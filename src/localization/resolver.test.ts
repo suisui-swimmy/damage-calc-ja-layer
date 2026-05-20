@@ -17,6 +17,7 @@ describe("resolveEntity", () => {
     ["move", "10まんボルト", "Thunderbolt"],
     ["move", "きあいだま", "Focus Blast"],
     ["item", "こだわりメガネ", "Choice Specs"],
+    ["ability", "せいでんき", "Static"],
     ["nature", "ひかえめ", "Modest"],
     ["type", "でんき", "Electric"],
   ] as const)("resolves %s input %s to %s", (kind, input, expected) => {
@@ -31,6 +32,14 @@ describe("resolveEntity", () => {
   it("keeps not-found explicit", () => {
     expect(resolveEntity("pokemon", "ぜったいにいないポケモン")).toMatchObject({
       status: "not-found",
+    });
+  });
+
+  it("uses manual alias overlays without editing generated options", () => {
+    expect(resolveEntity("move", "10万ボルト")).toMatchObject({
+      status: "alias",
+      canonicalName: "Thunderbolt",
+      displayNameJa: "10まんボルト",
     });
   });
 

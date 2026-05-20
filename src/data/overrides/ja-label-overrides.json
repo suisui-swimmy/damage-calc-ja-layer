@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": "manual-2026-05-20",
+  "source": {
+    "kind": "manual-overlay",
+    "note": "Display label fixes layered over generated options."
+  },
+  "generatedBy": "manual",
+  "kind": "ja-label-overrides",
+  "entries": [],
+  "summary": {
+    "entryCount": 0,
+    "appliedAtRuntime": true
+  }
+}

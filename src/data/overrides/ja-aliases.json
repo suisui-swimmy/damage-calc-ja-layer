@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": "manual-2026-05-20",
+  "source": {
+    "kind": "manual-overlay",
+    "note": "Additional Japanese aliases layered over generated options."
+  },
+  "generatedBy": "manual",
+  "kind": "ja-alias-overrides",
+  "entries": [
+    {
+      "kind": "move",
+      "id": "thunderbolt",
+      "aliasesJa": [
+        "10万ボルト",
+        "十万ボルト"
+      ],
+      "notes": "Common numeric variants for 10まんボルト."
+    }
+  ],
+  "summary": {
+    "entryCount": 1,
+    "appliedAtRuntime": true
+  }
+}

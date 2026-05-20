@@ -4,10 +4,15 @@ import moveOptions from "../data/generated/move-options.gen.json";
 import natureOptions from "../data/generated/nature-options.gen.json";
 import pokemonOptions from "../data/generated/pokemon-options.gen.json";
 import typeOptions from "../data/generated/type-options.gen.json";
+import jaAliases from "../data/overrides/ja-aliases.json";
+import jaLabelOverrides from "../data/overrides/ja-label-overrides.json";
 import type {
   EntityKind,
   LocalizedOptionEntry,
   LocalizedOptionPayload,
+  ManualJaAliasOverride,
+  ManualJaLabelOverride,
+  ManualJaOverridePayload,
   SourceStatus,
 } from "../data/optionTypes";
 import { normalizeJaSearchText, toCalcId } from "./normalizeJa";
@@ -52,6 +57,19 @@ const payloadByKind: Record<EntityKind, LocalizedOptionPayload> = {
   nature: natureOptions as unknown as LocalizedOptionPayload,
   type: typeOptions as unknown as LocalizedOptionPayload,
 };
+
+const aliasOverridePayload =
+  jaAliases as ManualJaOverridePayload<"ja-alias-overrides", ManualJaAliasOverride>;
+const labelOverridePayload =
+  jaLabelOverrides as ManualJaOverridePayload<"ja-label-overrides", ManualJaLabelOverride>;
+
+const aliasOverridesByKey = new Map(
+  aliasOverridePayload.entries.map((entry) => [`${entry.kind}:${entry.id}`, entry.aliasesJa]),
+);
+
+const labelOverridesByKey = new Map(
+  labelOverridePayload.entries.map((entry) => [`${entry.kind}:${entry.id}`, entry.displayNameJa]),
+);
 
 const sourceStatusOf = (option: LocalizedOptionEntry): SourceStatus =>
   option.sourceStatus ?? option.fallback?.nameSourceStatus ?? "supported";
@@ -104,8 +122,34 @@ const buildIndex = (entries: LocalizedOptionEntry[]) => {
   return { exactIndex, aliasIndex, entries };
 };
 
+const applyManualOverrides = (
+  kind: EntityKind,
+  entries: LocalizedOptionEntry[],
+): LocalizedOptionEntry[] =>
+  entries.map((entry) => {
+    const key = `${kind}:${entry.id}`;
+    const aliasesJa = aliasOverridesByKey.get(key) ?? [];
+    const displayNameJa = labelOverridesByKey.get(key);
+
+    if (aliasesJa.length === 0 && displayNameJa === undefined) {
+      return entry;
+    }
+
+    return {
+      ...entry,
+      label: displayNameJa ?? entry.label,
+      searchText:
+        aliasesJa.length === 0
+          ? entry.searchText
+          : `${entry.searchText} ${aliasesJa.join(" ")}`,
+    };
+  });
+
 const searchByKind = Object.fromEntries(
-  Object.entries(payloadByKind).map(([kind, payload]) => [kind, buildIndex(payload.entries)]),
+  Object.entries(payloadByKind).map(([kind, payload]) => [
+    kind,
+    buildIndex(applyManualOverrides(kind as EntityKind, payload.entries)),
+  ]),
 ) as Record<EntityKind, ReturnType<typeof buildIndex>>;
 
 const resolveMatches = (

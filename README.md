@@ -46,6 +46,9 @@ Milestone 1 の calc catalog 生成・検証土台を実装済み。
 | Move | 10まんボルト | Thunderbolt |
 | Move | きあいだま | Focus Blast |
 | Item | こだわりメガネ | Choice Specs |
+| Ability | せいでんき | Static |
+| Nature | ひかえめ | Modest |
+| Type | でんき | Electric |
 
 ## 開発コマンド
 
@@ -53,6 +56,7 @@ Milestone 1 の calc catalog 生成・検証土台を実装済み。
 npm install
 npm run generate:calc-catalog
 npm run validate:calc-catalog
+npm run validate:ja-mapping
 npm run inspect:calc
 npm test
 npm run build
@@ -95,6 +99,30 @@ Move / Item / Ability / Nature / Type / Pokemon の補助 metadata は UI 表示
 ダメージ計算の正としては使わず、最終計算は必ず `src/calc/smogonAdapter.ts` 経由で `@smogon/calc` に渡す。
 
 `Generations.get(9)` は National Dex 的に広い catalog を返すため、UI 対象範囲や未対応表示の絞り込みは後続の support matrix / overlay で扱う。
+
+## 日本語 mapping 検証
+
+ChampionCreator 由来の options JSON と `@smogon/calc` 由来の calc catalog を照合する。
+
+```bash
+npm run validate:ja-mapping
+```
+
+検証対象:
+
+- `src/data/generated/pokemon-options.gen.json` と `src/data/generated/calc-species.gen.json`
+- `src/data/generated/move-options.gen.json` と `src/data/generated/calc-moves.gen.json`
+- `src/data/generated/item-options.gen.json` と `src/data/generated/calc-items.gen.json`
+- `src/data/generated/ability-options.gen.json` と `src/data/generated/calc-abilities.gen.json`
+- `src/data/generated/nature-options.gen.json` と `src/data/generated/calc-natures.gen.json`
+- `src/data/generated/type-options.gen.json` と `src/data/generated/calc-types.gen.json`
+
+この script は、`id` / `showdownName` が calc catalog 側に存在するか、重複、空 label、空 `searchText`、catalog 側だけにある entry を summary で出す。
+`sourceStatus` と `fallback.reason` は握りつぶさず集計し、ChampionCreator 由来の暫定データや `needs-confirmation` を可視化する。
+
+現時点では欠損の可視化を優先するため、calc catalog 側だけにある Pokemon や `needs-confirmation` の Ability は summary と warning に留める。
+生成済み JSON を手で直接修正せず、追加の別名や表示名補正は `src/data/overrides/ja-aliases.json` / `src/data/overrides/ja-label-overrides.json` に積む。
+manual overlay は `src/localization/resolver.ts` で generated options に薄く重ね、生成元データを直接編集しない。
 
 UI はまだ検証用の薄い smoke 表示だけ。
 本格的な入力フォームや gh-pages 公開は後続 milestone で扱う。
