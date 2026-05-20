@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f5f0;
+  color: #222326;
+  font-family:
+    "Yu Gothic", "Yu Gothic UI", "Hiragino Sans", "Meiryo", system-ui,
+    sans-serif;
+}
+
+.app-shell {
+  width: min(960px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero {
+  margin-bottom: 32px;
+}
+
+.eyebrow,
+.version {
+  color: #6a5d4f;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+.panel {
+  border-top: 1px solid #d8d1c5;
+  padding: 24px 0;
+}
+
+.result-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.result-row {
+  display: grid;
+  grid-template-columns: 96px minmax(120px, 1fr) minmax(180px, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e6dfd4;
+}
+
+code {
+  overflow-wrap: anywhere;
+  font-family: "Cascadia Code", "Consolas", monospace;
+}
