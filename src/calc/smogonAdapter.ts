@@ -1,33 +1,49 @@
-import { Field, Generations, Move, Pokemon, calculate } from "@smogon/calc";
+import { Field, Generations, Move, Pokemon, calculate, toID } from "@smogon/calc";
 import calcPackage from "@smogon/calc/package.json";
+import type { GenerationNum, StatID, StatsTable, State } from "@smogon/calc";
 
-export interface StatTable {
-  hp?: number;
-  atk?: number;
-  def?: number;
-  spa?: number;
-  spd?: number;
-  spe?: number;
-}
+export type StatTable = Partial<StatsTable>;
+export type BoostTable = Partial<Record<Exclude<StatID, "hp">, number>>;
 
 export interface CalcPokemonInput {
-  name: string;
+  canonicalName: string;
   level?: number;
   item?: string;
   ability?: string;
   nature?: string;
   evs?: StatTable;
   ivs?: StatTable;
-  boosts?: Omit<StatTable, "hp">;
+  boosts?: BoostTable;
+  teraType?: State.Pokemon["teraType"];
+  curHP?: number;
 }
 
 export interface CalcMoveInput {
-  name: string;
+  canonicalName: string;
   isCrit?: boolean;
+  hits?: number;
+}
+
+export interface CalcSideInput {
+  isReflect?: boolean;
+  isLightScreen?: boolean;
+  isProtected?: boolean;
+  isAuroraVeil?: boolean;
+  isHelpingHand?: boolean;
+  isFriendGuard?: boolean;
+  isBattery?: boolean;
+  isPowerSpot?: boolean;
+  isSteelySpirit?: boolean;
+  isSR?: boolean;
+  spikes?: number;
 }
 
 export interface CalcFieldInput {
-  gameType?: "Singles" | "Doubles";
+  gameType?: State.Field["gameType"];
+  weather?: State.Field["weather"];
+  terrain?: State.Field["terrain"];
+  attackerSide?: CalcSideInput;
+  defenderSide?: CalcSideInput;
 }
 
 export interface DamageCalculationInput {
@@ -37,20 +53,41 @@ export interface DamageCalculationInput {
   field?: CalcFieldInput;
 }
 
+export interface CalcPokemonResultSummary {
+  canonicalName: string;
+  level: number;
+  item?: string;
+  ability?: string;
+  nature: string;
+  teraType?: State.Pokemon["teraType"];
+  stats: StatsTable;
+}
+
+export interface CalcMoveResultSummary {
+  canonicalName: string;
+  type: string;
+  category: string;
+  basePower: number;
+}
+
+export interface CalcFieldResultSummary {
+  gameType: State.Field["gameType"];
+  weather?: State.Field["weather"];
+  terrain?: State.Field["terrain"];
+  attackerSide: CalcSideInput;
+  defenderSide: CalcSideInput;
+}
+
 export interface DamageCalculationResult {
+  generation: GenerationNum;
+  calcVersion: string;
   damageRolls: number[];
   damageRange: [number, number];
-  description: string;
-  attacker: {
-    canonicalName: string;
-    item?: string;
-  };
-  defender: {
-    canonicalName: string;
-  };
-  move: {
-    canonicalName: string;
-  };
+  rawDescription: string;
+  attacker: CalcPokemonResultSummary;
+  defender: CalcPokemonResultSummary;
+  move: CalcMoveResultSummary;
+  field: CalcFieldResultSummary;
 }
 
 const generation = Generations.get(9);
@@ -65,35 +102,95 @@ const flattenDamage = (damage: unknown): number[] => {
   return [];
 };
 
+const sideSummary = (side: Field["attackerSide"]): CalcSideInput => ({
+  isReflect: side.isReflect,
+  isLightScreen: side.isLightScreen,
+  isProtected: side.isProtected,
+  isAuroraVeil: side.isAuroraVeil,
+  isHelpingHand: side.isHelpingHand,
+  isFriendGuard: side.isFriendGuard,
+  isBattery: side.isBattery,
+  isPowerSpot: side.isPowerSpot,
+  isSteelySpirit: side.isSteelySpirit,
+  isSR: side.isSR,
+  spikes: side.spikes,
+});
+
+const assertKnownCanonical = (
+  kind: "pokemon" | "move" | "item" | "ability" | "nature" | "type",
+  canonicalName: string,
+  role: string,
+) => {
+  const id = toID(canonicalName);
+  const catalog = {
+    pokemon: generation.species,
+    move: generation.moves,
+    item: generation.items,
+    ability: generation.abilities,
+    nature: generation.natures,
+    type: generation.types,
+  }[kind];
+
+  if (!catalog.get(id)) {
+    throw new Error(`Unknown ${role} canonical ${kind}: ${canonicalName}`);
+  }
+};
+
+const buildPokemon = (role: "attacker" | "defender", input: CalcPokemonInput) => {
+  assertKnownCanonical("pokemon", input.canonicalName, role);
+  if (input.item) {
+    assertKnownCanonical("item", input.item, `${role} item`);
+  }
+  if (input.ability) {
+    assertKnownCanonical("ability", input.ability, `${role} ability`);
+  }
+  if (input.nature) {
+    assertKnownCanonical("nature", input.nature, `${role} nature`);
+  }
+  if (input.teraType) {
+    assertKnownCanonical("type", input.teraType, `${role} teraType`);
+  }
+
+  return new Pokemon(generation, input.canonicalName, {
+    level: input.level ?? 50,
+    item: input.item,
+    ability: input.ability,
+    nature: input.nature,
+    evs: input.evs,
+    ivs: input.ivs,
+    boosts: input.boosts,
+    teraType: input.teraType,
+    curHP: input.curHP,
+  });
+};
+
+const buildMove = (input: CalcMoveInput) => {
+  assertKnownCanonical("move", input.canonicalName, "move");
+
+  return new Move(generation, input.canonicalName, {
+    isCrit: input.isCrit,
+    hits: input.hits,
+  });
+};
+
+const buildField = (input?: CalcFieldInput) =>
+  new Field({
+    gameType: input?.gameType ?? "Singles",
+    weather: input?.weather,
+    terrain: input?.terrain,
+    attackerSide: input?.attackerSide,
+    defenderSide: input?.defenderSide,
+  });
+
 export const getSmogonCalcVersion = (): string => calcPackage.version;
 
 export const calculateDamage = (
   input: DamageCalculationInput,
 ): DamageCalculationResult => {
-  const attacker = new Pokemon(generation, input.attacker.name, {
-    level: input.attacker.level ?? 50,
-    item: input.attacker.item,
-    ability: input.attacker.ability,
-    nature: input.attacker.nature,
-    evs: input.attacker.evs,
-    ivs: input.attacker.ivs,
-    boosts: input.attacker.boosts,
-  });
-  const defender = new Pokemon(generation, input.defender.name, {
-    level: input.defender.level ?? 50,
-    item: input.defender.item,
-    ability: input.defender.ability,
-    nature: input.defender.nature,
-    evs: input.defender.evs,
-    ivs: input.defender.ivs,
-    boosts: input.defender.boosts,
-  });
-  const move = new Move(generation, input.move.name, {
-    isCrit: input.move.isCrit,
-  });
-  const field = new Field({
-    gameType: input.field?.gameType ?? "Singles",
-  });
+  const attacker = buildPokemon("attacker", input.attacker);
+  const defender = buildPokemon("defender", input.defender);
+  const move = buildMove(input.move);
+  const field = buildField(input.field);
   const result = calculate(generation, attacker, defender, move, field);
   const damageRolls = flattenDamage(result.damage);
 
@@ -102,18 +199,41 @@ export const calculateDamage = (
   }
 
   return {
+    generation: generation.num,
+    calcVersion: getSmogonCalcVersion(),
     damageRolls,
-    damageRange: [Math.min(...damageRolls), Math.max(...damageRolls)],
-    description: result.desc(),
+    damageRange: result.range(),
+    rawDescription: result.desc(),
     attacker: {
       canonicalName: attacker.name,
+      level: attacker.level,
       item: attacker.item,
+      ability: attacker.ability,
+      nature: attacker.nature,
+      teraType: attacker.teraType,
+      stats: attacker.stats,
     },
     defender: {
       canonicalName: defender.name,
+      level: defender.level,
+      item: defender.item,
+      ability: defender.ability,
+      nature: defender.nature,
+      teraType: defender.teraType,
+      stats: defender.stats,
     },
     move: {
       canonicalName: move.name,
+      type: move.type,
+      category: move.category,
+      basePower: move.bp,
+    },
+    field: {
+      gameType: field.gameType,
+      weather: field.weather,
+      terrain: field.terrain,
+      attackerSide: sideSummary(field.attackerSide),
+      defenderSide: sideSummary(field.defenderSide),
     },
   };
 };

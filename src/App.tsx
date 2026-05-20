@@ -12,19 +12,19 @@ const smokeInputs = [
 
 const smokeResult = calculateDamage({
   attacker: {
-    name: "Pikachu",
+    canonicalName: "Pikachu",
     level: 50,
     nature: "Modest",
     item: "Choice Specs",
     evs: { spa: 252 },
   },
   defender: {
-    name: "Squirtle",
+    canonicalName: "Squirtle",
     level: 50,
     evs: { hp: 252 },
   },
   move: {
-    name: "Thunderbolt",
+    canonicalName: "Thunderbolt",
   },
 });
 
@@ -59,7 +59,7 @@ export const App = () => (
       <h2>Calc Smoke</h2>
       <p className="version">@smogon/calc {getSmogonCalcVersion()}</p>
       <p>{formatDamageResultJa(smokeResult).summaryText}</p>
-      <code>{smokeResult.description}</code>
+      <code>{smokeResult.rawDescription}</code>
     </section>
   </main>
 );

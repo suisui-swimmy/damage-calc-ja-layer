@@ -24,6 +24,6 @@ export const formatDamageResultJa = (
     moveNameJa,
     damageRange: result.damageRange,
     summaryText: `${attackerNameJa} の ${moveNameJa}: ${minDamage}-${maxDamage} ダメージ`,
-    sourceDescription: result.description,
+    sourceDescription: result.rawDescription,
   };
 };

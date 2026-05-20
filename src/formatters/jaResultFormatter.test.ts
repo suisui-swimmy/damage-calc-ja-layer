@@ -6,19 +6,19 @@ describe("formatDamageResultJa", () => {
   it("returns a minimal Japanese display structure", () => {
     const calcResult = calculateDamage({
       attacker: {
-        name: "Pikachu",
+        canonicalName: "Pikachu",
         level: 50,
         nature: "Modest",
         item: "Choice Specs",
         evs: { spa: 252 },
       },
       defender: {
-        name: "Squirtle",
+        canonicalName: "Squirtle",
         level: 50,
         evs: { hp: 252 },
       },
       move: {
-        name: "Thunderbolt",
+        canonicalName: "Thunderbolt",
       },
     });
 
