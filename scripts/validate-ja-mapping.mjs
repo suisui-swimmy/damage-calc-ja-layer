@@ -408,7 +408,7 @@ const validateOverlay = async (target, catalogByKind) => {
     if (!catalogByKind.get(entry.kind).has(entry.id)) {
       summary.missingCatalogRefs += 1;
       summary.examples.missingCatalogRefs.push(key);
-      addWarning(target.fileName, `override ${key} does not reference a calc catalog id`);
+      addError(target.fileName, `override ${key} does not reference a calc catalog id`);
     }
 
     target.validateEntry(entry, index, target.fileName);

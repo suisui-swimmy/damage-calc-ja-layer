@@ -18,6 +18,7 @@ import type {
 import { normalizeJaSearchText, toCalcId } from "./normalizeJa";
 
 export type ResolveStatus = "exact" | "alias" | "fuzzy" | "ambiguous" | "not-found";
+export type ResolveMatchedBy = "label" | "canonical" | "id" | "searchText" | "manualAlias" | "fuzzy";
 
 export interface ResolveCandidate {
   canonicalName: string;
@@ -25,6 +26,8 @@ export interface ResolveCandidate {
   reason: string;
   calcId: string;
   sourceStatus: SourceStatus;
+  matchedBy: ResolveMatchedBy;
+  matchText: string;
 }
 
 export interface ResolveResult {
@@ -42,11 +45,11 @@ export interface ResolveOptions {
   allowFuzzy?: boolean;
 }
 
-type MatchReason = "label" | "canonical" | "id" | "searchText";
-
 interface SearchEntry {
   option: LocalizedOptionEntry;
-  reason: MatchReason;
+  matchedBy: ResolveMatchedBy;
+  matchText: string;
+  sourceStatus?: SourceStatus;
 }
 
 const payloadByKind: Record<EntityKind, LocalizedOptionPayload> = {
@@ -64,25 +67,36 @@ const labelOverridePayload =
   jaLabelOverrides as ManualJaOverridePayload<"ja-label-overrides", ManualJaLabelOverride>;
 
 const aliasOverridesByKey = new Map(
-  aliasOverridePayload.entries.map((entry) => [`${entry.kind}:${entry.id}`, entry.aliasesJa]),
+  aliasOverridePayload.entries.map((entry) => [`${entry.kind}:${entry.id}`, entry]),
 );
 
 const labelOverridesByKey = new Map(
-  labelOverridePayload.entries.map((entry) => [`${entry.kind}:${entry.id}`, entry.displayNameJa]),
+  labelOverridePayload.entries.map((entry) => [`${entry.kind}:${entry.id}`, entry]),
 );
 
-const sourceStatusOf = (option: LocalizedOptionEntry): SourceStatus =>
-  option.sourceStatus ?? option.fallback?.nameSourceStatus ?? "supported";
-
-const candidateFromOption = (
+const sourceStatusOf = (
   option: LocalizedOptionEntry,
-  reason: string,
-): ResolveCandidate => ({
-  canonicalName: option.showdownName,
-  displayNameJa: option.label,
-  reason,
-  calcId: option.id,
-  sourceStatus: sourceStatusOf(option),
+  overrideSourceStatus?: SourceStatus,
+): SourceStatus =>
+  overrideSourceStatus ?? option.sourceStatus ?? option.fallback?.nameSourceStatus ?? "supported";
+
+const reasonByMatchedBy: Record<ResolveMatchedBy, string> = {
+  label: "label exact match",
+  canonical: "canonical name exact match",
+  id: "calcId exact match",
+  searchText: "searchText token match",
+  manualAlias: "manual alias match",
+  fuzzy: "searchText fuzzy match",
+};
+
+const candidateFromSearchEntry = (entry: SearchEntry): ResolveCandidate => ({
+  canonicalName: entry.option.showdownName,
+  displayNameJa: entry.option.label,
+  reason: reasonByMatchedBy[entry.matchedBy],
+  calcId: entry.option.id,
+  sourceStatus: sourceStatusOf(entry.option, entry.sourceStatus),
+  matchedBy: entry.matchedBy,
+  matchText: entry.matchText,
 });
 
 const addIndexValue = (
@@ -101,21 +115,44 @@ const addIndexValue = (
   index.set(normalized, current);
 };
 
-const buildIndex = (entries: LocalizedOptionEntry[]) => {
+const buildIndex = (kind: EntityKind, entries: LocalizedOptionEntry[]) => {
   const exactIndex = new Map<string, SearchEntry[]>();
   const aliasIndex = new Map<string, SearchEntry[]>();
 
   for (const option of entries) {
-    addIndexValue(exactIndex, option.label, { option, reason: "label" });
-    addIndexValue(exactIndex, option.showdownName, { option, reason: "canonical" });
-    addIndexValue(exactIndex, option.id, { option, reason: "id" });
+    addIndexValue(exactIndex, option.label, {
+      option,
+      matchedBy: "label",
+      matchText: option.label,
+    });
+    addIndexValue(exactIndex, option.showdownName, {
+      option,
+      matchedBy: "canonical",
+      matchText: option.showdownName,
+    });
+    addIndexValue(exactIndex, option.id, { option, matchedBy: "id", matchText: option.id });
     addIndexValue(exactIndex, toCalcId(option.showdownName), {
       option,
-      reason: "canonical",
+      matchedBy: "canonical",
+      matchText: toCalcId(option.showdownName),
     });
 
     for (const token of option.searchText.split(/\s+/)) {
-      addIndexValue(aliasIndex, token, { option, reason: "searchText" });
+      addIndexValue(aliasIndex, token, {
+        option,
+        matchedBy: "searchText",
+        matchText: token,
+      });
+    }
+
+    const aliasOverride = aliasOverridesByKey.get(`${kind}:${option.id}`);
+    for (const alias of aliasOverride?.aliasesJa ?? []) {
+      addIndexValue(aliasIndex, alias, {
+        option,
+        matchedBy: "manualAlias",
+        matchText: alias,
+        sourceStatus: aliasOverride?.sourceStatus,
+      });
     }
   }
 
@@ -128,27 +165,24 @@ const applyManualOverrides = (
 ): LocalizedOptionEntry[] =>
   entries.map((entry) => {
     const key = `${kind}:${entry.id}`;
-    const aliasesJa = aliasOverridesByKey.get(key) ?? [];
-    const displayNameJa = labelOverridesByKey.get(key);
+    const labelOverride = labelOverridesByKey.get(key);
+    const displayNameJa = labelOverride?.displayNameJa;
 
-    if (aliasesJa.length === 0 && displayNameJa === undefined) {
+    if (displayNameJa === undefined && labelOverride?.sourceStatus === undefined) {
       return entry;
     }
 
     return {
       ...entry,
       label: displayNameJa ?? entry.label,
-      searchText:
-        aliasesJa.length === 0
-          ? entry.searchText
-          : `${entry.searchText} ${aliasesJa.join(" ")}`,
+      sourceStatus: labelOverride?.sourceStatus ?? entry.sourceStatus,
     };
   });
 
 const searchByKind = Object.fromEntries(
   Object.entries(payloadByKind).map(([kind, payload]) => [
     kind,
-    buildIndex(applyManualOverrides(kind as EntityKind, payload.entries)),
+    buildIndex(kind as EntityKind, applyManualOverrides(kind as EntityKind, payload.entries)),
   ]),
 ) as Record<EntityKind, ReturnType<typeof buildIndex>>;
 
@@ -158,9 +192,7 @@ const resolveMatches = (
   matches: SearchEntry[],
   status: ResolveStatus,
 ): ResolveResult => {
-  const candidates = matches.map(({ option, reason }) =>
-    candidateFromOption(option, reason),
-  );
+  const candidates = matches.map(candidateFromSearchEntry);
 
   if (candidates.length === 1 && status !== "ambiguous") {
     const [candidate] = candidates;
@@ -210,7 +242,11 @@ export const resolveEntity = (
     const fuzzyMatches = search.entries
       .filter((entry) => normalizeJaSearchText(entry.searchText).includes(normalized))
       .slice(0, 10)
-      .map((option) => ({ option, reason: "searchText" as const }));
+      .map((option) => ({
+        option,
+        matchedBy: "fuzzy" as const,
+        matchText: input,
+      }));
 
     if (fuzzyMatches.length > 0) {
       return resolveMatches(kind, input, fuzzyMatches, "fuzzy");
