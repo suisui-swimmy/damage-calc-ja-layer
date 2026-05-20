@@ -42,6 +42,12 @@ describe("smogonAdapter", () => {
 
     expect(result.damageRolls.length).toBeGreaterThan(0);
     expect(result.damageRange[0]).toBeGreaterThan(0);
+    expect(result.damagePercentageRange?.notation).toBe("%");
+    expect(result.damagePercentageRange?.min).toBeGreaterThan(0);
+    expect(result.koChance).toMatchObject({
+      turns: expect.any(Number),
+      sourceText: expect.any(String),
+    });
     expect(result.attacker.canonicalName).toBe("Pikachu");
     expect(result.attacker.item).toBe("Choice Specs");
     expect(result.attacker.nature).toBe("Modest");

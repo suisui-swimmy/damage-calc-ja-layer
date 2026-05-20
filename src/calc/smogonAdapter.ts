@@ -78,11 +78,25 @@ export interface CalcFieldResultSummary {
   defenderSide: CalcSideInput;
 }
 
+export interface DamagePercentageRange {
+  min: number;
+  max: number;
+  notation: "%";
+}
+
+export interface KoChanceSummary {
+  chance?: number;
+  turns: number;
+  sourceText: string;
+}
+
 export interface DamageCalculationResult {
   generation: GenerationNum;
   calcVersion: string;
   damageRolls: number[];
   damageRange: [number, number];
+  damagePercentageRange?: DamagePercentageRange;
+  koChance?: KoChanceSummary;
   rawDescription: string;
   attacker: CalcPokemonResultSummary;
   defender: CalcPokemonResultSummary;
@@ -182,6 +196,35 @@ const buildField = (input?: CalcFieldInput) =>
     defenderSide: input?.defenderSide,
   });
 
+const toDamagePercentageRange = (
+  [minDamage, maxDamage]: [number, number],
+  defenderMaxHp: number,
+): DamagePercentageRange | undefined => {
+  if (defenderMaxHp <= 0) {
+    return undefined;
+  }
+
+  return {
+    min: Math.floor((minDamage * 1000) / defenderMaxHp) / 10,
+    max: Math.floor((maxDamage * 1000) / defenderMaxHp) / 10,
+    notation: "%",
+  };
+};
+
+const summarizeKoChance = (
+  koChance: ReturnType<ReturnType<typeof calculate>["kochance"]>,
+): KoChanceSummary | undefined => {
+  if (koChance.n === 0 && !koChance.text) {
+    return undefined;
+  }
+
+  return {
+    chance: koChance.chance,
+    turns: koChance.n,
+    sourceText: koChance.text,
+  };
+};
+
 export const getSmogonCalcVersion = (): string => calcPackage.version;
 
 export const calculateDamage = (
@@ -193,6 +236,7 @@ export const calculateDamage = (
   const field = buildField(input.field);
   const result = calculate(generation, attacker, defender, move, field);
   const damageRolls = flattenDamage(result.damage);
+  const damageRange = result.range();
 
   if (damageRolls.length === 0) {
     throw new Error("No numeric damage rolls returned by @smogon/calc");
@@ -202,7 +246,9 @@ export const calculateDamage = (
     generation: generation.num,
     calcVersion: getSmogonCalcVersion(),
     damageRolls,
-    damageRange: result.range(),
+    damageRange,
+    damagePercentageRange: toDamagePercentageRange(damageRange, defender.maxHP()),
+    koChance: summarizeKoChance(result.kochance(false)),
     rawDescription: result.desc(),
     attacker: {
       canonicalName: attacker.name,
