@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "inspect:calc": "node scripts/inspect-smogon-calc.mjs"
+    "inspect:calc": "node scripts/inspect-smogon-calc.mjs",
+    "generate:calc-catalog": "node scripts/generate-calc-catalog.mjs",
+    "validate:calc-catalog": "node scripts/validate-calc-catalog.mjs"
   },
   "dependencies": {
     "@smogon/calc": "^0.11.0",

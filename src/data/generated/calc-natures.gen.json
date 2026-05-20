@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": "@smogon/calc@0.11.0-gen9",
+  "source": {
+    "packageName": "@smogon/calc",
+    "packageVersion": "0.11.0",
+    "packageLicense": "MIT",
+    "generation": 9
+  },
+  "generatedBy": "scripts/generate-calc-catalog.mjs",
+  "kind": "nature",
+  "entries": [
+    {
+      "id": "adamant",
+      "kind": "nature",
+      "showdownName": "Adamant",
+      "plus": "atk",
+      "minus": "spa"
+    },
+    {
+      "id": "bashful",
+      "kind": "nature",
+      "showdownName": "Bashful",
+      "plus": "spa",
+      "minus": "spa"
+    },
+    {
+      "id": "bold",
+      "kind": "nature",
+      "showdownName": "Bold",
+      "plus": "def",
+      "minus": "atk"
+    },
+    {
+      "id": "brave",
+      "kind": "nature",
+      "showdownName": "Brave",
+      "plus": "atk",
+      "minus": "spe"
+    },
+    {
+      "id": "calm",
+      "kind": "nature",
+      "showdownName": "Calm",
+      "plus": "spd",
+      "minus": "atk"
+    },
+    {
+      "id": "careful",
+      "kind": "nature",
+      "showdownName": "Careful",
+      "plus": "spd",
+      "minus": "spa"
+    },
+    {
+      "id": "docile",
+      "kind": "nature",
+      "showdownName": "Docile",
+      "plus": "def",
+      "minus": "def"
+    },
+    {
+      "id": "gentle",
+      "kind": "nature",
+      "showdownName": "Gentle",
+      "plus": "spd",
+      "minus": "def"
+    },
+    {
+      "id": "hardy",
+      "kind": "nature",
+      "showdownName": "Hardy",
+      "plus": "atk",
+      "minus": "atk"
+    },
+    {
+      "id": "hasty",
+      "kind": "nature",
+      "showdownName": "Hasty",
+      "plus": "spe",
+      "minus": "def"
+    },
+    {
+      "id": "impish",
+      "kind": "nature",
+      "showdownName": "Impish",
+      "plus": "def",
+      "minus": "spa"
+    },
+    {
+      "id": "jolly",
+      "kind": "nature",
+      "showdownName": "Jolly",
+      "plus": "spe",
+      "minus": "spa"
+    },
+    {
+      "id": "lax",
+      "kind": "nature",
+      "showdownName": "Lax",
+      "plus": "def",
+      "minus": "spd"
+    },
+    {
+      "id": "lonely",
+      "kind": "nature",
+      "showdownName": "Lonely",
+      "plus": "atk",
+      "minus": "def"
+    },
+    {
+      "id": "mild",
+      "kind": "nature",
+      "showdownName": "Mild",
+      "plus": "spa",
+      "minus": "def"
+    },
+    {
+      "id": "modest",
+      "kind": "nature",
+      "showdownName": "Modest",
+      "plus": "spa",
+      "minus": "atk"
+    },
+    {
+      "id": "naive",
+      "kind": "nature",
+      "showdownName": "Naive",
+      "plus": "spe",
+      "minus": "spd"
+    },
+    {
+      "id": "naughty",
+      "kind": "nature",
+      "showdownName": "Naughty",
+      "plus": "atk",
+      "minus": "spd"
+    },
+    {
+      "id": "quiet",
+      "kind": "nature",
+      "showdownName": "Quiet",
+      "plus": "spa",
+      "minus": "spe"
+    },
+    {
+      "id": "quirky",
+      "kind": "nature",
+      "showdownName": "Quirky",
+      "plus": "spd",
+      "minus": "spd"
+    },
+    {
+      "id": "rash",
+      "kind": "nature",
+      "showdownName": "Rash",
+      "plus": "spa",
+      "minus": "spd"
+    },
+    {
+      "id": "relaxed",
+      "kind": "nature",
+      "showdownName": "Relaxed",
+      "plus": "def",
+      "minus": "spe"
+    },
+    {
+      "id": "sassy",
+      "kind": "nature",
+      "showdownName": "Sassy",
+      "plus": "spd",
+      "minus": "spe"
+    },
+    {
+      "id": "serious",
+      "kind": "nature",
+      "showdownName": "Serious",
+      "plus": "spe",
+      "minus": "spe"
+    },
+    {
+      "id": "timid",
+      "kind": "nature",
+      "showdownName": "Timid",
+      "plus": "spe",
+      "minus": "atk"
+    }
+  ],
+  "summary": {
+    "entryCount": 25,
+    "emptyIdCount": 0,
+    "metadataIsUiHintOnly": true
+  }
+}

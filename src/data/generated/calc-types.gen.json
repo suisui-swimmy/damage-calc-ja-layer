@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": "@smogon/calc@0.11.0-gen9",
+  "source": {
+    "packageName": "@smogon/calc",
+    "packageVersion": "0.11.0",
+    "packageLicense": "MIT",
+    "generation": 9
+  },
+  "generatedBy": "scripts/generate-calc-catalog.mjs",
+  "kind": "type",
+  "entries": [
+    {
+      "id": "",
+      "kind": "type",
+      "showdownName": "???"
+    },
+    {
+      "id": "bug",
+      "kind": "type",
+      "showdownName": "Bug"
+    },
+    {
+      "id": "dark",
+      "kind": "type",
+      "showdownName": "Dark"
+    },
+    {
+      "id": "dragon",
+      "kind": "type",
+      "showdownName": "Dragon"
+    },
+    {
+      "id": "electric",
+      "kind": "type",
+      "showdownName": "Electric"
+    },
+    {
+      "id": "fairy",
+      "kind": "type",
+      "showdownName": "Fairy"
+    },
+    {
+      "id": "fighting",
+      "kind": "type",
+      "showdownName": "Fighting"
+    },
+    {
+      "id": "fire",
+      "kind": "type",
+      "showdownName": "Fire"
+    },
+    {
+      "id": "flying",
+      "kind": "type",
+      "showdownName": "Flying"
+    },
+    {
+      "id": "ghost",
+      "kind": "type",
+      "showdownName": "Ghost"
+    },
+    {
+      "id": "grass",
+      "kind": "type",
+      "showdownName": "Grass"
+    },
+    {
+      "id": "ground",
+      "kind": "type",
+      "showdownName": "Ground"
+    },
+    {
+      "id": "ice",
+      "kind": "type",
+      "showdownName": "Ice"
+    },
+    {
+      "id": "normal",
+      "kind": "type",
+      "showdownName": "Normal"
+    },
+    {
+      "id": "poison",
+      "kind": "type",
+      "showdownName": "Poison"
+    },
+    {
+      "id": "psychic",
+      "kind": "type",
+      "showdownName": "Psychic"
+    },
+    {
+      "id": "rock",
+      "kind": "type",
+      "showdownName": "Rock"
+    },
+    {
+      "id": "steel",
+      "kind": "type",
+      "showdownName": "Steel"
+    },
+    {
+      "id": "stellar",
+      "kind": "type",
+      "showdownName": "Stellar"
+    },
+    {
+      "id": "water",
+      "kind": "type",
+      "showdownName": "Water"
+    }
+  ],
+  "summary": {
+    "entryCount": 20,
+    "emptyIdCount": 1,
+    "metadataIsUiHintOnly": true
+  }
+}

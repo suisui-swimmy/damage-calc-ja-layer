@@ -1,0 +1,1584 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": "@smogon/calc@0.11.0-gen9",
+  "source": {
+    "packageName": "@smogon/calc",
+    "packageVersion": "0.11.0",
+    "packageLicense": "MIT",
+    "generation": 9
+  },
+  "generatedBy": "scripts/generate-calc-catalog.mjs",
+  "kind": "ability",
+  "entries": [
+    {
+      "id": "adaptability",
+      "kind": "ability",
+      "showdownName": "Adaptability"
+    },
+    {
+      "id": "aerilate",
+      "kind": "ability",
+      "showdownName": "Aerilate"
+    },
+    {
+      "id": "aftermath",
+      "kind": "ability",
+      "showdownName": "Aftermath"
+    },
+    {
+      "id": "airlock",
+      "kind": "ability",
+      "showdownName": "Air Lock"
+    },
+    {
+      "id": "analytic",
+      "kind": "ability",
+      "showdownName": "Analytic"
+    },
+    {
+      "id": "angerpoint",
+      "kind": "ability",
+      "showdownName": "Anger Point"
+    },
+    {
+      "id": "angershell",
+      "kind": "ability",
+      "showdownName": "Anger Shell"
+    },
+    {
+      "id": "anticipation",
+      "kind": "ability",
+      "showdownName": "Anticipation"
+    },
+    {
+      "id": "arenatrap",
+      "kind": "ability",
+      "showdownName": "Arena Trap"
+    },
+    {
+      "id": "armortail",
+      "kind": "ability",
+      "showdownName": "Armor Tail"
+    },
+    {
+      "id": "aromaveil",
+      "kind": "ability",
+      "showdownName": "Aroma Veil"
+    },
+    {
+      "id": "asoneglastrier",
+      "kind": "ability",
+      "showdownName": "As One (Glastrier)"
+    },
+    {
+      "id": "asonespectrier",
+      "kind": "ability",
+      "showdownName": "As One (Spectrier)"
+    },
+    {
+      "id": "aurabreak",
+      "kind": "ability",
+      "showdownName": "Aura Break"
+    },
+    {
+      "id": "baddreams",
+      "kind": "ability",
+      "showdownName": "Bad Dreams"
+    },
+    {
+      "id": "ballfetch",
+      "kind": "ability",
+      "showdownName": "Ball Fetch"
+    },
+    {
+      "id": "battery",
+      "kind": "ability",
+      "showdownName": "Battery"
+    },
+    {
+      "id": "battlearmor",
+      "kind": "ability",
+      "showdownName": "Battle Armor"
+    },
+    {
+      "id": "battlebond",
+      "kind": "ability",
+      "showdownName": "Battle Bond"
+    },
+    {
+      "id": "beadsofruin",
+      "kind": "ability",
+      "showdownName": "Beads of Ruin"
+    },
+    {
+      "id": "beastboost",
+      "kind": "ability",
+      "showdownName": "Beast Boost"
+    },
+    {
+      "id": "berserk",
+      "kind": "ability",
+      "showdownName": "Berserk"
+    },
+    {
+      "id": "bigpecks",
+      "kind": "ability",
+      "showdownName": "Big Pecks"
+    },
+    {
+      "id": "blaze",
+      "kind": "ability",
+      "showdownName": "Blaze"
+    },
+    {
+      "id": "bulletproof",
+      "kind": "ability",
+      "showdownName": "Bulletproof"
+    },
+    {
+      "id": "cheekpouch",
+      "kind": "ability",
+      "showdownName": "Cheek Pouch"
+    },
+    {
+      "id": "chillingneigh",
+      "kind": "ability",
+      "showdownName": "Chilling Neigh"
+    },
+    {
+      "id": "chlorophyll",
+      "kind": "ability",
+      "showdownName": "Chlorophyll"
+    },
+    {
+      "id": "clearbody",
+      "kind": "ability",
+      "showdownName": "Clear Body"
+    },
+    {
+      "id": "cloudnine",
+      "kind": "ability",
+      "showdownName": "Cloud Nine"
+    },
+    {
+      "id": "colorchange",
+      "kind": "ability",
+      "showdownName": "Color Change"
+    },
+    {
+      "id": "comatose",
+      "kind": "ability",
+      "showdownName": "Comatose"
+    },
+    {
+      "id": "commander",
+      "kind": "ability",
+      "showdownName": "Commander"
+    },
+    {
+      "id": "competitive",
+      "kind": "ability",
+      "showdownName": "Competitive"
+    },
+    {
+      "id": "compoundeyes",
+      "kind": "ability",
+      "showdownName": "Compound Eyes"
+    },
+    {
+      "id": "contrary",
+      "kind": "ability",
+      "showdownName": "Contrary"
+    },
+    {
+      "id": "corrosion",
+      "kind": "ability",
+      "showdownName": "Corrosion"
+    },
+    {
+      "id": "costar",
+      "kind": "ability",
+      "showdownName": "Costar"
+    },
+    {
+      "id": "cottondown",
+      "kind": "ability",
+      "showdownName": "Cotton Down"
+    },
+    {
+      "id": "cudchew",
+      "kind": "ability",
+      "showdownName": "Cud Chew"
+    },
+    {
+      "id": "curiousmedicine",
+      "kind": "ability",
+      "showdownName": "Curious Medicine"
+    },
+    {
+      "id": "cursedbody",
+      "kind": "ability",
+      "showdownName": "Cursed Body"
+    },
+    {
+      "id": "cutecharm",
+      "kind": "ability",
+      "showdownName": "Cute Charm"
+    },
+    {
+      "id": "damp",
+      "kind": "ability",
+      "showdownName": "Damp"
+    },
+    {
+      "id": "dancer",
+      "kind": "ability",
+      "showdownName": "Dancer"
+    },
+    {
+      "id": "darkaura",
+      "kind": "ability",
+      "showdownName": "Dark Aura"
+    },
+    {
+      "id": "dauntlessshield",
+      "kind": "ability",
+      "showdownName": "Dauntless Shield"
+    },
+    {
+      "id": "dazzling",
+      "kind": "ability",
+      "showdownName": "Dazzling"
+    },
+    {
+      "id": "defeatist",
+      "kind": "ability",
+      "showdownName": "Defeatist"
+    },
+    {
+      "id": "defiant",
+      "kind": "ability",
+      "showdownName": "Defiant"
+    },
+    {
+      "id": "deltastream",
+      "kind": "ability",
+      "showdownName": "Delta Stream"
+    },
+    {
+      "id": "desolateland",
+      "kind": "ability",
+      "showdownName": "Desolate Land"
+    },
+    {
+      "id": "disguise",
+      "kind": "ability",
+      "showdownName": "Disguise"
+    },
+    {
+      "id": "download",
+      "kind": "ability",
+      "showdownName": "Download"
+    },
+    {
+      "id": "dragonsmaw",
+      "kind": "ability",
+      "showdownName": "Dragon's Maw"
+    },
+    {
+      "id": "drizzle",
+      "kind": "ability",
+      "showdownName": "Drizzle"
+    },
+    {
+      "id": "drought",
+      "kind": "ability",
+      "showdownName": "Drought"
+    },
+    {
+      "id": "dryskin",
+      "kind": "ability",
+      "showdownName": "Dry Skin"
+    },
+    {
+      "id": "earlybird",
+      "kind": "ability",
+      "showdownName": "Early Bird"
+    },
+    {
+      "id": "eartheater",
+      "kind": "ability",
+      "showdownName": "Earth Eater"
+    },
+    {
+      "id": "effectspore",
+      "kind": "ability",
+      "showdownName": "Effect Spore"
+    },
+    {
+      "id": "electricsurge",
+      "kind": "ability",
+      "showdownName": "Electric Surge"
+    },
+    {
+      "id": "electromorphosis",
+      "kind": "ability",
+      "showdownName": "Electromorphosis"
+    },
+    {
+      "id": "embodyaspectcornerstone",
+      "kind": "ability",
+      "showdownName": "Embody Aspect (Cornerstone)"
+    },
+    {
+      "id": "embodyaspecthearthflame",
+      "kind": "ability",
+      "showdownName": "Embody Aspect (Hearthflame)"
+    },
+    {
+      "id": "embodyaspectteal",
+      "kind": "ability",
+      "showdownName": "Embody Aspect (Teal)"
+    },
+    {
+      "id": "embodyaspectwellspring",
+      "kind": "ability",
+      "showdownName": "Embody Aspect (Wellspring)"
+    },
+    {
+      "id": "emergencyexit",
+      "kind": "ability",
+      "showdownName": "Emergency Exit"
+    },
+    {
+      "id": "fairyaura",
+      "kind": "ability",
+      "showdownName": "Fairy Aura"
+    },
+    {
+      "id": "filter",
+      "kind": "ability",
+      "showdownName": "Filter"
+    },
+    {
+      "id": "flamebody",
+      "kind": "ability",
+      "showdownName": "Flame Body"
+    },
+    {
+      "id": "flareboost",
+      "kind": "ability",
+      "showdownName": "Flare Boost"
+    },
+    {
+      "id": "flashfire",
+      "kind": "ability",
+      "showdownName": "Flash Fire"
+    },
+    {
+      "id": "flowergift",
+      "kind": "ability",
+      "showdownName": "Flower Gift"
+    },
+    {
+      "id": "flowerveil",
+      "kind": "ability",
+      "showdownName": "Flower Veil"
+    },
+    {
+      "id": "fluffy",
+      "kind": "ability",
+      "showdownName": "Fluffy"
+    },
+    {
+      "id": "forecast",
+      "kind": "ability",
+      "showdownName": "Forecast"
+    },
+    {
+      "id": "forewarn",
+      "kind": "ability",
+      "showdownName": "Forewarn"
+    },
+    {
+      "id": "friendguard",
+      "kind": "ability",
+      "showdownName": "Friend Guard"
+    },
+    {
+      "id": "frisk",
+      "kind": "ability",
+      "showdownName": "Frisk"
+    },
+    {
+      "id": "fullmetalbody",
+      "kind": "ability",
+      "showdownName": "Full Metal Body"
+    },
+    {
+      "id": "furcoat",
+      "kind": "ability",
+      "showdownName": "Fur Coat"
+    },
+    {
+      "id": "galewings",
+      "kind": "ability",
+      "showdownName": "Gale Wings"
+    },
+    {
+      "id": "galvanize",
+      "kind": "ability",
+      "showdownName": "Galvanize"
+    },
+    {
+      "id": "gluttony",
+      "kind": "ability",
+      "showdownName": "Gluttony"
+    },
+    {
+      "id": "goodasgold",
+      "kind": "ability",
+      "showdownName": "Good as Gold"
+    },
+    {
+      "id": "gooey",
+      "kind": "ability",
+      "showdownName": "Gooey"
+    },
+    {
+      "id": "gorillatactics",
+      "kind": "ability",
+      "showdownName": "Gorilla Tactics"
+    },
+    {
+      "id": "grasspelt",
+      "kind": "ability",
+      "showdownName": "Grass Pelt"
+    },
+    {
+      "id": "grassysurge",
+      "kind": "ability",
+      "showdownName": "Grassy Surge"
+    },
+    {
+      "id": "grimneigh",
+      "kind": "ability",
+      "showdownName": "Grim Neigh"
+    },
+    {
+      "id": "guarddog",
+      "kind": "ability",
+      "showdownName": "Guard Dog"
+    },
+    {
+      "id": "gulpmissile",
+      "kind": "ability",
+      "showdownName": "Gulp Missile"
+    },
+    {
+      "id": "guts",
+      "kind": "ability",
+      "showdownName": "Guts"
+    },
+    {
+      "id": "hadronengine",
+      "kind": "ability",
+      "showdownName": "Hadron Engine"
+    },
+    {
+      "id": "harvest",
+      "kind": "ability",
+      "showdownName": "Harvest"
+    },
+    {
+      "id": "healer",
+      "kind": "ability",
+      "showdownName": "Healer"
+    },
+    {
+      "id": "heatproof",
+      "kind": "ability",
+      "showdownName": "Heatproof"
+    },
+    {
+      "id": "heavymetal",
+      "kind": "ability",
+      "showdownName": "Heavy Metal"
+    },
+    {
+      "id": "honeygather",
+      "kind": "ability",
+      "showdownName": "Honey Gather"
+    },
+    {
+      "id": "hospitality",
+      "kind": "ability",
+      "showdownName": "Hospitality"
+    },
+    {
+      "id": "hugepower",
+      "kind": "ability",
+      "showdownName": "Huge Power"
+    },
+    {
+      "id": "hungerswitch",
+      "kind": "ability",
+      "showdownName": "Hunger Switch"
+    },
+    {
+      "id": "hustle",
+      "kind": "ability",
+      "showdownName": "Hustle"
+    },
+    {
+      "id": "hydration",
+      "kind": "ability",
+      "showdownName": "Hydration"
+    },
+    {
+      "id": "hypercutter",
+      "kind": "ability",
+      "showdownName": "Hyper Cutter"
+    },
+    {
+      "id": "icebody",
+      "kind": "ability",
+      "showdownName": "Ice Body"
+    },
+    {
+      "id": "iceface",
+      "kind": "ability",
+      "showdownName": "Ice Face"
+    },
+    {
+      "id": "icescales",
+      "kind": "ability",
+      "showdownName": "Ice Scales"
+    },
+    {
+      "id": "illuminate",
+      "kind": "ability",
+      "showdownName": "Illuminate"
+    },
+    {
+      "id": "illusion",
+      "kind": "ability",
+      "showdownName": "Illusion"
+    },
+    {
+      "id": "immunity",
+      "kind": "ability",
+      "showdownName": "Immunity"
+    },
+    {
+      "id": "imposter",
+      "kind": "ability",
+      "showdownName": "Imposter"
+    },
+    {
+      "id": "infiltrator",
+      "kind": "ability",
+      "showdownName": "Infiltrator"
+    },
+    {
+      "id": "innardsout",
+      "kind": "ability",
+      "showdownName": "Innards Out"
+    },
+    {
+      "id": "innerfocus",
+      "kind": "ability",
+      "showdownName": "Inner Focus"
+    },
+    {
+      "id": "insomnia",
+      "kind": "ability",
+      "showdownName": "Insomnia"
+    },
+    {
+      "id": "intimidate",
+      "kind": "ability",
+      "showdownName": "Intimidate"
+    },
+    {
+      "id": "intrepidsword",
+      "kind": "ability",
+      "showdownName": "Intrepid Sword"
+    },
+    {
+      "id": "ironbarbs",
+      "kind": "ability",
+      "showdownName": "Iron Barbs"
+    },
+    {
+      "id": "ironfist",
+      "kind": "ability",
+      "showdownName": "Iron Fist"
+    },
+    {
+      "id": "justified",
+      "kind": "ability",
+      "showdownName": "Justified"
+    },
+    {
+      "id": "keeneye",
+      "kind": "ability",
+      "showdownName": "Keen Eye"
+    },
+    {
+      "id": "klutz",
+      "kind": "ability",
+      "showdownName": "Klutz"
+    },
+    {
+      "id": "leafguard",
+      "kind": "ability",
+      "showdownName": "Leaf Guard"
+    },
+    {
+      "id": "levitate",
+      "kind": "ability",
+      "showdownName": "Levitate"
+    },
+    {
+      "id": "libero",
+      "kind": "ability",
+      "showdownName": "Libero"
+    },
+    {
+      "id": "lightmetal",
+      "kind": "ability",
+      "showdownName": "Light Metal"
+    },
+    {
+      "id": "lightningrod",
+      "kind": "ability",
+      "showdownName": "Lightning Rod"
+    },
+    {
+      "id": "limber",
+      "kind": "ability",
+      "showdownName": "Limber"
+    },
+    {
+      "id": "lingeringaroma",
+      "kind": "ability",
+      "showdownName": "Lingering Aroma"
+    },
+    {
+      "id": "liquidooze",
+      "kind": "ability",
+      "showdownName": "Liquid Ooze"
+    },
+    {
+      "id": "liquidvoice",
+      "kind": "ability",
+      "showdownName": "Liquid Voice"
+    },
+    {
+      "id": "longreach",
+      "kind": "ability",
+      "showdownName": "Long Reach"
+    },
+    {
+      "id": "magicbounce",
+      "kind": "ability",
+      "showdownName": "Magic Bounce"
+    },
+    {
+      "id": "magicguard",
+      "kind": "ability",
+      "showdownName": "Magic Guard"
+    },
+    {
+      "id": "magician",
+      "kind": "ability",
+      "showdownName": "Magician"
+    },
+    {
+      "id": "magmaarmor",
+      "kind": "ability",
+      "showdownName": "Magma Armor"
+    },
+    {
+      "id": "magnetpull",
+      "kind": "ability",
+      "showdownName": "Magnet Pull"
+    },
+    {
+      "id": "marvelscale",
+      "kind": "ability",
+      "showdownName": "Marvel Scale"
+    },
+    {
+      "id": "megalauncher",
+      "kind": "ability",
+      "showdownName": "Mega Launcher"
+    },
+    {
+      "id": "merciless",
+      "kind": "ability",
+      "showdownName": "Merciless"
+    },
+    {
+      "id": "mimicry",
+      "kind": "ability",
+      "showdownName": "Mimicry"
+    },
+    {
+      "id": "mindseye",
+      "kind": "ability",
+      "showdownName": "Mind's Eye"
+    },
+    {
+      "id": "minus",
+      "kind": "ability",
+      "showdownName": "Minus"
+    },
+    {
+      "id": "mirrorarmor",
+      "kind": "ability",
+      "showdownName": "Mirror Armor"
+    },
+    {
+      "id": "mistysurge",
+      "kind": "ability",
+      "showdownName": "Misty Surge"
+    },
+    {
+      "id": "moldbreaker",
+      "kind": "ability",
+      "showdownName": "Mold Breaker"
+    },
+    {
+      "id": "moody",
+      "kind": "ability",
+      "showdownName": "Moody"
+    },
+    {
+      "id": "motordrive",
+      "kind": "ability",
+      "showdownName": "Motor Drive"
+    },
+    {
+      "id": "mountaineer",
+      "kind": "ability",
+      "showdownName": "Mountaineer"
+    },
+    {
+      "id": "moxie",
+      "kind": "ability",
+      "showdownName": "Moxie"
+    },
+    {
+      "id": "multiscale",
+      "kind": "ability",
+      "showdownName": "Multiscale"
+    },
+    {
+      "id": "multitype",
+      "kind": "ability",
+      "showdownName": "Multitype"
+    },
+    {
+      "id": "mummy",
+      "kind": "ability",
+      "showdownName": "Mummy"
+    },
+    {
+      "id": "myceliummight",
+      "kind": "ability",
+      "showdownName": "Mycelium Might"
+    },
+    {
+      "id": "naturalcure",
+      "kind": "ability",
+      "showdownName": "Natural Cure"
+    },
+    {
+      "id": "neuroforce",
+      "kind": "ability",
+      "showdownName": "Neuroforce"
+    },
+    {
+      "id": "neutralizinggas",
+      "kind": "ability",
+      "showdownName": "Neutralizing Gas"
+    },
+    {
+      "id": "noguard",
+      "kind": "ability",
+      "showdownName": "No Guard"
+    },
+    {
+      "id": "normalize",
+      "kind": "ability",
+      "showdownName": "Normalize"
+    },
+    {
+      "id": "oblivious",
+      "kind": "ability",
+      "showdownName": "Oblivious"
+    },
+    {
+      "id": "opportunist",
+      "kind": "ability",
+      "showdownName": "Opportunist"
+    },
+    {
+      "id": "orichalcumpulse",
+      "kind": "ability",
+      "showdownName": "Orichalcum Pulse"
+    },
+    {
+      "id": "overcoat",
+      "kind": "ability",
+      "showdownName": "Overcoat"
+    },
+    {
+      "id": "overgrow",
+      "kind": "ability",
+      "showdownName": "Overgrow"
+    },
+    {
+      "id": "owntempo",
+      "kind": "ability",
+      "showdownName": "Own Tempo"
+    },
+    {
+      "id": "parentalbond",
+      "kind": "ability",
+      "showdownName": "Parental Bond"
+    },
+    {
+      "id": "pastelveil",
+      "kind": "ability",
+      "showdownName": "Pastel Veil"
+    },
+    {
+      "id": "perishbody",
+      "kind": "ability",
+      "showdownName": "Perish Body"
+    },
+    {
+      "id": "persistent",
+      "kind": "ability",
+      "showdownName": "Persistent"
+    },
+    {
+      "id": "pickpocket",
+      "kind": "ability",
+      "showdownName": "Pickpocket"
+    },
+    {
+      "id": "pickup",
+      "kind": "ability",
+      "showdownName": "Pickup"
+    },
+    {
+      "id": "pixilate",
+      "kind": "ability",
+      "showdownName": "Pixilate"
+    },
+    {
+      "id": "plus",
+      "kind": "ability",
+      "showdownName": "Plus"
+    },
+    {
+      "id": "poisonheal",
+      "kind": "ability",
+      "showdownName": "Poison Heal"
+    },
+    {
+      "id": "poisonpoint",
+      "kind": "ability",
+      "showdownName": "Poison Point"
+    },
+    {
+      "id": "poisonpuppeteer",
+      "kind": "ability",
+      "showdownName": "Poison Puppeteer"
+    },
+    {
+      "id": "poisontouch",
+      "kind": "ability",
+      "showdownName": "Poison Touch"
+    },
+    {
+      "id": "powerconstruct",
+      "kind": "ability",
+      "showdownName": "Power Construct"
+    },
+    {
+      "id": "powerofalchemy",
+      "kind": "ability",
+      "showdownName": "Power of Alchemy"
+    },
+    {
+      "id": "powerspot",
+      "kind": "ability",
+      "showdownName": "Power Spot"
+    },
+    {
+      "id": "prankster",
+      "kind": "ability",
+      "showdownName": "Prankster"
+    },
+    {
+      "id": "pressure",
+      "kind": "ability",
+      "showdownName": "Pressure"
+    },
+    {
+      "id": "primordialsea",
+      "kind": "ability",
+      "showdownName": "Primordial Sea"
+    },
+    {
+      "id": "prismarmor",
+      "kind": "ability",
+      "showdownName": "Prism Armor"
+    },
+    {
+      "id": "propellertail",
+      "kind": "ability",
+      "showdownName": "Propeller Tail"
+    },
+    {
+      "id": "protean",
+      "kind": "ability",
+      "showdownName": "Protean"
+    },
+    {
+      "id": "protosynthesis",
+      "kind": "ability",
+      "showdownName": "Protosynthesis"
+    },
+    {
+      "id": "psychicsurge",
+      "kind": "ability",
+      "showdownName": "Psychic Surge"
+    },
+    {
+      "id": "punkrock",
+      "kind": "ability",
+      "showdownName": "Punk Rock"
+    },
+    {
+      "id": "purepower",
+      "kind": "ability",
+      "showdownName": "Pure Power"
+    },
+    {
+      "id": "purifyingsalt",
+      "kind": "ability",
+      "showdownName": "Purifying Salt"
+    },
+    {
+      "id": "quarkdrive",
+      "kind": "ability",
+      "showdownName": "Quark Drive"
+    },
+    {
+      "id": "queenlymajesty",
+      "kind": "ability",
+      "showdownName": "Queenly Majesty"
+    },
+    {
+      "id": "quickdraw",
+      "kind": "ability",
+      "showdownName": "Quick Draw"
+    },
+    {
+      "id": "quickfeet",
+      "kind": "ability",
+      "showdownName": "Quick Feet"
+    },
+    {
+      "id": "raindish",
+      "kind": "ability",
+      "showdownName": "Rain Dish"
+    },
+    {
+      "id": "rattled",
+      "kind": "ability",
+      "showdownName": "Rattled"
+    },
+    {
+      "id": "rebound",
+      "kind": "ability",
+      "showdownName": "Rebound"
+    },
+    {
+      "id": "receiver",
+      "kind": "ability",
+      "showdownName": "Receiver"
+    },
+    {
+      "id": "reckless",
+      "kind": "ability",
+      "showdownName": "Reckless"
+    },
+    {
+      "id": "refrigerate",
+      "kind": "ability",
+      "showdownName": "Refrigerate"
+    },
+    {
+      "id": "regenerator",
+      "kind": "ability",
+      "showdownName": "Regenerator"
+    },
+    {
+      "id": "ripen",
+      "kind": "ability",
+      "showdownName": "Ripen"
+    },
+    {
+      "id": "rivalry",
+      "kind": "ability",
+      "showdownName": "Rivalry"
+    },
+    {
+      "id": "rkssystem",
+      "kind": "ability",
+      "showdownName": "RKS System"
+    },
+    {
+      "id": "rockhead",
+      "kind": "ability",
+      "showdownName": "Rock Head"
+    },
+    {
+      "id": "rockypayload",
+      "kind": "ability",
+      "showdownName": "Rocky Payload"
+    },
+    {
+      "id": "roughskin",
+      "kind": "ability",
+      "showdownName": "Rough Skin"
+    },
+    {
+      "id": "runaway",
+      "kind": "ability",
+      "showdownName": "Run Away"
+    },
+    {
+      "id": "sandforce",
+      "kind": "ability",
+      "showdownName": "Sand Force"
+    },
+    {
+      "id": "sandrush",
+      "kind": "ability",
+      "showdownName": "Sand Rush"
+    },
+    {
+      "id": "sandspit",
+      "kind": "ability",
+      "showdownName": "Sand Spit"
+    },
+    {
+      "id": "sandstream",
+      "kind": "ability",
+      "showdownName": "Sand Stream"
+    },
+    {
+      "id": "sandveil",
+      "kind": "ability",
+      "showdownName": "Sand Veil"
+    },
+    {
+      "id": "sapsipper",
+      "kind": "ability",
+      "showdownName": "Sap Sipper"
+    },
+    {
+      "id": "schooling",
+      "kind": "ability",
+      "showdownName": "Schooling"
+    },
+    {
+      "id": "scrappy",
+      "kind": "ability",
+      "showdownName": "Scrappy"
+    },
+    {
+      "id": "screencleaner",
+      "kind": "ability",
+      "showdownName": "Screen Cleaner"
+    },
+    {
+      "id": "seedsower",
+      "kind": "ability",
+      "showdownName": "Seed Sower"
+    },
+    {
+      "id": "serenegrace",
+      "kind": "ability",
+      "showdownName": "Serene Grace"
+    },
+    {
+      "id": "shadowshield",
+      "kind": "ability",
+      "showdownName": "Shadow Shield"
+    },
+    {
+      "id": "shadowtag",
+      "kind": "ability",
+      "showdownName": "Shadow Tag"
+    },
+    {
+      "id": "sharpness",
+      "kind": "ability",
+      "showdownName": "Sharpness"
+    },
+    {
+      "id": "shedskin",
+      "kind": "ability",
+      "showdownName": "Shed Skin"
+    },
+    {
+      "id": "sheerforce",
+      "kind": "ability",
+      "showdownName": "Sheer Force"
+    },
+    {
+      "id": "shellarmor",
+      "kind": "ability",
+      "showdownName": "Shell Armor"
+    },
+    {
+      "id": "shielddust",
+      "kind": "ability",
+      "showdownName": "Shield Dust"
+    },
+    {
+      "id": "shieldsdown",
+      "kind": "ability",
+      "showdownName": "Shields Down"
+    },
+    {
+      "id": "simple",
+      "kind": "ability",
+      "showdownName": "Simple"
+    },
+    {
+      "id": "skilllink",
+      "kind": "ability",
+      "showdownName": "Skill Link"
+    },
+    {
+      "id": "slowstart",
+      "kind": "ability",
+      "showdownName": "Slow Start"
+    },
+    {
+      "id": "slushrush",
+      "kind": "ability",
+      "showdownName": "Slush Rush"
+    },
+    {
+      "id": "sniper",
+      "kind": "ability",
+      "showdownName": "Sniper"
+    },
+    {
+      "id": "snowcloak",
+      "kind": "ability",
+      "showdownName": "Snow Cloak"
+    },
+    {
+      "id": "snowwarning",
+      "kind": "ability",
+      "showdownName": "Snow Warning"
+    },
+    {
+      "id": "solarpower",
+      "kind": "ability",
+      "showdownName": "Solar Power"
+    },
+    {
+      "id": "solidrock",
+      "kind": "ability",
+      "showdownName": "Solid Rock"
+    },
+    {
+      "id": "soulheart",
+      "kind": "ability",
+      "showdownName": "Soul-Heart"
+    },
+    {
+      "id": "soundproof",
+      "kind": "ability",
+      "showdownName": "Soundproof"
+    },
+    {
+      "id": "speedboost",
+      "kind": "ability",
+      "showdownName": "Speed Boost"
+    },
+    {
+      "id": "stakeout",
+      "kind": "ability",
+      "showdownName": "Stakeout"
+    },
+    {
+      "id": "stall",
+      "kind": "ability",
+      "showdownName": "Stall"
+    },
+    {
+      "id": "stalwart",
+      "kind": "ability",
+      "showdownName": "Stalwart"
+    },
+    {
+      "id": "stamina",
+      "kind": "ability",
+      "showdownName": "Stamina"
+    },
+    {
+      "id": "stancechange",
+      "kind": "ability",
+      "showdownName": "Stance Change"
+    },
+    {
+      "id": "static",
+      "kind": "ability",
+      "showdownName": "Static"
+    },
+    {
+      "id": "steadfast",
+      "kind": "ability",
+      "showdownName": "Steadfast"
+    },
+    {
+      "id": "steamengine",
+      "kind": "ability",
+      "showdownName": "Steam Engine"
+    },
+    {
+      "id": "steelworker",
+      "kind": "ability",
+      "showdownName": "Steelworker"
+    },
+    {
+      "id": "steelyspirit",
+      "kind": "ability",
+      "showdownName": "Steely Spirit"
+    },
+    {
+      "id": "stench",
+      "kind": "ability",
+      "showdownName": "Stench"
+    },
+    {
+      "id": "stickyhold",
+      "kind": "ability",
+      "showdownName": "Sticky Hold"
+    },
+    {
+      "id": "stormdrain",
+      "kind": "ability",
+      "showdownName": "Storm Drain"
+    },
+    {
+      "id": "strongjaw",
+      "kind": "ability",
+      "showdownName": "Strong Jaw"
+    },
+    {
+      "id": "sturdy",
+      "kind": "ability",
+      "showdownName": "Sturdy"
+    },
+    {
+      "id": "suctioncups",
+      "kind": "ability",
+      "showdownName": "Suction Cups"
+    },
+    {
+      "id": "superluck",
+      "kind": "ability",
+      "showdownName": "Super Luck"
+    },
+    {
+      "id": "supersweetsyrup",
+      "kind": "ability",
+      "showdownName": "Supersweet Syrup"
+    },
+    {
+      "id": "supremeoverlord",
+      "kind": "ability",
+      "showdownName": "Supreme Overlord"
+    },
+    {
+      "id": "surgesurfer",
+      "kind": "ability",
+      "showdownName": "Surge Surfer"
+    },
+    {
+      "id": "swarm",
+      "kind": "ability",
+      "showdownName": "Swarm"
+    },
+    {
+      "id": "sweetveil",
+      "kind": "ability",
+      "showdownName": "Sweet Veil"
+    },
+    {
+      "id": "swiftswim",
+      "kind": "ability",
+      "showdownName": "Swift Swim"
+    },
+    {
+      "id": "swordofruin",
+      "kind": "ability",
+      "showdownName": "Sword of Ruin"
+    },
+    {
+      "id": "symbiosis",
+      "kind": "ability",
+      "showdownName": "Symbiosis"
+    },
+    {
+      "id": "synchronize",
+      "kind": "ability",
+      "showdownName": "Synchronize"
+    },
+    {
+      "id": "tabletsofruin",
+      "kind": "ability",
+      "showdownName": "Tablets of Ruin"
+    },
+    {
+      "id": "tangledfeet",
+      "kind": "ability",
+      "showdownName": "Tangled Feet"
+    },
+    {
+      "id": "tanglinghair",
+      "kind": "ability",
+      "showdownName": "Tangling Hair"
+    },
+    {
+      "id": "technician",
+      "kind": "ability",
+      "showdownName": "Technician"
+    },
+    {
+      "id": "telepathy",
+      "kind": "ability",
+      "showdownName": "Telepathy"
+    },
+    {
+      "id": "teraformzero",
+      "kind": "ability",
+      "showdownName": "Teraform Zero"
+    },
+    {
+      "id": "terashell",
+      "kind": "ability",
+      "showdownName": "Tera Shell"
+    },
+    {
+      "id": "terashift",
+      "kind": "ability",
+      "showdownName": "Tera Shift"
+    },
+    {
+      "id": "teravolt",
+      "kind": "ability",
+      "showdownName": "Teravolt"
+    },
+    {
+      "id": "thermalexchange",
+      "kind": "ability",
+      "showdownName": "Thermal Exchange"
+    },
+    {
+      "id": "thickfat",
+      "kind": "ability",
+      "showdownName": "Thick Fat"
+    },
+    {
+      "id": "tintedlens",
+      "kind": "ability",
+      "showdownName": "Tinted Lens"
+    },
+    {
+      "id": "torrent",
+      "kind": "ability",
+      "showdownName": "Torrent"
+    },
+    {
+      "id": "toughclaws",
+      "kind": "ability",
+      "showdownName": "Tough Claws"
+    },
+    {
+      "id": "toxicboost",
+      "kind": "ability",
+      "showdownName": "Toxic Boost"
+    },
+    {
+      "id": "toxicchain",
+      "kind": "ability",
+      "showdownName": "Toxic Chain"
+    },
+    {
+      "id": "toxicdebris",
+      "kind": "ability",
+      "showdownName": "Toxic Debris"
+    },
+    {
+      "id": "trace",
+      "kind": "ability",
+      "showdownName": "Trace"
+    },
+    {
+      "id": "transistor",
+      "kind": "ability",
+      "showdownName": "Transistor"
+    },
+    {
+      "id": "triage",
+      "kind": "ability",
+      "showdownName": "Triage"
+    },
+    {
+      "id": "truant",
+      "kind": "ability",
+      "showdownName": "Truant"
+    },
+    {
+      "id": "turboblaze",
+      "kind": "ability",
+      "showdownName": "Turboblaze"
+    },
+    {
+      "id": "unaware",
+      "kind": "ability",
+      "showdownName": "Unaware"
+    },
+    {
+      "id": "unburden",
+      "kind": "ability",
+      "showdownName": "Unburden"
+    },
+    {
+      "id": "unnerve",
+      "kind": "ability",
+      "showdownName": "Unnerve"
+    },
+    {
+      "id": "unseenfist",
+      "kind": "ability",
+      "showdownName": "Unseen Fist"
+    },
+    {
+      "id": "vesselofruin",
+      "kind": "ability",
+      "showdownName": "Vessel of Ruin"
+    },
+    {
+      "id": "victorystar",
+      "kind": "ability",
+      "showdownName": "Victory Star"
+    },
+    {
+      "id": "vitalspirit",
+      "kind": "ability",
+      "showdownName": "Vital Spirit"
+    },
+    {
+      "id": "voltabsorb",
+      "kind": "ability",
+      "showdownName": "Volt Absorb"
+    },
+    {
+      "id": "wanderingspirit",
+      "kind": "ability",
+      "showdownName": "Wandering Spirit"
+    },
+    {
+      "id": "waterabsorb",
+      "kind": "ability",
+      "showdownName": "Water Absorb"
+    },
+    {
+      "id": "waterbubble",
+      "kind": "ability",
+      "showdownName": "Water Bubble"
+    },
+    {
+      "id": "watercompaction",
+      "kind": "ability",
+      "showdownName": "Water Compaction"
+    },
+    {
+      "id": "waterveil",
+      "kind": "ability",
+      "showdownName": "Water Veil"
+    },
+    {
+      "id": "weakarmor",
+      "kind": "ability",
+      "showdownName": "Weak Armor"
+    },
+    {
+      "id": "wellbakedbody",
+      "kind": "ability",
+      "showdownName": "Well-Baked Body"
+    },
+    {
+      "id": "whitesmoke",
+      "kind": "ability",
+      "showdownName": "White Smoke"
+    },
+    {
+      "id": "wimpout",
+      "kind": "ability",
+      "showdownName": "Wimp Out"
+    },
+    {
+      "id": "windpower",
+      "kind": "ability",
+      "showdownName": "Wind Power"
+    },
+    {
+      "id": "windrider",
+      "kind": "ability",
+      "showdownName": "Wind Rider"
+    },
+    {
+      "id": "wonderguard",
+      "kind": "ability",
+      "showdownName": "Wonder Guard"
+    },
+    {
+      "id": "wonderskin",
+      "kind": "ability",
+      "showdownName": "Wonder Skin"
+    },
+    {
+      "id": "zenmode",
+      "kind": "ability",
+      "showdownName": "Zen Mode"
+    },
+    {
+      "id": "zerotohero",
+      "kind": "ability",
+      "showdownName": "Zero to Hero"
+    }
+  ],
+  "summary": {
+    "entryCount": 313,
+    "emptyIdCount": 0,
+    "metadataIsUiHintOnly": true
+  }
+}
