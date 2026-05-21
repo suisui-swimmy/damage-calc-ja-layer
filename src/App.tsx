@@ -1,4 +1,6 @@
 import type { EntityKind } from "./data/optionTypes";
+import type { LocalizedOptionPayload } from "./data/optionTypes";
+import pokemonOptions from "./data/generated/pokemon-options.gen.json";
 import { calculateDamage, getSmogonCalcVersion } from "./calc/smogonAdapter";
 import { formatDamageResultJa } from "./formatters/jaResultFormatter";
 import { resolveEntity } from "./localization/resolver";
@@ -20,6 +22,12 @@ interface LedgerRow {
 const assetPath = (path: string) =>
   `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
 
+const pokemonOptionPayload = pokemonOptions as LocalizedOptionPayload<"pokemon-options">;
+const pokemonArtworkById = new Map(
+  pokemonOptionPayload.entries.map((entry) => [entry.id, entry.artwork]),
+);
+const pokemonArtwork = (id: string) => pokemonArtworkById.get(id);
+
 const ledgerRows: LedgerRow[] = [
   {
     id: "pokemon:pikachu",
@@ -30,7 +38,7 @@ const ledgerRows: LedgerRow[] = [
     source: "ChampionCreator option",
     aliases: ["Pikachu", "pikachu"],
     status: "exact",
-    artwork: "/assets/official-artwork/25.png",
+    artwork: pokemonArtwork("pikachu"),
   },
   {
     id: "pokemon:squirtle",
@@ -41,7 +49,7 @@ const ledgerRows: LedgerRow[] = [
     source: "ChampionCreator option",
     aliases: ["Squirtle", "squirtle"],
     status: "exact",
-    artwork: "/assets/official-artwork/7.png",
+    artwork: pokemonArtwork("squirtle"),
   },
   {
     id: "move:thunderbolt",
@@ -195,7 +203,14 @@ export const App = () => (
               </span>
               <strong className="ja-cell">
                 {row.artwork ? (
-                  <img src={assetPath(row.artwork)} alt="" width="40" height="40" />
+                  <img
+                    src={assetPath(row.artwork)}
+                    alt=""
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 ) : (
                   <span className="entity-mark">{row.labelJa.slice(0, 1)}</span>
                 )}

@@ -12,7 +12,8 @@
     "inspect:calc": "node scripts/inspect-smogon-calc.mjs",
     "generate:calc-catalog": "node scripts/generate-calc-catalog.mjs",
     "validate:calc-catalog": "node scripts/validate-calc-catalog.mjs",
-    "validate:ja-mapping": "node scripts/validate-ja-mapping.mjs"
+    "validate:ja-mapping": "node scripts/validate-ja-mapping.mjs",
+    "validate:artwork-assets": "node scripts/validate-artwork-assets.mjs"
   },
   "dependencies": {
     "@smogon/calc": "^0.11.0",
