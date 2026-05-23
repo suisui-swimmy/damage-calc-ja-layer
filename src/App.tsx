@@ -6,8 +6,21 @@ import moveOptions from "./data/generated/move-options.gen.json";
 import natureOptions from "./data/generated/nature-options.gen.json";
 import pokemonOptions from "./data/generated/pokemon-options.gen.json";
 import typeOptions from "./data/generated/type-options.gen.json";
-import { calculateDamage, getSmogonCalcVersion } from "./calc/smogonAdapter";
+import {
+  calculateDamage,
+  getSmogonCalcVersion,
+  type CalcFieldInput,
+  type DamageCalculationInput,
+} from "./calc/smogonAdapter";
 import { formatDamageResultJa } from "./formatters/jaResultFormatter";
+import {
+  defaultCalcScenario,
+  parseCalcScenarioJson,
+  serializeCalcScenario,
+  type CalcScenarioShareState,
+  type ScenarioTerrain,
+  type ScenarioWeather,
+} from "./domain/shareState";
 import { getOptionDisplayNameJa } from "./localization/displayNameRules";
 import { resolveEntity, type ResolveCandidate, type ResolveResult } from "./localization/resolver";
 
@@ -31,6 +44,11 @@ interface ArtworkImageProps {
   fallbackClassName: string;
   label: string;
   size: number;
+}
+
+interface ResolvedCalcInput {
+  input?: DamageCalculationInput;
+  errors: string[];
 }
 
 const assetPath = (path: string) =>
@@ -100,27 +118,6 @@ const optionRowsByKind = Object.fromEntries(
 
 const ledgerRows = Object.values(optionRowsByKind).flat();
 
-const smokeResult = calculateDamage({
-  attacker: {
-    canonicalName: "Pikachu",
-    level: 50,
-    ability: "Static",
-    nature: "Modest",
-    item: "Choice Specs",
-    evs: { spa: 252 },
-  },
-  defender: {
-    canonicalName: "Squirtle",
-    level: 50,
-    evs: { hp: 252 },
-  },
-  move: {
-    canonicalName: "Thunderbolt",
-  },
-});
-
-const formattedResult = formatDamageResultJa(smokeResult);
-
 const kindLabels: Record<EntityKind, string> = {
   pokemon: "Pokemon",
   move: "Move",
@@ -137,14 +134,25 @@ const statusLabels: Record<LedgerStatus, string> = {
   "needs-confirmation": "needs-confirmation",
 };
 
-const attackerArtwork = pokemonArtworkByCanonicalName.get(
-  formattedResult.attacker.name.canonicalName,
-);
-const defenderArtwork = pokemonArtworkByCanonicalName.get(
-  formattedResult.defender.name.canonicalName,
-);
-
 const statusFilters: StatusFilter[] = ["all", "exact", "alias", "source", "needs-confirmation"];
+
+const weatherOptions: Array<{ value: ScenarioWeather; label: string }> = [
+  { value: "", label: "なし" },
+  { value: "Sun", label: "はれ" },
+  { value: "Rain", label: "あめ" },
+  { value: "Sand", label: "すなあらし" },
+  { value: "Snow", label: "ゆき" },
+];
+
+const terrainOptions: Array<{ value: ScenarioTerrain; label: string }> = [
+  { value: "", label: "なし" },
+  { value: "Electric", label: "エレキフィールド" },
+  { value: "Grassy", label: "グラスフィールド" },
+  { value: "Misty", label: "ミストフィールド" },
+  { value: "Psychic", label: "サイコフィールド" },
+];
+
+const appVersion = "0.0.0-milestone-7";
 
 const matchesStatusFilter = (row: LedgerRow, filter: StatusFilter) =>
   filter === "all" || row.status === filter;
@@ -196,12 +204,100 @@ const rowsFromResolveResult = (
   result.candidates?.map((candidate, index) => rowFromCandidate(kind, input, candidate, index)) ??
   [];
 
+const resolveCanonicalForCalc = (
+  kind: EntityKind,
+  input: string,
+  label: string,
+  allowFuzzy: boolean,
+  optional = false,
+) => {
+  const trimmedInput = input.trim();
+
+  if (!trimmedInput) {
+    return optional
+      ? { canonicalName: undefined, error: undefined }
+      : { canonicalName: undefined, error: `${label} が未入力です` };
+  }
+
+  const result = resolveEntity(kind, trimmedInput, { allowFuzzy });
+
+  if ((result.status === "exact" || result.status === "alias") && result.canonicalName) {
+    return {
+      canonicalName: result.canonicalName,
+      error: undefined,
+    };
+  }
+
+  return {
+    canonicalName: undefined,
+    error:
+      result.status === "fuzzy"
+        ? `${label}「${trimmedInput}」は fuzzy 候補です。候補を確認して完全な名前で入力してください`
+        : `${label}「${trimmedInput}」は ${result.status} です`,
+  };
+};
+
+const resolveScenarioForCalc = (
+  scenario: CalcScenarioShareState,
+  allowFuzzy: boolean,
+): ResolvedCalcInput => {
+  const attacker = resolveCanonicalForCalc("pokemon", scenario.attacker.pokemon, "攻撃側", allowFuzzy);
+  const defender = resolveCanonicalForCalc("pokemon", scenario.defender.pokemon, "防御側", allowFuzzy);
+  const move = resolveCanonicalForCalc("move", scenario.move.name, "技", allowFuzzy);
+  const item = resolveCanonicalForCalc("item", scenario.attacker.item, "持ち物", allowFuzzy, true);
+  const ability = resolveCanonicalForCalc("ability", scenario.attacker.ability, "特性", allowFuzzy, true);
+  const nature = resolveCanonicalForCalc("nature", scenario.attacker.nature, "性格", allowFuzzy, true);
+  const errors = [attacker, defender, move, item, ability, nature]
+    .map((entry) => entry.error)
+    .filter((entry): entry is string => Boolean(entry));
+
+  if (errors.length > 0 || !attacker.canonicalName || !defender.canonicalName || !move.canonicalName) {
+    return { errors };
+  }
+
+  const field: CalcFieldInput = {
+    weather: scenario.field.weather || undefined,
+    terrain: scenario.field.terrain || undefined,
+    defenderSide: scenario.field.defenderLightScreen
+      ? {
+          isLightScreen: true,
+        }
+      : undefined,
+  };
+
+  return {
+    errors,
+    input: {
+      attacker: {
+        canonicalName: attacker.canonicalName,
+        level: 50,
+        item: item.canonicalName,
+        ability: ability.canonicalName,
+        nature: nature.canonicalName,
+        evs: { spa: 252 },
+      },
+      defender: {
+        canonicalName: defender.canonicalName,
+        level: 50,
+        evs: { hp: 252 },
+      },
+      move: {
+        canonicalName: move.canonicalName,
+      },
+      field,
+    },
+  };
+};
+
 export const App = () => {
   const [activeKind, setActiveKind] = useState<EntityKind>("pokemon");
   const [activeStatusFilter, setActiveStatusFilter] = useState<StatusFilter>("all");
   const [query, setQuery] = useState("ピカチュウ");
   const [allowFuzzy, setAllowFuzzy] = useState(true);
   const [selectedRowId, setSelectedRowId] = useState(firstMatchingRow("pokemon", "all").id);
+  const [scenario, setScenario] = useState<CalcScenarioShareState>(defaultCalcScenario);
+  const [jsonDraft, setJsonDraft] = useState(serializeCalcScenario(defaultCalcScenario));
+  const [jsonMessage, setJsonMessage] = useState("ready");
   const normalizedQuery = query.trim();
   const resolveResult = useMemo(
     () =>
@@ -233,6 +329,37 @@ export const App = () => {
   const statusSummary = resolveResult
     ? `${resolveResult.status} / ${resolveResult.candidates?.length ?? 0} candidates`
     : `${optionRowsByKind[activeKind].length} entries`;
+  const resolvedCalcInput = useMemo(
+    () => resolveScenarioForCalc(scenario, allowFuzzy),
+    [allowFuzzy, scenario],
+  );
+  const calculation = useMemo(() => {
+    if (!resolvedCalcInput.input) {
+      return {
+        result: undefined,
+        error: resolvedCalcInput.errors.join(" / "),
+      };
+    }
+
+    try {
+      return {
+        result: calculateDamage(resolvedCalcInput.input),
+        error: "",
+      };
+    } catch (error) {
+      return {
+        result: undefined,
+        error: error instanceof Error ? error.message : "計算に失敗しました",
+      };
+    }
+  }, [resolvedCalcInput]);
+  const formattedResult = calculation.result ? formatDamageResultJa(calculation.result) : undefined;
+  const attackerArtwork = formattedResult
+    ? pokemonArtworkByCanonicalName.get(formattedResult.attacker.name.canonicalName)
+    : undefined;
+  const defenderArtwork = formattedResult
+    ? pokemonArtworkByCanonicalName.get(formattedResult.defender.name.canonicalName)
+    : undefined;
 
   const selectKind = (kind: EntityKind) => {
     setActiveKind(kind);
@@ -249,14 +376,60 @@ export const App = () => {
     setSelectedRowId("");
   };
 
+  const updateScenario = (
+    section: "attacker" | "defender" | "move" | "field",
+    key: string,
+    value: string | boolean,
+  ) => {
+    setScenario((current) => {
+      const next = {
+        ...current,
+        [section]: {
+          ...current[section],
+          [key]: value,
+        },
+      };
+
+      setJsonDraft(serializeCalcScenario(next));
+      setJsonMessage("edited");
+      return next;
+    });
+  };
+
+  const applyJsonDraft = () => {
+    const parsed = parseCalcScenarioJson(jsonDraft);
+
+    if (!parsed.ok || !parsed.scenario) {
+      setJsonMessage(parsed.error ?? "import failed");
+      return;
+    }
+
+    setScenario(parsed.scenario);
+    setJsonDraft(serializeCalcScenario(parsed.scenario));
+    setJsonMessage("imported");
+  };
+
+  const copyJsonDraft = async () => {
+    const json = serializeCalcScenario(scenario);
+    setJsonDraft(json);
+
+    try {
+      await navigator.clipboard?.writeText(json);
+      setJsonMessage("copied");
+    } catch {
+      setJsonMessage("copy failed; textarea updated");
+    }
+  };
+
   return (
     <main className="app-shell">
       <header className="topbar">
         <div>
-          <p className="eyebrow">Milestone 6 UI Preview</p>
-          <h1>日英対応一覧</h1>
+          <p className="eyebrow">Milestone 7 Release Candidate</p>
+          <h1>日本語ダメージ計算レイヤー</h1>
         </div>
         <div className="version-stack" aria-label="version info">
+          <span>app {appVersion}</span>
           <span>@smogon/calc {getSmogonCalcVersion()}</span>
           <span>data calc-0.11.0-gen9</span>
         </div>
@@ -291,6 +464,119 @@ export const App = () => {
             clear
           </button>
         </div>
+      </section>
+
+      <section className="scenario-panel" aria-labelledby="scenario-title">
+        <div className="panel-header compact">
+          <div>
+            <h2 id="scenario-title">計算条件</h2>
+            <p>{calculation.error || formattedResult?.summaryText || "resolver ready"}</p>
+          </div>
+          <div className="scenario-actions">
+            <button className="clear-button" onClick={copyJsonDraft} type="button">
+              copy JSON
+            </button>
+            <button className="clear-button" onClick={applyJsonDraft} type="button">
+              import JSON
+            </button>
+            <span className="source-chip source">{jsonMessage}</span>
+          </div>
+        </div>
+
+        <div className="scenario-grid">
+          <label className="query-field">
+            <span>攻撃側</span>
+            <input
+              onChange={(event) => updateScenario("attacker", "pokemon", event.target.value)}
+              value={scenario.attacker.pokemon}
+            />
+          </label>
+          <label className="query-field">
+            <span>防御側</span>
+            <input
+              onChange={(event) => updateScenario("defender", "pokemon", event.target.value)}
+              value={scenario.defender.pokemon}
+            />
+          </label>
+          <label className="query-field">
+            <span>技</span>
+            <input
+              onChange={(event) => updateScenario("move", "name", event.target.value)}
+              value={scenario.move.name}
+            />
+          </label>
+          <label className="query-field">
+            <span>持ち物</span>
+            <input
+              onChange={(event) => updateScenario("attacker", "item", event.target.value)}
+              value={scenario.attacker.item}
+            />
+          </label>
+          <label className="query-field">
+            <span>特性</span>
+            <input
+              onChange={(event) => updateScenario("attacker", "ability", event.target.value)}
+              value={scenario.attacker.ability}
+            />
+          </label>
+          <label className="query-field">
+            <span>性格</span>
+            <input
+              onChange={(event) => updateScenario("attacker", "nature", event.target.value)}
+              value={scenario.attacker.nature}
+            />
+          </label>
+          <label className="query-field">
+            <span>天候</span>
+            <select
+              onChange={(event) =>
+                updateScenario("field", "weather", event.target.value as ScenarioWeather)
+              }
+              value={scenario.field.weather}
+            >
+              {weatherOptions.map((option) => (
+                <option key={option.value || "none"} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="query-field">
+            <span>フィールド</span>
+            <select
+              onChange={(event) =>
+                updateScenario("field", "terrain", event.target.value as ScenarioTerrain)
+              }
+              value={scenario.field.terrain}
+            >
+              {terrainOptions.map((option) => (
+                <option key={option.value || "none"} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="toggle-field light-screen-toggle">
+            <input
+              checked={scenario.field.defenderLightScreen}
+              onChange={(event) =>
+                updateScenario("field", "defenderLightScreen", event.target.checked)
+              }
+              type="checkbox"
+            />
+            <span>ひかりのかべ</span>
+          </label>
+        </div>
+
+        <textarea
+          aria-label="calculation condition JSON"
+          className="json-draft"
+          onChange={(event) => {
+            setJsonDraft(event.target.value);
+            setJsonMessage("editing JSON");
+          }}
+          value={jsonDraft}
+        />
       </section>
 
       <section className="workspace" aria-label="Japanese English mapping workspace">
@@ -406,12 +692,12 @@ export const App = () => {
           <div className="trace-arrow" aria-hidden="true" />
           <div className="trace-card">
             <span>formatter</span>
-            <strong>{formattedResult.summaryText}</strong>
+            <strong>{formattedResult?.summaryText ?? "計算条件を確認中"}</strong>
           </div>
 
           <div className="raw-source">
             <span>raw source</span>
-            <code>{smokeResult.rawDescription}</code>
+            <code>{calculation.result?.rawDescription ?? calculation.error}</code>
           </div>
         </aside>
       </section>
@@ -419,7 +705,7 @@ export const App = () => {
       <section className="calc-strip" aria-label="calculation result">
         <div>
           <div className="result-entity">
-            {attackerArtwork ? (
+            {attackerArtwork && formattedResult ? (
               <ArtworkImage
                 artwork={attackerArtwork}
                 fallbackClassName="result-mark"
@@ -428,24 +714,24 @@ export const App = () => {
               />
             ) : (
               <span className="result-mark">
-                {formattedResult.attacker.name.displayNameJa.slice(0, 1)}
+                {(formattedResult?.attacker.name.displayNameJa ?? "?").slice(0, 1)}
               </span>
             )}
             <div>
               <span>attacker</span>
-              <strong>{formattedResult.attacker.name.displayNameJa}</strong>
-              <code>{formattedResult.attacker.name.canonicalName}</code>
+              <strong>{formattedResult?.attacker.name.displayNameJa ?? scenario.attacker.pokemon}</strong>
+              <code>{formattedResult?.attacker.name.canonicalName ?? "unresolved"}</code>
             </div>
           </div>
         </div>
         <div>
           <span>move</span>
-          <strong>{formattedResult.move.name.displayNameJa}</strong>
-          <code>{formattedResult.move.name.canonicalName}</code>
+          <strong>{formattedResult?.move.name.displayNameJa ?? scenario.move.name}</strong>
+          <code>{formattedResult?.move.name.canonicalName ?? "unresolved"}</code>
         </div>
         <div>
           <div className="result-entity">
-            {defenderArtwork ? (
+            {defenderArtwork && formattedResult ? (
               <ArtworkImage
                 artwork={defenderArtwork}
                 fallbackClassName="result-mark"
@@ -454,19 +740,19 @@ export const App = () => {
               />
             ) : (
               <span className="result-mark">
-                {formattedResult.defender.name.displayNameJa.slice(0, 1)}
+                {(formattedResult?.defender.name.displayNameJa ?? "?").slice(0, 1)}
               </span>
             )}
             <div>
               <span>defender</span>
-              <strong>{formattedResult.defender.name.displayNameJa}</strong>
-              <code>{formattedResult.defender.name.canonicalName}</code>
+              <strong>{formattedResult?.defender.name.displayNameJa ?? scenario.defender.pokemon}</strong>
+              <code>{formattedResult?.defender.name.canonicalName ?? "unresolved"}</code>
             </div>
           </div>
         </div>
         <div className="damage-result">
           <span>formatter result</span>
-          <strong>{formattedResult.summaryText}</strong>
+          <strong>{formattedResult?.summaryText ?? calculation.error}</strong>
         </div>
       </section>
     </main>

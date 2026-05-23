@@ -23,8 +23,8 @@ body {
 
 button,
 input,
-textarea,
-select {
+select,
+textarea {
   font: inherit;
 }
 
@@ -108,6 +108,7 @@ p {
 .ledger-panel,
 .trace-panel,
 .resolver-panel,
+.scenario-panel,
 .calc-strip {
   border: 1px solid #daddd4;
   background: rgba(255, 255, 255, 0.88);
@@ -146,7 +147,8 @@ p {
   text-transform: uppercase;
 }
 
-.query-field input {
+.query-field input,
+.query-field select {
   width: 100%;
   min-height: 40px;
   border: 1px solid #dce0d6;
@@ -156,7 +158,8 @@ p {
   padding: 0 12px;
 }
 
-.query-field input:focus {
+.query-field input:focus,
+.query-field select:focus {
   border-color: #f0c84c;
   outline: 3px solid #fff3bd;
 }
@@ -186,6 +189,50 @@ p {
 .clear-button:focus-visible {
   border-color: #c9d0c2;
   background: #eef2e8;
+}
+
+.scenario-panel {
+  overflow: hidden;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.panel-header.compact {
+  align-items: center;
+  padding: 14px 18px;
+}
+
+.scenario-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 8px;
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e6e8df;
+}
+
+.light-screen-toggle {
+  align-self: end;
+}
+
+.json-draft {
+  display: block;
+  width: 100%;
+  min-height: 132px;
+  border: 0;
+  background: #172027;
+  color: #f9fbf2;
+  padding: 14px 18px;
+  font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  resize: vertical;
 }
 
 .entity-rail {
@@ -615,12 +662,21 @@ p {
 
   .topbar,
   .resolver-panel,
+  .scenario-grid,
   .panel-header {
     display: grid;
   }
 
   .resolver-controls {
     grid-template-columns: 1fr;
+  }
+
+  .scenario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scenario-actions {
+    justify-content: start;
   }
 
   .version-stack {
