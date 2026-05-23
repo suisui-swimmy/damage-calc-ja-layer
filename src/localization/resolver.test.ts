@@ -138,6 +138,19 @@ describe("resolveEntity", () => {
     });
   });
 
+  it("derives Arceus type-form labels from canonical type suffixes", () => {
+    expect(resolveEntity("pokemon", "Arceus-Bug")).toMatchObject({
+      status: "exact",
+      canonicalName: "Arceus-Bug",
+      displayNameJa: "アルセウス むしタイプ",
+    });
+    expect(resolveEntity("pokemon", "アルセウス むしタイプ")).toMatchObject({
+      status: "exact",
+      canonicalName: "Arceus-Bug",
+      displayNameJa: "アルセウス むしタイプ",
+    });
+  });
+
   it("does not collapse fuzzy ambiguity into one candidate", () => {
     const result = resolveEntity("pokemon", "ピカ", { allowFuzzy: true });
 

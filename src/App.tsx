@@ -1,11 +1,17 @@
 import { useMemo, useState } from "react";
 import type { EntityKind, LocalizedOptionPayload } from "./data/optionTypes";
+import abilityOptions from "./data/generated/ability-options.gen.json";
+import itemOptions from "./data/generated/item-options.gen.json";
+import moveOptions from "./data/generated/move-options.gen.json";
+import natureOptions from "./data/generated/nature-options.gen.json";
 import pokemonOptions from "./data/generated/pokemon-options.gen.json";
+import typeOptions from "./data/generated/type-options.gen.json";
 import { calculateDamage, getSmogonCalcVersion } from "./calc/smogonAdapter";
 import { formatDamageResultJa } from "./formatters/jaResultFormatter";
-import { resolveEntity } from "./localization/resolver";
+import { getOptionDisplayNameJa } from "./localization/displayNameRules";
+import { resolveEntity, type ResolveCandidate, type ResolveResult } from "./localization/resolver";
 
-type LedgerStatus = "exact" | "alias" | "source";
+type LedgerStatus = "exact" | "alias" | "source" | "needs-confirmation";
 type StatusFilter = LedgerStatus | "all" | "needs-confirmation";
 
 interface LedgerRow {
@@ -20,101 +26,79 @@ interface LedgerRow {
   artwork?: string;
 }
 
+interface ArtworkImageProps {
+  artwork: string;
+  fallbackClassName: string;
+  label: string;
+  size: number;
+}
+
 const assetPath = (path: string) =>
   `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
 
+const ArtworkImage = ({ artwork, fallbackClassName, label, size }: ArtworkImageProps) => {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return <span className={fallbackClassName}>{label.slice(0, 1)}</span>;
+  }
+
+  return (
+    <img
+      src={assetPath(artwork)}
+      alt=""
+      width={size}
+      height={size}
+      loading="lazy"
+      decoding="async"
+      onError={() => setFailed(true)}
+    />
+  );
+};
+
 const pokemonOptionPayload = pokemonOptions as LocalizedOptionPayload<"pokemon-options">;
+const optionPayloadByKind: Record<EntityKind, LocalizedOptionPayload> = {
+  pokemon: pokemonOptionPayload,
+  move: moveOptions as LocalizedOptionPayload<"move-options">,
+  item: itemOptions as LocalizedOptionPayload<"item-options">,
+  ability: abilityOptions as LocalizedOptionPayload<"ability-options">,
+  nature: natureOptions as LocalizedOptionPayload<"nature-options">,
+  type: typeOptions as LocalizedOptionPayload<"type-options">,
+};
+
 const pokemonOptionById = new Map(pokemonOptionPayload.entries.map((entry) => [entry.id, entry]));
 const pokemonArtworkByCanonicalName = new Map(
   pokemonOptionPayload.entries.map((entry) => [entry.showdownName, entry.artwork]),
 );
 
-const pokemonShowcaseIds = [
-  "pikachu",
-  "squirtle",
-  "charizard",
-  "garchomp",
-  "miraidon",
-  "ogerponwellspring",
-  "terapagosstellar",
-  "zygardecomplete",
-];
-
-const pokemonLedgerRows = pokemonShowcaseIds.flatMap((id): LedgerRow[] => {
-  const option = pokemonOptionById.get(id);
-
-  if (!option) {
-    return [];
+const sourceStatusToLedgerStatus = (sourceStatus?: string): LedgerStatus => {
+  if (sourceStatus === "needs-confirmation") {
+    return "needs-confirmation";
   }
+  if (sourceStatus === "adapter-temporary" || sourceStatus === "unsupported-temporary") {
+    return "source";
+  }
+  return "exact";
+};
 
-  return [
-    {
-      id: `pokemon:${option.id}`,
-      kind: "pokemon",
-      labelJa: option.label,
-      inputJa: option.label,
-      canonicalName: option.showdownName,
-      source: "pokemon-options artwork",
-      aliases: [option.showdownName, option.id],
-      status: "exact",
-      artwork: option.artwork,
-    },
-  ];
-});
+const optionRowsByKind = Object.fromEntries(
+  Object.entries(optionPayloadByKind).map(([kind, payload]) => [
+    kind,
+    payload.entries.map((entry): LedgerRow => ({
+      id: `${kind}:${entry.id}`,
+      kind: kind as EntityKind,
+      labelJa: getOptionDisplayNameJa(kind as EntityKind, entry),
+      inputJa: getOptionDisplayNameJa(kind as EntityKind, entry),
+      canonicalName: entry.showdownName,
+      source: payload.generatedBy,
+      aliases: [entry.showdownName, entry.id],
+      status: sourceStatusToLedgerStatus(entry.sourceStatus ?? entry.fallback?.nameSourceStatus),
+      artwork: kind === "pokemon" ? entry.artwork : undefined,
+    })),
+  ]),
+) as Record<EntityKind, LedgerRow[]>;
 
-const ledgerRows: LedgerRow[] = [
-  ...pokemonLedgerRows,
-  {
-    id: "move:thunderbolt",
-    kind: "move",
-    labelJa: "10まんボルト",
-    inputJa: "10万ボルト",
-    canonicalName: "Thunderbolt",
-    source: "manual alias overlay",
-    aliases: ["10まんボルト", "10万ボルト", "Thunderbolt"],
-    status: "alias",
-  },
-  {
-    id: "item:choicespecs",
-    kind: "item",
-    labelJa: "こだわりメガネ",
-    inputJa: "こだわりメガネ",
-    canonicalName: "Choice Specs",
-    source: "ChampionCreator option",
-    aliases: ["Choice Specs", "choicespecs"],
-    status: "exact",
-  },
-  {
-    id: "ability:static",
-    kind: "ability",
-    labelJa: "せいでんき",
-    inputJa: "せいでんき",
-    canonicalName: "Static",
-    source: "ChampionCreator option",
-    aliases: ["Static", "static"],
-    status: "exact",
-  },
-  {
-    id: "nature:modest",
-    kind: "nature",
-    labelJa: "ひかえめ",
-    inputJa: "ひかえめ",
-    canonicalName: "Modest",
-    source: "ChampionCreator option",
-    aliases: ["Modest", "とくこう上昇"],
-    status: "exact",
-  },
-  {
-    id: "type:electric",
-    kind: "type",
-    labelJa: "でんき",
-    inputJa: "でんき",
-    canonicalName: "Electric",
-    source: "calc catalog",
-    aliases: ["Electric", "electric"],
-    status: "source",
-  },
-];
+const ledgerRows = Object.values(optionRowsByKind).flat();
 
 const smokeResult = calculateDamage({
   attacker: {
@@ -150,6 +134,7 @@ const statusLabels: Record<LedgerStatus, string> = {
   exact: "exact",
   alias: "alias",
   source: "source",
+  "needs-confirmation": "needs-confirmation",
 };
 
 const attackerArtwork = pokemonArtworkByCanonicalName.get(
@@ -159,7 +144,7 @@ const defenderArtwork = pokemonArtworkByCanonicalName.get(
   formattedResult.defender.name.canonicalName,
 );
 
-const statusFilters: StatusFilter[] = ["all", "exact", "alias", "needs-confirmation"];
+const statusFilters: StatusFilter[] = ["all", "exact", "alias", "source", "needs-confirmation"];
 
 const matchesStatusFilter = (row: LedgerRow, filter: StatusFilter) =>
   filter === "all" || row.status === filter;
@@ -169,36 +154,99 @@ const firstMatchingRow = (kind: EntityKind, filter: StatusFilter) =>
   ledgerRows.find((row) => row.kind === kind) ??
   ledgerRows[0];
 
+const candidateStatus = (candidate: ResolveCandidate): LedgerStatus => {
+  if (candidate.sourceStatus === "needs-confirmation") {
+    return "needs-confirmation";
+  }
+  if (candidate.matchedBy === "manualAlias" || candidate.matchedBy === "searchText") {
+    return "alias";
+  }
+  if (candidate.matchedBy === "fuzzy") {
+    return "source";
+  }
+  return "exact";
+};
+
+const rowFromCandidate = (
+  kind: EntityKind,
+  input: string,
+  candidate: ResolveCandidate,
+  index: number,
+): LedgerRow => {
+  const option = kind === "pokemon" ? pokemonOptionById.get(candidate.calcId) : undefined;
+
+  return {
+    id: `candidate:${kind}:${candidate.calcId}:${index}`,
+    kind,
+    labelJa: candidate.displayNameJa,
+    inputJa: input,
+    canonicalName: candidate.canonicalName,
+    source: candidate.reason,
+    aliases: [candidate.matchText, candidate.canonicalName, candidate.calcId],
+    status: candidateStatus(candidate),
+    artwork: option?.artwork,
+  };
+};
+
+const rowsFromResolveResult = (
+  kind: EntityKind,
+  input: string,
+  result: ResolveResult,
+): LedgerRow[] =>
+  result.candidates?.map((candidate, index) => rowFromCandidate(kind, input, candidate, index)) ??
+  [];
+
 export const App = () => {
   const [activeKind, setActiveKind] = useState<EntityKind>("pokemon");
   const [activeStatusFilter, setActiveStatusFilter] = useState<StatusFilter>("all");
+  const [query, setQuery] = useState("ピカチュウ");
+  const [allowFuzzy, setAllowFuzzy] = useState(true);
   const [selectedRowId, setSelectedRowId] = useState(firstMatchingRow("pokemon", "all").id);
-
-  const visibleRows = useMemo(
+  const normalizedQuery = query.trim();
+  const resolveResult = useMemo(
     () =>
-      ledgerRows.filter(
-        (row) => row.kind === activeKind && matchesStatusFilter(row, activeStatusFilter),
-      ),
-    [activeKind, activeStatusFilter],
+      normalizedQuery
+        ? resolveEntity(activeKind, normalizedQuery, { allowFuzzy })
+        : undefined,
+    [activeKind, allowFuzzy, normalizedQuery],
+  );
+  const candidateRows = useMemo(
+    () =>
+      resolveResult
+        ? rowsFromResolveResult(activeKind, normalizedQuery, resolveResult)
+        : [],
+    [activeKind, normalizedQuery, resolveResult],
   );
 
-  const selectedRow =
-    visibleRows.find((row) => row.id === selectedRowId) ??
-    firstMatchingRow(activeKind, activeStatusFilter);
-  const selectedTrace = resolveEntity(selectedRow.kind, selectedRow.inputJa);
+  const visibleRows = useMemo(
+    () => {
+      const sourceRows = normalizedQuery ? candidateRows : optionRowsByKind[activeKind];
+      return sourceRows.filter((row) => matchesStatusFilter(row, activeStatusFilter));
+    },
+    [activeKind, activeStatusFilter, candidateRows, normalizedQuery],
+  );
+
+  const selectedRow = visibleRows.find((row) => row.id === selectedRowId) ?? visibleRows[0];
+  const selectedTrace = selectedRow
+    ? resolveEntity(selectedRow.kind, selectedRow.inputJa, { allowFuzzy })
+    : resolveResult;
+  const statusSummary = resolveResult
+    ? `${resolveResult.status} / ${resolveResult.candidates?.length ?? 0} candidates`
+    : `${optionRowsByKind[activeKind].length} entries`;
 
   const selectKind = (kind: EntityKind) => {
-    const nextSelectedRow = firstMatchingRow(kind, activeStatusFilter);
-
     setActiveKind(kind);
-    setSelectedRowId(nextSelectedRow.id);
+    setSelectedRowId("");
   };
 
   const selectStatusFilter = (filter: StatusFilter) => {
-    const nextSelectedRow = firstMatchingRow(activeKind, filter);
-
     setActiveStatusFilter(filter);
-    setSelectedRowId(nextSelectedRow.id);
+    setSelectedRowId("");
+  };
+
+  const updateQuery = (value: string) => {
+    setQuery(value);
+    setSelectedRowId("");
   };
 
   return (
@@ -213,6 +261,37 @@ export const App = () => {
           <span>data calc-0.11.0-gen9</span>
         </div>
       </header>
+
+      <section className="resolver-panel" aria-labelledby="resolver-title">
+        <div>
+          <h2 id="resolver-title">resolver input</h2>
+          <p>{kindLabels[activeKind]} / {statusSummary}</p>
+        </div>
+        <div className="resolver-controls">
+          <label className="query-field">
+            <span>input</span>
+            <input
+              onChange={(event) => updateQuery(event.target.value)}
+              placeholder="ピカチュウ / 10万ボルト / Choice Specs"
+              value={query}
+            />
+          </label>
+          <label className="toggle-field">
+            <input
+              checked={allowFuzzy}
+              onChange={(event) => {
+                setAllowFuzzy(event.target.checked);
+                setSelectedRowId("");
+              }}
+              type="checkbox"
+            />
+            <span>fuzzy</span>
+          </label>
+          <button className="clear-button" onClick={() => updateQuery("")} type="button">
+            clear
+          </button>
+        </div>
+      </section>
 
       <section className="workspace" aria-label="Japanese English mapping workspace">
         <nav className="entity-rail" aria-label="entity categories">
@@ -238,7 +317,7 @@ export const App = () => {
           <div className="panel-header">
             <div>
               <h2 id="ledger-title">日英対応</h2>
-              <p>日本語 UI の入力語と Smogon / Showdown canonical name の対応を確認する画面。</p>
+              <p>{normalizedQuery ? `「${normalizedQuery}」の resolver 候補` : `${kindLabels[activeKind]} の option entries`}</p>
             </div>
             <div className="filter-row" aria-label="status filters">
               {statusFilters.map((filter) => (
@@ -278,13 +357,11 @@ export const App = () => {
                   </span>
                   <strong className="ja-cell">
                     {row.artwork ? (
-                      <img
-                        src={assetPath(row.artwork)}
-                        alt=""
-                        width="40"
-                        height="40"
-                        loading="lazy"
-                        decoding="async"
+                      <ArtworkImage
+                        artwork={row.artwork}
+                        fallbackClassName="entity-mark"
+                        label={row.labelJa}
+                        size={40}
                       />
                     ) : (
                       <span className="entity-mark">{row.labelJa.slice(0, 1)}</span>
@@ -308,23 +385,23 @@ export const App = () => {
               <h2 id="trace-title">resolver trace</h2>
               <p>選択中の行が計算入力へ渡るまでの検証ログ。</p>
             </div>
-            <span className={`source-chip ${selectedRow.status}`}>selected</span>
+            <span className={`source-chip ${selectedRow?.status ?? "source"}`}>selected</span>
           </div>
 
           <div className="trace-card">
             <span>入力</span>
-            <strong>{selectedRow.inputJa}</strong>
+            <strong>{selectedRow?.inputJa ?? normalizedQuery ?? "-"}</strong>
           </div>
           <div className="trace-arrow" aria-hidden="true" />
           <div className="trace-card">
             <span>resolver</span>
-            <strong>{selectedTrace.status}</strong>
-            <small>{selectedTrace.candidates?.[0]?.reason ?? "candidate check"}</small>
+            <strong>{selectedTrace?.status ?? "not-found"}</strong>
+            <small>{selectedTrace?.candidates?.[0]?.reason ?? "candidate check"}</small>
           </div>
           <div className="trace-arrow" aria-hidden="true" />
           <div className="trace-card">
             <span>canonical</span>
-            <code>{selectedTrace.canonicalName ?? selectedRow.canonicalName}</code>
+            <code>{selectedTrace?.canonicalName ?? selectedRow?.canonicalName ?? "未決定"}</code>
           </div>
           <div className="trace-arrow" aria-hidden="true" />
           <div className="trace-card">
@@ -343,13 +420,11 @@ export const App = () => {
         <div>
           <div className="result-entity">
             {attackerArtwork ? (
-              <img
-                src={assetPath(attackerArtwork)}
-                alt=""
-                width="52"
-                height="52"
-                loading="lazy"
-                decoding="async"
+              <ArtworkImage
+                artwork={attackerArtwork}
+                fallbackClassName="result-mark"
+                label={formattedResult.attacker.name.displayNameJa}
+                size={52}
               />
             ) : (
               <span className="result-mark">
@@ -371,13 +446,11 @@ export const App = () => {
         <div>
           <div className="result-entity">
             {defenderArtwork ? (
-              <img
-                src={assetPath(defenderArtwork)}
-                alt=""
-                width="52"
-                height="52"
-                loading="lazy"
-                decoding="async"
+              <ArtworkImage
+                artwork={defenderArtwork}
+                fallbackClassName="result-mark"
+                label={formattedResult.defender.name.displayNameJa}
+                size={52}
               />
             ) : (
               <span className="result-mark">

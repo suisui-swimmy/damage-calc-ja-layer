@@ -17,6 +17,7 @@ export interface OptionFallback {
 
 export interface LocalizedOptionEntry {
   id: string;
+  kind?: EntityKind;
   label: string;
   showdownName: string;
   searchText: string;

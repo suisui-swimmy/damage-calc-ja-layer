@@ -6,6 +6,7 @@ import pokemonOptions from "../data/generated/pokemon-options.gen.json";
 import typeOptions from "../data/generated/type-options.gen.json";
 import jaAliases from "../data/overrides/ja-aliases.json";
 import jaLabelOverrides from "../data/overrides/ja-label-overrides.json";
+import { getOptionDisplayNameJa } from "./displayNameRules";
 import type {
   EntityKind,
   LocalizedOptionEntry,
@@ -46,6 +47,7 @@ export interface ResolveOptions {
 }
 
 interface SearchEntry {
+  kind: EntityKind;
   option: LocalizedOptionEntry;
   matchedBy: ResolveMatchedBy;
   matchText: string;
@@ -91,7 +93,7 @@ const reasonByMatchedBy: Record<ResolveMatchedBy, string> = {
 
 const candidateFromSearchEntry = (entry: SearchEntry): ResolveCandidate => ({
   canonicalName: entry.option.showdownName,
-  displayNameJa: entry.option.label,
+  displayNameJa: getOptionDisplayNameJa(entry.kind, entry.option),
   reason: reasonByMatchedBy[entry.matchedBy],
   calcId: entry.option.id,
   sourceStatus: sourceStatusOf(entry.option, entry.sourceStatus),
@@ -120,18 +122,23 @@ const buildIndex = (kind: EntityKind, entries: LocalizedOptionEntry[]) => {
   const aliasIndex = new Map<string, SearchEntry[]>();
 
   for (const option of entries) {
-    addIndexValue(exactIndex, option.label, {
+    const displayNameJa = getOptionDisplayNameJa(kind, option);
+
+    addIndexValue(exactIndex, displayNameJa, {
+      kind,
       option,
       matchedBy: "label",
-      matchText: option.label,
+      matchText: displayNameJa,
     });
     addIndexValue(exactIndex, option.showdownName, {
+      kind,
       option,
       matchedBy: "canonical",
       matchText: option.showdownName,
     });
-    addIndexValue(exactIndex, option.id, { option, matchedBy: "id", matchText: option.id });
+    addIndexValue(exactIndex, option.id, { kind, option, matchedBy: "id", matchText: option.id });
     addIndexValue(exactIndex, toCalcId(option.showdownName), {
+      kind,
       option,
       matchedBy: "canonical",
       matchText: toCalcId(option.showdownName),
@@ -139,6 +146,7 @@ const buildIndex = (kind: EntityKind, entries: LocalizedOptionEntry[]) => {
 
     for (const token of option.searchText.split(/\s+/)) {
       addIndexValue(aliasIndex, token, {
+        kind,
         option,
         matchedBy: "searchText",
         matchText: token,
@@ -148,6 +156,7 @@ const buildIndex = (kind: EntityKind, entries: LocalizedOptionEntry[]) => {
     const aliasOverride = aliasOverridesByKey.get(`${kind}:${option.id}`);
     for (const alias of aliasOverride?.aliasesJa ?? []) {
       addIndexValue(aliasIndex, alias, {
+        kind,
         option,
         matchedBy: "manualAlias",
         matchText: alias,
@@ -174,6 +183,7 @@ const applyManualOverrides = (
 
     return {
       ...entry,
+      kind,
       label: displayNameJa ?? entry.label,
       sourceStatus: labelOverride?.sourceStatus ?? entry.sourceStatus,
     };
@@ -243,6 +253,7 @@ export const resolveEntity = (
       .filter((entry) => normalizeJaSearchText(entry.searchText).includes(normalized))
       .slice(0, 10)
       .map((option) => ({
+        kind,
         option,
         matchedBy: "fuzzy" as const,
         matchText: input,
