@@ -130,11 +130,17 @@ p {
   border-radius: 7px;
   background: transparent;
   color: #4e574d;
-  cursor: default;
+  cursor: pointer;
   font-size: 0.83rem;
   font-weight: 800;
   letter-spacing: 0;
   text-align: left;
+}
+
+.rail-item:hover,
+.rail-item:focus-visible {
+  border-color: #d8ba49;
+  background: #fffbe8;
 }
 
 .rail-item strong {
@@ -203,7 +209,14 @@ p {
 }
 
 .filter-chip {
-  cursor: default;
+  cursor: pointer;
+}
+
+.filter-chip:hover,
+.filter-chip:focus-visible {
+  border-color: #c9d0c2;
+  background: #eef2e8;
+  color: #263027;
 }
 
 .filter-chip.active {
@@ -260,12 +273,26 @@ p {
   border: 0;
   border-bottom: 1px solid #edf0e8;
   background: transparent;
+  cursor: pointer;
   text-align: left;
+}
+
+.ledger-row:hover,
+.ledger-row:focus-visible {
+  background: #fbfdf8;
 }
 
 .ledger-row.selected {
   background: #fff8d9;
   box-shadow: inset 4px 0 0 #f0c84c;
+}
+
+.empty-state {
+  padding: 28px 18px;
+  border-bottom: 1px solid #edf0e8;
+  color: #697067;
+  font-size: 0.88rem;
+  font-weight: 800;
 }
 
 .ledger-row > span:first-child {
@@ -412,6 +439,41 @@ p {
   min-height: 94px;
   padding: 15px 17px;
   border-right: 1px solid #e6e8df;
+}
+
+.result-entity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.result-entity > div {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.result-entity img,
+.result-mark {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  border: 1px solid #dfe3da;
+  border-radius: 8px;
+  background: #f2f4ee;
+}
+
+.result-entity img {
+  object-fit: contain;
+  padding: 4px;
+}
+
+.result-mark {
+  display: grid;
+  place-items: center;
+  color: #49524a;
+  font-weight: 900;
 }
 
 .calc-strip > div:last-child {
