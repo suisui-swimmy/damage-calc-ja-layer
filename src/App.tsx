@@ -136,6 +136,21 @@ const statusLabels: Record<LedgerStatus, string> = {
 
 const statusFilters: StatusFilter[] = ["all", "exact", "alias", "source", "needs-confirmation"];
 
+const getKoReferenceFallbackReason = (status: string): string => {
+  switch (status) {
+    case "source-empty":
+      return "翻訳対象のKO原文がありません。";
+    case "unsupported-calc-version":
+      return "この @smogon/calc バージョンの翻訳プロファイルは未対応です。";
+    case "unsupported-template":
+      return "未対応の英文テンプレートが含まれるため、原文を表示しています。";
+    case "unknown-effect":
+      return "未登録の効果名が含まれるため、原文を表示しています。";
+    default:
+      return "参考訳を生成できなかったため、原文を表示しています。";
+  }
+};
+
 const weatherOptions: Array<{ value: ScenarioWeather; label: string }> = [
   { value: "", label: "なし" },
   { value: "Sun", label: "はれ" },
@@ -354,6 +369,8 @@ export const App = () => {
     }
   }, [resolvedCalcInput]);
   const formattedResult = calculation.result ? formatDamageResultJa(calculation.result) : undefined;
+  const koReferenceTranslation = formattedResult?.koChance?.referenceTranslation;
+  const isKoReferenceTranslated = koReferenceTranslation?.status === "translated";
   const attackerArtwork = formattedResult
     ? pokemonArtworkByCanonicalName.get(formattedResult.attacker.name.canonicalName)
     : undefined;
@@ -694,6 +711,40 @@ export const App = () => {
             <span>formatter</span>
             <strong>{formattedResult?.summaryText ?? "計算条件を確認中"}</strong>
           </div>
+
+          {koReferenceTranslation ? (
+            <section
+              className={`ko-reference-card ${isKoReferenceTranslated ? "translated" : "fallback"}`}
+              aria-labelledby="ko-reference-title"
+            >
+              <div className="ko-reference-header">
+                <div>
+                  <span>reference translation</span>
+                  <h3 id="ko-reference-title">Smogon原文の参考翻訳</h3>
+                </div>
+                <span className="ko-reference-version">@smogon/calc {koReferenceTranslation.calcVersion}</span>
+              </div>
+
+              {isKoReferenceTranslated ? (
+                <p className="ko-reference-ja">{koReferenceTranslation.displayText}</p>
+              ) : (
+                <div className="ko-reference-fallback" role="status">
+                  <strong>未翻訳の原文を表示中</strong>
+                  <span>{getKoReferenceFallbackReason(koReferenceTranslation.status)}</span>
+                </div>
+              )}
+
+              <div className="ko-reference-source">
+                <span>Smogon原文</span>
+                {koReferenceTranslation.sourceTextEn.trim() ? (
+                  <code lang="en">{koReferenceTranslation.sourceTextEn}</code>
+                ) : (
+                  <code>原文なし</code>
+                )}
+              </div>
+              <small>計算ロジックには使用しない参考表示です。</small>
+            </section>
+          ) : null}
 
           <div className="raw-source">
             <span>raw source</span>

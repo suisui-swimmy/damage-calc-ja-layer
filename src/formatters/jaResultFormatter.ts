@@ -1,6 +1,10 @@
 import type { CalcSideInput, DamageCalculationResult } from "../calc/smogonAdapter";
 import type { EntityKind } from "../data/optionTypes";
 import { getDisplayNameJa } from "../localization/resolver";
+import {
+  translateSmogonKoSourceTextJa,
+  type SmogonKoReferenceTranslation,
+} from "./smogonKoReferenceTranslator";
 
 export interface JaEntityDisplay {
   canonicalName: string;
@@ -41,6 +45,7 @@ export interface JaKoChanceDisplay {
   turns: number;
   labelJa: string;
   sourceText: string;
+  referenceTranslation: SmogonKoReferenceTranslation;
 }
 
 export interface JaFieldDisplay {
@@ -155,6 +160,7 @@ const formatDamagePercentageRange = (
 
 const formatKoChance = (
   koChance: DamageCalculationResult["koChance"],
+  calcVersion: string,
 ): JaKoChanceDisplay | undefined => {
   if (!koChance) {
     return undefined;
@@ -178,6 +184,7 @@ const formatKoChance = (
     turns: koChance.turns,
     labelJa,
     sourceText: koChance.sourceText,
+    referenceTranslation: translateSmogonKoSourceTextJa(koChance.sourceText, calcVersion),
   };
 };
 
@@ -262,7 +269,7 @@ export const formatDamageResultJa = (
     attackerSideConditions: sideConditionNames(result.field.attackerSide),
     defenderSideConditions: sideConditionNames(result.field.defenderSide),
   };
-  const koChance = formatKoChance(result.koChance);
+  const koChance = formatKoChance(result.koChance, result.calcVersion);
   const attackerNameJa = attacker.name.displayNameJa;
   const defenderNameJa = defender.name.displayNameJa;
   const moveNameJa = move.name.displayNameJa;

@@ -556,6 +556,113 @@ p {
   font-size: 0.72rem;
 }
 
+.ko-reference-card {
+  display: grid;
+  gap: 12px;
+  margin: 12px 14px 0;
+  border: 1px solid #dce3d8;
+  border-radius: 10px;
+  padding: 14px;
+  background: #f8faf5;
+}
+
+.ko-reference-card.translated {
+  border-color: #c9dcc8;
+  background: linear-gradient(135deg, #f4faf2 0%, #fbfcf8 100%);
+}
+
+.ko-reference-card.fallback {
+  border-color: #e2ddd0;
+  background: #fbfaf6;
+}
+
+.ko-reference-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ko-reference-header > div {
+  display: grid;
+  gap: 3px;
+}
+
+.ko-reference-header span,
+.ko-reference-source > span {
+  color: #737d73;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ko-reference-header h3 {
+  margin: 0;
+  color: #1d2620;
+  font-size: 0.93rem;
+  line-height: 1.4;
+}
+
+.ko-reference-header .ko-reference-version {
+  flex: 0 0 auto;
+  border: 1px solid #d7ddd2;
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #667067;
+  font-size: 0.65rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.ko-reference-ja {
+  margin: 0;
+  color: #173e28;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.55;
+}
+
+.ko-reference-fallback {
+  display: grid;
+  gap: 4px;
+  border-left: 3px solid #b79651;
+  padding: 3px 0 3px 10px;
+}
+
+.ko-reference-fallback strong {
+  color: #5e461c;
+  font-size: 0.82rem;
+}
+
+.ko-reference-fallback span {
+  color: #71664f;
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
+.ko-reference-source {
+  display: grid;
+  gap: 5px;
+  border-top: 1px solid #e1e6dd;
+  padding-top: 10px;
+}
+
+.ko-reference-source code {
+  overflow-wrap: anywhere;
+  color: #465149;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.ko-reference-card > small {
+  color: #778077;
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
 .calc-strip {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1.45fr;
@@ -720,6 +827,14 @@ p {
 
   .calc-strip {
     grid-template-columns: 1fr;
+  }
+
+  .ko-reference-header {
+    display: grid;
+  }
+
+  .ko-reference-header .ko-reference-version {
+    justify-self: start;
   }
 
   .calc-strip > div {

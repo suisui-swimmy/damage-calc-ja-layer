@@ -58,6 +58,14 @@ describe("formatDamageResultJa", () => {
     expect(formatted.damage.percentageRange?.text).toContain("-");
     expect(formatted.damage.percentageRange?.text).toContain("%");
     expect(formatted.koChance?.labelJa).toBeTruthy();
+    expect(formatted.koChance?.referenceTranslation).toMatchObject({
+      status: "translated",
+      displayText: expect.any(String),
+      sourceTextEn: calcResult.koChance?.sourceText,
+      isAuthoritative: false,
+      calcVersion: "0.11.0",
+      templateProfile: "smogon-calc-0.11.0",
+    });
     expect(formatted.details).toContainEqual(
       expect.objectContaining({
         label: "攻撃側の持ち物",
@@ -148,6 +156,72 @@ describe("formatDamageResultJa", () => {
       displayNameJa: "Mystery Beam",
     });
     expect(formatted.summaryText).toContain("Missingmon の Mystery Beam");
+  });
+
+  it("keeps the Smogon source reference translation separate from structured KO values", () => {
+    const calcResult = calculateDamage({
+      attacker: {
+        canonicalName: "Pikachu",
+      },
+      defender: {
+        canonicalName: "Squirtle",
+      },
+      move: {
+        canonicalName: "Thunderbolt",
+      },
+    });
+    const sourceText = "guaranteed 2HKO after burn damage";
+
+    const formatted = formatDamageResultJa({
+      ...calcResult,
+      koChance: {
+        chance: 1,
+        turns: 2,
+        sourceText,
+      },
+    });
+
+    expect(formatted.koChance).toMatchObject({
+      chance: 1,
+      turns: 2,
+      labelJa: "確定2発",
+      sourceText,
+      referenceTranslation: {
+        status: "translated",
+        displayText: "確定2発（やけどダメージ込み）",
+        referenceTextJa: "確定2発（やけどダメージ込み）",
+        sourceTextEn: sourceText,
+        isAuthoritative: false,
+      },
+    });
+  });
+
+  it("translates an after effect emitted by the live @smogon/calc path", () => {
+    const calcResult = calculateDamage({
+      attacker: {
+        canonicalName: "Mew",
+      },
+      defender: {
+        canonicalName: "Mew",
+      },
+      move: {
+        canonicalName: "Tackle",
+      },
+      field: {
+        weather: "Sand",
+      },
+    });
+    const formatted = formatDamageResultJa(calcResult);
+
+    expect(calcResult.koChance?.sourceText).toBe(
+      "guaranteed 7HKO after sandstorm damage",
+    );
+    expect(formatted.koChance?.referenceTranslation).toMatchObject({
+      status: "translated",
+      displayText: "確定7発（すなあらしダメージ込み）",
+      sourceTextEn: "guaranteed 7HKO after sandstorm damage",
+      isAuthoritative: false,
+    });
   });
 
   it("does not parse rawDescription to build Japanese display logic", () => {

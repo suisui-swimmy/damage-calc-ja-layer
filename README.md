@@ -69,10 +69,12 @@ npm run build
 - `src/localization/resolver.ts`: entity kind ごとの日本語入力 -> canonical name 解決
 - `src/calc/smogonAdapter.ts`: `@smogon/calc` 呼び出し境界
 - `src/formatters/jaResultFormatter.ts`: calc 結果の日本語表示用 formatter
+- `src/formatters/smogonKoReferenceTranslator.ts`: KO英文 `sourceText` の表示専用参考translator
 - `src/domain/shareState.ts`: 計算条件 JSON の schemaVersion / serialize / parse
 - `src/data/generated/*.gen.json`: 日本語 options JSON
 - `src/data/generated/calc-*.gen.json`: `@smogon/calc` Gen9 由来の canonical catalog
 - `src/data/overrides/`: 日本語 alias / 表示名補正の manual overlay
+- `src/data/overrides/smogon-ko-reference-ja.json`: `@smogon/calc@0.11.0` KO英文の参考訳辞書
 - `public/assets/official-artwork/`: UI 表示用の公式イラスト asset
 
 ## Resolver
@@ -113,17 +115,22 @@ adapter output は formatter / UI が読むための最小構造に落とす。
 `src/formatters/jaResultFormatter.ts` は、adapter output を日本語 UI 表示用の構造へ変換する表示専用層。
 formatter は `@smogon/calc` を直接呼ばず、英文 `rawDescription` を再パースしてロジックを作らない。
 
+KO chance の英文 `sourceText` だけは、`src/formatters/smogonKoReferenceTranslator.ts` の独立した表示専用translatorへ渡す。
+この参考訳は計算やKO判定へ再利用せず、対応するcalc version・英文template・全effectが一致した場合だけ日本語を返す。未知version・未知template・未知effectでは部分翻訳せず、英文全体へfallbackする。
+
 返す主な表示情報:
 
 - 攻撃側、防御側、技の日本語表示名と canonical name
 - 持ち物、特性、性格、テラスタイプの日本語表示名と canonical name
 - ダメージ最小 / 最大、乱数 roll、割合表示
 - `@smogon/calc` の `kochance()` 由来の KO chance 構造値と原文 source
+- `@smogon/calc@0.11.0` のKO英文に対する「Smogon原文の参考翻訳」と翻訳status
 - 天候、フィールド、壁や場条件の日本語ラベル
 - 検証用の `rawDescription` / `sourceDescription`
 
 日本語名が見つからない場合は canonical name を fallback 表示する。
 確定数、乱数表現、割合などは adapter が `@smogon/calc` から安全に渡せる範囲だけ表示し、取れない情報を formatter 側で仮補完しない。
+参考翻訳は常に原文と `isAuthoritative: false` を保持し、日本語表示が計算の正ではないことをAPI上でも区別する。
 
 ## Web UI
 
@@ -219,6 +226,8 @@ npm test
 npm run build
 ```
 
+calc version を更新した場合は、`smogon-ko-reference-ja.json` の全effect、KO英文template fixture、translatorの対応profileも同時に確認する。確認が終わるまでは、新versionの `sourceText` は英文fallbackとして扱う。
+
 画像参照を増やした場合は `public/assets/official-artwork/` と `src/data/generated/pokemon-options.gen.json` の `artwork` を揃え、`npm run validate:artwork-assets` を通す。
 
 ## 制限
@@ -227,4 +236,4 @@ npm run build
 - Champions 新特性 4 件は `needs-confirmation` として扱い、`@smogon/calc` に存在しないものは adapter で計算しない
 - Type `unknown -> ???` は calc catalog の empty id と対応するため、`validate:ja-mapping` では warning として残す
 - generated JSON を静的 import しているため、build の large chunk warning は残る
-- KO chance の詳細文は `@smogon/calc` の構造値から取れる最小表示に留め、英文 `sourceText` の完全日本語化は未対応
+- KO chance の参考訳はnpm公開版 `@smogon/calc@0.11.0` の確認済み英文templateに限定し、未知version・未知文法は英文fallbackになる
