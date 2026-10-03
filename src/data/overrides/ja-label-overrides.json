@@ -1,15 +1,55 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "manual-2026-05-20",
+  "dataVersion": "manual-2026-10-04",
   "source": {
     "kind": "manual-overlay",
-    "note": "Display label fixes layered over generated options."
+    "note": "Display label fixes layered over generated options; no calc data or artwork changes.",
+    "taurosNames": "https://zukan.pokemon.co.jp/detail/0128",
+    "vivillonPatternNames": "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html",
+    "calcDefinition": "@smogon/calc@0.11.0 src/data/species.ts; Generations.get(9).species"
   },
   "generatedBy": "manual",
   "kind": "ja-label-overrides",
-  "entries": [],
+  "entries": [
+    {
+      "kind": "pokemon",
+      "id": "taurospaldeaaqua",
+      "displayNameJa": "ケンタロス パルデアのすがた・ウォーターしゅ",
+      "notes": "Official Japanese breed name; calc Aqua has Fighting/Water types."
+    },
+    {
+      "kind": "pokemon",
+      "id": "taurospaldeablaze",
+      "displayNameJa": "ケンタロス パルデアのすがた・ブレイズしゅ",
+      "notes": "Official Japanese breed name; calc Blaze has Fighting/Fire types."
+    },
+    {
+      "kind": "pokemon",
+      "id": "taurospaldeacombat",
+      "displayNameJa": "ケンタロス パルデアのすがた・コンバットしゅ",
+      "notes": "Official Japanese breed name; calc Combat has Fighting type."
+    },
+    {
+      "kind": "pokemon",
+      "id": "vivillon",
+      "displayNameJa": "ビビヨン",
+      "notes": "Calc base entry has no named pattern metadata; do not infer Meadow or Fancy from Showdown or artwork."
+    },
+    {
+      "kind": "pokemon",
+      "id": "vivillonfancy",
+      "displayNameJa": "ビビヨン ファンシーなもよう",
+      "notes": "Explicit calc form; shares types, stats, weight and default ability with Vivillon."
+    },
+    {
+      "kind": "pokemon",
+      "id": "vivillonpokeball",
+      "displayNameJa": "ビビヨン ボールのもよう",
+      "notes": "Explicit calc form; shares types, stats, weight and default ability with Vivillon."
+    }
+  ],
   "summary": {
-    "entryCount": 0,
+    "entryCount": 6,
     "appliedAtRuntime": true
   }
 }

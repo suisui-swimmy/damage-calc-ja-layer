@@ -5,14 +5,12 @@ import natureOptions from "../data/generated/nature-options.gen.json";
 import pokemonOptions from "../data/generated/pokemon-options.gen.json";
 import typeOptions from "../data/generated/type-options.gen.json";
 import jaAliases from "../data/overrides/ja-aliases.json";
-import jaLabelOverrides from "../data/overrides/ja-label-overrides.json";
-import { getOptionDisplayNameJa } from "./displayNameRules";
+import { applyManualLabelOverride, getOptionDisplayNameJa } from "./displayNameRules";
 import type {
   EntityKind,
   LocalizedOptionEntry,
   LocalizedOptionPayload,
   ManualJaAliasOverride,
-  ManualJaLabelOverride,
   ManualJaOverridePayload,
   SourceStatus,
 } from "../data/optionTypes";
@@ -65,15 +63,9 @@ const payloadByKind: Record<EntityKind, LocalizedOptionPayload> = {
 
 const aliasOverridePayload =
   jaAliases as ManualJaOverridePayload<"ja-alias-overrides", ManualJaAliasOverride>;
-const labelOverridePayload =
-  jaLabelOverrides as ManualJaOverridePayload<"ja-label-overrides", ManualJaLabelOverride>;
 
 const aliasOverridesByKey = new Map(
   aliasOverridePayload.entries.map((entry) => [`${entry.kind}:${entry.id}`, entry]),
-);
-
-const labelOverridesByKey = new Map(
-  labelOverridePayload.entries.map((entry) => [`${entry.kind}:${entry.id}`, entry]),
 );
 
 const sourceStatusOf = (
@@ -168,31 +160,13 @@ const buildIndex = (kind: EntityKind, entries: LocalizedOptionEntry[]) => {
   return { exactIndex, aliasIndex, entries };
 };
 
-const applyManualOverrides = (
-  kind: EntityKind,
-  entries: LocalizedOptionEntry[],
-): LocalizedOptionEntry[] =>
-  entries.map((entry) => {
-    const key = `${kind}:${entry.id}`;
-    const labelOverride = labelOverridesByKey.get(key);
-    const displayNameJa = labelOverride?.displayNameJa;
-
-    if (displayNameJa === undefined && labelOverride?.sourceStatus === undefined) {
-      return entry;
-    }
-
-    return {
-      ...entry,
-      kind,
-      label: displayNameJa ?? entry.label,
-      sourceStatus: labelOverride?.sourceStatus ?? entry.sourceStatus,
-    };
-  });
-
 const searchByKind = Object.fromEntries(
   Object.entries(payloadByKind).map(([kind, payload]) => [
     kind,
-    buildIndex(kind as EntityKind, applyManualOverrides(kind as EntityKind, payload.entries)),
+    buildIndex(
+      kind as EntityKind,
+      payload.entries.map((entry) => applyManualLabelOverride(kind as EntityKind, entry)),
+    ),
   ]),
 ) as Record<EntityKind, ReturnType<typeof buildIndex>>;
 

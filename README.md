@@ -180,6 +180,44 @@ npm run validate:ja-mapping
 - `src/data/overrides/ja-aliases.json`
 - `src/data/overrides/ja-label-overrides.json`
 
+日本語 options は取り込み済みスナップショットで、この checkout には元の
+`generate-pokemon-options.mjs` / `generate-battle-options.mjs` と全入力素材は含まれていない。
+表示補正は `ja-label-overrides.json` を `displayNameRules.ts` で実行時に適用し、一覧・resolver・formatter で共有する。
+補正対象の検索文字列も補正後の表示名・canonical name・IDから組み直し、誤った旧表示を検索に残さない。
+残す必要がある旧入力や略称は `ja-aliases.json` に明示する。
+この補正の反映に options JSON の手編集・再生成は不要で、通常の test / build で再現できる。
+別プロジェクトで使う場合も、補正前の generated JSON だけをコピーせず、補正定義と localization 層を一緒に使う。
+
+### 既存 calc フォームの日本語表示
+
+| calc canonical name | 日本語表示 |
+| --- | --- |
+| Tauros-Paldea-Aqua | ケンタロス パルデアのすがた・ウォーターしゅ |
+| Tauros-Paldea-Blaze | ケンタロス パルデアのすがた・ブレイズしゅ |
+| Tauros-Paldea-Combat | ケンタロス パルデアのすがた・コンバットしゅ |
+| Vivillon | ビビヨン |
+| Vivillon-Fancy | ビビヨン ファンシーなもよう |
+| Vivillon-Pokeball | ビビヨン ボールのもよう |
+
+日本語名の確認元は、[ポケモンずかんのケンタロス](https://zukan.pokemon.co.jp/detail/0128)と
+[ポケモン公式のビビヨン模様一覧](https://www.pokemon.co.jp/goods/2025/05/250530_go01.html)。
+名前とフォームの間を空白で区切る既存方針に沿い、ケンタロスの種別は公式の「しゅ」表記を使う。
+「ケンタロス ウォーター種」などの漢字表記も別名として解決する。
+「ケンタロス パルデアのすがた」「パルデアケンタロス」は3候補の `ambiguous` となり、種類を自動選択しない。
+
+`@smogon/calc@0.11.0` の `src/data/species.ts` と `Generations.get(9).species` では、
+裸の `Vivillon` は `otherFormes` に Fancy / Pokeball を持つ基本項目で、特定の模様を示す情報はない。
+そのため本レイヤーでは模様を指定しない「ビビヨン」として扱い、Showdown の既定模様や画像から模様を推定しない。
+3項目のタイプ・種族値・体重・既定特性は同一だが、canonical name はそれぞれ維持する。
+「はなぞののもよう」を Fancy / Pokeball に流用する理由にはならないため、その旧検索語は引き継がない。
+calc にない残りの模様は追加しない。画像参照は既存のままであり、模様を識別する根拠には使わない。
+
+`Eelevate` / `Aura Guard` / `Fire Mane` は採用中の `@smogon/calc@0.11.0` の特性一覧・効果実装、
+本レイヤーの calc catalog / 日本語 options に未収録。
+resolver は `not-found`、表示は英語 fallback、adapter は未知の特性として拒否する。
+日本語訳や計算カタログへの追加は行わず、将来 Showdown 向け表示を拡張する場合の別対象とする。
+`Aegislash-Shield` / `Aegislash-Blade` / `Aegislash-Both` も calc 固有の別項目として維持する。
+
 ## Pokemon Artwork
 
 ポケモン画像は、メイン導線の UI asset として扱う。

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "manual-2026-05-20",
+  "dataVersion": "manual-2026-10-04",
   "source": {
     "kind": "manual-overlay",
     "note": "Additional Japanese aliases layered over generated options."
@@ -16,10 +16,43 @@
         "十万ボルト"
       ],
       "notes": "Common numeric variants for 10まんボルト."
+    },
+    {
+      "kind": "pokemon",
+      "id": "taurospaldeaaqua",
+      "aliasesJa": [
+        "ケンタロス パルデアのすがた", "パルデアケンタロス", "パルデアのすがた",
+        "ケンタロス ウォーターしゅ", "ケンタロス ウォーター種",
+        "ケンタロス パルデアのすがた ウォーター種",
+        "パルデアケンタロス ウォーターしゅ", "パルデアケンタロス ウォーター種"
+      ],
+      "notes": "Unqualified Paldea aliases are shared by all three breeds and must remain ambiguous."
+    },
+    {
+      "kind": "pokemon",
+      "id": "taurospaldeablaze",
+      "aliasesJa": [
+        "ケンタロス パルデアのすがた", "パルデアケンタロス", "パルデアのすがた",
+        "ケンタロス ブレイズしゅ", "ケンタロス ブレイズ種",
+        "ケンタロス パルデアのすがた ブレイズ種",
+        "パルデアケンタロス ブレイズしゅ", "パルデアケンタロス ブレイズ種"
+      ],
+      "notes": "Unqualified Paldea aliases are shared by all three breeds and must remain ambiguous."
+    },
+    {
+      "kind": "pokemon",
+      "id": "taurospaldeacombat",
+      "aliasesJa": [
+        "ケンタロス パルデアのすがた", "パルデアケンタロス", "パルデアのすがた",
+        "ケンタロス コンバットしゅ", "ケンタロス コンバット種",
+        "ケンタロス パルデアのすがた コンバット種",
+        "パルデアケンタロス コンバットしゅ", "パルデアケンタロス コンバット種"
+      ],
+      "notes": "Unqualified Paldea aliases are shared by all three breeds and must remain ambiguous."
     }
   ],
   "summary": {
-    "entryCount": 1,
+    "entryCount": 4,
     "appliedAtRuntime": true
   }
 }
