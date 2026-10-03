@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/smogon/pokemon-showdown",
+  "commit": "3661ce40bf9001d185ce078b8920e12304204609",
+  "commitDate": "2026-10-02T20:40:10Z",
+  "checkedOn": "2026-10-04",
+  "packageVersion": "0.11.11",
+  "files": {
+    "data/pokedex.ts": "73048386b864be5aff093e9393acf32e8016299e9d7b76078bf5120b769e2fe0",
+    "data/abilities.ts": "6baacc416212eeb47ad3decd490523fefbd9c5a1eb97ebae7787bfea35fbb180",
+    "data/typechart.ts": "7b0eae126bdcf98edfd71cbe75af00b763f5f0d5db36024b6f3e7c5e4aea95ac",
+    "data/aliases.ts": "bc4f123f3091f3c19aeb183d061b9b85e120d02659aabaa60aa8034e1415da1e",
+    "sim/dex-species.ts": "5f47308e655371968c3b4ddc6680cf0da1c92022c330625ca5cce71e3f0e43ce",
+    "package.json": "78dcf8df745fa5045bc6e927ec4417838d716bfe65876e60dc5dddc3d497b244",
+    "LICENSE": "b2002a9fd52ba8db3783a05fbdebfb09c34fd09513b90f6b390a2c0dfbc93ed0"
+  }
+}

@@ -41,11 +41,17 @@ jobs:
       - name: Validate artwork assets
         run: npm run validate:artwork-assets
 
+      - name: Validate Showdown display mapping
+        run: npm run validate:showdown-display
+
       - name: Run tests
         run: npm test
 
       - name: Build
         run: npm run build
+
+      - name: Build Showdown display module
+        run: npm run build:showdown
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

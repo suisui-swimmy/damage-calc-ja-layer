@@ -21,6 +21,7 @@ Smogon / Showdown 側の計算エンジンは改変せず、日本語 UI をオ�
 - 日本語の計算条件入力から resolver -> adapter -> formatter を通して、ブラウザでダメージ結果を確認する
 - 計算条件を `schemaVersion` 付き JSON として copy / import する
 - `@smogon/calc` Gen9 由来の calc catalog を再生成・検証する
+- 外部 Pokemon Showdown のポケモン・フォーム・特性・タイプの名前/IDから、日本語表示を取得する（計算用resolverとは別API）
 - GitHub Actions で validation / test / build / GitHub Pages deploy を実行する
 
 ## 方針
@@ -46,9 +47,11 @@ npm run build
 npm run validate:calc-catalog
 npm run validate:ja-mapping
 npm run validate:artwork-assets
+npm run validate:showdown-display
 npm run inspect:calc
 npm test
 npm run build
+npm run build:showdown
 ```
 
 ## 代表確認ケース
@@ -67,6 +70,7 @@ npm run build
 
 - `src/localization/normalizeJa.ts`: 日本語・英語入力の検索用正規化
 - `src/localization/resolver.ts`: entity kind ごとの日本語入力 -> canonical name 解決
+- `src/showdown.ts`: 外部Showdown名/ID -> 日本語表示の公開入口
 - `src/calc/smogonAdapter.ts`: `@smogon/calc` 呼び出し境界
 - `src/formatters/jaResultFormatter.ts`: calc 結果の日本語表示用 formatter
 - `src/formatters/smogonKoReferenceTranslator.ts`: KO英文 `sourceText` の表示専用参考translator
@@ -210,13 +214,188 @@ npm run validate:ja-mapping
 そのため本レイヤーでは模様を指定しない「ビビヨン」として扱い、Showdown の既定模様や画像から模様を推定しない。
 3項目のタイプ・種族値・体重・既定特性は同一だが、canonical name はそれぞれ維持する。
 「はなぞののもよう」を Fancy / Pokeball に流用する理由にはならないため、その旧検索語は引き継がない。
-calc にない残りの模様は追加しない。画像参照は既存のままであり、模様を識別する根拠には使わない。
+calc 向け辞書には残りの模様を追加しない。外部Showdown向けは後述の独立APIで全20模様を扱う。
+画像参照は既存のままであり、模様を識別する根拠には使わない。
 
 `Eelevate` / `Aura Guard` / `Fire Mane` は採用中の `@smogon/calc@0.11.0` の特性一覧・効果実装、
 本レイヤーの calc catalog / 日本語 options に未収録。
 resolver は `not-found`、表示は英語 fallback、adapter は未知の特性として拒否する。
-日本語訳や計算カタログへの追加は行わず、将来 Showdown 向け表示を拡張する場合の別対象とする。
+計算用カタログ・resolverには追加しない。日本語表示は後述のShowdown表示専用APIで扱う。
 `Aegislash-Shield` / `Aegislash-Blade` / `Aegislash-Both` も calc 固有の別項目として維持する。
+
+## 外部Showdown向け日本語表示API
+
+公開入口は `src/showdown.ts` の `resolveShowdownDisplayNameJa(kind, input)`。
+`kind` は `pokemon` / `ability` / `type`、`input` はShowdown名またはID。
+`resolveEntity` / `getDisplayNameJa`、calc catalog、adapterとは独立しており、表示に成功しても計算可能とは判定しない。
+日本語名の検索、部分一致、任意のShowdown略称の展開は行わない。
+
+```ts
+import { resolveShowdownDisplayNameJa, showdownDisplayMetadata } from "./src/showdown";
+
+const result = resolveShowdownDisplayNameJa("pokemon", "aegislash");
+// {
+//   input: "aegislash", inputId: "aegislash", kind: "pokemon",
+//   usage: "display-only", status: "localized", matchedBy: "name-or-id",
+//   showdownId: "aegislash", showdownName: "Aegislash",
+//   displayNameJa: "ギルガルド シールドフォルム",
+//   dictionaryRef: { kind: "pokemon", id: "aegislashshield", canonicalName: "Aegislash-Shield" },
+//   provenance: "showdown-overlay"
+// }
+console.log(showdownDisplayMetadata.showdownCommit);
+```
+
+`input` と `inputId` は元入力とそのShowdown式ID化を保持する。
+`showdownId` / `showdownName` は参照版に存在する外部の識別子、`dictionaryRef` は日本語辞書を引くためだけの参照先。
+`dictionaryRef` を外部IDの置換やcalcへの入力に使用しない。
+明示的な別名の場合だけ、元の `inputId` と解決先の `showdownId` が異なる。
+返却形式はTypeScriptの判別可能なunionとして公開している。
+
+| status | 内容 | 日本語名 |
+| --- | --- | --- |
+| `localized` | 名前/IDまたは確認済み別名に一致 | `displayNameJa` を返す |
+| `needs-confirmation` | 辞書の暫定名、通常種へのfallback、区別できないフォーム表示など | 返さない。外部ID・辞書参照・`reason`を返す |
+| `unsupported` | 参照版に存在するが、日本語対応がない | 返さない。外部ID・`reason`を返す |
+| `ambiguous` | 種別未指定などで表示対象を確定できない | 選択結果を返さず、`candidates` と `reason`を返す |
+| `not-found` | 参照版または許可した別名に存在しない | 返さない。元入力と `reason`を返す |
+
+`localized` の `provenance` は既存辞書の再利用 (`existing-dictionary`) または明示的な補正 (`showdown-overlay`)。
+全結果の `usage: "display-only"` は計算対応・ゲーム内使用可否を保証しないことを表す。
+`unknown -> ???` はcalc側の特殊項目であり、このAPIのタイプには含めない。
+
+### SnapCropへの取り込み例
+
+```bash
+npm run validate:showdown-display
+npm run build:showdown
+```
+
+`dist-showdown/showdown.js` は外部import・実行時通信がない単独ES module。
+出力フォルダーをSnapCrop側の `vendor/damage-calc-ja-layer/` などへコピーして使える。
+型定義 (`showdown.d.ts` と `types/`) とShowdownのライセンス文も同梱される。
+本リポジトリはprivateパッケージであり、npm公開は行っていない。
+
+```js
+import { resolveShowdownDisplayNameJa } from "./vendor/damage-calc-ja-layer/showdown.js";
+
+const speciesId = "vivillonicysnow"; // SnapCropがShowdownから受け取ったID
+const display = resolveShowdownDisplayNameJa("pokemon", speciesId);
+const label = display.status === "localized" ? display.displayNameJa : speciesId;
+// label: "ビビヨン ひょうせつのもよう"
+// 元のspeciesIdを保存し、要確認・未対応・曖昧などはdisplay.statusで別途表示する。
+
+const ability = resolveShowdownDisplayNameJa("ability", "Aura Guard");
+const type = resolveShowdownDisplayNameJa("type", "electric");
+// ability.displayNameJa: "はどうのぼうご"（status === "localized" の場合）
+// type.displayNameJa: "でんき"（同上）
+```
+
+### 参照版と対応範囲
+
+Showdown参照版は [3661ce40bf9001d185ce078b8920e12304204609](https://github.com/smogon/pokemon-showdown/tree/3661ce40bf9001d185ce078b8920e12304204609)
+（commit日時: 2026-10-02 UTC、確認日: 2026-10-04）。
+`data/pokedex.ts`、`data/abilities.ts`、`data/typechart.ts`、`data/aliases.ts`、`sim/dex-species.ts`を確認した。
+スナップショットは名前とフォーム構成のみを採用し、タイプ相性・能力値・特性効果は取り込まない。
+
+| 種別 | 日本語表示可能 | 要確認 | 日本語未対応 | 参照版の項目数 |
+| --- | ---: | ---: | ---: | ---: |
+| ポケモン・フォーム | 1,257 | 130 | 199 | 1,586 |
+| 特性 | 307 | 13 | 1 | 321 |
+| タイプ | 19 | 0 | 0 | 19 |
+
+件数は参照版の全項目（CAP等を含む）に対する表示の集計であり、ゲーム・世代別の使用可能件数ではない。
+最新の集計は `showdownDisplayMetadata.summary` で取得できる。
+既存辞書の暫定状態は確定名へ昇格させず、別フォームと同じ表示になるものも要確認にする。
+たとえば `Arceus-Bug` は辞書側の暫定状態を保留し、`Darmanitan-Galar-Zen` や一部のTotemフォームは表示名の重複を理由に保留する。
+
+- `Aegislash` / `aegislash`: シールドフォルム。辞書の `Aegislash-Shield` を参照しても外部IDは `aegislash`。
+- `Aegislash-Blade`: ブレードフォルムを維持。`Aegislash-Both` はこの入口では `not-found`。
+- `Tauros-Paldea-Aqua` / `Blaze` / `Combat`: 既存補正辞書のウォーターしゅ・ブレイズしゅ・コンバットしゅを再利用。
+- `Tauros-Paldea`: `ambiguous`。Showdownの略称はCombatへのaliasだが、このAPIでは3種から選ぶ必要がある入力として明示する。
+- 確認済み別名は `Aegislash-Shield` / `aegislashshield` と `Vivillon-Meadow` / `vivillonmeadow` のみ。その他の略称は展開しない。
+
+### ビビヨン全20模様
+
+参照版の `formeOrder` 20件を、裸の `Vivillon` + `cosmeticFormes` 17件 + `otherFormes` 2件と突合する。
+`baseForme: "Meadow"` と `vivillonmeadow: "Vivillon"` に基づき、裸の `Vivillon` は「はなぞののもよう」と表示する。
+上流コメントの「実際のbaseはIcy Snow」というTODOは未適用であり、定義の置換には使わない。
+`dex-species.ts` がcosmetic formを保持する処理に合わせ、各模様から `Vivillon` へのaliasをそのまま適用して模様を消すことはしない。
+calc側の裸の `Vivillon` は従来どおり「ビビヨン」であり、契約は変えない。
+
+| Showdown名（各IDも受付） | 表示する模様 |
+| --- | --- |
+| Vivillon-Icy Snow | ひょうせつのもよう |
+| Vivillon-Polar | せつげんのもよう |
+| Vivillon-Tundra | ゆきぐにのもよう |
+| Vivillon-Continental | たいりくのもよう |
+| Vivillon-Garden | ていえんのもよう |
+| Vivillon-Elegant | みやびなもよう |
+| Vivillon / Vivillon-Meadow | はなぞののもよう |
+| Vivillon-Modern | モダンなもよう |
+| Vivillon-Marine | マリンのもよう |
+| Vivillon-Archipelago | ぐんとうのもよう |
+| Vivillon-High Plains | こうやのもよう |
+| Vivillon-Sandstorm | さじんのもよう |
+| Vivillon-River | たいがのもよう |
+| Vivillon-Monsoon | スコールのもよう |
+| Vivillon-Savanna | サバンナのもよう |
+| Vivillon-Sun | たいようのもよう |
+| Vivillon-Ocean | オーシャンのもよう |
+| Vivillon-Jungle | ジャングルのもよう |
+| Vivillon-Fancy | ファンシーなもよう |
+| Vivillon-Pokeball | ボールのもよう |
+
+表示には「ビビヨン 」を付ける。日本語20模様の表記は[公式の全20種ピンズ紹介](https://www.pokemon.co.jp/goods/2025/05/250530_go01.html)で確認。
+未知の模様名は他模様へ置換せず `not-found` とする。
+
+### 新特性の確認元
+
+英語名とIDは参照版の `data/abilities.ts` の `name` とオブジェクトキー。
+日本語名は下記公式図鑑のページ内 `script#json-data` の `abilities[].name` を2026-10-04に確認した。
+
+| Showdown名 | ID | 正式な日本語名 | 確認元 |
+| --- | --- | --- | --- |
+| Eelevate | eelevate | うなぎのぼり | [メガシビルドン](https://zukan.pokemon.co.jp/detail/0604-1) |
+| Aura Guard | auraguard | はどうのぼうご | [メガルカリオＺ](https://zukan.pokemon.co.jp/detail/0448-2) |
+| Fire Mane | firemane | ほのおのたてがみ | [メガカエンジシ](https://zukan.pokemon.co.jp/detail/0668-2) |
+
+これらはShowdown表示専用の手動対応表に収録し、未収録のcalc catalogや日本語optionsには追加しない。
+特性の効果・所属・通常/隠れ/特殊の表示選択は本APIの責務に含めない。
+
+### 再生成と更新
+
+- `scripts/data/showdown-source.lock.json`: 上流commit・確認日・採用ファイルのSHA-256。
+- `src/data/generated/showdown-catalog.gen.json`: 上流から抽出した名前・フォーム構成・別名の監査用スナップショット。
+- `src/data/overrides/showdown-display-overrides.json`: 出典付きの翻訳参照先・追加日本語名・確認済み別名・曖昧入力。
+- `src/data/generated/showdown-display.gen.json`: 既存辞書と補正から生成する対応・未対応の一覧。単体では辞書参照が未展開なので、外部利用には公開入口またはビルド済みJSを使う。
+
+日常の再生成は同梱スナップショットからオフラインで実行できる。
+
+```bash
+npm run generate:showdown-display
+npm run validate:showdown-display
+npm test
+npm run build:showdown
+```
+
+`validate:showdown-display` は元データから組み直して生成結果の完全一致を確認し、
+ID重複・存在しない辞書参照・別名衝突・上流別名の不一致・ビビヨン全模様の欠落も拒否する。
+生成データのversionには入力辞書・補正・表示規則のhashを反映する。
+ローカルJSONは内容を正規化し、表示規則は改行をLFへ揃えてhash化するため、Windows/Linuxで同じ結果になる。
+
+上流スナップショット自体を再検証する場合は、固定版のShowdown checkoutを用意する。
+Showdownの依存インストールや実行は不要。抽出scriptはTypeScript構文から名前用のリテラルだけを読み、上流コードを実行しない。
+
+```bash
+git -c core.autocrlf=false clone https://github.com/smogon/pokemon-showdown.git node_modules/.cache/pokemon-showdown
+git -C node_modules/.cache/pokemon-showdown -c core.autocrlf=false checkout --detach 3661ce40bf9001d185ce078b8920e12304204609
+node scripts/import-showdown-catalog.mjs node_modules/.cache/pokemon-showdown --check
+```
+
+`--check` を外すとスナップショットを再生成する。改行を含めてSHA-256で固定元と照合する。
+Showdown版を更新するときはlockと対応表のcommitを更新し、`baseForme` / 全フォーム / 別名を再監査してから再生成する。
+既存辞書の暫定名を確認できた場合も、根拠と明示的な参照をShowdown補正へ追加する。
+タイプ・特性・種族値の継承、ゲーム別使用可否、画像、SnapCrop本体はこの機能の対象外。
 
 ## Pokemon Artwork
 

@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": "manual-showdown-2026-10-04",
+  "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
+  "usage": "display-only",
+  "notes": [
+    "Bare Vivillon is Meadow in the pinned baseForme and vivillonmeadow alias. The Icy Snow TODO is not the active definition.",
+    "Cosmetic form IDs take precedence over upstream aliases pointing at their base species.",
+    "Dictionary references are translation keys, never replacement external IDs."
+  ],
+  "entries": [
+    {
+      "kind": "pokemon",
+      "showdownId": "aegislash",
+      "showdownName": "Aegislash",
+      "dictionaryName": "Aegislash-Shield",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0681"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "aegislashblade",
+      "showdownName": "Aegislash-Blade",
+      "dictionaryName": "Aegislash-Blade",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0681"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "taurospaldeaaqua",
+      "showdownName": "Tauros-Paldea-Aqua",
+      "dictionaryName": "Tauros-Paldea-Aqua",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0128"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "taurospaldeablaze",
+      "showdownName": "Tauros-Paldea-Blaze",
+      "dictionaryName": "Tauros-Paldea-Blaze",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0128"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "taurospaldeacombat",
+      "showdownName": "Tauros-Paldea-Combat",
+      "dictionaryName": "Tauros-Paldea-Combat",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0128"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonicysnow",
+      "showdownName": "Vivillon-Icy Snow",
+      "displayNameJa": "ビビヨン ひょうせつのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonpolar",
+      "showdownName": "Vivillon-Polar",
+      "displayNameJa": "ビビヨン せつげんのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillontundra",
+      "showdownName": "Vivillon-Tundra",
+      "displayNameJa": "ビビヨン ゆきぐにのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivilloncontinental",
+      "showdownName": "Vivillon-Continental",
+      "displayNameJa": "ビビヨン たいりくのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillongarden",
+      "showdownName": "Vivillon-Garden",
+      "displayNameJa": "ビビヨン ていえんのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonelegant",
+      "showdownName": "Vivillon-Elegant",
+      "displayNameJa": "ビビヨン みやびなもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillon",
+      "showdownName": "Vivillon",
+      "displayNameJa": "ビビヨン はなぞののもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonmodern",
+      "showdownName": "Vivillon-Modern",
+      "displayNameJa": "ビビヨン モダンなもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonmarine",
+      "showdownName": "Vivillon-Marine",
+      "displayNameJa": "ビビヨン マリンのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonarchipelago",
+      "showdownName": "Vivillon-Archipelago",
+      "displayNameJa": "ビビヨン ぐんとうのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonhighplains",
+      "showdownName": "Vivillon-High Plains",
+      "displayNameJa": "ビビヨン こうやのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonsandstorm",
+      "showdownName": "Vivillon-Sandstorm",
+      "displayNameJa": "ビビヨン さじんのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonriver",
+      "showdownName": "Vivillon-River",
+      "displayNameJa": "ビビヨン たいがのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonmonsoon",
+      "showdownName": "Vivillon-Monsoon",
+      "displayNameJa": "ビビヨン スコールのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonsavanna",
+      "showdownName": "Vivillon-Savanna",
+      "displayNameJa": "ビビヨン サバンナのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonsun",
+      "showdownName": "Vivillon-Sun",
+      "displayNameJa": "ビビヨン たいようのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonocean",
+      "showdownName": "Vivillon-Ocean",
+      "displayNameJa": "ビビヨン オーシャンのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonjungle",
+      "showdownName": "Vivillon-Jungle",
+      "displayNameJa": "ビビヨン ジャングルのもよう",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonfancy",
+      "showdownName": "Vivillon-Fancy",
+      "dictionaryName": "Vivillon-Fancy",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vivillonpokeball",
+      "showdownName": "Vivillon-Pokeball",
+      "dictionaryName": "Vivillon-Pokeball",
+      "sources": [
+        "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html"
+      ]
+    },
+    {
+      "kind": "ability",
+      "showdownId": "eelevate",
+      "showdownName": "Eelevate",
+      "displayNameJa": "うなぎのぼり",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0604-1"
+      ],
+      "evidence": "Official page script#json-data abilities[].name; checked 2026-10-04. Showdown data/abilities.ts name and object key."
+    },
+    {
+      "kind": "ability",
+      "showdownId": "auraguard",
+      "showdownName": "Aura Guard",
+      "displayNameJa": "はどうのぼうご",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0448-2"
+      ],
+      "evidence": "Official page script#json-data abilities[].name; checked 2026-10-04. Showdown data/abilities.ts name and object key."
+    },
+    {
+      "kind": "ability",
+      "showdownId": "firemane",
+      "showdownName": "Fire Mane",
+      "displayNameJa": "ほのおのたてがみ",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0668-2"
+      ],
+      "evidence": "Official page script#json-data abilities[].name; checked 2026-10-04. Showdown data/abilities.ts name and object key."
+    }
+  ],
+  "aliases": [
+    {
+      "kind": "pokemon",
+      "inputId": "aegislashshield",
+      "targetId": "aegislash"
+    },
+    {
+      "kind": "pokemon",
+      "inputId": "vivillonmeadow",
+      "targetId": "vivillon"
+    }
+  ],
+  "ambiguities": [
+    {
+      "kind": "pokemon",
+      "inputId": "taurospaldea",
+      "targetIds": [
+        "taurospaldeaaqua",
+        "taurospaldeablaze",
+        "taurospaldeacombat"
+      ],
+      "reason": "breed-not-specified",
+      "notes": "Showdown aliases this shorthand to Combat; this display API requires the explicit breed to avoid guessing caller intent."
+    }
+  ]
+}

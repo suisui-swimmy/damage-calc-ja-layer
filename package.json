@@ -13,7 +13,10 @@
     "generate:calc-catalog": "node scripts/generate-calc-catalog.mjs",
     "validate:calc-catalog": "node scripts/validate-calc-catalog.mjs",
     "validate:ja-mapping": "node scripts/validate-ja-mapping.mjs",
-    "validate:artwork-assets": "node scripts/validate-artwork-assets.mjs"
+    "validate:artwork-assets": "node scripts/validate-artwork-assets.mjs",
+    "generate:showdown-display": "node scripts/generate-showdown-display.mjs",
+    "validate:showdown-display": "node scripts/generate-showdown-display.mjs --check",
+    "build:showdown": "vite build --config vite.showdown.config.ts && tsc -p tsconfig.showdown.json && node scripts/finalize-showdown-build.mjs"
   },
   "dependencies": {
     "@smogon/calc": "^0.11.0",

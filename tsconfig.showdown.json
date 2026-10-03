@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist-showdown/types",
+    "rootDir": "./src",
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.showdown.tsbuildinfo"
+  },
+  "include": ["src/showdown.ts"]
+}
