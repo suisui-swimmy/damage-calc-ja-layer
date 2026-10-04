@@ -256,10 +256,14 @@ console.log(showdownDisplayMetadata.showdownCommit);
 | `localized` | 名前/IDまたは確認済み別名に一致 | `displayNameJa` を返す |
 | `needs-confirmation` | 辞書の暫定名、通常種へのfallback、区別できないフォーム表示など | 返さない。外部ID・辞書参照・`reason`を返す |
 | `unsupported` | 参照版に存在するが、日本語対応がない | 返さない。外部ID・`reason`を返す |
+| `out-of-scope` | 翻訳対象外として確認済み | 返さない。元の名前・ID、`category`・`noteJa`・`reason`を返す |
 | `ambiguous` | 種別未指定などで表示対象を確定できない | 選択結果を返さず、`candidates` と `reason`を返す |
 | `not-found` | 参照版または許可した別名に存在しない | 返さない。元入力と `reason`を返す |
 
 `localized` の `provenance` は既存辞書の再利用 (`existing-dictionary`) または明示的な補正 (`showdown-overlay`)。
+UI用の識別補足・特殊項目の表示には `labelKind: "ui-label"` と `noteJa` を付ける。
+`out-of-scope` の追加に伴い、生成済み表示mappingと `showdownDisplayMetadata.schemaVersion` は **2**。
+statusを列挙して処理する呼び出し側は新状態を追加する。`status === "localized"` の場合だけ日本語名を使う処理はそのまま使える。
 全結果の `usage: "display-only"` は計算対応・ゲーム内使用可否を保証しないことを表す。
 `unknown -> ???` はcalc側の特殊項目であり、このAPIのタイプには含めない。
 
@@ -282,7 +286,7 @@ const speciesId = "vivillonicysnow"; // SnapCropがShowdownから受け取った
 const display = resolveShowdownDisplayNameJa("pokemon", speciesId);
 const label = display.status === "localized" ? display.displayNameJa : speciesId;
 // label: "ビビヨン ひょうせつのもよう"
-// 元のspeciesIdを保存し、要確認・未対応・曖昧などはdisplay.statusで別途表示する。
+// 元のspeciesIdを保存し、要確認・未対応・対象外・曖昧などはdisplay.statusで別途表示する。
 
 const ability = resolveShowdownDisplayNameJa("ability", "Aura Guard");
 const type = resolveShowdownDisplayNameJa("type", "electric");
@@ -297,16 +301,46 @@ Showdown参照版は [3661ce40bf9001d185ce078b8920e12304204609](https://github.c
 `data/pokedex.ts`、`data/abilities.ts`、`data/typechart.ts`、`data/aliases.ts`、`sim/dex-species.ts`を確認した。
 スナップショットは名前とフォーム構成のみを採用し、タイプ相性・能力値・特性効果は取り込まない。
 
-| 種別 | 日本語表示可能 | 要確認 | 日本語未対応 | 参照版の項目数 |
-| --- | ---: | ---: | ---: | ---: |
-| ポケモン・フォーム | 1,257 | 130 | 199 | 1,586 |
-| 特性 | 307 | 13 | 1 | 321 |
-| タイプ | 19 | 0 | 0 | 19 |
+| 種別 | 日本語表示可能 | 要確認 | 日本語未対応 | 翻訳対象外・確認済み | 参照版の項目数 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| ポケモン・フォーム | 1,265 | 122 | 82 | 117 | 1,586 |
+| 特性 | 308 | 10 | 0 | 3 | 321 |
+| タイプ | 19 | 0 | 0 | 0 | 19 |
 
 件数は参照版の全項目（CAP等を含む）に対する表示の集計であり、ゲーム・世代別の使用可能件数ではない。
 最新の集計は `showdownDisplayMetadata.summary` で取得できる。
+未解決は `needs-confirmation` + `unsupported` の合計。`out-of-scope` は含めない。
+この件数はcalc未収録の項目数や新規翻訳が必要な件数とは異なる。
 既存辞書の暫定状態は確定名へ昇格させず、別フォームと同じ表示になるものも要確認にする。
-たとえば `Arceus-Bug` は辞書側の暫定状態を保留し、`Darmanitan-Galar-Zen` や一部のTotemフォームは表示名の重複を理由に保留する。
+たとえば `Arceus-Bug` は辞書側の暫定状態を保留し、`Darmanitan-Galar-Zen` は表示名の重複を理由に保留する。
+
+### ぬし・特殊項目の表示方針
+
+ユーザーが2026-10-04に確認したShowdownの説明と採用方針を、版を固定した専用補正へ記録している。
+実行時に説明文の解析や接尾辞の削除で対象を推測せず、登録済みのIDだけに適用する。
+
+- H3のぬし8件: `Araquanid-Totem` / `Gumshoos-Totem` / `Kommo-o-Totem` / `Lurantis-Totem` / `Ribombee-Totem` / `Salazzle-Totem` / `Togedemaru-Totem` / `Vikavolt-Totem`。
+  既存の種族名に `（ぬし）` を付ける。外部IDはTotemのまま。括弧部分は正式種族名ではなく識別用のUI表記。
+- `No Ability` / `noability`: `特性なし` を返す。正式な特性名の翻訳ではなくUI用ラベル。特性の無効化状態を判定するものではない。
+- CAP86件: `category: "cap"`。元の英語名に加えて「Smogon CAPの創作ポケモン」または「Smogon CAPの創作特性」を `noteJa` に返す。
+- ポケウッド33件: `category: "pokestar"`、`noteJa: "ポケウッドの登場データ"`。公式ゲーム由来の特殊データとしてCAPと区別する。日本語名が存在しないと断定せず、今回は個別名称の翻訳対象外とする。
+- `MissingNo.`: `category: "glitch"`、`noteJa: "初代作品のバグ由来データ"`。元の表記を維持する。
+
+最後の3分類は `status: "out-of-scope"`、`reason: "outside-localization-scope"` として既知の項目を返す。
+APIから削除したり、呼び出し側で非表示にすると決めたりはしない。日本語の固有名は返さず、英語名と注記を表示できる。
+H2のTotem4件は今回の確認範囲に含めず、引き続き要確認とする。
+
+```ts
+const display = resolveShowdownDisplayNameJa("pokemon", "Ababo");
+if (display.status === "out-of-scope") {
+  console.log(display.showdownId);   // ababo
+  console.log(display.showdownName); // Ababo
+  console.log(display.category);     // cap
+  console.log(display.noteJa);       // Smogon CAPの創作ポケモン
+}
+```
+
+### 名前が異なる項目と確認済み別名
 
 - `Aegislash` / `aegislash`: シールドフォルム。辞書の `Aegislash-Shield` を参照しても外部IDは `aegislash`。
 - `Aegislash-Blade`: ブレードフォルムを維持。`Aegislash-Both` はこの入口では `not-found`。
@@ -367,6 +401,7 @@ calc側の裸の `Vivillon` は従来どおり「ビビヨン」であり、契�
 - `scripts/data/showdown-source.lock.json`: 上流commit・確認日・採用ファイルのSHA-256。
 - `src/data/generated/showdown-catalog.gen.json`: 上流から抽出した名前・フォーム構成・別名の監査用スナップショット。
 - `src/data/overrides/showdown-display-overrides.json`: 出典付きの翻訳参照先・追加日本語名・確認済み別名・曖昧入力。
+- 同ファイルの `outOfScopeGroups`: 確認済みの翻訳対象外ID・分類・日本語注記・判断根拠。
 - `src/data/generated/showdown-display.gen.json`: 既存辞書と補正から生成する対応・未対応の一覧。単体では辞書参照が未展開なので、外部利用には公開入口またはビルド済みJSを使う。
 
 日常の再生成は同梱スナップショットからオフラインで実行できる。
@@ -379,7 +414,7 @@ npm run build:showdown
 ```
 
 `validate:showdown-display` は元データから組み直して生成結果の完全一致を確認し、
-ID重複・存在しない辞書参照・別名衝突・上流別名の不一致・ビビヨン全模様の欠落も拒否する。
+ID重複・存在しない辞書参照・別名衝突・上流別名の不一致・ビビヨン全模様の欠落・翻訳と対象外定義の競合も拒否する。
 生成データのversionには入力辞書・補正・表示規則のhashを反映する。
 ローカルJSONは内容を正規化し、表示規則は改行をLFへ揃えてhash化するため、Windows/Linuxで同じ結果になる。
 

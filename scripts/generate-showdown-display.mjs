@@ -26,6 +26,20 @@ const known = new Map(catalog.entries.map((entry) => [key(entry), entry]));
 assert.equal(known.size, catalog.entries.length, "Duplicate Showdown IDs");
 const overrides = new Map(overlay.entries.map((entry) => [key(entry), entry]));
 assert.equal(overrides.size, overlay.entries.length, "Duplicate overrides");
+const outOfScope = new Map();
+for (const group of overlay.outOfScopeGroups ?? []) {
+  assert(["cap", "pokestar", "glitch"].includes(group.category), "Unknown scope category");
+  assert(["pokemon", "ability"].includes(group.kind), "Invalid scope kind");
+  assert(group.category === "cap" || group.kind === "pokemon", "Special species category on an ability");
+  assert(group.noteJa && group.sources?.length && group.evidence?.checkedOn, "Missing scope review evidence");
+  for (const entry of group.entries) {
+    const scopedKey = key({ ...entry, kind: group.kind });
+    assert(known.has(scopedKey), `Unknown scope ID: ${scopedKey}`);
+    assert.equal(known.get(scopedKey).showdownName, entry.showdownName);
+    assert(!overrides.has(scopedKey) && !outOfScope.has(scopedKey), `Conflicting scope rule: ${scopedKey}`);
+    outOfScope.set(scopedKey, { category: group.category, noteJa: group.noteJa });
+  }
+}
 const dictionaries = {};
 for (const kind of ["pokemon", "ability", "type"]) {
   const data = await read(`src/data/generated/${kind}-options.gen.json`);
@@ -36,17 +50,26 @@ for (const entry of overlay.entries) {
   assert.equal(entry.showdownName, known.get(key(entry)).showdownName);
   assert(entry.sources?.length > 0, `Missing provenance: ${key(entry)}`);
   assert(Boolean(entry.dictionaryName) !== Boolean(entry.displayNameJa), `Choose dictionary or literal: ${key(entry)}`);
+  if (entry.labelKind !== undefined) assert.equal(entry.labelKind, "ui-label");
+  if (entry.displaySuffixJa !== undefined) {
+    assert(entry.dictionaryName && !entry.displayNameJa && entry.labelKind === "ui-label");
+    assert.equal(entry.displaySuffixJa, "（ぬし）");
+    assert.equal(known.get(key(entry)).baseSpecies, entry.dictionaryName, "Totem dictionary must refer to the reviewed base species");
+  }
 }
 const entries = catalog.entries.map((entry) => {
+  const result = { kind: entry.kind, showdownId: entry.showdownId, showdownName: entry.showdownName };
+  const scope = outOfScope.get(key(entry));
+  if (scope) return { ...result, status: "out-of-scope", reason: "outside-localization-scope", ...scope };
   const override = overrides.get(key(entry));
   const dictionaryName = override?.dictionaryName ?? entry.showdownName;
   const option = dictionaries[entry.kind].get(dictionaryName);
   const labelOverride = option && labels.entries.find((label) => label.kind === entry.kind && label.id === option.id);
   if (override?.dictionaryName) assert(option, `Missing dictionary reference: ${dictionaryName}`);
-  const result = { kind: entry.kind, showdownId: entry.showdownId, showdownName: entry.showdownName };
+  const displayMetadata = override?.labelKind ? { labelKind: override.labelKind, noteJa: override.noteJa } : {};
   if (override?.displayNameJa) {
     assert(/[\u3040-\u30ff\u3400-\u9fff]/u.test(override.displayNameJa));
-    return { ...result, status: "localized", displayNameJa: override.displayNameJa, provenance: "showdown-overlay" };
+    return { ...result, status: "localized", displayNameJa: override.displayNameJa, provenance: "showdown-overlay", ...displayMetadata };
   }
   if (!option) return { ...result, status: "unsupported", reason: "missing-japanese-mapping" };
   // A matching English name does not certify a base-form fallback as a form translation.
@@ -55,14 +78,15 @@ const entries = catalog.entries.map((entry) => {
   const japanese = /[\u3040-\u30ff\u3400-\u9fff]/u.test(labelOverride?.displayNameJa ?? option.label);
   const dictionaryRef = { kind: entry.kind, id: option.id, canonicalName: option.showdownName };
   if (!verified || !japanese) return { ...result, status: "needs-confirmation", dictionaryRef, reason: "unverified-dictionary-label" };
-  return { ...result, status: "localized", dictionaryRef, provenance: override ? "showdown-overlay" : "existing-dictionary" };
+  return { ...result, status: "localized", dictionaryRef, provenance: override ? "showdown-overlay" : "existing-dictionary",
+    ...displayMetadata, ...(override?.displaySuffixJa ? { displaySuffixJa: override.displaySuffixJa } : {}) };
 });
 // Some imported labels lack fallback flags but still collapse distinct forms.
 // Keep the ordinary species display; withhold any indistinguishable form labels.
 const labelsToEntries = new Map();
 for (const entry of entries.filter((entry) => entry.status === "localized")) {
   const option = entry.dictionaryRef && dictionaries[entry.kind].get(entry.dictionaryRef.canonicalName);
-  const label = entry.displayNameJa ?? labels.entries.find((value) => value.kind === entry.kind && value.id === option.id)?.displayNameJa ?? option.label;
+  const label = (entry.displayNameJa ?? labels.entries.find((value) => value.kind === entry.kind && value.id === option.id)?.displayNameJa ?? option.label) + (entry.displaySuffixJa ?? "");
   const labelKey = `${entry.kind}:${label}`;
   labelsToEntries.set(labelKey, [...(labelsToEntries.get(labelKey) ?? []), entry]);
 }
@@ -103,9 +127,9 @@ const mappedForms = overlay.entries.filter((entry) => entry.kind === "pokemon" &
 assert.deepEqual(mappedForms.map((entry) => entry.showdownName).sort(), [...formNames].sort(), "Vivillon overlay coverage mismatch");
 for (const name of formNames) assert.equal(byKey.get(`pokemon:${toID(name)}`).status, "localized");
 const summary = Object.fromEntries(["pokemon", "ability", "type"].map((kind) => [kind,
-  Object.fromEntries(["localized", "needs-confirmation", "unsupported"].map((status) => [status, entries.filter((entry) => entry.kind === kind && entry.status === status).length]))]));
+  Object.fromEntries(["localized", "needs-confirmation", "unsupported", "out-of-scope"].map((status) => [status, entries.filter((entry) => entry.kind === kind && entry.status === status).length]))]));
 const payload = {
-  schemaVersion: 1, dataVersion: `showdown-display-${createHash("sha256").update(JSON.stringify(hashes)).digest("hex").slice(0, 16)}`,
+  schemaVersion: 2, dataVersion: `showdown-display-${createHash("sha256").update(JSON.stringify(hashes)).digest("hex").slice(0, 16)}`,
   source: { showdownCommit: catalog.source.commit, overlayVersion: overlay.dataVersion, sha256: hashes },
   generatedBy: "scripts/generate-showdown-display.mjs", kind: "showdown-display-mapping", usage: "display-only",
   entries, aliases: overlay.aliases, ambiguities: overlay.ambiguities, summary,

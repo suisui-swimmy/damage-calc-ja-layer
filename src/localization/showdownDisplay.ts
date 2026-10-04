@@ -20,14 +20,14 @@ const entries = new Map<string, ShowdownDisplayCandidate>();
 const names = new Map<string, string>();
 for (const entry of mapping.entries) {
   const kind = entry.kind as ShowdownEntityKind;
-  const { kind: _kind, ...value } = entry;
+  const { kind: _kind, displaySuffixJa, ...value } = entry;
   let candidate: ShowdownDisplayCandidate;
   if (value.status === "localized" && value.dictionaryRef) {
     const option = dictionaries[kind].get(value.dictionaryRef.canonicalName);
     if (!option || option.id !== value.dictionaryRef.id) {
       throw new Error(`Stale Showdown dictionary reference: ${kind}:${value.showdownId}`);
     }
-    candidate = { ...value, displayNameJa: getOptionDisplayNameJa(kind, option) } as ShowdownDisplayCandidate;
+    candidate = { ...value, displayNameJa: getOptionDisplayNameJa(kind, option) + (displaySuffixJa ?? "") } as ShowdownDisplayCandidate;
   } else {
     candidate = value as ShowdownDisplayCandidate;
   }

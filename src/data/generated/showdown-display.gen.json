@@ -1,13 +1,13 @@
 {
-  "schemaVersion": 1,
-  "dataVersion": "showdown-display-594116040412a749",
+  "schemaVersion": 2,
+  "dataVersion": "showdown-display-00a603986e7e6322",
   "source": {
     "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
-    "overlayVersion": "manual-showdown-2026-10-04",
+    "overlayVersion": "manual-showdown-2026-10-04-special-content",
     "sha256": {
       "src/data/generated/showdown-catalog.gen.json": "2a35d2c5c6cd5b58c28a856e4e0a3799e38707791d4de0f54f5fc68022349bc9",
       "scripts/data/showdown-source.lock.json": "1b1d2f0827cf0efafaaf6d498f57700cff82148da42f8e831daf25e865e2c2d2",
-      "src/data/overrides/showdown-display-overrides.json": "6d1cdbf17a8797796d05bcb5cdf53f2e4d1e8791763a9156e56af4c77a8abaa6",
+      "src/data/overrides/showdown-display-overrides.json": "4d5e82d829821a88c13febc3b7d8ca61961787e16abf884559bf9d0b403eb4f8",
       "src/data/overrides/ja-label-overrides.json": "f13d88e9b78f6ff0cddbf7655836ceb29069ad5fd406b290d0088e1241cfe9c0",
       "src/localization/displayNameRules.ts": "3cb42e1f40b6ae7bdc952dae2e167094875e5922d22497a6cde5d2218d1f10e7",
       "src/data/generated/pokemon-options.gen.json": "845879d802cc3b80cc9c69a8eecb2a518f750b34c771e68489651a849ea8d9d8",
@@ -1871,13 +1871,10 @@
       "kind": "ability",
       "showdownId": "mountaineer",
       "showdownName": "Mountaineer",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "mountaineer",
-        "canonicalName": "Mountaineer"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作特性"
     },
     {
       "kind": "ability",
@@ -1979,8 +1976,11 @@
       "kind": "ability",
       "showdownId": "noability",
       "showdownName": "No Ability",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "特性なし",
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "Showdownの特殊項目に対するUI用ラベル。特性の無効化状態は判定しない。"
     },
     {
       "kind": "ability",
@@ -2118,13 +2118,10 @@
       "kind": "ability",
       "showdownId": "persistent",
       "showdownName": "Persistent",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "persistent",
-        "canonicalName": "Persistent"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作特性"
     },
     {
       "kind": "ability",
@@ -2478,13 +2475,10 @@
       "kind": "ability",
       "showdownId": "rebound",
       "showdownName": "Rebound",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "rebound",
-        "canonicalName": "Rebound"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作特性"
     },
     {
       "kind": "ability",
@@ -3858,8 +3852,10 @@
       "kind": "pokemon",
       "showdownId": "ababo",
       "showdownName": "Ababo",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -4305,13 +4301,16 @@
       "kind": "pokemon",
       "showdownId": "araquanidtotem",
       "showdownName": "Araquanid-Totem",
-      "status": "needs-confirmation",
+      "status": "localized",
       "dictionaryRef": {
         "kind": "pokemon",
-        "id": "araquanidtotem",
-        "canonicalName": "Araquanid-Totem"
+        "id": "araquanid",
+        "canonicalName": "Araquanid"
       },
-      "reason": "non-distinct-form-label"
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "displaySuffixJa": "（ぬし）"
     },
     {
       "kind": "pokemon",
@@ -4653,15 +4652,19 @@
       "kind": "pokemon",
       "showdownId": "argalis",
       "showdownName": "Argalis",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "arghonaut",
       "showdownName": "Arghonaut",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -4763,8 +4766,10 @@
       "kind": "pokemon",
       "showdownId": "astrolotl",
       "showdownName": "Astrolotl",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -4806,8 +4811,10 @@
       "kind": "pokemon",
       "showdownId": "aurumoth",
       "showdownName": "Aurumoth",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -5485,8 +5492,10 @@
       "kind": "pokemon",
       "showdownId": "brattler",
       "showdownName": "Brattler",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -5516,8 +5525,10 @@
       "kind": "pokemon",
       "showdownId": "breezi",
       "showdownName": "Breezi",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -5741,8 +5752,10 @@
       "kind": "pokemon",
       "showdownId": "caimanoe",
       "showdownName": "Caimanoe",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -5832,8 +5845,10 @@
       "kind": "pokemon",
       "showdownId": "caribolt",
       "showdownName": "Caribolt",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -5959,15 +5974,19 @@
       "kind": "pokemon",
       "showdownId": "cawdet",
       "showdownName": "Cawdet",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "cawmodore",
       "showdownName": "Cawmodore",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -6381,22 +6400,28 @@
       "kind": "pokemon",
       "showdownId": "chromera",
       "showdownName": "Chromera",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "chuggalong",
       "showdownName": "Chuggalong",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "chuggon",
       "showdownName": "Chuggon",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -6618,8 +6643,10 @@
       "kind": "pokemon",
       "showdownId": "colossoil",
       "showdownName": "Colossoil",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -6697,8 +6724,10 @@
       "kind": "pokemon",
       "showdownId": "coribalis",
       "showdownName": "Coribalis",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -6920,8 +6949,10 @@
       "kind": "pokemon",
       "showdownId": "cresceidon",
       "showdownName": "Cresceidon",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -6987,15 +7018,19 @@
       "kind": "pokemon",
       "showdownId": "crucibelle",
       "showdownName": "Crucibelle",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "crucibellemega",
       "showdownName": "Crucibelle-Mega",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -7061,8 +7096,10 @@
       "kind": "pokemon",
       "showdownId": "cupra",
       "showdownName": "Cupra",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -7104,8 +7141,10 @@
       "kind": "pokemon",
       "showdownId": "cyclohm",
       "showdownName": "Cyclohm",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -7636,8 +7675,10 @@
       "kind": "pokemon",
       "showdownId": "dorsoil",
       "showdownName": "Dorsoil",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -7727,8 +7768,10 @@
       "kind": "pokemon",
       "showdownId": "draggalong",
       "showdownName": "Draggalong",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -8022,8 +8065,10 @@
       "kind": "pokemon",
       "showdownId": "duohm",
       "showdownName": "Duohm",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -8276,8 +8321,10 @@
       "kind": "pokemon",
       "showdownId": "electrelk",
       "showdownName": "Electrelk",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -8343,8 +8390,10 @@
       "kind": "pokemon",
       "showdownId": "embirch",
       "showdownName": "Embirch",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -8434,8 +8483,10 @@
       "kind": "pokemon",
       "showdownId": "equilibra",
       "showdownName": "Equilibra",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -8645,8 +8696,10 @@
       "kind": "pokemon",
       "showdownId": "fawnifer",
       "showdownName": "Fawnifer",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -8748,8 +8801,10 @@
       "kind": "pokemon",
       "showdownId": "fidgit",
       "showdownName": "Fidgit",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -8879,8 +8934,10 @@
       "kind": "pokemon",
       "showdownId": "flarelm",
       "showdownName": "Flarelm",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -8934,8 +8991,10 @@
       "kind": "pokemon",
       "showdownId": "floatoy",
       "showdownName": "Floatoy",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -9069,8 +9128,10 @@
       "kind": "pokemon",
       "showdownId": "flox",
       "showdownName": "Flox",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -10466,13 +10527,16 @@
       "kind": "pokemon",
       "showdownId": "gumshoostotem",
       "showdownName": "Gumshoos-Totem",
-      "status": "needs-confirmation",
+      "status": "localized",
       "dictionaryRef": {
         "kind": "pokemon",
-        "id": "gumshoostotem",
-        "canonicalName": "Gumshoos-Totem"
+        "id": "gumshoos",
+        "canonicalName": "Gumshoos"
       },
-      "reason": "non-distinct-form-label"
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "displaySuffixJa": "（ぬし）"
     },
     {
       "kind": "pokemon",
@@ -10718,8 +10782,10 @@
       "kind": "pokemon",
       "showdownId": "hemogoblin",
       "showdownName": "Hemogoblin",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -11337,8 +11403,10 @@
       "kind": "pokemon",
       "showdownId": "jumbao",
       "showdownName": "Jumbao",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -11356,8 +11424,10 @@
       "kind": "pokemon",
       "showdownId": "justyke",
       "showdownName": "Justyke",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -11507,8 +11577,10 @@
       "kind": "pokemon",
       "showdownId": "kerfluffle",
       "showdownName": "Kerfluffle",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -11586,8 +11658,10 @@
       "kind": "pokemon",
       "showdownId": "kitsunoh",
       "showdownName": "Kitsunoh",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -11701,13 +11775,16 @@
       "kind": "pokemon",
       "showdownId": "kommoototem",
       "showdownName": "Kommo-o-Totem",
-      "status": "needs-confirmation",
+      "status": "localized",
       "dictionaryRef": {
         "kind": "pokemon",
-        "id": "kommoototem",
-        "canonicalName": "Kommo-o-Totem"
+        "id": "kommoo",
+        "canonicalName": "Kommo-o"
       },
-      "reason": "non-distinct-form-label"
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "displaySuffixJa": "（ぬし）"
     },
     {
       "kind": "pokemon",
@@ -11761,8 +11838,10 @@
       "kind": "pokemon",
       "showdownId": "krilowatt",
       "showdownName": "Krilowatt",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -12404,13 +12483,16 @@
       "kind": "pokemon",
       "showdownId": "lurantistotem",
       "showdownName": "Lurantis-Totem",
-      "status": "needs-confirmation",
+      "status": "localized",
       "dictionaryRef": {
         "kind": "pokemon",
-        "id": "lurantistotem",
-        "canonicalName": "Lurantis-Totem"
+        "id": "lurantis",
+        "canonicalName": "Lurantis"
       },
-      "reason": "non-distinct-form-label"
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "displaySuffixJa": "（ぬし）"
     },
     {
       "kind": "pokemon",
@@ -12704,8 +12786,10 @@
       "kind": "pokemon",
       "showdownId": "malaconda",
       "showdownName": "Malaconda",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -13347,15 +13431,19 @@
       "kind": "pokemon",
       "showdownId": "miasmaw",
       "showdownName": "Miasmaw",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "miasmite",
       "showdownName": "Miasmite",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -13619,15 +13707,19 @@
       "kind": "pokemon",
       "showdownId": "missingno",
       "showdownName": "MissingNo.",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "glitch",
+      "noteJa": "初代作品のバグ由来データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "mollux",
       "showdownName": "Mollux",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -13669,8 +13761,10 @@
       "kind": "pokemon",
       "showdownId": "monohm",
       "showdownName": "Monohm",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -13832,8 +13926,10 @@
       "kind": "pokemon",
       "showdownId": "mumbao",
       "showdownName": "Mumbao",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -13947,8 +14043,10 @@
       "kind": "pokemon",
       "showdownId": "naviathan",
       "showdownName": "Naviathan",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -14002,15 +14100,19 @@
       "kind": "pokemon",
       "showdownId": "necturine",
       "showdownName": "Necturine",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "necturna",
       "showdownName": "Necturna",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -14172,8 +14274,10 @@
       "kind": "pokemon",
       "showdownId": "nohface",
       "showdownName": "Nohface",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -14251,8 +14355,10 @@
       "kind": "pokemon",
       "showdownId": "obliteryx",
       "showdownName": "Obliteryx",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -14594,8 +14700,10 @@
       "kind": "pokemon",
       "showdownId": "pajantom",
       "showdownName": "Pajantom",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -15293,15 +15401,19 @@
       "kind": "pokemon",
       "showdownId": "plasmanta",
       "showdownName": "Plasmanta",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "pluffle",
       "showdownName": "Pluffle",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -15331,232 +15443,298 @@
       "kind": "pokemon",
       "showdownId": "pokestarblackbelt",
       "showdownName": "Pokestar Black Belt",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarblackbeltprop",
       "showdownName": "Pokestar Black Belt-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarblackdoor",
       "showdownName": "Pokestar Black Door",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarblackdoorprop",
       "showdownName": "Pokestar Black Door-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarbrycenman",
       "showdownName": "Pokestar Brycen-Man",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarbrycenmanprop",
       "showdownName": "Pokestar Brycen-Man-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarf00",
       "showdownName": "Pokestar F-00",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarf002",
       "showdownName": "Pokestar F-002",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarf002prop",
       "showdownName": "Pokestar F-002-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarf00prop",
       "showdownName": "Pokestar F-00-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestargiant",
       "showdownName": "Pokestar Giant",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestargiant2",
       "showdownName": "Pokestar Giant-2",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestargiantpropo1",
       "showdownName": "Pokestar Giant-PropO1",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestargiantpropo2",
       "showdownName": "Pokestar Giant-PropO2",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarhumanoid",
       "showdownName": "Pokestar Humanoid",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarhumanoidprop",
       "showdownName": "Pokestar Humanoid-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarmonster",
       "showdownName": "Pokestar Monster",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarmonsterprop",
       "showdownName": "Pokestar Monster-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarmt",
       "showdownName": "Pokestar MT",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarmt2",
       "showdownName": "Pokestar MT2",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarmt2prop",
       "showdownName": "Pokestar MT2-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarmtprop",
       "showdownName": "Pokestar MT-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarsmeargle",
       "showdownName": "Pokestar Smeargle",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarspirit",
       "showdownName": "Pokestar Spirit",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarspiritprop",
       "showdownName": "Pokestar Spirit-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestartransport",
       "showdownName": "Pokestar Transport",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestartransportprop",
       "showdownName": "Pokestar Transport-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarufo",
       "showdownName": "Pokestar UFO",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarufo2",
       "showdownName": "Pokestar UFO-2",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarufopropu1",
       "showdownName": "Pokestar UFO-PropU1",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarufopropu2",
       "showdownName": "Pokestar UFO-PropU2",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarwhitedoor",
       "showdownName": "Pokestar White Door",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
       "showdownId": "pokestarwhitedoorprop",
       "showdownName": "Pokestar White Door-Prop",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "pokestar",
+      "noteJa": "ポケウッドの登場データ"
     },
     {
       "kind": "pokemon",
@@ -15778,8 +15956,10 @@
       "kind": "pokemon",
       "showdownId": "privatyke",
       "showdownName": "Privatyke",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -15797,8 +15977,10 @@
       "kind": "pokemon",
       "showdownId": "protowatt",
       "showdownName": "Protowatt",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -15900,8 +16082,10 @@
       "kind": "pokemon",
       "showdownId": "pyroak",
       "showdownName": "Pyroak",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -16147,15 +16331,19 @@
       "kind": "pokemon",
       "showdownId": "ramnarok",
       "showdownName": "Ramnarok",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "ramnarokradiant",
       "showdownName": "Ramnarok-Radiant",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -16281,8 +16469,10 @@
       "kind": "pokemon",
       "showdownId": "rebble",
       "showdownName": "Rebble",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -16432,8 +16622,10 @@
       "kind": "pokemon",
       "showdownId": "revenankh",
       "showdownName": "Revenankh",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -16487,13 +16679,16 @@
       "kind": "pokemon",
       "showdownId": "ribombeetotem",
       "showdownName": "Ribombee-Totem",
-      "status": "needs-confirmation",
+      "status": "localized",
       "dictionaryRef": {
         "kind": "pokemon",
-        "id": "ribombeetotem",
-        "canonicalName": "Ribombee-Totem"
+        "id": "ribombee",
+        "canonicalName": "Ribombee"
       },
-      "reason": "non-distinct-form-label"
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "displaySuffixJa": "（ぬし）"
     },
     {
       "kind": "pokemon",
@@ -16763,15 +16958,19 @@
       "kind": "pokemon",
       "showdownId": "saharaja",
       "showdownName": "Saharaja",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "saharascal",
       "showdownName": "Saharascal",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -16825,13 +17024,16 @@
       "kind": "pokemon",
       "showdownId": "salazzletotem",
       "showdownName": "Salazzle-Totem",
-      "status": "needs-confirmation",
+      "status": "localized",
       "dictionaryRef": {
         "kind": "pokemon",
-        "id": "salazzletotem",
-        "canonicalName": "Salazzle-Totem"
+        "id": "salazzle",
+        "canonicalName": "Salazzle"
       },
-      "reason": "non-distinct-form-label"
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "displaySuffixJa": "（ぬし）"
     },
     {
       "kind": "pokemon",
@@ -17026,8 +17228,10 @@
       "kind": "pokemon",
       "showdownId": "scattervein",
       "showdownName": "Scattervein",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -17177,15 +17381,19 @@
       "kind": "pokemon",
       "showdownId": "scraptor",
       "showdownName": "Scraptor",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "scratchet",
       "showdownName": "Scratchet",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -17510,8 +17718,10 @@
       "kind": "pokemon",
       "showdownId": "shox",
       "showdownName": "Shox",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -18225,22 +18435,28 @@
       "kind": "pokemon",
       "showdownId": "smogecko",
       "showdownName": "Smogecko",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "smoguana",
       "showdownName": "Smoguana",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "smokomodo",
       "showdownName": "Smokomodo",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -18270,8 +18486,10 @@
       "kind": "pokemon",
       "showdownId": "snaelstrom",
       "showdownName": "Snaelstrom",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -18397,8 +18615,10 @@
       "kind": "pokemon",
       "showdownId": "snugglow",
       "showdownName": "Snugglow",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -18440,8 +18660,10 @@
       "kind": "pokemon",
       "showdownId": "solotl",
       "showdownName": "Solotl",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -18819,8 +19041,10 @@
       "kind": "pokemon",
       "showdownId": "stratagem",
       "showdownName": "Stratagem",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -19042,8 +19266,10 @@
       "kind": "pokemon",
       "showdownId": "swirlpool",
       "showdownName": "Swirlpool",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -19061,15 +19287,19 @@
       "kind": "pokemon",
       "showdownId": "syclant",
       "showdownName": "Syclant",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "syclar",
       "showdownName": "Syclar",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -19087,8 +19317,10 @@
       "kind": "pokemon",
       "showdownId": "tactite",
       "showdownName": "Tactite",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -19610,13 +19842,16 @@
       "kind": "pokemon",
       "showdownId": "togedemarutotem",
       "showdownName": "Togedemaru-Totem",
-      "status": "needs-confirmation",
+      "status": "localized",
       "dictionaryRef": {
         "kind": "pokemon",
-        "id": "togedemarutotem",
-        "canonicalName": "Togedemaru-Totem"
+        "id": "togedemaru",
+        "canonicalName": "Togedemaru"
       },
-      "reason": "non-distinct-form-label"
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "displaySuffixJa": "（ぬし）"
     },
     {
       "kind": "pokemon",
@@ -19658,8 +19893,10 @@
       "kind": "pokemon",
       "showdownId": "tomohawk",
       "showdownName": "Tomohawk",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -20490,15 +20727,19 @@
       "kind": "pokemon",
       "showdownId": "venomicon",
       "showdownName": "Venomicon",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "venomiconepilogue",
       "showdownName": "Venomicon-Epilogue",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -20648,13 +20889,16 @@
       "kind": "pokemon",
       "showdownId": "vikavolttotem",
       "showdownName": "Vikavolt-Totem",
-      "status": "needs-confirmation",
+      "status": "localized",
       "dictionaryRef": {
         "kind": "pokemon",
-        "id": "vikavolttotem",
-        "canonicalName": "Vikavolt-Totem"
+        "id": "vikavolt",
+        "canonicalName": "Vikavolt"
       },
-      "reason": "non-distinct-form-label"
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "displaySuffixJa": "（ぬし）"
     },
     {
       "kind": "pokemon",
@@ -20888,15 +21132,19 @@
       "kind": "pokemon",
       "showdownId": "volkraken",
       "showdownName": "Volkraken",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "volkritter",
       "showdownName": "Volkritter",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -20926,15 +21174,19 @@
       "kind": "pokemon",
       "showdownId": "voodoll",
       "showdownName": "Voodoll",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
       "showdownId": "voodoom",
       "showdownName": "Voodoom",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "out-of-scope",
+      "reason": "outside-localization-scope",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作ポケモン"
     },
     {
       "kind": "pokemon",
@@ -22075,19 +22327,22 @@
   ],
   "summary": {
     "pokemon": {
-      "localized": 1257,
-      "needs-confirmation": 130,
-      "unsupported": 199
+      "localized": 1265,
+      "needs-confirmation": 122,
+      "unsupported": 82,
+      "out-of-scope": 117
     },
     "ability": {
-      "localized": 307,
-      "needs-confirmation": 13,
-      "unsupported": 1
+      "localized": 308,
+      "needs-confirmation": 10,
+      "unsupported": 0,
+      "out-of-scope": 3
     },
     "type": {
       "localized": 19,
       "needs-confirmation": 0,
-      "unsupported": 0
+      "unsupported": 0,
+      "out-of-scope": 0
     }
   }
 }

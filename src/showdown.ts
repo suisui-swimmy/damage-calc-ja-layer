@@ -5,4 +5,5 @@ export type {
   ShowdownDisplayCandidate,
   ShowdownDisplayResult,
   ShowdownEntityKind,
+  ShowdownScopeCategory,
 } from "./localization/showdownTypes";

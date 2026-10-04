@@ -3,3 +3,9 @@ docs/
 node_modules/
 dist/
 dist-showdown/
+
+# Local localization worklist and its audit tooling (not runtime inputs).
+/SHOWDOWN_LOCALIZATION_AUDIT.md
+/reports/showdown-localization-audit.json
+/scripts/data/showdown-audit-baseline.json
+/scripts/audit-showdown-display.mjs

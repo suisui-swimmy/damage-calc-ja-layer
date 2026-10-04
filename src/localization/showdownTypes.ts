@@ -1,5 +1,6 @@
 /** Names/display only. This API does not certify calculation or ruleset support. */
 export type ShowdownEntityKind = "pokemon" | "ability" | "type";
+export type ShowdownScopeCategory = "cap" | "pokestar" | "glitch";
 
 export interface ShowdownDictionaryRef {
   kind: ShowdownEntityKind;
@@ -15,7 +16,8 @@ interface ShowdownIdentity {
 }
 
 export type ShowdownDisplayCandidate = ShowdownIdentity & (
-  | { status: "localized"; displayNameJa: string; provenance: "existing-dictionary" | "showdown-overlay" }
+  | { status: "localized"; displayNameJa: string; provenance: "existing-dictionary" | "showdown-overlay"; labelKind?: "ui-label"; noteJa?: string }
+  | { status: "out-of-scope"; reason: "outside-localization-scope"; category: ShowdownScopeCategory; noteJa: string }
   | { status: "needs-confirmation" | "unsupported"; reason: string }
 );
 

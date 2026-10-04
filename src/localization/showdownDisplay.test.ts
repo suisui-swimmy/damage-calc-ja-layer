@@ -127,7 +127,7 @@ describe("Showdown display API", () => {
   });
 
   it("withholds indistinguishable imported form labels even without fallback flags", () => {
-    for (const name of ["Araquanid-Totem", "Darmanitan-Galar-Zen", "Darmanitan-Zen"]) {
+    for (const name of ["Darmanitan-Galar-Zen", "Darmanitan-Zen"]) {
       expect(lookup("pokemon", name)).toMatchObject({ status: "needs-confirmation", reason: "non-distinct-form-label" });
       expect(lookup("pokemon", name)).not.toHaveProperty("displayNameJa");
     }

@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "manual-showdown-2026-10-04",
+  "dataVersion": "manual-showdown-2026-10-04-special-content",
   "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
   "usage": "display-only",
   "notes": [
     "Bare Vivillon is Meadow in the pinned baseForme and vivillonmeadow alias. The Icy Snow TODO is not the active definition.",
     "Cosmetic form IDs take precedence over upstream aliases pointing at their base species.",
-    "Dictionary references are translation keys, never replacement external IDs."
+    "Dictionary references are translation keys, never replacement external IDs.",
+    "The explicitly reviewed CAP, Pokestar and glitch IDs remain known entries but are out of Japanese-name localization scope. User confirmed the Showdown descriptions on 2026-10-04."
   ],
   "entries": [
     {
@@ -263,6 +264,122 @@
         "https://zukan.pokemon.co.jp/detail/0668-2"
       ],
       "evidence": "Official page script#json-data abilities[].name; checked 2026-10-04. Showdown data/abilities.ts name and object key."
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "araquanidtotem",
+      "showdownName": "Araquanid-Totem",
+      "dictionaryName": "Araquanid",
+      "displaySuffixJa": "（ぬし）",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": "User confirmed these eight H3 Totem entries as totem Pokemon on 2026-10-04; approved Japanese base name plus UI suffix. No stats or ability inheritance."
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "gumshoostotem",
+      "showdownName": "Gumshoos-Totem",
+      "dictionaryName": "Gumshoos",
+      "displaySuffixJa": "（ぬし）",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": "User confirmed these eight H3 Totem entries as totem Pokemon on 2026-10-04; approved Japanese base name plus UI suffix. No stats or ability inheritance."
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "kommoototem",
+      "showdownName": "Kommo-o-Totem",
+      "dictionaryName": "Kommo-o",
+      "displaySuffixJa": "（ぬし）",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": "User confirmed these eight H3 Totem entries as totem Pokemon on 2026-10-04; approved Japanese base name plus UI suffix. No stats or ability inheritance."
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "lurantistotem",
+      "showdownName": "Lurantis-Totem",
+      "dictionaryName": "Lurantis",
+      "displaySuffixJa": "（ぬし）",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": "User confirmed these eight H3 Totem entries as totem Pokemon on 2026-10-04; approved Japanese base name plus UI suffix. No stats or ability inheritance."
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "ribombeetotem",
+      "showdownName": "Ribombee-Totem",
+      "dictionaryName": "Ribombee",
+      "displaySuffixJa": "（ぬし）",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": "User confirmed these eight H3 Totem entries as totem Pokemon on 2026-10-04; approved Japanese base name plus UI suffix. No stats or ability inheritance."
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "salazzletotem",
+      "showdownName": "Salazzle-Totem",
+      "dictionaryName": "Salazzle",
+      "displaySuffixJa": "（ぬし）",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": "User confirmed these eight H3 Totem entries as totem Pokemon on 2026-10-04; approved Japanese base name plus UI suffix. No stats or ability inheritance."
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "togedemarutotem",
+      "showdownName": "Togedemaru-Totem",
+      "dictionaryName": "Togedemaru",
+      "displaySuffixJa": "（ぬし）",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": "User confirmed these eight H3 Totem entries as totem Pokemon on 2026-10-04; approved Japanese base name plus UI suffix. No stats or ability inheritance."
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "vikavolttotem",
+      "showdownName": "Vikavolt-Totem",
+      "dictionaryName": "Vikavolt",
+      "displaySuffixJa": "（ぬし）",
+      "labelKind": "ui-label",
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": "User confirmed these eight H3 Totem entries as totem Pokemon on 2026-10-04; approved Japanese base name plus UI suffix. No stats or ability inheritance."
+    },
+    {
+      "kind": "ability",
+      "showdownId": "noability",
+      "showdownName": "No Ability",
+      "displayNameJa": "特性なし",
+      "labelKind": "ui-label",
+      "noteJa": "Showdownの特殊項目に対するUI用ラベル。特性の無効化状態は判定しない。",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/abilities.ts"
+      ],
+      "evidence": "User confirmed the Showdown description \"Does nothing.\" and approved the UI label on 2026-10-04. This is not an official ability name."
     }
   ],
   "aliases": [
@@ -288,6 +405,552 @@
       ],
       "reason": "breed-not-specified",
       "notes": "Showdown aliases this shorthand to Combat; this display API requires the explicit breed to avoid guessing caller intent."
+    }
+  ],
+  "outOfScopeGroups": [
+    {
+      "category": "cap",
+      "kind": "ability",
+      "noteJa": "Smogon CAPの創作特性",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/abilities.ts"
+      ],
+      "evidence": {
+        "verifiedBy": "user",
+        "checkedOn": "2026-10-04",
+        "showdownDescription": "A made-up ability by Smogon CAP.",
+        "decision": "Preserve original name and ID; exclude from Japanese-name translation backlog. Do not hide or delete the entry."
+      },
+      "entries": [
+        {
+          "showdownId": "mountaineer",
+          "showdownName": "Mountaineer"
+        },
+        {
+          "showdownId": "persistent",
+          "showdownName": "Persistent"
+        },
+        {
+          "showdownId": "rebound",
+          "showdownName": "Rebound"
+        }
+      ]
+    },
+    {
+      "category": "cap",
+      "kind": "pokemon",
+      "noteJa": "Smogon CAPの創作ポケモン",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": {
+        "verifiedBy": "user",
+        "checkedOn": "2026-10-04",
+        "showdownDescription": "A made-up Pokémon by Smogon CAP.",
+        "decision": "Preserve original name and ID; exclude from Japanese-name translation backlog. Do not hide or delete the entry."
+      },
+      "entries": [
+        {
+          "showdownId": "ababo",
+          "showdownName": "Ababo"
+        },
+        {
+          "showdownId": "argalis",
+          "showdownName": "Argalis"
+        },
+        {
+          "showdownId": "arghonaut",
+          "showdownName": "Arghonaut"
+        },
+        {
+          "showdownId": "astrolotl",
+          "showdownName": "Astrolotl"
+        },
+        {
+          "showdownId": "aurumoth",
+          "showdownName": "Aurumoth"
+        },
+        {
+          "showdownId": "brattler",
+          "showdownName": "Brattler"
+        },
+        {
+          "showdownId": "breezi",
+          "showdownName": "Breezi"
+        },
+        {
+          "showdownId": "caimanoe",
+          "showdownName": "Caimanoe"
+        },
+        {
+          "showdownId": "caribolt",
+          "showdownName": "Caribolt"
+        },
+        {
+          "showdownId": "cawdet",
+          "showdownName": "Cawdet"
+        },
+        {
+          "showdownId": "cawmodore",
+          "showdownName": "Cawmodore"
+        },
+        {
+          "showdownId": "chromera",
+          "showdownName": "Chromera"
+        },
+        {
+          "showdownId": "chuggalong",
+          "showdownName": "Chuggalong"
+        },
+        {
+          "showdownId": "chuggon",
+          "showdownName": "Chuggon"
+        },
+        {
+          "showdownId": "colossoil",
+          "showdownName": "Colossoil"
+        },
+        {
+          "showdownId": "coribalis",
+          "showdownName": "Coribalis"
+        },
+        {
+          "showdownId": "cresceidon",
+          "showdownName": "Cresceidon"
+        },
+        {
+          "showdownId": "crucibelle",
+          "showdownName": "Crucibelle"
+        },
+        {
+          "showdownId": "crucibellemega",
+          "showdownName": "Crucibelle-Mega"
+        },
+        {
+          "showdownId": "cupra",
+          "showdownName": "Cupra"
+        },
+        {
+          "showdownId": "cyclohm",
+          "showdownName": "Cyclohm"
+        },
+        {
+          "showdownId": "dorsoil",
+          "showdownName": "Dorsoil"
+        },
+        {
+          "showdownId": "draggalong",
+          "showdownName": "Draggalong"
+        },
+        {
+          "showdownId": "duohm",
+          "showdownName": "Duohm"
+        },
+        {
+          "showdownId": "electrelk",
+          "showdownName": "Electrelk"
+        },
+        {
+          "showdownId": "embirch",
+          "showdownName": "Embirch"
+        },
+        {
+          "showdownId": "equilibra",
+          "showdownName": "Equilibra"
+        },
+        {
+          "showdownId": "fawnifer",
+          "showdownName": "Fawnifer"
+        },
+        {
+          "showdownId": "fidgit",
+          "showdownName": "Fidgit"
+        },
+        {
+          "showdownId": "flarelm",
+          "showdownName": "Flarelm"
+        },
+        {
+          "showdownId": "floatoy",
+          "showdownName": "Floatoy"
+        },
+        {
+          "showdownId": "hemogoblin",
+          "showdownName": "Hemogoblin"
+        },
+        {
+          "showdownId": "jumbao",
+          "showdownName": "Jumbao"
+        },
+        {
+          "showdownId": "justyke",
+          "showdownName": "Justyke"
+        },
+        {
+          "showdownId": "kerfluffle",
+          "showdownName": "Kerfluffle"
+        },
+        {
+          "showdownId": "kitsunoh",
+          "showdownName": "Kitsunoh"
+        },
+        {
+          "showdownId": "krilowatt",
+          "showdownName": "Krilowatt"
+        },
+        {
+          "showdownId": "malaconda",
+          "showdownName": "Malaconda"
+        },
+        {
+          "showdownId": "miasmaw",
+          "showdownName": "Miasmaw"
+        },
+        {
+          "showdownId": "miasmite",
+          "showdownName": "Miasmite"
+        },
+        {
+          "showdownId": "mollux",
+          "showdownName": "Mollux"
+        },
+        {
+          "showdownId": "monohm",
+          "showdownName": "Monohm"
+        },
+        {
+          "showdownId": "mumbao",
+          "showdownName": "Mumbao"
+        },
+        {
+          "showdownId": "naviathan",
+          "showdownName": "Naviathan"
+        },
+        {
+          "showdownId": "necturine",
+          "showdownName": "Necturine"
+        },
+        {
+          "showdownId": "necturna",
+          "showdownName": "Necturna"
+        },
+        {
+          "showdownId": "nohface",
+          "showdownName": "Nohface"
+        },
+        {
+          "showdownId": "pajantom",
+          "showdownName": "Pajantom"
+        },
+        {
+          "showdownId": "plasmanta",
+          "showdownName": "Plasmanta"
+        },
+        {
+          "showdownId": "pluffle",
+          "showdownName": "Pluffle"
+        },
+        {
+          "showdownId": "privatyke",
+          "showdownName": "Privatyke"
+        },
+        {
+          "showdownId": "protowatt",
+          "showdownName": "Protowatt"
+        },
+        {
+          "showdownId": "pyroak",
+          "showdownName": "Pyroak"
+        },
+        {
+          "showdownId": "ramnarok",
+          "showdownName": "Ramnarok"
+        },
+        {
+          "showdownId": "ramnarokradiant",
+          "showdownName": "Ramnarok-Radiant"
+        },
+        {
+          "showdownId": "rebble",
+          "showdownName": "Rebble"
+        },
+        {
+          "showdownId": "revenankh",
+          "showdownName": "Revenankh"
+        },
+        {
+          "showdownId": "saharaja",
+          "showdownName": "Saharaja"
+        },
+        {
+          "showdownId": "saharascal",
+          "showdownName": "Saharascal"
+        },
+        {
+          "showdownId": "scattervein",
+          "showdownName": "Scattervein"
+        },
+        {
+          "showdownId": "scratchet",
+          "showdownName": "Scratchet"
+        },
+        {
+          "showdownId": "shox",
+          "showdownName": "Shox"
+        },
+        {
+          "showdownId": "smogecko",
+          "showdownName": "Smogecko"
+        },
+        {
+          "showdownId": "smoguana",
+          "showdownName": "Smoguana"
+        },
+        {
+          "showdownId": "smokomodo",
+          "showdownName": "Smokomodo"
+        },
+        {
+          "showdownId": "snaelstrom",
+          "showdownName": "Snaelstrom"
+        },
+        {
+          "showdownId": "snugglow",
+          "showdownName": "Snugglow"
+        },
+        {
+          "showdownId": "solotl",
+          "showdownName": "Solotl"
+        },
+        {
+          "showdownId": "stratagem",
+          "showdownName": "Stratagem"
+        },
+        {
+          "showdownId": "swirlpool",
+          "showdownName": "Swirlpool"
+        },
+        {
+          "showdownId": "syclant",
+          "showdownName": "Syclant"
+        },
+        {
+          "showdownId": "syclar",
+          "showdownName": "Syclar"
+        },
+        {
+          "showdownId": "tactite",
+          "showdownName": "Tactite"
+        },
+        {
+          "showdownId": "tomohawk",
+          "showdownName": "Tomohawk"
+        },
+        {
+          "showdownId": "venomicon",
+          "showdownName": "Venomicon"
+        },
+        {
+          "showdownId": "venomiconepilogue",
+          "showdownName": "Venomicon-Epilogue"
+        },
+        {
+          "showdownId": "volkraken",
+          "showdownName": "Volkraken"
+        },
+        {
+          "showdownId": "volkritter",
+          "showdownName": "Volkritter"
+        },
+        {
+          "showdownId": "voodoll",
+          "showdownName": "Voodoll"
+        },
+        {
+          "showdownId": "voodoom",
+          "showdownName": "Voodoom"
+        },
+        {
+          "showdownId": "flox",
+          "showdownName": "Flox"
+        },
+        {
+          "showdownId": "obliteryx",
+          "showdownName": "Obliteryx"
+        },
+        {
+          "showdownId": "scraptor",
+          "showdownName": "Scraptor"
+        }
+      ]
+    },
+    {
+      "category": "pokestar",
+      "kind": "pokemon",
+      "noteJa": "ポケウッドの登場データ",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": {
+        "verifiedBy": "user",
+        "checkedOn": "2026-10-04",
+        "showdownDescription": "A Pokémon from Pokéstar Studios in Black 2 and White 2.",
+        "decision": "Preserve original name and ID; exclude from Japanese-name translation backlog. Do not hide or delete the entry."
+      },
+      "entries": [
+        {
+          "showdownId": "pokestarblackbelt",
+          "showdownName": "Pokestar Black Belt"
+        },
+        {
+          "showdownId": "pokestarblackbeltprop",
+          "showdownName": "Pokestar Black Belt-Prop"
+        },
+        {
+          "showdownId": "pokestarblackdoor",
+          "showdownName": "Pokestar Black Door"
+        },
+        {
+          "showdownId": "pokestarblackdoorprop",
+          "showdownName": "Pokestar Black Door-Prop"
+        },
+        {
+          "showdownId": "pokestarbrycenman",
+          "showdownName": "Pokestar Brycen-Man"
+        },
+        {
+          "showdownId": "pokestarbrycenmanprop",
+          "showdownName": "Pokestar Brycen-Man-Prop"
+        },
+        {
+          "showdownId": "pokestarf00",
+          "showdownName": "Pokestar F-00"
+        },
+        {
+          "showdownId": "pokestarf002",
+          "showdownName": "Pokestar F-002"
+        },
+        {
+          "showdownId": "pokestarf002prop",
+          "showdownName": "Pokestar F-002-Prop"
+        },
+        {
+          "showdownId": "pokestarf00prop",
+          "showdownName": "Pokestar F-00-Prop"
+        },
+        {
+          "showdownId": "pokestargiant",
+          "showdownName": "Pokestar Giant"
+        },
+        {
+          "showdownId": "pokestargiant2",
+          "showdownName": "Pokestar Giant-2"
+        },
+        {
+          "showdownId": "pokestargiantpropo1",
+          "showdownName": "Pokestar Giant-PropO1"
+        },
+        {
+          "showdownId": "pokestargiantpropo2",
+          "showdownName": "Pokestar Giant-PropO2"
+        },
+        {
+          "showdownId": "pokestarhumanoid",
+          "showdownName": "Pokestar Humanoid"
+        },
+        {
+          "showdownId": "pokestarhumanoidprop",
+          "showdownName": "Pokestar Humanoid-Prop"
+        },
+        {
+          "showdownId": "pokestarmonster",
+          "showdownName": "Pokestar Monster"
+        },
+        {
+          "showdownId": "pokestarmonsterprop",
+          "showdownName": "Pokestar Monster-Prop"
+        },
+        {
+          "showdownId": "pokestarmt",
+          "showdownName": "Pokestar MT"
+        },
+        {
+          "showdownId": "pokestarmt2",
+          "showdownName": "Pokestar MT2"
+        },
+        {
+          "showdownId": "pokestarmt2prop",
+          "showdownName": "Pokestar MT2-Prop"
+        },
+        {
+          "showdownId": "pokestarmtprop",
+          "showdownName": "Pokestar MT-Prop"
+        },
+        {
+          "showdownId": "pokestarsmeargle",
+          "showdownName": "Pokestar Smeargle"
+        },
+        {
+          "showdownId": "pokestarspirit",
+          "showdownName": "Pokestar Spirit"
+        },
+        {
+          "showdownId": "pokestarspiritprop",
+          "showdownName": "Pokestar Spirit-Prop"
+        },
+        {
+          "showdownId": "pokestartransport",
+          "showdownName": "Pokestar Transport"
+        },
+        {
+          "showdownId": "pokestartransportprop",
+          "showdownName": "Pokestar Transport-Prop"
+        },
+        {
+          "showdownId": "pokestarufo",
+          "showdownName": "Pokestar UFO"
+        },
+        {
+          "showdownId": "pokestarufo2",
+          "showdownName": "Pokestar UFO-2"
+        },
+        {
+          "showdownId": "pokestarufopropu1",
+          "showdownName": "Pokestar UFO-PropU1"
+        },
+        {
+          "showdownId": "pokestarufopropu2",
+          "showdownName": "Pokestar UFO-PropU2"
+        },
+        {
+          "showdownId": "pokestarwhitedoor",
+          "showdownName": "Pokestar White Door"
+        },
+        {
+          "showdownId": "pokestarwhitedoorprop",
+          "showdownName": "Pokestar White Door-Prop"
+        }
+      ]
+    },
+    {
+      "category": "glitch",
+      "kind": "pokemon",
+      "noteJa": "初代作品のバグ由来データ",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "evidence": {
+        "verifiedBy": "user",
+        "checkedOn": "2026-10-04",
+        "showdownDescription": "A glitch Pokémon from Red/Blue/Yellow.",
+        "decision": "Preserve original name and ID; exclude from Japanese-name translation backlog. Do not hide or delete the entry."
+      },
+      "entries": [
+        {
+          "showdownId": "missingno",
+          "showdownName": "MissingNo."
+        }
+      ]
     }
   ]
 }
