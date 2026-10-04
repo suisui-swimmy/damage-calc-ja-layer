@@ -394,6 +394,9 @@ const validateOverlay = async (target, catalogByKind) => {
     }
 
     const key = `${entry.kind}:${entry.id}`;
+    if (entry.confirmsShowdownName !== undefined && typeof entry.confirmsShowdownName !== "boolean") {
+      addError(target.fileName, `override ${key} has invalid confirmsShowdownName`);
+    }
     if (seenKeys.has(key)) {
       addError(target.fileName, `duplicate override key ${key}`);
     }

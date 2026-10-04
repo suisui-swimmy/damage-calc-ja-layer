@@ -73,6 +73,8 @@ export interface ManualJaLabelOverride {
   id: string;
   displayNameJa: string;
   sourceStatus?: SourceStatus;
+  /** False for text-only corrections that must not approve an unresolved Showdown form. */
+  confirmsShowdownName?: boolean;
   notes?: string;
 }
 

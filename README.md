@@ -187,6 +187,10 @@ npm run validate:ja-mapping
 日本語 options は取り込み済みスナップショットで、この checkout には元の
 `generate-pokemon-options.mjs` / `generate-battle-options.mjs` と全入力素材は含まれていない。
 表示補正は `ja-label-overrides.json` を `displayNameRules.ts` で実行時に適用し、一覧・resolver・formatter で共有する。
+メガシンカ97項目は、重複する通常種名を除いた完成名で表示する（例: `メガアブソル` / `メガプテラ`）。
+X・Y・Zの表記と `メガメガニウム` はそのまま保持する。
+旧表示の `アブソル メガアブソル` などは `ja-aliases.json` で入力互換用の別名として受け付け、返す表示は完成名へ統一する。
+`confirmsShowdownName: false` を指定した表示補正は、Showdown側の未確認フォームを承認済みへ変更しない。
 補正対象の検索文字列も補正後の表示名・canonical name・IDから組み直し、誤った旧表示を検索に残さない。
 残す必要がある旧入力や略称は `ja-aliases.json` に明示する。
 この補正の反映に options JSON の手編集・再生成は不要で、通常の test / build で再現できる。

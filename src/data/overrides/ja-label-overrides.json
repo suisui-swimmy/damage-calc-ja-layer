@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "manual-2026-10-04",
+  "dataVersion": "manual-2026-10-05-mega-labels",
   "source": {
     "kind": "manual-overlay",
     "note": "Display label fixes layered over generated options; no calc data or artwork changes.",
     "taurosNames": "https://zukan.pokemon.co.jp/detail/0128",
     "vivillonPatternNames": "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html",
-    "calcDefinition": "@smogon/calc@0.11.0 src/data/species.ts; Generations.get(9).species"
+    "calcDefinition": "@smogon/calc@0.11.0 src/data/species.ts; Generations.get(9).species",
+    "megaNames": "Existing pokemon-options snapshot: retain the complete Mega name, remove only the separate repeated species prefix."
   },
   "generatedBy": "manual",
   "kind": "ja-label-overrides",
@@ -46,10 +47,689 @@
       "id": "vivillonpokeball",
       "displayNameJa": "ビビヨン ボールのもよう",
       "notes": "Explicit calc form; shares types, stats, weight and default ability with Vivillon."
+    },
+    {
+      "kind": "pokemon",
+      "id": "abomasnowmega",
+      "displayNameJa": "メガユキノオー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "absolmega",
+      "displayNameJa": "メガアブソル",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "absolmegaz",
+      "displayNameJa": "メガアブソルZ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "aerodactylmega",
+      "displayNameJa": "メガプテラ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "aggronmega",
+      "displayNameJa": "メガボスゴドラ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "alakazammega",
+      "displayNameJa": "メガフーディン",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "altariamega",
+      "displayNameJa": "メガチルタリス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "ampharosmega",
+      "displayNameJa": "メガデンリュウ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "audinomega",
+      "displayNameJa": "メガタブンネ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "banettemega",
+      "displayNameJa": "メガジュペッタ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "barbaraclemega",
+      "displayNameJa": "メガガメノデス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "baxcaliburmega",
+      "displayNameJa": "メガセグレイブ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "beedrillmega",
+      "displayNameJa": "メガスピアー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "blastoisemega",
+      "displayNameJa": "メガカメックス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "blazikenmega",
+      "displayNameJa": "メガバシャーモ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "cameruptmega",
+      "displayNameJa": "メガバクーダ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "chandeluremega",
+      "displayNameJa": "メガシャンデラ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "charizardmegax",
+      "displayNameJa": "メガリザードンＸ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "charizardmegay",
+      "displayNameJa": "メガリザードンＹ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "chesnaughtmega",
+      "displayNameJa": "メガブリガロン",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "chimechomega",
+      "displayNameJa": "メガチリーン",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "clefablemega",
+      "displayNameJa": "メガピクシー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "crabominablemega",
+      "displayNameJa": "メガケケンカニ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "darkraimega",
+      "displayNameJa": "メガダークライ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "delphoxmega",
+      "displayNameJa": "メガマフォクシー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "dianciemega",
+      "displayNameJa": "メガディアンシー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "dragalgemega",
+      "displayNameJa": "メガドラミドロ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "dragonitemega",
+      "displayNameJa": "メガカイリュー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "drampamega",
+      "displayNameJa": "メガジジーロン",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "eelektrossmega",
+      "displayNameJa": "メガシビルドン",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "emboarmega",
+      "displayNameJa": "メガエンブオー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "excadrillmega",
+      "displayNameJa": "メガドリュウズ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "falinksmega",
+      "displayNameJa": "メガタイレーツ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "feraligatrmega",
+      "displayNameJa": "メガオーダイル",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "floettemega",
+      "displayNameJa": "メガフラエッテ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "froslassmega",
+      "displayNameJa": "メガユキメノコ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "gallademega",
+      "displayNameJa": "メガエルレイド",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "garchompmega",
+      "displayNameJa": "メガガブリアス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "garchompmegaz",
+      "displayNameJa": "メガガブリアスZ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "gardevoirmega",
+      "displayNameJa": "メガサーナイト",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "gengarmega",
+      "displayNameJa": "メガゲンガー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "glaliemega",
+      "displayNameJa": "メガオニゴーリ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "glimmoramega",
+      "displayNameJa": "メガキラフロル",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "golisopodmega",
+      "displayNameJa": "メガグソクムシャ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "golurkmega",
+      "displayNameJa": "メガゴルーグ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "greninjamega",
+      "displayNameJa": "メガゲッコウガ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "gyaradosmega",
+      "displayNameJa": "メガギャラドス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "hawluchamega",
+      "displayNameJa": "メガルチャブル",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "heatranmega",
+      "displayNameJa": "メガヒードラン",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "heracrossmega",
+      "displayNameJa": "メガヘラクロス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "houndoommega",
+      "displayNameJa": "メガヘルガー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "kangaskhanmega",
+      "displayNameJa": "メガガルーラ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "latiasmega",
+      "displayNameJa": "メガラティアス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "latiosmega",
+      "displayNameJa": "メガラティオス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "lopunnymega",
+      "displayNameJa": "メガミミロップ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "lucariomega",
+      "displayNameJa": "メガルカリオ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "lucariomegaz",
+      "displayNameJa": "メガルカリオZ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "magearnamega",
+      "displayNameJa": "メガマギアナ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "magearnaoriginalmega",
+      "displayNameJa": "メガマギアナ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "malamarmega",
+      "displayNameJa": "メガカラマネロ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "manectricmega",
+      "displayNameJa": "メガライボルト",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mawilemega",
+      "displayNameJa": "メガクチート",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "medichammega",
+      "displayNameJa": "メガチャーレム",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "meganiummega",
+      "displayNameJa": "メガメガニウム",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "meowsticfmega",
+      "displayNameJa": "メガニャオニクス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "meowsticmmega",
+      "displayNameJa": "メガニャオニクス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "metagrossmega",
+      "displayNameJa": "メガメタグロス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mewtwomegax",
+      "displayNameJa": "メガミュウツーＸ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mewtwomegay",
+      "displayNameJa": "メガミュウツーＹ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pidgeotmega",
+      "displayNameJa": "メガピジョット",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pinsirmega",
+      "displayNameJa": "メガカイロス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pyroarmega",
+      "displayNameJa": "メガカエンジシ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "raichumegax",
+      "displayNameJa": "メガライチュウX",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "raichumegay",
+      "displayNameJa": "メガライチュウY",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "rayquazamega",
+      "displayNameJa": "メガレックウザ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "sableyemega",
+      "displayNameJa": "メガヤミラミ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "salamencemega",
+      "displayNameJa": "メガボーマンダ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "sceptilemega",
+      "displayNameJa": "メガジュカイン",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "scizormega",
+      "displayNameJa": "メガハッサム",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "scolipedemega",
+      "displayNameJa": "メガペンドラー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "scovillainmega",
+      "displayNameJa": "メガスコヴィラン",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "scraftymega",
+      "displayNameJa": "メガズルズキン",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "sharpedomega",
+      "displayNameJa": "メガサメハダー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "skarmorymega",
+      "displayNameJa": "メガエアームド",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "slowbromega",
+      "displayNameJa": "メガヤドラン",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "staraptormega",
+      "displayNameJa": "メガムクホーク",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "starmiemega",
+      "displayNameJa": "メガスターミー",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "steelixmega",
+      "displayNameJa": "メガハガネール",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "swampertmega",
+      "displayNameJa": "メガラグラージ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "tatsugiricurlymega",
+      "displayNameJa": "メガシャリタツ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "tatsugiridroopymega",
+      "displayNameJa": "メガシャリタツ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "tatsugiristretchymega",
+      "displayNameJa": "メガシャリタツ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "tyranitarmega",
+      "displayNameJa": "メガバンギラス",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "venusaurmega",
+      "displayNameJa": "メガフシギバナ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "victreebelmega",
+      "displayNameJa": "メガウツボット",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "zeraoramega",
+      "displayNameJa": "メガゼラオラ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "pokemon",
+      "id": "zygardemega",
+      "displayNameJa": "メガジガルデ",
+      "confirmsShowdownName": false,
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
     }
   ],
   "summary": {
-    "entryCount": 6,
+    "entryCount": 103,
     "appliedAtRuntime": true
   }
 }

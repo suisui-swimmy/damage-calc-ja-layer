@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "dataVersion": "showdown-display-d9e8fb847ce569e7",
+  "dataVersion": "showdown-display-c18ba7ae54c57f29",
   "source": {
     "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
     "overlayVersion": "manual-showdown-2026-10-04-special-content",
@@ -9,7 +9,7 @@
       "scripts/data/showdown-source.lock.json": "1b1d2f0827cf0efafaaf6d498f57700cff82148da42f8e831daf25e865e2c2d2",
       "src/data/overrides/showdown-display-overrides.json": "4d5e82d829821a88c13febc3b7d8ca61961787e16abf884559bf9d0b403eb4f8",
       "src/data/overrides/showdown-pokemon-names.json": "50403443a0df6e3d9130a5d6b2ae025596d684220fccf2cbea73db5319fcfd2e",
-      "src/data/overrides/ja-label-overrides.json": "f13d88e9b78f6ff0cddbf7655836ceb29069ad5fd406b290d0088e1241cfe9c0",
+      "src/data/overrides/ja-label-overrides.json": "6e51a518f531bb42635762f057fd6d906703b453526342dab169f4118d57358d",
       "src/localization/displayNameRules.ts": "3cb42e1f40b6ae7bdc952dae2e167094875e5922d22497a6cde5d2218d1f10e7",
       "src/data/generated/pokemon-options.gen.json": "845879d802cc3b80cc9c69a8eecb2a518f750b34c771e68489651a849ea8d9d8",
       "src/data/generated/ability-options.gen.json": "c5a0b6fde9d932afbd046215b49ba1636945e85416a3e8a7fd922a733f182a7b",

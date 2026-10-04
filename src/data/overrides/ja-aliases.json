@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "manual-2026-10-04",
+  "dataVersion": "manual-2026-10-05-mega-labels",
   "source": {
     "kind": "manual-overlay",
     "note": "Additional Japanese aliases layered over generated options."
@@ -21,10 +21,14 @@
       "kind": "pokemon",
       "id": "taurospaldeaaqua",
       "aliasesJa": [
-        "ケンタロス パルデアのすがた", "パルデアケンタロス", "パルデアのすがた",
-        "ケンタロス ウォーターしゅ", "ケンタロス ウォーター種",
+        "ケンタロス パルデアのすがた",
+        "パルデアケンタロス",
+        "パルデアのすがた",
+        "ケンタロス ウォーターしゅ",
+        "ケンタロス ウォーター種",
         "ケンタロス パルデアのすがた ウォーター種",
-        "パルデアケンタロス ウォーターしゅ", "パルデアケンタロス ウォーター種"
+        "パルデアケンタロス ウォーターしゅ",
+        "パルデアケンタロス ウォーター種"
       ],
       "notes": "Unqualified Paldea aliases are shared by all three breeds and must remain ambiguous."
     },
@@ -32,10 +36,14 @@
       "kind": "pokemon",
       "id": "taurospaldeablaze",
       "aliasesJa": [
-        "ケンタロス パルデアのすがた", "パルデアケンタロス", "パルデアのすがた",
-        "ケンタロス ブレイズしゅ", "ケンタロス ブレイズ種",
+        "ケンタロス パルデアのすがた",
+        "パルデアケンタロス",
+        "パルデアのすがた",
+        "ケンタロス ブレイズしゅ",
+        "ケンタロス ブレイズ種",
         "ケンタロス パルデアのすがた ブレイズ種",
-        "パルデアケンタロス ブレイズしゅ", "パルデアケンタロス ブレイズ種"
+        "パルデアケンタロス ブレイズしゅ",
+        "パルデアケンタロス ブレイズ種"
       ],
       "notes": "Unqualified Paldea aliases are shared by all three breeds and must remain ambiguous."
     },
@@ -43,16 +51,796 @@
       "kind": "pokemon",
       "id": "taurospaldeacombat",
       "aliasesJa": [
-        "ケンタロス パルデアのすがた", "パルデアケンタロス", "パルデアのすがた",
-        "ケンタロス コンバットしゅ", "ケンタロス コンバット種",
+        "ケンタロス パルデアのすがた",
+        "パルデアケンタロス",
+        "パルデアのすがた",
+        "ケンタロス コンバットしゅ",
+        "ケンタロス コンバット種",
         "ケンタロス パルデアのすがた コンバット種",
-        "パルデアケンタロス コンバットしゅ", "パルデアケンタロス コンバット種"
+        "パルデアケンタロス コンバットしゅ",
+        "パルデアケンタロス コンバット種"
       ],
       "notes": "Unqualified Paldea aliases are shared by all three breeds and must remain ambiguous."
+    },
+    {
+      "kind": "pokemon",
+      "id": "abomasnowmega",
+      "aliasesJa": [
+        "ユキノオー メガユキノオー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "absolmega",
+      "aliasesJa": [
+        "アブソル メガアブソル"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "absolmegaz",
+      "aliasesJa": [
+        "アブソル メガアブソルZ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "aerodactylmega",
+      "aliasesJa": [
+        "プテラ メガプテラ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "aggronmega",
+      "aliasesJa": [
+        "ボスゴドラ メガボスゴドラ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "alakazammega",
+      "aliasesJa": [
+        "フーディン メガフーディン"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "altariamega",
+      "aliasesJa": [
+        "チルタリス メガチルタリス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "ampharosmega",
+      "aliasesJa": [
+        "デンリュウ メガデンリュウ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "audinomega",
+      "aliasesJa": [
+        "タブンネ メガタブンネ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "banettemega",
+      "aliasesJa": [
+        "ジュペッタ メガジュペッタ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "barbaraclemega",
+      "aliasesJa": [
+        "ガメノデス メガガメノデス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "baxcaliburmega",
+      "aliasesJa": [
+        "セグレイブ メガセグレイブ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "beedrillmega",
+      "aliasesJa": [
+        "スピアー メガスピアー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "blastoisemega",
+      "aliasesJa": [
+        "カメックス メガカメックス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "blazikenmega",
+      "aliasesJa": [
+        "バシャーモ メガバシャーモ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "cameruptmega",
+      "aliasesJa": [
+        "バクーダ メガバクーダ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "chandeluremega",
+      "aliasesJa": [
+        "シャンデラ メガシャンデラ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "charizardmegax",
+      "aliasesJa": [
+        "リザードン メガリザードンＸ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "charizardmegay",
+      "aliasesJa": [
+        "リザードン メガリザードンＹ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "chesnaughtmega",
+      "aliasesJa": [
+        "ブリガロン メガブリガロン"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "chimechomega",
+      "aliasesJa": [
+        "チリーン メガチリーン"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "clefablemega",
+      "aliasesJa": [
+        "ピクシー メガピクシー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "crabominablemega",
+      "aliasesJa": [
+        "ケケンカニ メガケケンカニ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "darkraimega",
+      "aliasesJa": [
+        "ダークライ メガダークライ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "delphoxmega",
+      "aliasesJa": [
+        "マフォクシー メガマフォクシー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "dianciemega",
+      "aliasesJa": [
+        "ディアンシー メガディアンシー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "dragalgemega",
+      "aliasesJa": [
+        "ドラミドロ メガドラミドロ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "dragonitemega",
+      "aliasesJa": [
+        "カイリュー メガカイリュー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "drampamega",
+      "aliasesJa": [
+        "ジジーロン メガジジーロン"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "eelektrossmega",
+      "aliasesJa": [
+        "シビルドン メガシビルドン"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "emboarmega",
+      "aliasesJa": [
+        "エンブオー メガエンブオー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "excadrillmega",
+      "aliasesJa": [
+        "ドリュウズ メガドリュウズ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "falinksmega",
+      "aliasesJa": [
+        "タイレーツ メガタイレーツ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "feraligatrmega",
+      "aliasesJa": [
+        "オーダイル メガオーダイル"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "floettemega",
+      "aliasesJa": [
+        "フラエッテ メガフラエッテ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "froslassmega",
+      "aliasesJa": [
+        "ユキメノコ メガユキメノコ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "gallademega",
+      "aliasesJa": [
+        "エルレイド メガエルレイド"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "garchompmega",
+      "aliasesJa": [
+        "ガブリアス メガガブリアス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "garchompmegaz",
+      "aliasesJa": [
+        "ガブリアス メガガブリアスZ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "gardevoirmega",
+      "aliasesJa": [
+        "サーナイト メガサーナイト"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "gengarmega",
+      "aliasesJa": [
+        "ゲンガー メガゲンガー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "glaliemega",
+      "aliasesJa": [
+        "オニゴーリ メガオニゴーリ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "glimmoramega",
+      "aliasesJa": [
+        "キラフロル メガキラフロル"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "golisopodmega",
+      "aliasesJa": [
+        "グソクムシャ メガグソクムシャ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "golurkmega",
+      "aliasesJa": [
+        "ゴルーグ メガゴルーグ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "greninjamega",
+      "aliasesJa": [
+        "ゲッコウガ メガゲッコウガ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "gyaradosmega",
+      "aliasesJa": [
+        "ギャラドス メガギャラドス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "hawluchamega",
+      "aliasesJa": [
+        "ルチャブル メガルチャブル"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "heatranmega",
+      "aliasesJa": [
+        "ヒードラン メガヒードラン"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "heracrossmega",
+      "aliasesJa": [
+        "ヘラクロス メガヘラクロス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "houndoommega",
+      "aliasesJa": [
+        "ヘルガー メガヘルガー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "kangaskhanmega",
+      "aliasesJa": [
+        "ガルーラ メガガルーラ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "latiasmega",
+      "aliasesJa": [
+        "ラティアス メガラティアス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "latiosmega",
+      "aliasesJa": [
+        "ラティオス メガラティオス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "lopunnymega",
+      "aliasesJa": [
+        "ミミロップ メガミミロップ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "lucariomega",
+      "aliasesJa": [
+        "ルカリオ メガルカリオ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "lucariomegaz",
+      "aliasesJa": [
+        "ルカリオ メガルカリオZ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "magearnamega",
+      "aliasesJa": [
+        "マギアナ メガマギアナ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "magearnaoriginalmega",
+      "aliasesJa": [
+        "マギアナ メガマギアナ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "malamarmega",
+      "aliasesJa": [
+        "カラマネロ メガカラマネロ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "manectricmega",
+      "aliasesJa": [
+        "ライボルト メガライボルト"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mawilemega",
+      "aliasesJa": [
+        "クチート メガクチート"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "medichammega",
+      "aliasesJa": [
+        "チャーレム メガチャーレム"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "meganiummega",
+      "aliasesJa": [
+        "メガニウム メガメガニウム"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "meowsticfmega",
+      "aliasesJa": [
+        "ニャオニクス メガニャオニクス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "meowsticmmega",
+      "aliasesJa": [
+        "ニャオニクス メガニャオニクス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "metagrossmega",
+      "aliasesJa": [
+        "メタグロス メガメタグロス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mewtwomegax",
+      "aliasesJa": [
+        "ミュウツー メガミュウツーＸ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mewtwomegay",
+      "aliasesJa": [
+        "ミュウツー メガミュウツーＹ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pidgeotmega",
+      "aliasesJa": [
+        "ピジョット メガピジョット"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pinsirmega",
+      "aliasesJa": [
+        "カイロス メガカイロス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pyroarmega",
+      "aliasesJa": [
+        "カエンジシ メガカエンジシ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "raichumegax",
+      "aliasesJa": [
+        "ライチュウ メガライチュウX"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "raichumegay",
+      "aliasesJa": [
+        "ライチュウ メガライチュウY"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "rayquazamega",
+      "aliasesJa": [
+        "レックウザ メガレックウザ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "sableyemega",
+      "aliasesJa": [
+        "ヤミラミ メガヤミラミ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "salamencemega",
+      "aliasesJa": [
+        "ボーマンダ メガボーマンダ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "sceptilemega",
+      "aliasesJa": [
+        "ジュカイン メガジュカイン"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "scizormega",
+      "aliasesJa": [
+        "ハッサム メガハッサム"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "scolipedemega",
+      "aliasesJa": [
+        "ペンドラー メガペンドラー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "scovillainmega",
+      "aliasesJa": [
+        "スコヴィラン メガスコヴィラン"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "scraftymega",
+      "aliasesJa": [
+        "ズルズキン メガズルズキン"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "sharpedomega",
+      "aliasesJa": [
+        "サメハダー メガサメハダー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "skarmorymega",
+      "aliasesJa": [
+        "エアームド メガエアームド"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "slowbromega",
+      "aliasesJa": [
+        "ヤドラン メガヤドラン"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "staraptormega",
+      "aliasesJa": [
+        "ムクホーク メガムクホーク"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "starmiemega",
+      "aliasesJa": [
+        "スターミー メガスターミー"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "steelixmega",
+      "aliasesJa": [
+        "ハガネール メガハガネール"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "swampertmega",
+      "aliasesJa": [
+        "ラグラージ メガラグラージ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "tatsugiricurlymega",
+      "aliasesJa": [
+        "シャリタツ メガシャリタツ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "tatsugiridroopymega",
+      "aliasesJa": [
+        "シャリタツ メガシャリタツ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "tatsugiristretchymega",
+      "aliasesJa": [
+        "シャリタツ メガシャリタツ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "tyranitarmega",
+      "aliasesJa": [
+        "バンギラス メガバンギラス"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "venusaurmega",
+      "aliasesJa": [
+        "フシギバナ メガフシギバナ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "victreebelmega",
+      "aliasesJa": [
+        "ウツボット メガウツボット"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "zeraoramega",
+      "aliasesJa": [
+        "ゼラオラ メガゼラオラ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "zygardemega",
+      "aliasesJa": [
+        "ジガルデ メガジガルデ"
+      ],
+      "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
     }
   ],
   "summary": {
-    "entryCount": 4,
+    "entryCount": 101,
     "appliedAtRuntime": true
   }
 }

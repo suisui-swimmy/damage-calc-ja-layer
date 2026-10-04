@@ -77,7 +77,7 @@ const entries = catalog.entries.map((entry) => {
   if (!option) return { ...result, status: "unsupported", reason: "missing-japanese-mapping" };
   // A matching English name does not certify a base-form fallback as a form translation.
   const sourceStatus = option.sourceStatus ?? option.fallback?.nameSourceStatus ?? "supported";
-  const verified = override || labelOverride || sourceStatus === "supported";
+  const verified = override || (labelOverride && labelOverride.confirmsShowdownName !== false) || sourceStatus === "supported";
   const japanese = /[\u3040-\u30ff\u3400-\u9fff]/u.test(labelOverride?.displayNameJa ?? option.label);
   const dictionaryRef = { kind: entry.kind, id: option.id, canonicalName: option.showdownName };
   if (!verified || !japanese) return { ...result, status: "needs-confirmation", dictionaryRef, reason: "unverified-dictionary-label" };
