@@ -117,9 +117,9 @@ describe("Showdown display API", () => {
   );
 
   it("separates unsupported known forms, uncertain labels and unknown inputs", () => {
-    expect(lookup("pokemon", "Pikachu-Rock-Star")).toMatchObject({ status: "unsupported", showdownId: "pikachurockstar" });
-    expect(lookup("pokemon", "Arceus-Bug")).toMatchObject({ status: "needs-confirmation", showdownId: "arceusbug" });
-    for (const input of ["Pikachu-Rock-Star", "Arceus-Bug"]) expect(lookup("pokemon", input)).not.toHaveProperty("displayNameJa");
+    expect(lookup("pokemon", "Pichu-Spiky-eared")).toMatchObject({ status: "unsupported", showdownId: "pichuspikyeared" });
+    expect(lookup("pokemon", "Marowak-Alola-Totem")).toMatchObject({ status: "needs-confirmation", showdownId: "marowakalolatotem" });
+    for (const input of ["Pichu-Spiky-eared", "Marowak-Alola-Totem"]) expect(lookup("pokemon", input)).not.toHaveProperty("displayNameJa");
     expect(lookup("ability", "Pikachu").status).toBe("not-found");
     expect(lookup("pokemon", "Static").status).toBe("not-found");
     expect(lookup("type", "Electric")).toMatchObject({ status: "localized", showdownId: "electric", displayNameJa: "でんき" });

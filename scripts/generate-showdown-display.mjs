@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
+import { pokemonNameOverrides } from "./lib/showdown-pokemon-names.mjs";
 
 const root = new URL("../", import.meta.url);
 const hashes = {};
@@ -14,6 +15,7 @@ const catalog = await read("src/data/generated/showdown-catalog.gen.json");
 const sourceLock = await read("scripts/data/showdown-source.lock.json");
 assert.deepEqual(catalog.source, sourceLock, "Catalog source lock mismatch");
 const overlay = await read("src/data/overrides/showdown-display-overrides.json");
+const pokemonNames = await read("src/data/overrides/showdown-pokemon-names.json");
 const labels = await read("src/data/overrides/ja-label-overrides.json");
 const displayRulesPath = "src/localization/displayNameRules.ts";
 hashes[displayRulesPath] = createHash("sha256").update((await readFile(new URL(displayRulesPath, root), "utf8")).replace(/\r\n/g, "\n")).digest("hex");
@@ -24,8 +26,9 @@ const toID = (name) => name.toLowerCase().replace(/[^a-z0-9]/g, "");
 const key = (entry) => `${entry.kind}:${entry.showdownId}`;
 const known = new Map(catalog.entries.map((entry) => [key(entry), entry]));
 assert.equal(known.size, catalog.entries.length, "Duplicate Showdown IDs");
-const overrides = new Map(overlay.entries.map((entry) => [key(entry), entry]));
-assert.equal(overrides.size, overlay.entries.length, "Duplicate overrides");
+const allOverrides = [...overlay.entries, ...pokemonNameOverrides(pokemonNames, catalog)];
+const overrides = new Map(allOverrides.map((entry) => [key(entry), entry]));
+assert.equal(overrides.size, allOverrides.length, "Duplicate overrides");
 const outOfScope = new Map();
 for (const group of overlay.outOfScopeGroups ?? []) {
   assert(["cap", "pokestar", "glitch"].includes(group.category), "Unknown scope category");
@@ -45,7 +48,7 @@ for (const kind of ["pokemon", "ability", "type"]) {
   const data = await read(`src/data/generated/${kind}-options.gen.json`);
   dictionaries[kind] = new Map(data.entries.map((entry) => [entry.showdownName, entry]));
 }
-for (const entry of overlay.entries) {
+for (const entry of allOverrides) {
   assert(known.has(key(entry)), `Override missing in Showdown: ${key(entry)}`);
   assert.equal(entry.showdownName, known.get(key(entry)).showdownName);
   assert(entry.sources?.length > 0, `Missing provenance: ${key(entry)}`);

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "dataVersion": "showdown-display-00a603986e7e6322",
+  "dataVersion": "showdown-display-d9e8fb847ce569e7",
   "source": {
     "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
     "overlayVersion": "manual-showdown-2026-10-04-special-content",
@@ -8,6 +8,7 @@
       "src/data/generated/showdown-catalog.gen.json": "2a35d2c5c6cd5b58c28a856e4e0a3799e38707791d4de0f54f5fc68022349bc9",
       "scripts/data/showdown-source.lock.json": "1b1d2f0827cf0efafaaf6d498f57700cff82148da42f8e831daf25e865e2c2d2",
       "src/data/overrides/showdown-display-overrides.json": "4d5e82d829821a88c13febc3b7d8ca61961787e16abf884559bf9d0b403eb4f8",
+      "src/data/overrides/showdown-pokemon-names.json": "50403443a0df6e3d9130a5d6b2ae025596d684220fccf2cbea73db5319fcfd2e",
       "src/data/overrides/ja-label-overrides.json": "f13d88e9b78f6ff0cddbf7655836ceb29069ad5fd406b290d0088e1241cfe9c0",
       "src/localization/displayNameRules.ts": "3cb42e1f40b6ae7bdc952dae2e167094875e5922d22497a6cde5d2218d1f10e7",
       "src/data/generated/pokemon-options.gen.json": "845879d802cc3b80cc9c69a8eecb2a518f750b34c771e68489651a849ea8d9d8",
@@ -4065,8 +4066,9 @@
       "kind": "pokemon",
       "showdownId": "alcremiecaramelswirl",
       "showdownName": "Alcremie-Caramel-Swirl",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "マホイップ キャラメルミックス",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -4084,50 +4086,57 @@
       "kind": "pokemon",
       "showdownId": "alcremielemoncream",
       "showdownName": "Alcremie-Lemon-Cream",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "マホイップ ミルキィレモン",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "alcremiematchacream",
       "showdownName": "Alcremie-Matcha-Cream",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "マホイップ ミルキィまっちゃ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "alcremiemintcream",
       "showdownName": "Alcremie-Mint-Cream",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "マホイップ ミルキィミント",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "alcremierainbowswirl",
       "showdownName": "Alcremie-Rainbow-Swirl",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "マホイップ トリプルミックス",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "alcremierubycream",
       "showdownName": "Alcremie-Ruby-Cream",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "マホイップ ミルキィルビー",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "alcremierubyswirl",
       "showdownName": "Alcremie-Ruby-Swirl",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "マホイップ ルビーミックス",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "alcremiesaltedcream",
       "showdownName": "Alcremie-Salted-Cream",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "マホイップ ミルキィソルト",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -4376,205 +4385,137 @@
       "kind": "pokemon",
       "showdownId": "arceusbug",
       "showdownName": "Arceus-Bug",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusbug",
-        "canonicalName": "Arceus-Bug"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス むしタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusdark",
       "showdownName": "Arceus-Dark",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusdark",
-        "canonicalName": "Arceus-Dark"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス あくタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusdragon",
       "showdownName": "Arceus-Dragon",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusdragon",
-        "canonicalName": "Arceus-Dragon"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス ドラゴンタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceuselectric",
       "showdownName": "Arceus-Electric",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceuselectric",
-        "canonicalName": "Arceus-Electric"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス でんきタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusfairy",
       "showdownName": "Arceus-Fairy",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusfairy",
-        "canonicalName": "Arceus-Fairy"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス フェアリータイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusfighting",
       "showdownName": "Arceus-Fighting",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusfighting",
-        "canonicalName": "Arceus-Fighting"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス かくとうタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusfire",
       "showdownName": "Arceus-Fire",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusfire",
-        "canonicalName": "Arceus-Fire"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス ほのおタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusflying",
       "showdownName": "Arceus-Flying",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusflying",
-        "canonicalName": "Arceus-Flying"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス ひこうタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusghost",
       "showdownName": "Arceus-Ghost",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusghost",
-        "canonicalName": "Arceus-Ghost"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス ゴーストタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusgrass",
       "showdownName": "Arceus-Grass",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusgrass",
-        "canonicalName": "Arceus-Grass"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス くさタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusground",
       "showdownName": "Arceus-Ground",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusground",
-        "canonicalName": "Arceus-Ground"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス じめんタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusice",
       "showdownName": "Arceus-Ice",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusice",
-        "canonicalName": "Arceus-Ice"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス こおりタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceuspoison",
       "showdownName": "Arceus-Poison",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceuspoison",
-        "canonicalName": "Arceus-Poison"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス どくタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceuspsychic",
       "showdownName": "Arceus-Psychic",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceuspsychic",
-        "canonicalName": "Arceus-Psychic"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス エスパータイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceusrock",
       "showdownName": "Arceus-Rock",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceusrock",
-        "canonicalName": "Arceus-Rock"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス いわタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceussteel",
       "showdownName": "Arceus-Steel",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceussteel",
-        "canonicalName": "Arceus-Steel"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス はがねタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "arceuswater",
       "showdownName": "Arceus-Water",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "arceuswater",
-        "canonicalName": "Arceus-Water"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "アルセウス みずタイプ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -4988,37 +4929,25 @@
       "kind": "pokemon",
       "showdownId": "basculegion",
       "showdownName": "Basculegion",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "basculegion",
-        "canonicalName": "Basculegion"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イダイトウ オスのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "basculegionf",
       "showdownName": "Basculegion-F",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "basculegionf",
-        "canonicalName": "Basculegion-F"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イダイトウ メスのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "basculin",
       "showdownName": "Basculin",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "basculin",
-        "canonicalName": "Basculin"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "バスラオ あかすじのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -5678,15 +5607,17 @@
       "kind": "pokemon",
       "showdownId": "burmysandy",
       "showdownName": "Burmy-Sandy",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "ミノムッチ すなちのミノ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "burmytrash",
       "showdownName": "Burmy-Trash",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "ミノムッチ ゴミのミノ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -6232,13 +6163,9 @@
       "kind": "pokemon",
       "showdownId": "cherrimsunshine",
       "showdownName": "Cherrim-Sunshine",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "cherrimsunshine",
-        "canonicalName": "Cherrim-Sunshine"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "チェリム ポジフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -7198,25 +7125,17 @@
       "kind": "pokemon",
       "showdownId": "darmanitan",
       "showdownName": "Darmanitan",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "darmanitan",
-        "canonicalName": "Darmanitan"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ヒヒダルマ ノーマルモード",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "darmanitangalar",
       "showdownName": "Darmanitan-Galar",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "darmanitangalar",
-        "canonicalName": "Darmanitan-Galar"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ヒヒダルマ ガラルのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -7330,22 +7249,25 @@
       "kind": "pokemon",
       "showdownId": "deerlingautumn",
       "showdownName": "Deerling-Autumn",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "シキジカ あきのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "deerlingsummer",
       "showdownName": "Deerling-Summer",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "シキジカ なつのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "deerlingwinter",
       "showdownName": "Deerling-Winter",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "シキジカ ふゆのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -7411,13 +7333,9 @@
       "kind": "pokemon",
       "showdownId": "deoxys",
       "showdownName": "Deoxys",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "deoxys",
-        "canonicalName": "Deoxys"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "デオキシス ノーマルフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -8005,13 +7923,9 @@
       "kind": "pokemon",
       "showdownId": "dudunsparce",
       "showdownName": "Dudunsparce",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "dudunsparce",
-        "canonicalName": "Dudunsparce"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ノココッチ ふたふしフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -8249,13 +8163,9 @@
       "kind": "pokemon",
       "showdownId": "eiscue",
       "showdownName": "Eiscue",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "eiscue",
-        "canonicalName": "Eiscue"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "コオリッポ アイスフェイス",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -8447,13 +8357,9 @@
       "kind": "pokemon",
       "showdownId": "enamorus",
       "showdownName": "Enamorus",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "enamorus",
-        "canonicalName": "Enamorus"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ラブトロス けしんフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -8870,29 +8776,33 @@
       "kind": "pokemon",
       "showdownId": "flabebeblue",
       "showdownName": "Flabébé-Blue",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラベベ あおいはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "flabebeorange",
       "showdownName": "Flabébé-Orange",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラベベ オレンジいろのはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "flabebewhite",
       "showdownName": "Flabébé-White",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラベベ しろいはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "flabebeyellow",
       "showdownName": "Flabébé-Yellow",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラベベ きいろのはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -9024,8 +8934,9 @@
       "kind": "pokemon",
       "showdownId": "floetteblue",
       "showdownName": "Floette-Blue",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラエッテ あおいはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -9055,22 +8966,25 @@
       "kind": "pokemon",
       "showdownId": "floetteorange",
       "showdownName": "Floette-Orange",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラエッテ オレンジいろのはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "floettewhite",
       "showdownName": "Floette-White",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラエッテ しろいはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "floetteyellow",
       "showdownName": "Floette-Yellow",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラエッテ きいろのはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -9100,29 +9014,33 @@
       "kind": "pokemon",
       "showdownId": "florgesblue",
       "showdownName": "Florges-Blue",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラージェス あおいはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "florgesorange",
       "showdownName": "Florges-Orange",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラージェス オレンジいろのはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "florgeswhite",
       "showdownName": "Florges-White",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラージェス しろいはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "florgesyellow",
       "showdownName": "Florges-Yellow",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "フラージェス きいろのはな",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -9221,13 +9139,9 @@
       "kind": "pokemon",
       "showdownId": "frillish",
       "showdownName": "Frillish",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "frillish",
-        "canonicalName": "Frillish"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "プルリル",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -9317,64 +9231,73 @@
       "kind": "pokemon",
       "showdownId": "furfroudandy",
       "showdownName": "Furfrou-Dandy",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "トリミアン ジェントルカット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "furfroudebutante",
       "showdownName": "Furfrou-Debutante",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "トリミアン レディカット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "furfroudiamond",
       "showdownName": "Furfrou-Diamond",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "トリミアン ダイヤカット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "furfrouheart",
       "showdownName": "Furfrou-Heart",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "トリミアン ハートカット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "furfroukabuki",
       "showdownName": "Furfrou-Kabuki",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "トリミアン カブキカット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "furfroulareine",
       "showdownName": "Furfrou-La Reine",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "トリミアン クイーンカット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "furfroumatron",
       "showdownName": "Furfrou-Matron",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "トリミアン マダムカット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "furfroupharaoh",
       "showdownName": "Furfrou-Pharaoh",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "トリミアン キングダムカット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "furfroustar",
       "showdownName": "Furfrou-Star",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "トリミアン スターカット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -9560,8 +9483,9 @@
       "kind": "pokemon",
       "showdownId": "gastrodoneast",
       "showdownName": "Gastrodon-East",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "トリトドン ひがしのうみ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -9579,49 +9503,33 @@
       "kind": "pokemon",
       "showdownId": "genesectburn",
       "showdownName": "Genesect-Burn",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "genesectburn",
-        "canonicalName": "Genesect-Burn"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ゲノセクト ブレイズカセット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "genesectchill",
       "showdownName": "Genesect-Chill",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "genesectchill",
-        "canonicalName": "Genesect-Chill"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ゲノセクト フリーズカセット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "genesectdouse",
       "showdownName": "Genesect-Douse",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "genesectdouse",
-        "canonicalName": "Genesect-Douse"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ゲノセクト アクアカセット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "genesectshock",
       "showdownName": "Genesect-Shock",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "genesectshock",
-        "canonicalName": "Genesect-Shock"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ゲノセクト イナズマカセット",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -9759,13 +9667,9 @@
       "kind": "pokemon",
       "showdownId": "giratina",
       "showdownName": "Giratina",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "giratina",
-        "canonicalName": "Giratina"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ギラティナ アナザーフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -10155,13 +10059,9 @@
       "kind": "pokemon",
       "showdownId": "gourgeist",
       "showdownName": "Gourgeist",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "gourgeist",
-        "canonicalName": "Gourgeist"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "パンプジン ふつうのサイズ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -11127,25 +11027,17 @@
       "kind": "pokemon",
       "showdownId": "indeedee",
       "showdownName": "Indeedee",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "indeedee",
-        "canonicalName": "Indeedee"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イエッサン オスのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "indeedeef",
       "showdownName": "Indeedee-F",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "indeedeef",
-        "canonicalName": "Indeedee-F"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イエッサン メスのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -11343,13 +11235,9 @@
       "kind": "pokemon",
       "showdownId": "jellicent",
       "showdownName": "Jellicent",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "jellicent",
-        "canonicalName": "Jellicent"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ブルンゲル",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -11553,13 +11441,9 @@
       "kind": "pokemon",
       "showdownId": "keldeo",
       "showdownName": "Keldeo",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "keldeo",
-        "canonicalName": "Keldeo"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ケルディオ いつものすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -11967,13 +11851,9 @@
       "kind": "pokemon",
       "showdownId": "landorus",
       "showdownName": "Landorus",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "landorus",
-        "canonicalName": "Landorus"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ランドロス けしんフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -12534,13 +12414,9 @@
       "kind": "pokemon",
       "showdownId": "lycanroc",
       "showdownName": "Lycanroc",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "lycanroc",
-        "canonicalName": "Lycanroc"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ルガルガン まひるのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -13047,25 +12923,17 @@
       "kind": "pokemon",
       "showdownId": "maushold",
       "showdownName": "Maushold",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "maushold",
-        "canonicalName": "Maushold"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イッカネズミ ３びきかぞく",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "mausholdfour",
       "showdownName": "Maushold-Four",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "mausholdfour",
-        "canonicalName": "Maushold-Four"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イッカネズミ ４ひきかぞく",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -13179,13 +13047,9 @@
       "kind": "pokemon",
       "showdownId": "meloetta",
       "showdownName": "Meloetta",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "meloetta",
-        "canonicalName": "Meloetta"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "メロエッタ ボイスフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -13227,25 +13091,17 @@
       "kind": "pokemon",
       "showdownId": "meowstic",
       "showdownName": "Meowstic",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "meowstic",
-        "canonicalName": "Meowstic"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ニャオニクス オスのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "meowsticf",
       "showdownName": "Meowstic-F",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "meowsticf",
-        "canonicalName": "Meowstic-F"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ニャオニクス メスのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -13533,25 +13389,17 @@
       "kind": "pokemon",
       "showdownId": "mimikyu",
       "showdownName": "Mimikyu",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "mimikyu",
-        "canonicalName": "Mimikyu"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ミミッキュ ばけたすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "mimikyubusted",
       "showdownName": "Mimikyu-Busted",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "mimikyubusted",
-        "canonicalName": "Mimikyu-Busted"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ミミッキュ ばれたすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -13593,67 +13441,65 @@
       "kind": "pokemon",
       "showdownId": "minior",
       "showdownName": "Minior",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "minior",
-        "canonicalName": "Minior"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "メテノ あかいろのコア",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "miniorblue",
       "showdownName": "Minior-Blue",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "メテノ みずいろのコア",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "miniorgreen",
       "showdownName": "Minior-Green",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "メテノ みどりいろのコア",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "miniorindigo",
       "showdownName": "Minior-Indigo",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "メテノ あおいろのコア",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "miniormeteor",
       "showdownName": "Minior-Meteor",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "miniormeteor",
-        "canonicalName": "Minior-Meteor"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "メテノ りゅうせいのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "miniororange",
       "showdownName": "Minior-Orange",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "メテノ だいだいいろのコア",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "miniorviolet",
       "showdownName": "Minior-Violet",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "メテノ むらさきいろのコア",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "minioryellow",
       "showdownName": "Minior-Yellow",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "メテノ きいろのコア",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -13794,13 +13640,9 @@
       "kind": "pokemon",
       "showdownId": "morpeko",
       "showdownName": "Morpeko",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "morpeko",
-        "canonicalName": "Morpeko"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "モルペコ まんぷくもよう",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -14064,25 +13906,17 @@
       "kind": "pokemon",
       "showdownId": "necrozmadawnwings",
       "showdownName": "Necrozma-Dawn-Wings",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "necrozmadawnwings",
-        "canonicalName": "Necrozma-Dawn-Wings"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ネクロズマ あかつきのつばさ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "necrozmaduskmane",
       "showdownName": "Necrozma-Dusk-Mane",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "necrozmaduskmane",
-        "canonicalName": "Necrozma-Dusk-Mane"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ネクロズマ たそがれのたてがみ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -14412,13 +14246,9 @@
       "kind": "pokemon",
       "showdownId": "ogerponcornerstone",
       "showdownName": "Ogerpon-Cornerstone",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "ogerponcornerstone",
-        "canonicalName": "Ogerpon-Cornerstone"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "オーガポン いしずえのめん",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -14436,13 +14266,9 @@
       "kind": "pokemon",
       "showdownId": "ogerponhearthflame",
       "showdownName": "Ogerpon-Hearthflame",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "ogerponhearthflame",
-        "canonicalName": "Ogerpon-Hearthflame"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "オーガポン かまどのめん",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -14472,13 +14298,9 @@
       "kind": "pokemon",
       "showdownId": "ogerponwellspring",
       "showdownName": "Ogerpon-Wellspring",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "ogerponwellspring",
-        "canonicalName": "Ogerpon-Wellspring"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "オーガポン いどのめん",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -14496,25 +14318,17 @@
       "kind": "pokemon",
       "showdownId": "oinkologne",
       "showdownName": "Oinkologne",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "oinkologne",
-        "canonicalName": "Oinkologne"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "パフュートン オスのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "oinkolognef",
       "showdownName": "Oinkologne-F",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "oinkolognef",
-        "canonicalName": "Oinkologne-F"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "パフュートン メスのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -14604,13 +14418,9 @@
       "kind": "pokemon",
       "showdownId": "oricorio",
       "showdownName": "Oricorio",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "oricorio",
-        "canonicalName": "Oricorio"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "オドリドリ めらめらスタイル",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -14709,13 +14519,9 @@
       "kind": "pokemon",
       "showdownId": "palafin",
       "showdownName": "Palafin",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "palafin",
-        "canonicalName": "Palafin"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イルカマン ナイーブフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -15160,27 +14966,25 @@
       "kind": "pokemon",
       "showdownId": "pikachualola",
       "showdownName": "Pikachu-Alola",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "pikachualola",
-        "canonicalName": "Pikachu-Alola"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ピカチュウ アローラキャップ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachubelle",
       "showdownName": "Pikachu-Belle",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "マダム・ピカチュウ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachucosplay",
       "showdownName": "Pikachu-Cosplay",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "おきがえピカチュウ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -15198,89 +15002,73 @@
       "kind": "pokemon",
       "showdownId": "pikachuhoenn",
       "showdownName": "Pikachu-Hoenn",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "pikachuhoenn",
-        "canonicalName": "Pikachu-Hoenn"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ピカチュウ ホウエンキャップ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachukalos",
       "showdownName": "Pikachu-Kalos",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "pikachukalos",
-        "canonicalName": "Pikachu-Kalos"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ピカチュウ カロスキャップ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachulibre",
       "showdownName": "Pikachu-Libre",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "マスクド・ピカチュウ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachuoriginal",
       "showdownName": "Pikachu-Original",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "pikachuoriginal",
-        "canonicalName": "Pikachu-Original"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ピカチュウ オリジナルキャップ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachupartner",
       "showdownName": "Pikachu-Partner",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "pikachupartner",
-        "canonicalName": "Pikachu-Partner"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ピカチュウ キミにきめたキャップ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachuphd",
       "showdownName": "Pikachu-PhD",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "ドクター・ピカチュウ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachupopstar",
       "showdownName": "Pikachu-Pop-Star",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アイドル・ピカチュウ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachurockstar",
       "showdownName": "Pikachu-Rock-Star",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "ハードロック・ピカチュウ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachusinnoh",
       "showdownName": "Pikachu-Sinnoh",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "pikachusinnoh",
-        "canonicalName": "Pikachu-Sinnoh"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ピカチュウ シンオウキャップ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -15293,25 +15081,17 @@
       "kind": "pokemon",
       "showdownId": "pikachuunova",
       "showdownName": "Pikachu-Unova",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "pikachuunova",
-        "canonicalName": "Pikachu-Unova"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ピカチュウ イッシュキャップ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "pikachuworld",
       "showdownName": "Pikachu-World",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "pikachuworld",
-        "canonicalName": "Pikachu-World"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ピカチュウ ワールドキャップ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -15800,13 +15580,9 @@
       "kind": "pokemon",
       "showdownId": "poltchageistartisan",
       "showdownName": "Poltchageist-Artisan",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "poltchageistartisan",
-        "canonicalName": "Poltchageist-Artisan"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "チャデス タカイモノのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -15824,13 +15600,9 @@
       "kind": "pokemon",
       "showdownId": "polteageistantique",
       "showdownName": "Polteageist-Antique",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "polteageistantique",
-        "canonicalName": "Polteageist-Antique"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ポットデス しんさくフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -15998,13 +15770,9 @@
       "kind": "pokemon",
       "showdownId": "pumpkaboo",
       "showdownName": "Pumpkaboo",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "pumpkaboo",
-        "canonicalName": "Pumpkaboo"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "バケッチャ ふつうのサイズ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -16091,13 +15859,9 @@
       "kind": "pokemon",
       "showdownId": "pyroar",
       "showdownName": "Pyroar",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "pyroar",
-        "canonicalName": "Pyroar"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "カエンジシ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -17195,22 +16959,25 @@
       "kind": "pokemon",
       "showdownId": "sawsbuckautumn",
       "showdownName": "Sawsbuck-Autumn",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "メブキジカ あきのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "sawsbucksummer",
       "showdownName": "Sawsbuck-Summer",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "メブキジカ なつのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "sawsbuckwinter",
       "showdownName": "Sawsbuck-Winter",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "メブキジカ ふゆのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -17579,13 +17346,9 @@
       "kind": "pokemon",
       "showdownId": "shaymin",
       "showdownName": "Shaymin",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "shaymin",
-        "canonicalName": "Shaymin"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シェイミ ランドフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -17651,8 +17414,9 @@
       "kind": "pokemon",
       "showdownId": "shelloseast",
       "showdownName": "Shellos-East",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "カラナクシ ひがしのうみ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -17823,205 +17587,137 @@
       "kind": "pokemon",
       "showdownId": "silvallybug",
       "showdownName": "Silvally-Bug",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallybug",
-        "canonicalName": "Silvally-Bug"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：バグ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallydark",
       "showdownName": "Silvally-Dark",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallydark",
-        "canonicalName": "Silvally-Dark"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：ダーク",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallydragon",
       "showdownName": "Silvally-Dragon",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallydragon",
-        "canonicalName": "Silvally-Dragon"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：ドラゴン",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallyelectric",
       "showdownName": "Silvally-Electric",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallyelectric",
-        "canonicalName": "Silvally-Electric"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：エレクトロ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallyfairy",
       "showdownName": "Silvally-Fairy",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallyfairy",
-        "canonicalName": "Silvally-Fairy"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：フェアリー",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallyfighting",
       "showdownName": "Silvally-Fighting",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallyfighting",
-        "canonicalName": "Silvally-Fighting"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：ファイト",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallyfire",
       "showdownName": "Silvally-Fire",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallyfire",
-        "canonicalName": "Silvally-Fire"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：ファイヤー",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallyflying",
       "showdownName": "Silvally-Flying",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallyflying",
-        "canonicalName": "Silvally-Flying"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：フライング",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallyghost",
       "showdownName": "Silvally-Ghost",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallyghost",
-        "canonicalName": "Silvally-Ghost"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：ゴースト",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallygrass",
       "showdownName": "Silvally-Grass",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallygrass",
-        "canonicalName": "Silvally-Grass"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：グラス",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallyground",
       "showdownName": "Silvally-Ground",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallyground",
-        "canonicalName": "Silvally-Ground"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：グラウンド",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallyice",
       "showdownName": "Silvally-Ice",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallyice",
-        "canonicalName": "Silvally-Ice"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：アイス",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallypoison",
       "showdownName": "Silvally-Poison",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallypoison",
-        "canonicalName": "Silvally-Poison"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：ポイズン",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallypsychic",
       "showdownName": "Silvally-Psychic",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallypsychic",
-        "canonicalName": "Silvally-Psychic"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：サイキック",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallyrock",
       "showdownName": "Silvally-Rock",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallyrock",
-        "canonicalName": "Silvally-Rock"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：ロック",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallysteel",
       "showdownName": "Silvally-Steel",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallysteel",
-        "canonicalName": "Silvally-Steel"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：スチール",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "silvallywater",
       "showdownName": "Silvally-Water",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "silvallywater",
-        "canonicalName": "Silvally-Water"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シルヴァディ タイプ：ウオーター",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -18075,13 +17771,9 @@
       "kind": "pokemon",
       "showdownId": "sinistchamasterpiece",
       "showdownName": "Sinistcha-Masterpiece",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "sinistchamasterpiece",
-        "canonicalName": "Sinistcha-Masterpiece"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ヤバソチャ ケッサクのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -18099,13 +17791,9 @@
       "kind": "pokemon",
       "showdownId": "sinisteaantique",
       "showdownName": "Sinistea-Antique",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "sinisteaantique",
-        "canonicalName": "Sinistea-Antique"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ヤバチャ しんさくフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -18813,49 +18501,33 @@
       "kind": "pokemon",
       "showdownId": "squawkabilly",
       "showdownName": "Squawkabilly",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "squawkabilly",
-        "canonicalName": "Squawkabilly"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イキリンコ グリーンフェザー",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "squawkabillyblue",
       "showdownName": "Squawkabilly-Blue",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "squawkabillyblue",
-        "canonicalName": "Squawkabilly-Blue"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イキリンコ ブルーフェザー",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "squawkabillywhite",
       "showdownName": "Squawkabilly-White",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "squawkabillywhite",
-        "canonicalName": "Squawkabilly-White"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イキリンコ ホワイトフェザー",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "squawkabillyyellow",
       "showdownName": "Squawkabilly-Yellow",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "squawkabillyyellow",
-        "canonicalName": "Squawkabilly-Yellow"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イキリンコ イエローフェザー",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -19458,13 +19130,9 @@
       "kind": "pokemon",
       "showdownId": "tatsugiri",
       "showdownName": "Tatsugiri",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "tatsugiri",
-        "canonicalName": "Tatsugiri"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "シャリタツ そったすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -19698,13 +19366,9 @@
       "kind": "pokemon",
       "showdownId": "thundurus",
       "showdownName": "Thundurus",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "thundurus",
-        "canonicalName": "Thundurus"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ボルトロス けしんフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -19926,13 +19590,9 @@
       "kind": "pokemon",
       "showdownId": "tornadus",
       "showdownName": "Tornadus",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "tornadus",
-        "canonicalName": "Tornadus"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "トルネロス けしんフォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -20034,13 +19694,9 @@
       "kind": "pokemon",
       "showdownId": "toxtricity",
       "showdownName": "Toxtricity",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "toxtricity",
-        "canonicalName": "Toxtricity"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ストリンダー ハイなすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -20358,190 +20014,217 @@
       "kind": "pokemon",
       "showdownId": "unownb",
       "showdownName": "Unown-B",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｂ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownc",
       "showdownName": "Unown-C",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｃ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownd",
       "showdownName": "Unown-D",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｄ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unowne",
       "showdownName": "Unown-E",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｅ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownexclamation",
       "showdownName": "Unown-Exclamation",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン !",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownf",
       "showdownName": "Unown-F",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｆ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unowng",
       "showdownName": "Unown-G",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｇ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownh",
       "showdownName": "Unown-H",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｈ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unowni",
       "showdownName": "Unown-I",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｉ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownj",
       "showdownName": "Unown-J",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｊ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownk",
       "showdownName": "Unown-K",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｋ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownl",
       "showdownName": "Unown-L",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｌ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownm",
       "showdownName": "Unown-M",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｍ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownn",
       "showdownName": "Unown-N",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｎ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unowno",
       "showdownName": "Unown-O",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｏ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownp",
       "showdownName": "Unown-P",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｐ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownq",
       "showdownName": "Unown-Q",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｑ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownquestion",
       "showdownName": "Unown-Question",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン ?",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownr",
       "showdownName": "Unown-R",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｒ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unowns",
       "showdownName": "Unown-S",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｓ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownt",
       "showdownName": "Unown-T",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｔ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownu",
       "showdownName": "Unown-U",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｕ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownv",
       "showdownName": "Unown-V",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｖ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownw",
       "showdownName": "Unown-W",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｗ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownx",
       "showdownName": "Unown-X",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｘ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unowny",
       "showdownName": "Unown-Y",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｙ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "unownz",
       "showdownName": "Unown-Z",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "アンノーン Ｚ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -20583,13 +20266,9 @@
       "kind": "pokemon",
       "showdownId": "urshifu",
       "showdownName": "Urshifu",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "urshifu",
-        "canonicalName": "Urshifu"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ウーラオス いちげきのかた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -21468,13 +21147,9 @@
       "kind": "pokemon",
       "showdownId": "wishiwashi",
       "showdownName": "Wishiwashi",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "wishiwashi",
-        "canonicalName": "Wishiwashi"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ヨワシ たんどくのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -21564,13 +21239,9 @@
       "kind": "pokemon",
       "showdownId": "wormadam",
       "showdownName": "Wormadam",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "wormadam",
-        "canonicalName": "Wormadam"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ミノマダム くさきのミノ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -21672,8 +21343,9 @@
       "kind": "pokemon",
       "showdownId": "xerneasneutral",
       "showdownName": "Xerneas-Neutral",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "ゼルネアス リラックスモード",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -22027,13 +21699,9 @@
       "kind": "pokemon",
       "showdownId": "zygarde",
       "showdownName": "Zygarde",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "zygarde",
-        "canonicalName": "Zygarde"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ジガルデ ５０％フォルム",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -22327,9 +21995,9 @@
   ],
   "summary": {
     "pokemon": {
-      "localized": 1265,
-      "needs-confirmation": 122,
-      "unsupported": 82,
+      "localized": 1447,
+      "needs-confirmation": 19,
+      "unsupported": 3,
       "out-of-scope": 117
     },
     "ability": {

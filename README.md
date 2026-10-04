@@ -303,7 +303,7 @@ Showdown参照版は [3661ce40bf9001d185ce078b8920e12304204609](https://github.c
 
 | 種別 | 日本語表示可能 | 要確認 | 日本語未対応 | 翻訳対象外・確認済み | 参照版の項目数 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| ポケモン・フォーム | 1,265 | 122 | 82 | 117 | 1,586 |
+| ポケモン・フォーム | 1,447 | 19 | 3 | 117 | 1,586 |
 | 特性 | 308 | 10 | 0 | 3 | 321 |
 | タイプ | 19 | 0 | 0 | 0 | 19 |
 
@@ -311,8 +311,36 @@ Showdown参照版は [3661ce40bf9001d185ce078b8920e12304204609](https://github.c
 最新の集計は `showdownDisplayMetadata.summary` で取得できる。
 未解決は `needs-confirmation` + `unsupported` の合計。`out-of-scope` は含めない。
 この件数はcalc未収録の項目数や新規翻訳が必要な件数とは異なる。
-既存辞書の暫定状態は確定名へ昇格させず、別フォームと同じ表示になるものも要確認にする。
-たとえば `Arceus-Bug` は辞書側の暫定状態を保留し、`Darmanitan-Galar-Zen` は表示名の重複を理由に保留する。
+元辞書の暫定フラグだけでは自動承認せず、名前と対応を確認した項目をShowdown専用補正で確定する。
+未解決はポケモン22件・特性10件の計32件。`Darmanitan-Galar-Zen` などの表示重複や、未確認のぬし・Starter・Gmax等の補足は引き続き保留する。
+
+### POKEMON_ALLから採用した日本語名
+
+`@motemen/pokemon-data@9.5.0` の提供スナップショットから、ユーザーが採用を承認した182項目を
+`src/data/overrides/showdown-pokemon-names.json` に取り込んでいる。
+通常の生成・ビルド・テストにはこの同梱ファイルを使い、`others/` や外部APIには依存しない。
+
+- 171項目: 日本語の種族名とフォーム名を空白で連結。
+- 2項目: `Minior-Meteor` の7行と `Zygarde` の2行は各々すべて同じ表示を返すことを確認し、外部IDごとに一意の表示を採用。
+- 3項目: `Frillish` / `Jellicent` / `Pyroar` はフォーム指定のない名前として、`プルリル` / `ブルンゲル` / `カエンジシ` を表示。
+- 6項目: おきがえピカチュウは完成したフォーム名をそのまま表示し、種族名を二重に付けない。
+
+| Showdown名 | 表示例 |
+| --- | --- |
+| Silvally-Bug | シルヴァディ タイプ：バグ |
+| Maushold / Maushold-Four | イッカネズミ ３びきかぞく / イッカネズミ ４ひきかぞく |
+| Minior | メテノ あかいろのコア |
+| Pikachu-Belle | マダム・ピカチュウ |
+| Pikachu-Cosplay | おきがえピカチュウ |
+| Pikachu-Libre | マスクド・ピカチュウ |
+| Pikachu-PhD | ドクター・ピカチュウ |
+| Pikachu-Pop-Star | アイドル・ピカチュウ |
+| Pikachu-Rock-Star | ハードロック・ピカチュウ |
+
+日本語名は提供されたPokéAPI由来の欄を採用したもので、ゲーム公式資料で新規確認したことは意味しない。
+シルヴァディの `タイプ：バグ` / `タイプ：ウオーター` なども、承認された元の表記を保持する。
+既存calc向けの `getDisplayNameJa` / resolver / formatter の表示契約は変更しない。
+日本語表示に対応しても、calcにない個別フォームが計算可能になったとは判定しない。
 
 ### ぬし・特殊項目の表示方針
 
@@ -402,6 +430,7 @@ calc側の裸の `Vivillon` は従来どおり「ビビヨン」であり、契�
 - `src/data/generated/showdown-catalog.gen.json`: 上流から抽出した名前・フォーム構成・別名の監査用スナップショット。
 - `src/data/overrides/showdown-display-overrides.json`: 出典付きの翻訳参照先・追加日本語名・確認済み別名・曖昧入力。
 - 同ファイルの `outOfScopeGroups`: 確認済みの翻訳対象外ID・分類・日本語注記・判断根拠。
+- `src/data/overrides/showdown-pokemon-names.json`: 採用済み182項目の外部ID・承認表示名・組立方法と元データ189行の必要フィールド。元JSONの内容hash・出所・採用日を保持。
 - `src/data/generated/showdown-display.gen.json`: 既存辞書と補正から生成する対応・未対応の一覧。単体では辞書参照が未展開なので、外部利用には公開入口またはビルド済みJSを使う。
 
 日常の再生成は同梱スナップショットからオフラインで実行できる。
@@ -415,8 +444,19 @@ npm run build:showdown
 
 `validate:showdown-display` は元データから組み直して生成結果の完全一致を確認し、
 ID重複・存在しない辞書参照・別名衝突・上流別名の不一致・ビビヨン全模様の欠落・翻訳と対象外定義の競合も拒否する。
+採用済みポケモン名も、元行の名前/ID・組立方法・複数行の一致を確認する。別フォームへの置換や、複数候補の先頭だけを採る処理はしない。
 生成データのversionには入力辞書・補正・表示規則のhashを反映する。
 ローカルJSONは内容を正規化し、表示規則は改行をLFへ揃えてhash化するため、Windows/Linuxで同じ結果になる。
+
+提供元の `POKEMON_ALL.json` を保有している場合は、次の任意コマンドで採用部分を再検証できる。
+`--check` を外すと承認済みのID・表示名・組立方法を維持したまま元行を再取り込みする。
+
+```bash
+node scripts/import-showdown-pokemon-names.mjs path/to/POKEMON_ALL.json --check
+```
+
+元JSONは改行・空白に依存しない内容hashで固定し、別版への更新は承認済み一覧を再確認してから行う。
+通常の `generate:showdown-display` には元JSONも作業用の調査一覧も不要。
 
 上流スナップショット自体を再検証する場合は、固定版のShowdown checkoutを用意する。
 Showdownの依存インストールや実行は不要。抽出scriptはTypeScript構文から名前用のリテラルだけを読み、上流コードを実行しない。

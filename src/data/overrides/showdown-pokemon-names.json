@@ -1,0 +1,2986 @@
+{
+  "schemaVersion": 1,
+  "kind": "showdown-pokemon-name-imports",
+  "dataVersion": "pokemon-all-approved-2026-10-05",
+  "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
+  "source": {
+    "dataset": "@motemen/pokemon-data",
+    "version": "9.5.0",
+    "repository": "https://github.com/motemen/pokemon-data",
+    "file": "POKEMON_ALL.json",
+    "jsonContentSha256": "c2760cb64398cf0d1962a4a82a8c990f023120bf3b01cd41cc93cc0a52504c8d",
+    "originalFileSha256": "f93b0dfc71667175cc30f81bc11ef416ab3c0224d70112fd80de799639342f90",
+    "approvedOn": "2026-10-05",
+    "note": "User approved the 182 completed candidates, including all six complete Pikachu form names. Imported fields are display-only; no calculation data or runtime source-file dependency."
+  },
+  "entries": [
+    {
+      "showdownId": "alcremiecaramelswirl",
+      "showdownName": "Alcremie-Caramel-Swirl",
+      "composition": "species-and-form",
+      "displayNameJa": "マホイップ キャラメルミックス",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10352,
+          "pokeapi_form_id_name": "alcremie-caramel-swirl-strawberry-sweet",
+          "pkmn_id_name": "alcremiecaramelswirl",
+          "pkmn_name": "Alcremie-Caramel-Swirl",
+          "pokeapi_species_name_ja": "マホイップ",
+          "pokeapi_form_name_ja": "キャラメルミックス"
+        }
+      ]
+    },
+    {
+      "showdownId": "alcremielemoncream",
+      "showdownName": "Alcremie-Lemon-Cream",
+      "composition": "species-and-form",
+      "displayNameJa": "マホイップ ミルキィレモン",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10349,
+          "pokeapi_form_id_name": "alcremie-lemon-cream-strawberry-sweet",
+          "pkmn_id_name": "alcremielemoncream",
+          "pkmn_name": "Alcremie-Lemon-Cream",
+          "pokeapi_species_name_ja": "マホイップ",
+          "pokeapi_form_name_ja": "ミルキィレモン"
+        }
+      ]
+    },
+    {
+      "showdownId": "alcremiematchacream",
+      "showdownName": "Alcremie-Matcha-Cream",
+      "composition": "species-and-form",
+      "displayNameJa": "マホイップ ミルキィまっちゃ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10347,
+          "pokeapi_form_id_name": "alcremie-matcha-cream-strawberry-sweet",
+          "pkmn_id_name": "alcremiematchacream",
+          "pkmn_name": "Alcremie-Matcha-Cream",
+          "pokeapi_species_name_ja": "マホイップ",
+          "pokeapi_form_name_ja": "ミルキィまっちゃ"
+        }
+      ]
+    },
+    {
+      "showdownId": "alcremiemintcream",
+      "showdownName": "Alcremie-Mint-Cream",
+      "composition": "species-and-form",
+      "displayNameJa": "マホイップ ミルキィミント",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10348,
+          "pokeapi_form_id_name": "alcremie-mint-cream-strawberry-sweet",
+          "pkmn_id_name": "alcremiemintcream",
+          "pkmn_name": "Alcremie-Mint-Cream",
+          "pokeapi_species_name_ja": "マホイップ",
+          "pokeapi_form_name_ja": "ミルキィミント"
+        }
+      ]
+    },
+    {
+      "showdownId": "alcremierainbowswirl",
+      "showdownName": "Alcremie-Rainbow-Swirl",
+      "composition": "species-and-form",
+      "displayNameJa": "マホイップ トリプルミックス",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10353,
+          "pokeapi_form_id_name": "alcremie-rainbow-swirl-strawberry-sweet",
+          "pkmn_id_name": "alcremierainbowswirl",
+          "pkmn_name": "Alcremie-Rainbow-Swirl",
+          "pokeapi_species_name_ja": "マホイップ",
+          "pokeapi_form_name_ja": "トリプルミックス"
+        }
+      ]
+    },
+    {
+      "showdownId": "alcremierubycream",
+      "showdownName": "Alcremie-Ruby-Cream",
+      "composition": "species-and-form",
+      "displayNameJa": "マホイップ ミルキィルビー",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10346,
+          "pokeapi_form_id_name": "alcremie-ruby-cream-strawberry-sweet",
+          "pkmn_id_name": "alcremierubycream",
+          "pkmn_name": "Alcremie-Ruby-Cream",
+          "pokeapi_species_name_ja": "マホイップ",
+          "pokeapi_form_name_ja": "ミルキィルビー"
+        }
+      ]
+    },
+    {
+      "showdownId": "alcremierubyswirl",
+      "showdownName": "Alcremie-Ruby-Swirl",
+      "composition": "species-and-form",
+      "displayNameJa": "マホイップ ルビーミックス",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10351,
+          "pokeapi_form_id_name": "alcremie-ruby-swirl-strawberry-sweet",
+          "pkmn_id_name": "alcremierubyswirl",
+          "pkmn_name": "Alcremie-Ruby-Swirl",
+          "pokeapi_species_name_ja": "マホイップ",
+          "pokeapi_form_name_ja": "ルビーミックス"
+        }
+      ]
+    },
+    {
+      "showdownId": "alcremiesaltedcream",
+      "showdownName": "Alcremie-Salted-Cream",
+      "composition": "species-and-form",
+      "displayNameJa": "マホイップ ミルキィソルト",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10350,
+          "pokeapi_form_id_name": "alcremie-salted-cream-strawberry-sweet",
+          "pkmn_id_name": "alcremiesaltedcream",
+          "pkmn_name": "Alcremie-Salted-Cream",
+          "pokeapi_species_name_ja": "マホイップ",
+          "pokeapi_form_name_ja": "ミルキィソルト"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusbug",
+      "showdownName": "Arceus-Bug",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス むしタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10041,
+          "pokeapi_form_id_name": "arceus-bug",
+          "pkmn_id_name": "arceusbug",
+          "pkmn_name": "Arceus-Bug",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "むしタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusdark",
+      "showdownName": "Arceus-Dark",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス あくタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10042,
+          "pokeapi_form_id_name": "arceus-dark",
+          "pkmn_id_name": "arceusdark",
+          "pkmn_name": "Arceus-Dark",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "あくタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusdragon",
+      "showdownName": "Arceus-Dragon",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス ドラゴンタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10043,
+          "pokeapi_form_id_name": "arceus-dragon",
+          "pkmn_id_name": "arceusdragon",
+          "pkmn_name": "Arceus-Dragon",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "ドラゴンタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceuselectric",
+      "showdownName": "Arceus-Electric",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス でんきタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10044,
+          "pokeapi_form_id_name": "arceus-electric",
+          "pkmn_id_name": "arceuselectric",
+          "pkmn_name": "Arceus-Electric",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "でんきタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusfairy",
+      "showdownName": "Arceus-Fairy",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス フェアリータイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10085,
+          "pokeapi_form_id_name": "arceus-fairy",
+          "pkmn_id_name": "arceusfairy",
+          "pkmn_name": "Arceus-Fairy",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "フェアリータイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusfighting",
+      "showdownName": "Arceus-Fighting",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス かくとうタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10045,
+          "pokeapi_form_id_name": "arceus-fighting",
+          "pkmn_id_name": "arceusfighting",
+          "pkmn_name": "Arceus-Fighting",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "かくとうタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusfire",
+      "showdownName": "Arceus-Fire",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス ほのおタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10046,
+          "pokeapi_form_id_name": "arceus-fire",
+          "pkmn_id_name": "arceusfire",
+          "pkmn_name": "Arceus-Fire",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "ほのおタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusflying",
+      "showdownName": "Arceus-Flying",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス ひこうタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10047,
+          "pokeapi_form_id_name": "arceus-flying",
+          "pkmn_id_name": "arceusflying",
+          "pkmn_name": "Arceus-Flying",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "ひこうタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusghost",
+      "showdownName": "Arceus-Ghost",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス ゴーストタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10048,
+          "pokeapi_form_id_name": "arceus-ghost",
+          "pkmn_id_name": "arceusghost",
+          "pkmn_name": "Arceus-Ghost",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "ゴーストタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusgrass",
+      "showdownName": "Arceus-Grass",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス くさタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10049,
+          "pokeapi_form_id_name": "arceus-grass",
+          "pkmn_id_name": "arceusgrass",
+          "pkmn_name": "Arceus-Grass",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "くさタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusground",
+      "showdownName": "Arceus-Ground",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス じめんタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10050,
+          "pokeapi_form_id_name": "arceus-ground",
+          "pkmn_id_name": "arceusground",
+          "pkmn_name": "Arceus-Ground",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "じめんタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusice",
+      "showdownName": "Arceus-Ice",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス こおりタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10051,
+          "pokeapi_form_id_name": "arceus-ice",
+          "pkmn_id_name": "arceusice",
+          "pkmn_name": "Arceus-Ice",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "こおりタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceuspoison",
+      "showdownName": "Arceus-Poison",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス どくタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10052,
+          "pokeapi_form_id_name": "arceus-poison",
+          "pkmn_id_name": "arceuspoison",
+          "pkmn_name": "Arceus-Poison",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "どくタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceuspsychic",
+      "showdownName": "Arceus-Psychic",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス エスパータイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10053,
+          "pokeapi_form_id_name": "arceus-psychic",
+          "pkmn_id_name": "arceuspsychic",
+          "pkmn_name": "Arceus-Psychic",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "エスパータイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceusrock",
+      "showdownName": "Arceus-Rock",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス いわタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10054,
+          "pokeapi_form_id_name": "arceus-rock",
+          "pkmn_id_name": "arceusrock",
+          "pkmn_name": "Arceus-Rock",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "いわタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceussteel",
+      "showdownName": "Arceus-Steel",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス はがねタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10055,
+          "pokeapi_form_id_name": "arceus-steel",
+          "pkmn_id_name": "arceussteel",
+          "pkmn_name": "Arceus-Steel",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "はがねタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "arceuswater",
+      "showdownName": "Arceus-Water",
+      "composition": "species-and-form",
+      "displayNameJa": "アルセウス みずタイプ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10056,
+          "pokeapi_form_id_name": "arceus-water",
+          "pkmn_id_name": "arceuswater",
+          "pkmn_name": "Arceus-Water",
+          "pokeapi_species_name_ja": "アルセウス",
+          "pokeapi_form_name_ja": "みずタイプ"
+        }
+      ]
+    },
+    {
+      "showdownId": "basculegion",
+      "showdownName": "Basculegion",
+      "composition": "species-and-form",
+      "displayNameJa": "イダイトウ オスのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 902,
+          "pokeapi_form_id_name": "basculegion-male",
+          "pkmn_id_name": "basculegion",
+          "pkmn_name": "Basculegion",
+          "pokeapi_species_name_ja": "イダイトウ",
+          "pokeapi_form_name_ja": "オスのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "basculegionf",
+      "showdownName": "Basculegion-F",
+      "composition": "species-and-form",
+      "displayNameJa": "イダイトウ メスのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10417,
+          "pokeapi_form_id_name": "basculegion-female",
+          "pkmn_id_name": "basculegionf",
+          "pkmn_name": "Basculegion-F",
+          "pokeapi_species_name_ja": "イダイトウ",
+          "pokeapi_form_name_ja": "メスのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "basculin",
+      "showdownName": "Basculin",
+      "composition": "species-and-form",
+      "displayNameJa": "バスラオ あかすじのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 550,
+          "pokeapi_form_id_name": "basculin-red-striped",
+          "pkmn_id_name": "basculin",
+          "pkmn_name": "Basculin",
+          "pokeapi_species_name_ja": "バスラオ",
+          "pokeapi_form_name_ja": "あかすじのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "burmysandy",
+      "showdownName": "Burmy-Sandy",
+      "composition": "species-and-form",
+      "displayNameJa": "ミノムッチ すなちのミノ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10034,
+          "pokeapi_form_id_name": "burmy-sandy",
+          "pkmn_id_name": "burmysandy",
+          "pkmn_name": "Burmy-Sandy",
+          "pokeapi_species_name_ja": "ミノムッチ",
+          "pokeapi_form_name_ja": "すなちのミノ"
+        }
+      ]
+    },
+    {
+      "showdownId": "burmytrash",
+      "showdownName": "Burmy-Trash",
+      "composition": "species-and-form",
+      "displayNameJa": "ミノムッチ ゴミのミノ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10035,
+          "pokeapi_form_id_name": "burmy-trash",
+          "pkmn_id_name": "burmytrash",
+          "pkmn_name": "Burmy-Trash",
+          "pokeapi_species_name_ja": "ミノムッチ",
+          "pokeapi_form_name_ja": "ゴミのミノ"
+        }
+      ]
+    },
+    {
+      "showdownId": "cherrimsunshine",
+      "showdownName": "Cherrim-Sunshine",
+      "composition": "species-and-form",
+      "displayNameJa": "チェリム ポジフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10038,
+          "pokeapi_form_id_name": "cherrim-sunshine",
+          "pkmn_id_name": "cherrimsunshine",
+          "pkmn_name": "Cherrim-Sunshine",
+          "pokeapi_species_name_ja": "チェリム",
+          "pokeapi_form_name_ja": "ポジフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "darmanitan",
+      "showdownName": "Darmanitan",
+      "composition": "species-and-form",
+      "displayNameJa": "ヒヒダルマ ノーマルモード",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 555,
+          "pokeapi_form_id_name": "darmanitan-standard",
+          "pkmn_id_name": "darmanitan",
+          "pkmn_name": "Darmanitan",
+          "pokeapi_species_name_ja": "ヒヒダルマ",
+          "pokeapi_form_name_ja": "ノーマルモード"
+        }
+      ]
+    },
+    {
+      "showdownId": "darmanitangalar",
+      "showdownName": "Darmanitan-Galar",
+      "composition": "species-and-form",
+      "displayNameJa": "ヒヒダルマ ガラルのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10336,
+          "pokeapi_form_id_name": "darmanitan-galar-standard",
+          "pkmn_id_name": "darmanitangalar",
+          "pkmn_name": "Darmanitan-Galar",
+          "pokeapi_species_name_ja": "ヒヒダルマ",
+          "pokeapi_form_name_ja": "ガラルのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "deerlingautumn",
+      "showdownName": "Deerling-Autumn",
+      "composition": "species-and-form",
+      "displayNameJa": "シキジカ あきのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10069,
+          "pokeapi_form_id_name": "deerling-autumn",
+          "pkmn_id_name": "deerlingautumn",
+          "pkmn_name": "Deerling-Autumn",
+          "pokeapi_species_name_ja": "シキジカ",
+          "pokeapi_form_name_ja": "あきのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "deerlingsummer",
+      "showdownName": "Deerling-Summer",
+      "composition": "species-and-form",
+      "displayNameJa": "シキジカ なつのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10068,
+          "pokeapi_form_id_name": "deerling-summer",
+          "pkmn_id_name": "deerlingsummer",
+          "pkmn_name": "Deerling-Summer",
+          "pokeapi_species_name_ja": "シキジカ",
+          "pokeapi_form_name_ja": "なつのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "deerlingwinter",
+      "showdownName": "Deerling-Winter",
+      "composition": "species-and-form",
+      "displayNameJa": "シキジカ ふゆのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10070,
+          "pokeapi_form_id_name": "deerling-winter",
+          "pkmn_id_name": "deerlingwinter",
+          "pkmn_name": "Deerling-Winter",
+          "pokeapi_species_name_ja": "シキジカ",
+          "pokeapi_form_name_ja": "ふゆのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "deoxys",
+      "showdownName": "Deoxys",
+      "composition": "species-and-form",
+      "displayNameJa": "デオキシス ノーマルフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 386,
+          "pokeapi_form_id_name": "deoxys-normal",
+          "pkmn_id_name": "deoxys",
+          "pkmn_name": "Deoxys",
+          "pokeapi_species_name_ja": "デオキシス",
+          "pokeapi_form_name_ja": "ノーマルフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "dudunsparce",
+      "showdownName": "Dudunsparce",
+      "composition": "species-and-form",
+      "displayNameJa": "ノココッチ ふたふしフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 982,
+          "pokeapi_form_id_name": "dudunsparce-two-segment",
+          "pkmn_id_name": "dudunsparce",
+          "pkmn_name": "Dudunsparce",
+          "pokeapi_species_name_ja": "ノココッチ",
+          "pokeapi_form_name_ja": "ふたふしフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "eiscue",
+      "showdownName": "Eiscue",
+      "composition": "species-and-form",
+      "displayNameJa": "コオリッポ アイスフェイス",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 875,
+          "pokeapi_form_id_name": "eiscue-ice",
+          "pkmn_id_name": "eiscue",
+          "pkmn_name": "Eiscue",
+          "pokeapi_species_name_ja": "コオリッポ",
+          "pokeapi_form_name_ja": "アイスフェイス"
+        }
+      ]
+    },
+    {
+      "showdownId": "enamorus",
+      "showdownName": "Enamorus",
+      "composition": "species-and-form",
+      "displayNameJa": "ラブトロス けしんフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 905,
+          "pokeapi_form_id_name": "enamorus-incarnate",
+          "pkmn_id_name": "enamorus",
+          "pkmn_name": "Enamorus",
+          "pokeapi_species_name_ja": "ラブトロス",
+          "pokeapi_form_name_ja": "けしんフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "flabebeblue",
+      "showdownName": "Flabébé-Blue",
+      "composition": "species-and-form",
+      "displayNameJa": "フラベベ あおいはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10105,
+          "pokeapi_form_id_name": "flabebe-blue",
+          "pkmn_id_name": "flabebeblue",
+          "pkmn_name": "Flabébé-Blue",
+          "pokeapi_species_name_ja": "フラベベ",
+          "pokeapi_form_name_ja": "あおいはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "flabebeorange",
+      "showdownName": "Flabébé-Orange",
+      "composition": "species-and-form",
+      "displayNameJa": "フラベベ オレンジいろのはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10104,
+          "pokeapi_form_id_name": "flabebe-orange",
+          "pkmn_id_name": "flabebeorange",
+          "pkmn_name": "Flabébé-Orange",
+          "pokeapi_species_name_ja": "フラベベ",
+          "pokeapi_form_name_ja": "オレンジいろのはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "flabebewhite",
+      "showdownName": "Flabébé-White",
+      "composition": "species-and-form",
+      "displayNameJa": "フラベベ しろいはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10106,
+          "pokeapi_form_id_name": "flabebe-white",
+          "pkmn_id_name": "flabebewhite",
+          "pkmn_name": "Flabébé-White",
+          "pokeapi_species_name_ja": "フラベベ",
+          "pokeapi_form_name_ja": "しろいはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "flabebeyellow",
+      "showdownName": "Flabébé-Yellow",
+      "composition": "species-and-form",
+      "displayNameJa": "フラベベ きいろのはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10103,
+          "pokeapi_form_id_name": "flabebe-yellow",
+          "pkmn_id_name": "flabebeyellow",
+          "pkmn_name": "Flabébé-Yellow",
+          "pokeapi_species_name_ja": "フラベベ",
+          "pokeapi_form_name_ja": "きいろのはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "floetteblue",
+      "showdownName": "Floette-Blue",
+      "composition": "species-and-form",
+      "displayNameJa": "フラエッテ あおいはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10109,
+          "pokeapi_form_id_name": "floette-blue",
+          "pkmn_id_name": "floetteblue",
+          "pkmn_name": "Floette-Blue",
+          "pokeapi_species_name_ja": "フラエッテ",
+          "pokeapi_form_name_ja": "あおいはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "floetteorange",
+      "showdownName": "Floette-Orange",
+      "composition": "species-and-form",
+      "displayNameJa": "フラエッテ オレンジいろのはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10108,
+          "pokeapi_form_id_name": "floette-orange",
+          "pkmn_id_name": "floetteorange",
+          "pkmn_name": "Floette-Orange",
+          "pokeapi_species_name_ja": "フラエッテ",
+          "pokeapi_form_name_ja": "オレンジいろのはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "floettewhite",
+      "showdownName": "Floette-White",
+      "composition": "species-and-form",
+      "displayNameJa": "フラエッテ しろいはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10110,
+          "pokeapi_form_id_name": "floette-white",
+          "pkmn_id_name": "floettewhite",
+          "pkmn_name": "Floette-White",
+          "pokeapi_species_name_ja": "フラエッテ",
+          "pokeapi_form_name_ja": "しろいはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "floetteyellow",
+      "showdownName": "Floette-Yellow",
+      "composition": "species-and-form",
+      "displayNameJa": "フラエッテ きいろのはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10107,
+          "pokeapi_form_id_name": "floette-yellow",
+          "pkmn_id_name": "floetteyellow",
+          "pkmn_name": "Floette-Yellow",
+          "pokeapi_species_name_ja": "フラエッテ",
+          "pokeapi_form_name_ja": "きいろのはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "florgesblue",
+      "showdownName": "Florges-Blue",
+      "composition": "species-and-form",
+      "displayNameJa": "フラージェス あおいはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10113,
+          "pokeapi_form_id_name": "florges-blue",
+          "pkmn_id_name": "florgesblue",
+          "pkmn_name": "Florges-Blue",
+          "pokeapi_species_name_ja": "フラージェス",
+          "pokeapi_form_name_ja": "あおいはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "florgesorange",
+      "showdownName": "Florges-Orange",
+      "composition": "species-and-form",
+      "displayNameJa": "フラージェス オレンジいろのはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10112,
+          "pokeapi_form_id_name": "florges-orange",
+          "pkmn_id_name": "florgesorange",
+          "pkmn_name": "Florges-Orange",
+          "pokeapi_species_name_ja": "フラージェス",
+          "pokeapi_form_name_ja": "オレンジいろのはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "florgeswhite",
+      "showdownName": "Florges-White",
+      "composition": "species-and-form",
+      "displayNameJa": "フラージェス しろいはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10114,
+          "pokeapi_form_id_name": "florges-white",
+          "pkmn_id_name": "florgeswhite",
+          "pkmn_name": "Florges-White",
+          "pokeapi_species_name_ja": "フラージェス",
+          "pokeapi_form_name_ja": "しろいはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "florgesyellow",
+      "showdownName": "Florges-Yellow",
+      "composition": "species-and-form",
+      "displayNameJa": "フラージェス きいろのはな",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10111,
+          "pokeapi_form_id_name": "florges-yellow",
+          "pkmn_id_name": "florgesyellow",
+          "pkmn_name": "Florges-Yellow",
+          "pokeapi_species_name_ja": "フラージェス",
+          "pokeapi_form_name_ja": "きいろのはな"
+        }
+      ]
+    },
+    {
+      "showdownId": "frillish",
+      "showdownName": "Frillish",
+      "composition": "species-only",
+      "displayNameJa": "プルリル",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 592,
+          "pokeapi_form_id_name": "frillish",
+          "pkmn_id_name": "frillish",
+          "pkmn_name": "Frillish",
+          "pokeapi_species_name_ja": "プルリル",
+          "pokeapi_form_name_ja": null
+        }
+      ]
+    },
+    {
+      "showdownId": "furfroudandy",
+      "showdownName": "Furfrou-Dandy",
+      "composition": "species-and-form",
+      "displayNameJa": "トリミアン ジェントルカット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10120,
+          "pokeapi_form_id_name": "furfrou-dandy",
+          "pkmn_id_name": "furfroudandy",
+          "pkmn_name": "Furfrou-Dandy",
+          "pokeapi_species_name_ja": "トリミアン",
+          "pokeapi_form_name_ja": "ジェントルカット"
+        }
+      ]
+    },
+    {
+      "showdownId": "furfroudebutante",
+      "showdownName": "Furfrou-Debutante",
+      "composition": "species-and-form",
+      "displayNameJa": "トリミアン レディカット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10118,
+          "pokeapi_form_id_name": "furfrou-debutante",
+          "pkmn_id_name": "furfroudebutante",
+          "pkmn_name": "Furfrou-Debutante",
+          "pokeapi_species_name_ja": "トリミアン",
+          "pokeapi_form_name_ja": "レディカット"
+        }
+      ]
+    },
+    {
+      "showdownId": "furfroudiamond",
+      "showdownName": "Furfrou-Diamond",
+      "composition": "species-and-form",
+      "displayNameJa": "トリミアン ダイヤカット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10117,
+          "pokeapi_form_id_name": "furfrou-diamond",
+          "pkmn_id_name": "furfroudiamond",
+          "pkmn_name": "Furfrou-Diamond",
+          "pokeapi_species_name_ja": "トリミアン",
+          "pokeapi_form_name_ja": "ダイヤカット"
+        }
+      ]
+    },
+    {
+      "showdownId": "furfrouheart",
+      "showdownName": "Furfrou-Heart",
+      "composition": "species-and-form",
+      "displayNameJa": "トリミアン ハートカット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10115,
+          "pokeapi_form_id_name": "furfrou-heart",
+          "pkmn_id_name": "furfrouheart",
+          "pkmn_name": "Furfrou-Heart",
+          "pokeapi_species_name_ja": "トリミアン",
+          "pokeapi_form_name_ja": "ハートカット"
+        }
+      ]
+    },
+    {
+      "showdownId": "furfroukabuki",
+      "showdownName": "Furfrou-Kabuki",
+      "composition": "species-and-form",
+      "displayNameJa": "トリミアン カブキカット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10122,
+          "pokeapi_form_id_name": "furfrou-kabuki",
+          "pkmn_id_name": "furfroukabuki",
+          "pkmn_name": "Furfrou-Kabuki",
+          "pokeapi_species_name_ja": "トリミアン",
+          "pokeapi_form_name_ja": "カブキカット"
+        }
+      ]
+    },
+    {
+      "showdownId": "furfroulareine",
+      "showdownName": "Furfrou-La Reine",
+      "composition": "species-and-form",
+      "displayNameJa": "トリミアン クイーンカット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10121,
+          "pokeapi_form_id_name": "furfrou-la-reine",
+          "pkmn_id_name": "furfroulareine",
+          "pkmn_name": "Furfrou-La Reine",
+          "pokeapi_species_name_ja": "トリミアン",
+          "pokeapi_form_name_ja": "クイーンカット"
+        }
+      ]
+    },
+    {
+      "showdownId": "furfroumatron",
+      "showdownName": "Furfrou-Matron",
+      "composition": "species-and-form",
+      "displayNameJa": "トリミアン マダムカット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10119,
+          "pokeapi_form_id_name": "furfrou-matron",
+          "pkmn_id_name": "furfroumatron",
+          "pkmn_name": "Furfrou-Matron",
+          "pokeapi_species_name_ja": "トリミアン",
+          "pokeapi_form_name_ja": "マダムカット"
+        }
+      ]
+    },
+    {
+      "showdownId": "furfroupharaoh",
+      "showdownName": "Furfrou-Pharaoh",
+      "composition": "species-and-form",
+      "displayNameJa": "トリミアン キングダムカット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10123,
+          "pokeapi_form_id_name": "furfrou-pharaoh",
+          "pkmn_id_name": "furfroupharaoh",
+          "pkmn_name": "Furfrou-Pharaoh",
+          "pokeapi_species_name_ja": "トリミアン",
+          "pokeapi_form_name_ja": "キングダムカット"
+        }
+      ]
+    },
+    {
+      "showdownId": "furfroustar",
+      "showdownName": "Furfrou-Star",
+      "composition": "species-and-form",
+      "displayNameJa": "トリミアン スターカット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10116,
+          "pokeapi_form_id_name": "furfrou-star",
+          "pkmn_id_name": "furfroustar",
+          "pkmn_name": "Furfrou-Star",
+          "pokeapi_species_name_ja": "トリミアン",
+          "pokeapi_form_name_ja": "スターカット"
+        }
+      ]
+    },
+    {
+      "showdownId": "gastrodoneast",
+      "showdownName": "Gastrodon-East",
+      "composition": "species-and-form",
+      "displayNameJa": "トリトドン ひがしのうみ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10040,
+          "pokeapi_form_id_name": "gastrodon-east",
+          "pkmn_id_name": "gastrodoneast",
+          "pkmn_name": "Gastrodon-East",
+          "pokeapi_species_name_ja": "トリトドン",
+          "pokeapi_form_name_ja": "ひがしのうみ"
+        }
+      ]
+    },
+    {
+      "showdownId": "genesectburn",
+      "showdownName": "Genesect-Burn",
+      "composition": "species-and-form",
+      "displayNameJa": "ゲノセクト ブレイズカセット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10077,
+          "pokeapi_form_id_name": "genesect-burn",
+          "pkmn_id_name": "genesectburn",
+          "pkmn_name": "Genesect-Burn",
+          "pokeapi_species_name_ja": "ゲノセクト",
+          "pokeapi_form_name_ja": "ブレイズカセット"
+        }
+      ]
+    },
+    {
+      "showdownId": "genesectchill",
+      "showdownName": "Genesect-Chill",
+      "composition": "species-and-form",
+      "displayNameJa": "ゲノセクト フリーズカセット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10078,
+          "pokeapi_form_id_name": "genesect-chill",
+          "pkmn_id_name": "genesectchill",
+          "pkmn_name": "Genesect-Chill",
+          "pokeapi_species_name_ja": "ゲノセクト",
+          "pokeapi_form_name_ja": "フリーズカセット"
+        }
+      ]
+    },
+    {
+      "showdownId": "genesectdouse",
+      "showdownName": "Genesect-Douse",
+      "composition": "species-and-form",
+      "displayNameJa": "ゲノセクト アクアカセット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10075,
+          "pokeapi_form_id_name": "genesect-douse",
+          "pkmn_id_name": "genesectdouse",
+          "pkmn_name": "Genesect-Douse",
+          "pokeapi_species_name_ja": "ゲノセクト",
+          "pokeapi_form_name_ja": "アクアカセット"
+        }
+      ]
+    },
+    {
+      "showdownId": "genesectshock",
+      "showdownName": "Genesect-Shock",
+      "composition": "species-and-form",
+      "displayNameJa": "ゲノセクト イナズマカセット",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10076,
+          "pokeapi_form_id_name": "genesect-shock",
+          "pkmn_id_name": "genesectshock",
+          "pkmn_name": "Genesect-Shock",
+          "pokeapi_species_name_ja": "ゲノセクト",
+          "pokeapi_form_name_ja": "イナズマカセット"
+        }
+      ]
+    },
+    {
+      "showdownId": "giratina",
+      "showdownName": "Giratina",
+      "composition": "species-and-form",
+      "displayNameJa": "ギラティナ アナザーフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 487,
+          "pokeapi_form_id_name": "giratina-altered",
+          "pkmn_id_name": "giratina",
+          "pkmn_name": "Giratina",
+          "pokeapi_species_name_ja": "ギラティナ",
+          "pokeapi_form_name_ja": "アナザーフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "gourgeist",
+      "showdownName": "Gourgeist",
+      "composition": "species-and-form",
+      "displayNameJa": "パンプジン ふつうのサイズ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 711,
+          "pokeapi_form_id_name": "gourgeist-average",
+          "pkmn_id_name": "gourgeist",
+          "pkmn_name": "Gourgeist",
+          "pokeapi_species_name_ja": "パンプジン",
+          "pokeapi_form_name_ja": "ふつうのサイズ"
+        }
+      ]
+    },
+    {
+      "showdownId": "indeedee",
+      "showdownName": "Indeedee",
+      "composition": "species-and-form",
+      "displayNameJa": "イエッサン オスのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 876,
+          "pokeapi_form_id_name": "indeedee-male",
+          "pkmn_id_name": "indeedee",
+          "pkmn_name": "Indeedee",
+          "pokeapi_species_name_ja": "イエッサン",
+          "pokeapi_form_name_ja": "オスのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "indeedeef",
+      "showdownName": "Indeedee-F",
+      "composition": "species-and-form",
+      "displayNameJa": "イエッサン メスのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10355,
+          "pokeapi_form_id_name": "indeedee-female",
+          "pkmn_id_name": "indeedeef",
+          "pkmn_name": "Indeedee-F",
+          "pokeapi_species_name_ja": "イエッサン",
+          "pokeapi_form_name_ja": "メスのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "jellicent",
+      "showdownName": "Jellicent",
+      "composition": "species-only",
+      "displayNameJa": "ブルンゲル",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 593,
+          "pokeapi_form_id_name": "jellicent",
+          "pkmn_id_name": "jellicent",
+          "pkmn_name": "Jellicent",
+          "pokeapi_species_name_ja": "ブルンゲル",
+          "pokeapi_form_name_ja": null
+        }
+      ]
+    },
+    {
+      "showdownId": "keldeo",
+      "showdownName": "Keldeo",
+      "composition": "species-and-form",
+      "displayNameJa": "ケルディオ いつものすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 647,
+          "pokeapi_form_id_name": "keldeo-ordinary",
+          "pkmn_id_name": "keldeo",
+          "pkmn_name": "Keldeo",
+          "pokeapi_species_name_ja": "ケルディオ",
+          "pokeapi_form_name_ja": "いつものすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "landorus",
+      "showdownName": "Landorus",
+      "composition": "species-and-form",
+      "displayNameJa": "ランドロス けしんフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 645,
+          "pokeapi_form_id_name": "landorus-incarnate",
+          "pkmn_id_name": "landorus",
+          "pkmn_name": "Landorus",
+          "pokeapi_species_name_ja": "ランドロス",
+          "pokeapi_form_name_ja": "けしんフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "lycanroc",
+      "showdownName": "Lycanroc",
+      "composition": "species-and-form",
+      "displayNameJa": "ルガルガン まひるのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 745,
+          "pokeapi_form_id_name": "lycanroc-midday",
+          "pkmn_id_name": "lycanroc",
+          "pkmn_name": "Lycanroc",
+          "pokeapi_species_name_ja": "ルガルガン",
+          "pokeapi_form_name_ja": "まひるのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "maushold",
+      "showdownName": "Maushold",
+      "composition": "species-and-form",
+      "displayNameJa": "イッカネズミ ３びきかぞく",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10426,
+          "pokeapi_form_id_name": "maushold-family-of-three",
+          "pkmn_id_name": "maushold",
+          "pkmn_name": "Maushold",
+          "pokeapi_species_name_ja": "イッカネズミ",
+          "pokeapi_form_name_ja": "３びきかぞく"
+        }
+      ]
+    },
+    {
+      "showdownId": "mausholdfour",
+      "showdownName": "Maushold-Four",
+      "composition": "species-and-form",
+      "displayNameJa": "イッカネズミ ４ひきかぞく",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 925,
+          "pokeapi_form_id_name": "maushold-family-of-four",
+          "pkmn_id_name": "mausholdfour",
+          "pkmn_name": "Maushold-Four",
+          "pokeapi_species_name_ja": "イッカネズミ",
+          "pokeapi_form_name_ja": "４ひきかぞく"
+        }
+      ]
+    },
+    {
+      "showdownId": "meloetta",
+      "showdownName": "Meloetta",
+      "composition": "species-and-form",
+      "displayNameJa": "メロエッタ ボイスフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 648,
+          "pokeapi_form_id_name": "meloetta-aria",
+          "pkmn_id_name": "meloetta",
+          "pkmn_name": "Meloetta",
+          "pokeapi_species_name_ja": "メロエッタ",
+          "pokeapi_form_name_ja": "ボイスフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "meowstic",
+      "showdownName": "Meowstic",
+      "composition": "species-and-form",
+      "displayNameJa": "ニャオニクス オスのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 678,
+          "pokeapi_form_id_name": "meowstic-male",
+          "pkmn_id_name": "meowstic",
+          "pkmn_name": "Meowstic",
+          "pokeapi_species_name_ja": "ニャオニクス",
+          "pokeapi_form_name_ja": "オスのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "meowsticf",
+      "showdownName": "Meowstic-F",
+      "composition": "species-and-form",
+      "displayNameJa": "ニャオニクス メスのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10124,
+          "pokeapi_form_id_name": "meowstic-female",
+          "pkmn_id_name": "meowsticf",
+          "pkmn_name": "Meowstic-F",
+          "pokeapi_species_name_ja": "ニャオニクス",
+          "pokeapi_form_name_ja": "メスのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "mimikyu",
+      "showdownName": "Mimikyu",
+      "composition": "species-and-form",
+      "displayNameJa": "ミミッキュ ばけたすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 778,
+          "pokeapi_form_id_name": "mimikyu-disguised",
+          "pkmn_id_name": "mimikyu",
+          "pkmn_name": "Mimikyu",
+          "pokeapi_species_name_ja": "ミミッキュ",
+          "pokeapi_form_name_ja": "ばけたすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "mimikyubusted",
+      "showdownName": "Mimikyu-Busted",
+      "composition": "species-and-form",
+      "displayNameJa": "ミミッキュ ばれたすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10262,
+          "pokeapi_form_id_name": "mimikyu-busted",
+          "pkmn_id_name": "mimikyubusted",
+          "pkmn_name": "Mimikyu-Busted",
+          "pokeapi_species_name_ja": "ミミッキュ",
+          "pokeapi_form_name_ja": "ばれたすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "minior",
+      "showdownName": "Minior",
+      "composition": "species-and-form",
+      "displayNameJa": "メテノ あかいろのコア",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10255,
+          "pokeapi_form_id_name": "minior-red",
+          "pkmn_id_name": "minior",
+          "pkmn_name": "Minior",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "あかいろのコア"
+        }
+      ]
+    },
+    {
+      "showdownId": "miniorblue",
+      "showdownName": "Minior-Blue",
+      "composition": "species-and-form",
+      "displayNameJa": "メテノ みずいろのコア",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10259,
+          "pokeapi_form_id_name": "minior-blue",
+          "pkmn_id_name": "miniorblue",
+          "pkmn_name": "Minior-Blue",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "みずいろのコア"
+        }
+      ]
+    },
+    {
+      "showdownId": "miniorgreen",
+      "showdownName": "Minior-Green",
+      "composition": "species-and-form",
+      "displayNameJa": "メテノ みどりいろのコア",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10258,
+          "pokeapi_form_id_name": "minior-green",
+          "pkmn_id_name": "miniorgreen",
+          "pkmn_name": "Minior-Green",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "みどりいろのコア"
+        }
+      ]
+    },
+    {
+      "showdownId": "miniorindigo",
+      "showdownName": "Minior-Indigo",
+      "composition": "species-and-form",
+      "displayNameJa": "メテノ あおいろのコア",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10260,
+          "pokeapi_form_id_name": "minior-indigo",
+          "pkmn_id_name": "miniorindigo",
+          "pkmn_name": "Minior-Indigo",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "あおいろのコア"
+        }
+      ]
+    },
+    {
+      "showdownId": "miniormeteor",
+      "showdownName": "Minior-Meteor",
+      "composition": "species-and-form",
+      "displayNameJa": "メテノ りゅうせいのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 774,
+          "pokeapi_form_id_name": "minior-red-meteor",
+          "pkmn_id_name": "miniormeteor",
+          "pkmn_name": "Minior-Meteor",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "りゅうせいのすがた"
+        },
+        {
+          "pokeapi_form_id": 10249,
+          "pokeapi_form_id_name": "minior-orange-meteor",
+          "pkmn_id_name": "miniormeteor",
+          "pkmn_name": "Minior-Meteor",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "りゅうせいのすがた"
+        },
+        {
+          "pokeapi_form_id": 10250,
+          "pokeapi_form_id_name": "minior-yellow-meteor",
+          "pkmn_id_name": "miniormeteor",
+          "pkmn_name": "Minior-Meteor",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "りゅうせいのすがた"
+        },
+        {
+          "pokeapi_form_id": 10251,
+          "pokeapi_form_id_name": "minior-green-meteor",
+          "pkmn_id_name": "miniormeteor",
+          "pkmn_name": "Minior-Meteor",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "りゅうせいのすがた"
+        },
+        {
+          "pokeapi_form_id": 10252,
+          "pokeapi_form_id_name": "minior-blue-meteor",
+          "pkmn_id_name": "miniormeteor",
+          "pkmn_name": "Minior-Meteor",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "りゅうせいのすがた"
+        },
+        {
+          "pokeapi_form_id": 10253,
+          "pokeapi_form_id_name": "minior-indigo-meteor",
+          "pkmn_id_name": "miniormeteor",
+          "pkmn_name": "Minior-Meteor",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "りゅうせいのすがた"
+        },
+        {
+          "pokeapi_form_id": 10254,
+          "pokeapi_form_id_name": "minior-violet-meteor",
+          "pkmn_id_name": "miniormeteor",
+          "pkmn_name": "Minior-Meteor",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "りゅうせいのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "miniororange",
+      "showdownName": "Minior-Orange",
+      "composition": "species-and-form",
+      "displayNameJa": "メテノ だいだいいろのコア",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10256,
+          "pokeapi_form_id_name": "minior-orange",
+          "pkmn_id_name": "miniororange",
+          "pkmn_name": "Minior-Orange",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "だいだいいろのコア"
+        }
+      ]
+    },
+    {
+      "showdownId": "miniorviolet",
+      "showdownName": "Minior-Violet",
+      "composition": "species-and-form",
+      "displayNameJa": "メテノ むらさきいろのコア",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10261,
+          "pokeapi_form_id_name": "minior-violet",
+          "pkmn_id_name": "miniorviolet",
+          "pkmn_name": "Minior-Violet",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "むらさきいろのコア"
+        }
+      ]
+    },
+    {
+      "showdownId": "minioryellow",
+      "showdownName": "Minior-Yellow",
+      "composition": "species-and-form",
+      "displayNameJa": "メテノ きいろのコア",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10257,
+          "pokeapi_form_id_name": "minior-yellow",
+          "pkmn_id_name": "minioryellow",
+          "pkmn_name": "Minior-Yellow",
+          "pokeapi_species_name_ja": "メテノ",
+          "pokeapi_form_name_ja": "きいろのコア"
+        }
+      ]
+    },
+    {
+      "showdownId": "morpeko",
+      "showdownName": "Morpeko",
+      "composition": "species-and-form",
+      "displayNameJa": "モルペコ まんぷくもよう",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 877,
+          "pokeapi_form_id_name": "morpeko-full-belly",
+          "pkmn_id_name": "morpeko",
+          "pkmn_name": "Morpeko",
+          "pokeapi_species_name_ja": "モルペコ",
+          "pokeapi_form_name_ja": "まんぷくもよう"
+        }
+      ]
+    },
+    {
+      "showdownId": "necrozmadawnwings",
+      "showdownName": "Necrozma-Dawn-Wings",
+      "composition": "species-and-form",
+      "displayNameJa": "ネクロズマ あかつきのつばさ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10315,
+          "pokeapi_form_id_name": "necrozma-dawn",
+          "pkmn_id_name": "necrozmadawnwings",
+          "pkmn_name": "Necrozma-Dawn-Wings",
+          "pokeapi_species_name_ja": "ネクロズマ",
+          "pokeapi_form_name_ja": "あかつきのつばさ"
+        }
+      ]
+    },
+    {
+      "showdownId": "necrozmaduskmane",
+      "showdownName": "Necrozma-Dusk-Mane",
+      "composition": "species-and-form",
+      "displayNameJa": "ネクロズマ たそがれのたてがみ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10314,
+          "pokeapi_form_id_name": "necrozma-dusk",
+          "pkmn_id_name": "necrozmaduskmane",
+          "pkmn_name": "Necrozma-Dusk-Mane",
+          "pokeapi_species_name_ja": "ネクロズマ",
+          "pokeapi_form_name_ja": "たそがれのたてがみ"
+        }
+      ]
+    },
+    {
+      "showdownId": "ogerponcornerstone",
+      "showdownName": "Ogerpon-Cornerstone",
+      "composition": "species-and-form",
+      "displayNameJa": "オーガポン いしずえのめん",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10444,
+          "pokeapi_form_id_name": "ogerpon-cornerstone-mask",
+          "pkmn_id_name": "ogerponcornerstone",
+          "pkmn_name": "Ogerpon-Cornerstone",
+          "pokeapi_species_name_ja": "オーガポン",
+          "pokeapi_form_name_ja": "いしずえのめん"
+        }
+      ]
+    },
+    {
+      "showdownId": "ogerponhearthflame",
+      "showdownName": "Ogerpon-Hearthflame",
+      "composition": "species-and-form",
+      "displayNameJa": "オーガポン かまどのめん",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10443,
+          "pokeapi_form_id_name": "ogerpon-hearthflame-mask",
+          "pkmn_id_name": "ogerponhearthflame",
+          "pkmn_name": "Ogerpon-Hearthflame",
+          "pokeapi_species_name_ja": "オーガポン",
+          "pokeapi_form_name_ja": "かまどのめん"
+        }
+      ]
+    },
+    {
+      "showdownId": "ogerponwellspring",
+      "showdownName": "Ogerpon-Wellspring",
+      "composition": "species-and-form",
+      "displayNameJa": "オーガポン いどのめん",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10442,
+          "pokeapi_form_id_name": "ogerpon-wellspring-mask",
+          "pkmn_id_name": "ogerponwellspring",
+          "pkmn_name": "Ogerpon-Wellspring",
+          "pokeapi_species_name_ja": "オーガポン",
+          "pokeapi_form_name_ja": "いどのめん"
+        }
+      ]
+    },
+    {
+      "showdownId": "oinkologne",
+      "showdownName": "Oinkologne",
+      "composition": "species-and-form",
+      "displayNameJa": "パフュートン オスのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 916,
+          "pokeapi_form_id_name": "oinkologne-male",
+          "pkmn_id_name": "oinkologne",
+          "pkmn_name": "Oinkologne",
+          "pokeapi_species_name_ja": "パフュートン",
+          "pokeapi_form_name_ja": "オスのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "oinkolognef",
+      "showdownName": "Oinkologne-F",
+      "composition": "species-and-form",
+      "displayNameJa": "パフュートン メスのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10423,
+          "pokeapi_form_id_name": "oinkologne-female",
+          "pkmn_id_name": "oinkolognef",
+          "pkmn_name": "Oinkologne-F",
+          "pokeapi_species_name_ja": "パフュートン",
+          "pokeapi_form_name_ja": "メスのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "oricorio",
+      "showdownName": "Oricorio",
+      "composition": "species-and-form",
+      "displayNameJa": "オドリドリ めらめらスタイル",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 741,
+          "pokeapi_form_id_name": "oricorio-baile",
+          "pkmn_id_name": "oricorio",
+          "pkmn_name": "Oricorio",
+          "pokeapi_species_name_ja": "オドリドリ",
+          "pokeapi_form_name_ja": "めらめらスタイル"
+        }
+      ]
+    },
+    {
+      "showdownId": "palafin",
+      "showdownName": "Palafin",
+      "composition": "species-and-form",
+      "displayNameJa": "イルカマン ナイーブフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 964,
+          "pokeapi_form_id_name": "palafin-zero",
+          "pkmn_id_name": "palafin",
+          "pkmn_name": "Palafin",
+          "pokeapi_species_name_ja": "イルカマン",
+          "pokeapi_form_name_ja": "ナイーブフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachualola",
+      "showdownName": "Pikachu-Alola",
+      "composition": "species-and-form",
+      "displayNameJa": "ピカチュウ アローラキャップ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10201,
+          "pokeapi_form_id_name": "pikachu-alola-cap",
+          "pkmn_id_name": "pikachualola",
+          "pkmn_name": "Pikachu-Alola",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "アローラキャップ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachubelle",
+      "showdownName": "Pikachu-Belle",
+      "composition": "form-only",
+      "displayNameJa": "マダム・ピカチュウ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10183,
+          "pokeapi_form_id_name": "pikachu-belle",
+          "pkmn_id_name": "pikachubelle",
+          "pkmn_name": "Pikachu-Belle",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "マダム・ピカチュウ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachucosplay",
+      "showdownName": "Pikachu-Cosplay",
+      "composition": "form-only",
+      "displayNameJa": "おきがえピカチュウ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10187,
+          "pokeapi_form_id_name": "pikachu-cosplay",
+          "pkmn_id_name": "pikachucosplay",
+          "pkmn_name": "Pikachu-Cosplay",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "おきがえピカチュウ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachuhoenn",
+      "showdownName": "Pikachu-Hoenn",
+      "composition": "species-and-form",
+      "displayNameJa": "ピカチュウ ホウエンキャップ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10197,
+          "pokeapi_form_id_name": "pikachu-hoenn-cap",
+          "pkmn_id_name": "pikachuhoenn",
+          "pkmn_name": "Pikachu-Hoenn",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "ホウエンキャップ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachukalos",
+      "showdownName": "Pikachu-Kalos",
+      "composition": "species-and-form",
+      "displayNameJa": "ピカチュウ カロスキャップ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10200,
+          "pokeapi_form_id_name": "pikachu-kalos-cap",
+          "pkmn_id_name": "pikachukalos",
+          "pkmn_name": "Pikachu-Kalos",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "カロスキャップ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachulibre",
+      "showdownName": "Pikachu-Libre",
+      "composition": "form-only",
+      "displayNameJa": "マスクド・ピカチュウ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10186,
+          "pokeapi_form_id_name": "pikachu-libre",
+          "pkmn_id_name": "pikachulibre",
+          "pkmn_name": "Pikachu-Libre",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "マスクド・ピカチュウ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachuoriginal",
+      "showdownName": "Pikachu-Original",
+      "composition": "species-and-form",
+      "displayNameJa": "ピカチュウ オリジナルキャップ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10196,
+          "pokeapi_form_id_name": "pikachu-original-cap",
+          "pkmn_id_name": "pikachuoriginal",
+          "pkmn_name": "Pikachu-Original",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "オリジナルキャップ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachupartner",
+      "showdownName": "Pikachu-Partner",
+      "composition": "species-and-form",
+      "displayNameJa": "ピカチュウ キミにきめたキャップ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10267,
+          "pokeapi_form_id_name": "pikachu-partner-cap",
+          "pkmn_id_name": "pikachupartner",
+          "pkmn_name": "Pikachu-Partner",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "キミにきめたキャップ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachuphd",
+      "showdownName": "Pikachu-PhD",
+      "composition": "form-only",
+      "displayNameJa": "ドクター・ピカチュウ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10185,
+          "pokeapi_form_id_name": "pikachu-phd",
+          "pkmn_id_name": "pikachuphd",
+          "pkmn_name": "Pikachu-PhD",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "ドクター・ピカチュウ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachupopstar",
+      "showdownName": "Pikachu-Pop-Star",
+      "composition": "form-only",
+      "displayNameJa": "アイドル・ピカチュウ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10184,
+          "pokeapi_form_id_name": "pikachu-pop-star",
+          "pkmn_id_name": "pikachupopstar",
+          "pkmn_name": "Pikachu-Pop-Star",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "アイドル・ピカチュウ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachurockstar",
+      "showdownName": "Pikachu-Rock-Star",
+      "composition": "form-only",
+      "displayNameJa": "ハードロック・ピカチュウ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10182,
+          "pokeapi_form_id_name": "pikachu-rock-star",
+          "pkmn_id_name": "pikachurockstar",
+          "pkmn_name": "Pikachu-Rock-Star",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "ハードロック・ピカチュウ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachusinnoh",
+      "showdownName": "Pikachu-Sinnoh",
+      "composition": "species-and-form",
+      "displayNameJa": "ピカチュウ シンオウキャップ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10198,
+          "pokeapi_form_id_name": "pikachu-sinnoh-cap",
+          "pkmn_id_name": "pikachusinnoh",
+          "pkmn_name": "Pikachu-Sinnoh",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "シンオウキャップ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachuunova",
+      "showdownName": "Pikachu-Unova",
+      "composition": "species-and-form",
+      "displayNameJa": "ピカチュウ イッシュキャップ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10199,
+          "pokeapi_form_id_name": "pikachu-unova-cap",
+          "pkmn_id_name": "pikachuunova",
+          "pkmn_name": "Pikachu-Unova",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "イッシュキャップ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pikachuworld",
+      "showdownName": "Pikachu-World",
+      "composition": "species-and-form",
+      "displayNameJa": "ピカチュウ ワールドキャップ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10319,
+          "pokeapi_form_id_name": "pikachu-world-cap",
+          "pkmn_id_name": "pikachuworld",
+          "pkmn_name": "Pikachu-World",
+          "pokeapi_species_name_ja": "ピカチュウ",
+          "pokeapi_form_name_ja": "ワールドキャップ"
+        }
+      ]
+    },
+    {
+      "showdownId": "poltchageistartisan",
+      "showdownName": "Poltchageist-Artisan",
+      "composition": "species-and-form",
+      "displayNameJa": "チャデス タカイモノのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10447,
+          "pokeapi_form_id_name": "poltchageist-artisan",
+          "pkmn_id_name": "poltchageistartisan",
+          "pkmn_name": "Poltchageist-Artisan",
+          "pokeapi_species_name_ja": "チャデス",
+          "pokeapi_form_name_ja": "タカイモノのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "polteageistantique",
+      "showdownName": "Polteageist-Antique",
+      "composition": "species-and-form",
+      "displayNameJa": "ポットデス しんさくフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10345,
+          "pokeapi_form_id_name": "polteageist-antique",
+          "pkmn_id_name": "polteageistantique",
+          "pkmn_name": "Polteageist-Antique",
+          "pokeapi_species_name_ja": "ポットデス",
+          "pokeapi_form_name_ja": "しんさくフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "pumpkaboo",
+      "showdownName": "Pumpkaboo",
+      "composition": "species-and-form",
+      "displayNameJa": "バケッチャ ふつうのサイズ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 710,
+          "pokeapi_form_id_name": "pumpkaboo-average",
+          "pkmn_id_name": "pumpkaboo",
+          "pkmn_name": "Pumpkaboo",
+          "pokeapi_species_name_ja": "バケッチャ",
+          "pokeapi_form_name_ja": "ふつうのサイズ"
+        }
+      ]
+    },
+    {
+      "showdownId": "pyroar",
+      "showdownName": "Pyroar",
+      "composition": "species-only",
+      "displayNameJa": "カエンジシ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 668,
+          "pokeapi_form_id_name": "pyroar",
+          "pkmn_id_name": "pyroar",
+          "pkmn_name": "Pyroar",
+          "pokeapi_species_name_ja": "カエンジシ",
+          "pokeapi_form_name_ja": null
+        }
+      ]
+    },
+    {
+      "showdownId": "sawsbuckautumn",
+      "showdownName": "Sawsbuck-Autumn",
+      "composition": "species-and-form",
+      "displayNameJa": "メブキジカ あきのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10072,
+          "pokeapi_form_id_name": "sawsbuck-autumn",
+          "pkmn_id_name": "sawsbuckautumn",
+          "pkmn_name": "Sawsbuck-Autumn",
+          "pokeapi_species_name_ja": "メブキジカ",
+          "pokeapi_form_name_ja": "あきのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "sawsbucksummer",
+      "showdownName": "Sawsbuck-Summer",
+      "composition": "species-and-form",
+      "displayNameJa": "メブキジカ なつのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10071,
+          "pokeapi_form_id_name": "sawsbuck-summer",
+          "pkmn_id_name": "sawsbucksummer",
+          "pkmn_name": "Sawsbuck-Summer",
+          "pokeapi_species_name_ja": "メブキジカ",
+          "pokeapi_form_name_ja": "なつのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "sawsbuckwinter",
+      "showdownName": "Sawsbuck-Winter",
+      "composition": "species-and-form",
+      "displayNameJa": "メブキジカ ふゆのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10073,
+          "pokeapi_form_id_name": "sawsbuck-winter",
+          "pkmn_id_name": "sawsbuckwinter",
+          "pkmn_name": "Sawsbuck-Winter",
+          "pokeapi_species_name_ja": "メブキジカ",
+          "pokeapi_form_name_ja": "ふゆのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "shaymin",
+      "showdownName": "Shaymin",
+      "composition": "species-and-form",
+      "displayNameJa": "シェイミ ランドフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 492,
+          "pokeapi_form_id_name": "shaymin-land",
+          "pkmn_id_name": "shaymin",
+          "pkmn_name": "Shaymin",
+          "pokeapi_species_name_ja": "シェイミ",
+          "pokeapi_form_name_ja": "ランドフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "shelloseast",
+      "showdownName": "Shellos-East",
+      "composition": "species-and-form",
+      "displayNameJa": "カラナクシ ひがしのうみ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10039,
+          "pokeapi_form_id_name": "shellos-east",
+          "pkmn_id_name": "shelloseast",
+          "pkmn_name": "Shellos-East",
+          "pokeapi_species_name_ja": "カラナクシ",
+          "pokeapi_form_name_ja": "ひがしのうみ"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallybug",
+      "showdownName": "Silvally-Bug",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：バグ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10237,
+          "pokeapi_form_id_name": "silvally-bug",
+          "pkmn_id_name": "silvallybug",
+          "pkmn_name": "Silvally-Bug",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：バグ"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallydark",
+      "showdownName": "Silvally-Dark",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：ダーク",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10247,
+          "pokeapi_form_id_name": "silvally-dark",
+          "pkmn_id_name": "silvallydark",
+          "pkmn_name": "Silvally-Dark",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：ダーク"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallydragon",
+      "showdownName": "Silvally-Dragon",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：ドラゴン",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10246,
+          "pokeapi_form_id_name": "silvally-dragon",
+          "pkmn_id_name": "silvallydragon",
+          "pkmn_name": "Silvally-Dragon",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：ドラゴン"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallyelectric",
+      "showdownName": "Silvally-Electric",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：エレクトロ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10243,
+          "pokeapi_form_id_name": "silvally-electric",
+          "pkmn_id_name": "silvallyelectric",
+          "pkmn_name": "Silvally-Electric",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：エレクトロ"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallyfairy",
+      "showdownName": "Silvally-Fairy",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：フェアリー",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10248,
+          "pokeapi_form_id_name": "silvally-fairy",
+          "pkmn_id_name": "silvallyfairy",
+          "pkmn_name": "Silvally-Fairy",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：フェアリー"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallyfighting",
+      "showdownName": "Silvally-Fighting",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：ファイト",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10232,
+          "pokeapi_form_id_name": "silvally-fighting",
+          "pkmn_id_name": "silvallyfighting",
+          "pkmn_name": "Silvally-Fighting",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：ファイト"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallyfire",
+      "showdownName": "Silvally-Fire",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：ファイヤー",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10240,
+          "pokeapi_form_id_name": "silvally-fire",
+          "pkmn_id_name": "silvallyfire",
+          "pkmn_name": "Silvally-Fire",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：ファイヤー"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallyflying",
+      "showdownName": "Silvally-Flying",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：フライング",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10233,
+          "pokeapi_form_id_name": "silvally-flying",
+          "pkmn_id_name": "silvallyflying",
+          "pkmn_name": "Silvally-Flying",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：フライング"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallyghost",
+      "showdownName": "Silvally-Ghost",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：ゴースト",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10238,
+          "pokeapi_form_id_name": "silvally-ghost",
+          "pkmn_id_name": "silvallyghost",
+          "pkmn_name": "Silvally-Ghost",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：ゴースト"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallygrass",
+      "showdownName": "Silvally-Grass",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：グラス",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10242,
+          "pokeapi_form_id_name": "silvally-grass",
+          "pkmn_id_name": "silvallygrass",
+          "pkmn_name": "Silvally-Grass",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：グラス"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallyground",
+      "showdownName": "Silvally-Ground",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：グラウンド",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10235,
+          "pokeapi_form_id_name": "silvally-ground",
+          "pkmn_id_name": "silvallyground",
+          "pkmn_name": "Silvally-Ground",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：グラウンド"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallyice",
+      "showdownName": "Silvally-Ice",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：アイス",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10245,
+          "pokeapi_form_id_name": "silvally-ice",
+          "pkmn_id_name": "silvallyice",
+          "pkmn_name": "Silvally-Ice",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：アイス"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallypoison",
+      "showdownName": "Silvally-Poison",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：ポイズン",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10234,
+          "pokeapi_form_id_name": "silvally-poison",
+          "pkmn_id_name": "silvallypoison",
+          "pkmn_name": "Silvally-Poison",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：ポイズン"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallypsychic",
+      "showdownName": "Silvally-Psychic",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：サイキック",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10244,
+          "pokeapi_form_id_name": "silvally-psychic",
+          "pkmn_id_name": "silvallypsychic",
+          "pkmn_name": "Silvally-Psychic",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：サイキック"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallyrock",
+      "showdownName": "Silvally-Rock",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：ロック",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10236,
+          "pokeapi_form_id_name": "silvally-rock",
+          "pkmn_id_name": "silvallyrock",
+          "pkmn_name": "Silvally-Rock",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：ロック"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallysteel",
+      "showdownName": "Silvally-Steel",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：スチール",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10239,
+          "pokeapi_form_id_name": "silvally-steel",
+          "pkmn_id_name": "silvallysteel",
+          "pkmn_name": "Silvally-Steel",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：スチール"
+        }
+      ]
+    },
+    {
+      "showdownId": "silvallywater",
+      "showdownName": "Silvally-Water",
+      "composition": "species-and-form",
+      "displayNameJa": "シルヴァディ タイプ：ウオーター",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10241,
+          "pokeapi_form_id_name": "silvally-water",
+          "pkmn_id_name": "silvallywater",
+          "pkmn_name": "Silvally-Water",
+          "pokeapi_species_name_ja": "シルヴァディ",
+          "pokeapi_form_name_ja": "タイプ：ウオーター"
+        }
+      ]
+    },
+    {
+      "showdownId": "sinistchamasterpiece",
+      "showdownName": "Sinistcha-Masterpiece",
+      "composition": "species-and-form",
+      "displayNameJa": "ヤバソチャ ケッサクのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10448,
+          "pokeapi_form_id_name": "sinistcha-masterpiece",
+          "pkmn_id_name": "sinistchamasterpiece",
+          "pkmn_name": "Sinistcha-Masterpiece",
+          "pokeapi_species_name_ja": "ヤバソチャ",
+          "pokeapi_form_name_ja": "ケッサクのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "sinisteaantique",
+      "showdownName": "Sinistea-Antique",
+      "composition": "species-and-form",
+      "displayNameJa": "ヤバチャ しんさくフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10344,
+          "pokeapi_form_id_name": "sinistea-antique",
+          "pkmn_id_name": "sinisteaantique",
+          "pkmn_name": "Sinistea-Antique",
+          "pokeapi_species_name_ja": "ヤバチャ",
+          "pokeapi_form_name_ja": "しんさくフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "squawkabilly",
+      "showdownName": "Squawkabilly",
+      "composition": "species-and-form",
+      "displayNameJa": "イキリンコ グリーンフェザー",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 931,
+          "pokeapi_form_id_name": "squawkabilly-green-plumage",
+          "pkmn_id_name": "squawkabilly",
+          "pkmn_name": "Squawkabilly",
+          "pokeapi_species_name_ja": "イキリンコ",
+          "pokeapi_form_name_ja": "グリーンフェザー"
+        }
+      ]
+    },
+    {
+      "showdownId": "squawkabillyblue",
+      "showdownName": "Squawkabilly-Blue",
+      "composition": "species-and-form",
+      "displayNameJa": "イキリンコ ブルーフェザー",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10429,
+          "pokeapi_form_id_name": "squawkabilly-blue-plumage",
+          "pkmn_id_name": "squawkabillyblue",
+          "pkmn_name": "Squawkabilly-Blue",
+          "pokeapi_species_name_ja": "イキリンコ",
+          "pokeapi_form_name_ja": "ブルーフェザー"
+        }
+      ]
+    },
+    {
+      "showdownId": "squawkabillywhite",
+      "showdownName": "Squawkabilly-White",
+      "composition": "species-and-form",
+      "displayNameJa": "イキリンコ ホワイトフェザー",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10431,
+          "pokeapi_form_id_name": "squawkabilly-white-plumage",
+          "pkmn_id_name": "squawkabillywhite",
+          "pkmn_name": "Squawkabilly-White",
+          "pokeapi_species_name_ja": "イキリンコ",
+          "pokeapi_form_name_ja": "ホワイトフェザー"
+        }
+      ]
+    },
+    {
+      "showdownId": "squawkabillyyellow",
+      "showdownName": "Squawkabilly-Yellow",
+      "composition": "species-and-form",
+      "displayNameJa": "イキリンコ イエローフェザー",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10430,
+          "pokeapi_form_id_name": "squawkabilly-yellow-plumage",
+          "pkmn_id_name": "squawkabillyyellow",
+          "pkmn_name": "Squawkabilly-Yellow",
+          "pokeapi_species_name_ja": "イキリンコ",
+          "pokeapi_form_name_ja": "イエローフェザー"
+        }
+      ]
+    },
+    {
+      "showdownId": "tatsugiri",
+      "showdownName": "Tatsugiri",
+      "composition": "species-and-form",
+      "displayNameJa": "シャリタツ そったすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 978,
+          "pokeapi_form_id_name": "tatsugiri-curly",
+          "pkmn_id_name": "tatsugiri",
+          "pkmn_name": "Tatsugiri",
+          "pokeapi_species_name_ja": "シャリタツ",
+          "pokeapi_form_name_ja": "そったすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "thundurus",
+      "showdownName": "Thundurus",
+      "composition": "species-and-form",
+      "displayNameJa": "ボルトロス けしんフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 642,
+          "pokeapi_form_id_name": "thundurus-incarnate",
+          "pkmn_id_name": "thundurus",
+          "pkmn_name": "Thundurus",
+          "pokeapi_species_name_ja": "ボルトロス",
+          "pokeapi_form_name_ja": "けしんフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "tornadus",
+      "showdownName": "Tornadus",
+      "composition": "species-and-form",
+      "displayNameJa": "トルネロス けしんフォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 641,
+          "pokeapi_form_id_name": "tornadus-incarnate",
+          "pkmn_id_name": "tornadus",
+          "pkmn_name": "Tornadus",
+          "pokeapi_species_name_ja": "トルネロス",
+          "pokeapi_form_name_ja": "けしんフォルム"
+        }
+      ]
+    },
+    {
+      "showdownId": "toxtricity",
+      "showdownName": "Toxtricity",
+      "composition": "species-and-form",
+      "displayNameJa": "ストリンダー ハイなすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 849,
+          "pokeapi_form_id_name": "toxtricity-amped",
+          "pkmn_id_name": "toxtricity",
+          "pkmn_name": "Toxtricity",
+          "pokeapi_species_name_ja": "ストリンダー",
+          "pokeapi_form_name_ja": "ハイなすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownb",
+      "showdownName": "Unown-B",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｂ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10001,
+          "pokeapi_form_id_name": "unown-b",
+          "pkmn_id_name": "unownb",
+          "pkmn_name": "Unown-B",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｂ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownc",
+      "showdownName": "Unown-C",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｃ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10002,
+          "pokeapi_form_id_name": "unown-c",
+          "pkmn_id_name": "unownc",
+          "pkmn_name": "Unown-C",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｃ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownd",
+      "showdownName": "Unown-D",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｄ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10003,
+          "pokeapi_form_id_name": "unown-d",
+          "pkmn_id_name": "unownd",
+          "pkmn_name": "Unown-D",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｄ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unowne",
+      "showdownName": "Unown-E",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｅ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10004,
+          "pokeapi_form_id_name": "unown-e",
+          "pkmn_id_name": "unowne",
+          "pkmn_name": "Unown-E",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｅ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownexclamation",
+      "showdownName": "Unown-Exclamation",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン !",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10026,
+          "pokeapi_form_id_name": "unown-exclamation",
+          "pkmn_id_name": "unownexclamation",
+          "pkmn_name": "Unown-Exclamation",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "!"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownf",
+      "showdownName": "Unown-F",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｆ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10005,
+          "pokeapi_form_id_name": "unown-f",
+          "pkmn_id_name": "unownf",
+          "pkmn_name": "Unown-F",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｆ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unowng",
+      "showdownName": "Unown-G",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｇ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10006,
+          "pokeapi_form_id_name": "unown-g",
+          "pkmn_id_name": "unowng",
+          "pkmn_name": "Unown-G",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｇ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownh",
+      "showdownName": "Unown-H",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｈ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10007,
+          "pokeapi_form_id_name": "unown-h",
+          "pkmn_id_name": "unownh",
+          "pkmn_name": "Unown-H",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｈ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unowni",
+      "showdownName": "Unown-I",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｉ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10008,
+          "pokeapi_form_id_name": "unown-i",
+          "pkmn_id_name": "unowni",
+          "pkmn_name": "Unown-I",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｉ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownj",
+      "showdownName": "Unown-J",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｊ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10009,
+          "pokeapi_form_id_name": "unown-j",
+          "pkmn_id_name": "unownj",
+          "pkmn_name": "Unown-J",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｊ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownk",
+      "showdownName": "Unown-K",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｋ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10010,
+          "pokeapi_form_id_name": "unown-k",
+          "pkmn_id_name": "unownk",
+          "pkmn_name": "Unown-K",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｋ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownl",
+      "showdownName": "Unown-L",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｌ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10011,
+          "pokeapi_form_id_name": "unown-l",
+          "pkmn_id_name": "unownl",
+          "pkmn_name": "Unown-L",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｌ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownm",
+      "showdownName": "Unown-M",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｍ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10012,
+          "pokeapi_form_id_name": "unown-m",
+          "pkmn_id_name": "unownm",
+          "pkmn_name": "Unown-M",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｍ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownn",
+      "showdownName": "Unown-N",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｎ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10013,
+          "pokeapi_form_id_name": "unown-n",
+          "pkmn_id_name": "unownn",
+          "pkmn_name": "Unown-N",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｎ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unowno",
+      "showdownName": "Unown-O",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｏ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10014,
+          "pokeapi_form_id_name": "unown-o",
+          "pkmn_id_name": "unowno",
+          "pkmn_name": "Unown-O",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｏ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownp",
+      "showdownName": "Unown-P",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｐ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10015,
+          "pokeapi_form_id_name": "unown-p",
+          "pkmn_id_name": "unownp",
+          "pkmn_name": "Unown-P",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｐ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownq",
+      "showdownName": "Unown-Q",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｑ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10016,
+          "pokeapi_form_id_name": "unown-q",
+          "pkmn_id_name": "unownq",
+          "pkmn_name": "Unown-Q",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｑ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownquestion",
+      "showdownName": "Unown-Question",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン ?",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10027,
+          "pokeapi_form_id_name": "unown-question",
+          "pkmn_id_name": "unownquestion",
+          "pkmn_name": "Unown-Question",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "?"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownr",
+      "showdownName": "Unown-R",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｒ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10017,
+          "pokeapi_form_id_name": "unown-r",
+          "pkmn_id_name": "unownr",
+          "pkmn_name": "Unown-R",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｒ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unowns",
+      "showdownName": "Unown-S",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｓ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10018,
+          "pokeapi_form_id_name": "unown-s",
+          "pkmn_id_name": "unowns",
+          "pkmn_name": "Unown-S",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｓ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownt",
+      "showdownName": "Unown-T",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｔ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10019,
+          "pokeapi_form_id_name": "unown-t",
+          "pkmn_id_name": "unownt",
+          "pkmn_name": "Unown-T",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｔ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownu",
+      "showdownName": "Unown-U",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｕ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10020,
+          "pokeapi_form_id_name": "unown-u",
+          "pkmn_id_name": "unownu",
+          "pkmn_name": "Unown-U",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｕ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownv",
+      "showdownName": "Unown-V",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｖ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10021,
+          "pokeapi_form_id_name": "unown-v",
+          "pkmn_id_name": "unownv",
+          "pkmn_name": "Unown-V",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｖ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownw",
+      "showdownName": "Unown-W",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｗ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10022,
+          "pokeapi_form_id_name": "unown-w",
+          "pkmn_id_name": "unownw",
+          "pkmn_name": "Unown-W",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｗ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownx",
+      "showdownName": "Unown-X",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｘ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10023,
+          "pokeapi_form_id_name": "unown-x",
+          "pkmn_id_name": "unownx",
+          "pkmn_name": "Unown-X",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｘ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unowny",
+      "showdownName": "Unown-Y",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｙ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10024,
+          "pokeapi_form_id_name": "unown-y",
+          "pkmn_id_name": "unowny",
+          "pkmn_name": "Unown-Y",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｙ"
+        }
+      ]
+    },
+    {
+      "showdownId": "unownz",
+      "showdownName": "Unown-Z",
+      "composition": "species-and-form",
+      "displayNameJa": "アンノーン Ｚ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10025,
+          "pokeapi_form_id_name": "unown-z",
+          "pkmn_id_name": "unownz",
+          "pkmn_name": "Unown-Z",
+          "pokeapi_species_name_ja": "アンノーン",
+          "pokeapi_form_name_ja": "Ｚ"
+        }
+      ]
+    },
+    {
+      "showdownId": "urshifu",
+      "showdownName": "Urshifu",
+      "composition": "species-and-form",
+      "displayNameJa": "ウーラオス いちげきのかた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 892,
+          "pokeapi_form_id_name": "urshifu-single-strike",
+          "pkmn_id_name": "urshifu",
+          "pkmn_name": "Urshifu",
+          "pokeapi_species_name_ja": "ウーラオス",
+          "pokeapi_form_name_ja": "いちげきのかた"
+        }
+      ]
+    },
+    {
+      "showdownId": "wishiwashi",
+      "showdownName": "Wishiwashi",
+      "composition": "species-and-form",
+      "displayNameJa": "ヨワシ たんどくのすがた",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 746,
+          "pokeapi_form_id_name": "wishiwashi-solo",
+          "pkmn_id_name": "wishiwashi",
+          "pkmn_name": "Wishiwashi",
+          "pokeapi_species_name_ja": "ヨワシ",
+          "pokeapi_form_name_ja": "たんどくのすがた"
+        }
+      ]
+    },
+    {
+      "showdownId": "wormadam",
+      "showdownName": "Wormadam",
+      "composition": "species-and-form",
+      "displayNameJa": "ミノマダム くさきのミノ",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 413,
+          "pokeapi_form_id_name": "wormadam-plant",
+          "pkmn_id_name": "wormadam",
+          "pkmn_name": "Wormadam",
+          "pokeapi_species_name_ja": "ミノマダム",
+          "pokeapi_form_name_ja": "くさきのミノ"
+        }
+      ]
+    },
+    {
+      "showdownId": "xerneasneutral",
+      "showdownName": "Xerneas-Neutral",
+      "composition": "species-and-form",
+      "displayNameJa": "ゼルネアス リラックスモード",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 10132,
+          "pokeapi_form_id_name": "xerneas-neutral",
+          "pkmn_id_name": "xerneasneutral",
+          "pkmn_name": "Xerneas-Neutral",
+          "pokeapi_species_name_ja": "ゼルネアス",
+          "pokeapi_form_name_ja": "リラックスモード"
+        }
+      ]
+    },
+    {
+      "showdownId": "zygarde",
+      "showdownName": "Zygarde",
+      "composition": "species-and-form",
+      "displayNameJa": "ジガルデ ５０％フォルム",
+      "sourceRows": [
+        {
+          "pokeapi_form_id": 718,
+          "pokeapi_form_id_name": "zygarde-50",
+          "pkmn_id_name": "zygarde",
+          "pkmn_name": "Zygarde",
+          "pokeapi_species_name_ja": "ジガルデ",
+          "pokeapi_form_name_ja": "５０％フォルム"
+        },
+        {
+          "pokeapi_form_id": 10221,
+          "pokeapi_form_id_name": "zygarde-50-power-construct",
+          "pkmn_id_name": "zygarde",
+          "pkmn_name": "Zygarde",
+          "pokeapi_species_name_ja": "ジガルデ",
+          "pokeapi_form_name_ja": "５０％フォルム"
+        }
+      ]
+    }
+  ]
+}
