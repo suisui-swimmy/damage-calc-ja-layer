@@ -16,7 +16,15 @@ interface ShowdownIdentity {
 }
 
 export type ShowdownDisplayCandidate = ShowdownIdentity & (
-  | { status: "localized"; displayNameJa: string; provenance: "existing-dictionary" | "showdown-overlay"; labelKind?: "ui-label"; noteJa?: string }
+  | {
+    status: "localized";
+    displayNameJa: string;
+    /** Fixed UI disambiguator for this ID; never a current ability/state calculation. */
+    variantLabelJa?: string;
+    provenance: "existing-dictionary" | "showdown-overlay";
+    labelKind?: "ui-label";
+    noteJa?: string;
+  }
   | { status: "out-of-scope"; reason: "outside-localization-scope"; category: ShowdownScopeCategory; noteJa: string }
   | { status: "needs-confirmation" | "unsupported"; reason: string }
 );

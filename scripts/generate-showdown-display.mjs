@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import { pokemonNameOverrides } from "./lib/showdown-pokemon-names.mjs";
+import { validateSharedDisplayNames } from "./lib/showdown-shared-names.mjs";
 
 const root = new URL("../", import.meta.url);
 const hashes = {};
@@ -54,6 +55,9 @@ for (const entry of allOverrides) {
   assert(entry.sources?.length > 0, `Missing provenance: ${key(entry)}`);
   assert(Boolean(entry.dictionaryName) !== Boolean(entry.displayNameJa), `Choose dictionary or literal: ${key(entry)}`);
   if (entry.labelKind !== undefined) assert.equal(entry.labelKind, "ui-label");
+  if (entry.variantLabelJa !== undefined) {
+    assert(typeof entry.variantLabelJa === "string" && entry.variantLabelJa.trim(), "Invalid variant label");
+  }
   if (entry.displaySuffixJa !== undefined) {
     assert(entry.dictionaryName && !entry.displayNameJa && entry.labelKind === "ui-label");
     assert.equal(entry.displaySuffixJa, "（ぬし）");
@@ -69,7 +73,11 @@ const entries = catalog.entries.map((entry) => {
   const option = dictionaries[entry.kind].get(dictionaryName);
   const labelOverride = option && labels.entries.find((label) => label.kind === entry.kind && label.id === option.id);
   if (override?.dictionaryName) assert(option, `Missing dictionary reference: ${dictionaryName}`);
-  const displayMetadata = override?.labelKind ? { labelKind: override.labelKind, noteJa: override.noteJa } : {};
+  const displayMetadata = {
+    ...(override?.labelKind ? { labelKind: override.labelKind } : {}),
+    ...(override?.noteJa ? { noteJa: override.noteJa } : {}),
+    ...(override?.variantLabelJa ? { variantLabelJa: override.variantLabelJa } : {}),
+  };
   if (override?.displayNameJa) {
     assert(/[\u3040-\u30ff\u3400-\u9fff]/u.test(override.displayNameJa));
     return { ...result, status: "localized", displayNameJa: override.displayNameJa, provenance: "showdown-overlay", ...displayMetadata };
@@ -87,14 +95,21 @@ const entries = catalog.entries.map((entry) => {
 // Some imported labels lack fallback flags but still collapse distinct forms.
 // Keep the ordinary species display; withhold any indistinguishable form labels.
 const labelsToEntries = new Map();
-for (const entry of entries.filter((entry) => entry.status === "localized")) {
+const labelOf = (entry) => {
   const option = entry.dictionaryRef && dictionaries[entry.kind].get(entry.dictionaryRef.canonicalName);
-  const label = (entry.displayNameJa ?? labels.entries.find((value) => value.kind === entry.kind && value.id === option.id)?.displayNameJa ?? option.label) + (entry.displaySuffixJa ?? "");
+  return (entry.displayNameJa ?? labels.entries.find((value) => value.kind === entry.kind && value.id === option.id)?.displayNameJa ?? option.label) + (entry.displaySuffixJa ?? "");
+};
+for (const entry of entries.filter((entry) => entry.status === "localized")) {
+  const label = labelOf(entry);
   const labelKey = `${entry.kind}:${label}`;
   labelsToEntries.set(labelKey, [...(labelsToEntries.get(labelKey) ?? []), entry]);
 }
-for (const group of labelsToEntries.values()) {
+const sharedNames = validateSharedDisplayNames(overlay.sharedDisplayNameGroups ?? [], entries, labelOf);
+for (const [labelKey, group] of labelsToEntries) {
   if (group.length < 2) continue;
+  if (sharedNames.has(labelKey)) continue;
+  // A manual approval must not silently introduce an unreviewed shared name.
+  assert(!group.some((entry) => overrides.has(key(entry))), `Unreviewed shared display name: ${labelKey}`);
   for (const entry of group) {
     const source = known.get(key(entry));
     if (source.baseSpecies || source.forme || source.isCosmeticForme) {
@@ -103,6 +118,7 @@ for (const group of labelsToEntries.values()) {
       entry.reason = "non-distinct-form-label";
       delete entry.displayNameJa;
       delete entry.provenance;
+      delete entry.variantLabelJa;
     }
   }
 }

@@ -265,7 +265,9 @@ console.log(showdownDisplayMetadata.showdownCommit);
 | `not-found` | 参照版または許可した別名に存在しない | 返さない。元入力と `reason`を返す |
 
 `localized` の `provenance` は既存辞書の再利用 (`existing-dictionary`) または明示的な補正 (`showdown-overlay`)。
-UI用の識別補足・特殊項目の表示には `labelKind: "ui-label"` と `noteJa` を付ける。
+`displayNameJa` 自体にUI用の補足を含む相棒・ぬし・特殊項目には `labelKind: "ui-label"` と `noteJa` を付ける。
+確認済みの同名項目には、名前と分離した任意の `variantLabelJa` を返す。
+これは固定Showdown IDを区別するためのUI補足で、現在の特性・状態や使用可否を判定した結果ではない。
 `out-of-scope` の追加に伴い、生成済み表示mappingと `showdownDisplayMetadata.schemaVersion` は **2**。
 statusを列挙して処理する呼び出し側は新状態を追加する。`status === "localized"` の場合だけ日本語名を使う処理はそのまま使える。
 全結果の `usage: "display-only"` は計算対応・ゲーム内使用可否を保証しないことを表す。
@@ -298,6 +300,39 @@ const type = resolveShowdownDisplayNameJa("type", "electric");
 // type.displayNameJa: "でんき"（同上）
 ```
 
+### 同じ日本語名を共有するID
+
+正確な名前/IDで項目が決まる場合、表示名が他のIDと同じでも `localized` を返す。
+選択・保存のキーは `showdownId` とし、日本語名で別IDをまとめたり、特性名からIDを推測したりしない。
+
+| Showdown項目 | displayNameJa | variantLabelJa |
+| --- | --- | --- |
+| Greninja-Bond | ゲッコウガ | きずなへんげ |
+| Rockruff-Dusk | イワンコ | マイペース |
+| Ogerpon各種-Tera | オーガポン＋各お面の名称 | テラスタル |
+| Meowstic-M-Mega / Meowstic-F-Mega | メガニャオニクス | オス / メス |
+| As One (Glastrier) / As One (Spectrier) | じんばいったい | ブリザポス / レイスポス |
+| Embody Aspect各種 | おもかげやどし | 各お面の名称 |
+
+通常のGreninja / Rockruff / テラスタル前Ogerponには補足を付けない。
+メガニャオニクスは日本語名が共通でも、固定Showdown上の雌雄IDは保持する。
+既存calc向けの日本語resolverの契約はそのままであり、同名の日本語だけから外部IDを逆引きする機能は提供しない。
+
+```ts
+const result = resolveShowdownDisplayNameJa("pokemon", "greninjabond");
+if (result.status === "localized") {
+  const compactLabel = result.displayNameJa; // ゲッコウガ
+  const detailedLabel = result.variantLabelJa
+    ? `${result.displayNameJa}（${result.variantLabelJa}）`
+    : result.displayNameJa; // ゲッコウガ（きずなへんげ）
+  const selectedId = result.showdownId; // greninjabond を保持
+}
+```
+
+同名の承認は出典付きの `sharedDisplayNameGroups` 9群に限定する。
+生成時に名前・kind・ID集合・補足の区別を照合し、未知の第三項目の混入や補足の重複を拒否する。
+未確認の同名フォームを許可するために重複検査全体を無効化することはしない。
+
 ### 参照版と対応範囲
 
 Showdown参照版は [3661ce40bf9001d185ce078b8920e12304204609](https://github.com/smogon/pokemon-showdown/tree/3661ce40bf9001d185ce078b8920e12304204609)
@@ -307,8 +342,8 @@ Showdown参照版は [3661ce40bf9001d185ce078b8920e12304204609](https://github.c
 
 | 種別 | 日本語表示可能 | 要確認 | 日本語未対応 | 翻訳対象外・確認済み | 参照版の項目数 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| ポケモン・フォーム | 1,447 | 19 | 3 | 117 | 1,586 |
-| 特性 | 308 | 10 | 0 | 3 | 321 |
+| ポケモン・フォーム | 1,469 | 0 | 0 | 117 | 1,586 |
+| 特性 | 318 | 0 | 0 | 3 | 321 |
 | タイプ | 19 | 0 | 0 | 0 | 19 |
 
 件数は参照版の全項目（CAP等を含む）に対する表示の集計であり、ゲーム・世代別の使用可能件数ではない。
@@ -316,7 +351,9 @@ Showdown参照版は [3661ce40bf9001d185ce078b8920e12304204609](https://github.c
 未解決は `needs-confirmation` + `unsupported` の合計。`out-of-scope` は含めない。
 この件数はcalc未収録の項目数や新規翻訳が必要な件数とは異なる。
 元辞書の暫定フラグだけでは自動承認せず、名前と対応を確認した項目をShowdown専用補正で確定する。
-未解決はポケモン22件・特性10件の計32件。`Darmanitan-Galar-Zen` などの表示重複や、未確認のぬし・Starter・Gmax等の補足は引き続き保留する。
+この固定版では翻訳対象の1,806件に対応し、要確認・日本語未対応は0件。
+別枠の120件は翻訳対象外として確認済み。未知の名前や将来追加されるIDまで対応済みという意味ではない。
+日本語名・補足の出典は `showdown-display-overrides.json` の各項目と共有名グループに記録している。
 
 ### POKEMON_ALLから採用した日本語名
 
@@ -351,8 +388,11 @@ Showdown参照版は [3661ce40bf9001d185ce078b8920e12304204609](https://github.c
 ユーザーが2026-10-04に確認したShowdownの説明と採用方針を、版を固定した専用補正へ記録している。
 実行時に説明文の解析や接尾辞の削除で対象を推測せず、登録済みのIDだけに適用する。
 
-- H3のぬし8件: `Araquanid-Totem` / `Gumshoos-Totem` / `Kommo-o-Totem` / `Lurantis-Totem` / `Ribombee-Totem` / `Salazzle-Totem` / `Togedemaru-Totem` / `Vikavolt-Totem`。
+- ぬしの通常種名8件: `Araquanid-Totem` / `Gumshoos-Totem` / `Kommo-o-Totem` / `Lurantis-Totem` / `Ribombee-Totem` / `Salazzle-Totem` / `Togedemaru-Totem` / `Vikavolt-Totem`。
   既存の種族名に `（ぬし）` を付ける。外部IDはTotemのまま。括弧部分は正式種族名ではなく識別用のUI表記。
+- 地域・状態付きのぬし4件: `ガラガラ アローラのすがた（ぬし）` / `ラッタ アローラのすがた（ぬし）` / `ミミッキュ ばけたすがた（ぬし）` / `ミミッキュ ばれたすがた（ぬし）` と表示する。
+- `Pikachu-Starter` / `Eevee-Starter`: `ピカチュウ（相棒）` / `イーブイ（相棒）`。括弧部分はUI補足。
+- `Pichu-Spiky-eared`: 公式の名称 `ギザみみピチュー` を表示する。
 - `No Ability` / `noability`: `特性なし` を返す。正式な特性名の翻訳ではなくUI用ラベル。特性の無効化状態を判定するものではない。
 - CAP86件: `category: "cap"`。元の英語名に加えて「Smogon CAPの創作ポケモン」または「Smogon CAPの創作特性」を `noteJa` に返す。
 - ポケウッド33件: `category: "pokestar"`、`noteJa: "ポケウッドの登場データ"`。公式ゲーム由来の特殊データとしてCAPと区別する。日本語名が存在しないと断定せず、今回は個別名称の翻訳対象外とする。
@@ -360,7 +400,6 @@ Showdown参照版は [3661ce40bf9001d185ce078b8920e12304204609](https://github.c
 
 最後の3分類は `status: "out-of-scope"`、`reason: "outside-localization-scope"` として既知の項目を返す。
 APIから削除したり、呼び出し側で非表示にすると決めたりはしない。日本語の固有名は返さず、英語名と注記を表示できる。
-H2のTotem4件は今回の確認範囲に含めず、引き続き要確認とする。
 
 ```ts
 const display = resolveShowdownDisplayNameJa("pokemon", "Ababo");
@@ -434,6 +473,7 @@ calc側の裸の `Vivillon` は従来どおり「ビビヨン」であり、契�
 - `src/data/generated/showdown-catalog.gen.json`: 上流から抽出した名前・フォーム構成・別名の監査用スナップショット。
 - `src/data/overrides/showdown-display-overrides.json`: 出典付きの翻訳参照先・追加日本語名・確認済み別名・曖昧入力。
 - 同ファイルの `outOfScopeGroups`: 確認済みの翻訳対象外ID・分類・日本語注記・判断根拠。
+- 同ファイルの `sharedDisplayNameGroups`: 同じ日本語名を返してよい、確認済みのID集合と出典。識別補足は各entryの `variantLabelJa`。
 - `src/data/overrides/showdown-pokemon-names.json`: 採用済み182項目の外部ID・承認表示名・組立方法と元データ189行の必要フィールド。元JSONの内容hash・出所・採用日を保持。
 - `src/data/generated/showdown-display.gen.json`: 既存辞書と補正から生成する対応・未対応の一覧。単体では辞書参照が未展開なので、外部利用には公開入口またはビルド済みJSを使う。
 
@@ -447,7 +487,7 @@ npm run build:showdown
 ```
 
 `validate:showdown-display` は元データから組み直して生成結果の完全一致を確認し、
-ID重複・存在しない辞書参照・別名衝突・上流別名の不一致・ビビヨン全模様の欠落・翻訳と対象外定義の競合も拒否する。
+ID重複・存在しない辞書参照・別名衝突・上流別名の不一致・ビビヨン全模様の欠落・翻訳と対象外定義の競合・承認していない表示名共有も拒否する。
 採用済みポケモン名も、元行の名前/ID・組立方法・複数行の一致を確認する。別フォームへの置換や、複数候補の先頭だけを採る処理はしない。
 生成データのversionには入力辞書・補正・表示規則のhashを反映する。
 ローカルJSONは内容を正規化し、表示規則は改行をLFへ揃えてhash化するため、Windows/Linuxで同じ結果になる。

@@ -1,13 +1,14 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "manual-showdown-2026-10-04-special-content",
+  "dataVersion": "manual-showdown-2026-10-05-reviewed-shared-names",
   "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
   "usage": "display-only",
   "notes": [
     "Bare Vivillon is Meadow in the pinned baseForme and vivillonmeadow alias. The Icy Snow TODO is not the active definition.",
     "Cosmetic form IDs take precedence over upstream aliases pointing at their base species.",
     "Dictionary references are translation keys, never replacement external IDs.",
-    "The explicitly reviewed CAP, Pokestar and glitch IDs remain known entries but are out of Japanese-name localization scope. User confirmed the Showdown descriptions on 2026-10-04."
+    "The explicitly reviewed CAP, Pokestar and glitch IDs remain known entries but are out of Japanese-name localization scope. User confirmed the Showdown descriptions on 2026-10-04.",
+    "Reviewed shared Japanese names preserve separate external IDs. Optional variantLabelJa is a fixed UI disambiguator, not a current battle-state or ability calculation."
   ],
   "entries": [
     {
@@ -380,6 +381,385 @@
         "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/abilities.ts"
       ],
       "evidence": "User confirmed the Showdown description \"Does nothing.\" and approved the UI label on 2026-10-04. This is not an official ability name."
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "darmanitangalarzen",
+      "showdownName": "Darmanitan-Galar-Zen",
+      "displayNameJa": "ヒヒダルマ ガラルのすがた・ダルマモード",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0555-3"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "darmanitanzen",
+      "showdownName": "Darmanitan-Zen",
+      "displayNameJa": "ヒヒダルマ ダルマモード",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0555-1"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "toxtricitygmax",
+      "showdownName": "Toxtricity-Gmax",
+      "displayNameJa": "ストリンダー ハイなすがた・キョダイマックスのすがた",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0849-2"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "urshifugmax",
+      "showdownName": "Urshifu-Gmax",
+      "displayNameJa": "ウーラオス いちげきのかた・キョダイマックスのすがた",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0892-2"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "magearnaoriginalmega",
+      "showdownName": "Magearna-Original-Mega",
+      "displayNameJa": "メガマギアナ ５００ねんまえのいろ",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0801-3"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "tatsugiricurlymega",
+      "showdownName": "Tatsugiri-Curly-Mega",
+      "displayNameJa": "メガシャリタツ そったすがた",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0978-3"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "tatsugiridroopymega",
+      "showdownName": "Tatsugiri-Droopy-Mega",
+      "displayNameJa": "メガシャリタツ たれたすがた",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0978-4"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "tatsugiristretchymega",
+      "showdownName": "Tatsugiri-Stretchy-Mega",
+      "displayNameJa": "メガシャリタツ のびたすがた",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0978-5"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "meowsticmmega",
+      "showdownName": "Meowstic-M-Mega",
+      "displayNameJa": "メガニャオニクス",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0678-2",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "オス",
+      "noteJa": "日本語の名称は共通。補足はShowdownの性別別IDを識別するためのUI表記。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "meowsticfmega",
+      "showdownName": "Meowstic-F-Mega",
+      "displayNameJa": "メガニャオニクス",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0678-2",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "メス",
+      "noteJa": "日本語の名称は共通。補足はShowdownの性別別IDを識別するためのUI表記。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "pikachustarter",
+      "showdownName": "Pikachu-Starter",
+      "displayNameJa": "ピカチュウ（相棒）",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/pika_vee/story/180713_08.html",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "labelKind": "ui-label",
+      "noteJa": "相棒を識別するための括弧表記。別の正式種族名を意味しない。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "eeveestarter",
+      "showdownName": "Eevee-Starter",
+      "displayNameJa": "イーブイ（相棒）",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/pika_vee/story/180713_08.html",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "labelKind": "ui-label",
+      "noteJa": "相棒を識別するための括弧表記。別の正式種族名を意味しない。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "pichuspikyeared",
+      "showdownName": "Pichu-Spiky-eared",
+      "displayNameJa": "ギザみみピチュー",
+      "sources": [
+        "https://www.pokemon.jp/special/forme/column/",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "marowakalolatotem",
+      "showdownName": "Marowak-Alola-Totem",
+      "displayNameJa": "ガラガラ アローラのすがた（ぬし）",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/usum/gamesystem/171102_02.html",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "labelKind": "ui-label",
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "raticatealolatotem",
+      "showdownName": "Raticate-Alola-Totem",
+      "displayNameJa": "ラッタ アローラのすがた（ぬし）",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/usum/gamesystem/171102_02.html",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "labelKind": "ui-label",
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "mimikyutotem",
+      "showdownName": "Mimikyu-Totem",
+      "displayNameJa": "ミミッキュ ばけたすがた（ぬし）",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/usum/gamesystem/171102_02.html",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "labelKind": "ui-label",
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "mimikyubustedtotem",
+      "showdownName": "Mimikyu-Busted-Totem",
+      "displayNameJa": "ミミッキュ ばれたすがた（ぬし）",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/usum/gamesystem/171102_02.html",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "labelKind": "ui-label",
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "greninjabond",
+      "showdownName": "Greninja-Bond",
+      "displayNameJa": "ゲッコウガ",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sun_moon/pokemon/161004_04.html",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "きずなへんげ",
+      "noteJa": "固定Showdown項目の識別用補足。現在の特性やサトシゲッコウガへの変化は判定しない。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "rockruffdusk",
+      "showdownName": "Rockruff-Dusk",
+      "displayNameJa": "イワンコ",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/usum/lineup/170922_02.html",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "マイペース",
+      "noteJa": "固定Showdown項目の識別用補足。現在の特性や進化の可否は判定しない。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "ogerponcornerstonetera",
+      "showdownName": "Ogerpon-Cornerstone-Tera",
+      "displayNameJa": "オーガポン いしずえのめん",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "テラスタル",
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "ogerponhearthflametera",
+      "showdownName": "Ogerpon-Hearthflame-Tera",
+      "displayNameJa": "オーガポン かまどのめん",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "テラスタル",
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "ogerpontealtera",
+      "showdownName": "Ogerpon-Teal-Tera",
+      "displayNameJa": "オーガポン みどりのめん",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "テラスタル",
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。"
+    },
+    {
+      "kind": "pokemon",
+      "showdownId": "ogerponwellspringtera",
+      "showdownName": "Ogerpon-Wellspring-Tera",
+      "displayNameJa": "オーガポン いどのめん",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "テラスタル",
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。"
+    },
+    {
+      "kind": "ability",
+      "showdownId": "asoneglastrier",
+      "showdownName": "As One (Glastrier)",
+      "displayNameJa": "じんばいったい",
+      "sources": [
+        "https://www.nintendo.com/jp/topics/article/a52894dd-5259-4ee1-be6b-116ca6c05a02"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "ブリザポス"
+    },
+    {
+      "kind": "ability",
+      "showdownId": "asonespectrier",
+      "showdownName": "As One (Spectrier)",
+      "displayNameJa": "じんばいったい",
+      "sources": [
+        "https://www.nintendo.com/jp/topics/article/a52894dd-5259-4ee1-be6b-116ca6c05a02"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "レイスポス"
+    },
+    {
+      "kind": "ability",
+      "showdownId": "embodyaspectcornerstone",
+      "showdownName": "Embody Aspect (Cornerstone)",
+      "displayNameJa": "おもかげやどし",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "いしずえのめん"
+    },
+    {
+      "kind": "ability",
+      "showdownId": "embodyaspecthearthflame",
+      "showdownName": "Embody Aspect (Hearthflame)",
+      "displayNameJa": "おもかげやどし",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "かまどのめん"
+    },
+    {
+      "kind": "ability",
+      "showdownId": "embodyaspectteal",
+      "showdownName": "Embody Aspect (Teal)",
+      "displayNameJa": "おもかげやどし",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "みどりのめん"
+    },
+    {
+      "kind": "ability",
+      "showdownId": "embodyaspectwellspring",
+      "showdownName": "Embody Aspect (Wellspring)",
+      "displayNameJa": "おもかげやどし",
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/"
+      ],
+      "verifiedOn": "2026-10-05",
+      "variantLabelJa": "いどのめん"
+    },
+    {
+      "kind": "ability",
+      "showdownId": "dragonize",
+      "showdownName": "Dragonize",
+      "displayNameJa": "ドラゴンスキン",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0160-1"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "ability",
+      "showdownId": "megasol",
+      "showdownName": "Mega Sol",
+      "displayNameJa": "メガソーラー",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0154-1"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "ability",
+      "showdownId": "piercingdrill",
+      "showdownName": "Piercing Drill",
+      "displayNameJa": "かんつうドリル",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0530-1"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "ability",
+      "showdownId": "spicyspray",
+      "showdownName": "Spicy Spray",
+      "displayNameJa": "とびだすハバネロ",
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0952-1"
+      ],
+      "verifiedOn": "2026-10-05"
     }
   ],
   "aliases": [
@@ -951,6 +1331,125 @@
           "showdownName": "MissingNo."
         }
       ]
+    }
+  ],
+  "sharedDisplayNameGroups": [
+    {
+      "kind": "pokemon",
+      "displayNameJa": "ゲッコウガ",
+      "showdownIds": [
+        "greninja",
+        "greninjabond"
+      ],
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sun_moon/pokemon/161004_04.html",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "displayNameJa": "イワンコ",
+      "showdownIds": [
+        "rockruff",
+        "rockruffdusk"
+      ],
+      "sources": [
+        "https://www.pokemon.co.jp/ex/usum/lineup/170922_02.html",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "displayNameJa": "オーガポン いしずえのめん",
+      "showdownIds": [
+        "ogerponcornerstone",
+        "ogerponcornerstonetera"
+      ],
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "displayNameJa": "オーガポン かまどのめん",
+      "showdownIds": [
+        "ogerponhearthflame",
+        "ogerponhearthflametera"
+      ],
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "displayNameJa": "オーガポン みどりのめん",
+      "showdownIds": [
+        "ogerpon",
+        "ogerpontealtera"
+      ],
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "displayNameJa": "オーガポン いどのめん",
+      "showdownIds": [
+        "ogerponwellspring",
+        "ogerponwellspringtera"
+      ],
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "pokemon",
+      "displayNameJa": "メガニャオニクス",
+      "showdownIds": [
+        "meowsticmmega",
+        "meowsticfmega"
+      ],
+      "sources": [
+        "https://zukan.pokemon.co.jp/detail/0678-2",
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/pokedex.ts"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "ability",
+      "displayNameJa": "じんばいったい",
+      "showdownIds": [
+        "asoneglastrier",
+        "asonespectrier"
+      ],
+      "sources": [
+        "https://www.nintendo.com/jp/topics/article/a52894dd-5259-4ee1-be6b-116ca6c05a02"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "ability",
+      "displayNameJa": "おもかげやどし",
+      "showdownIds": [
+        "embodyaspectcornerstone",
+        "embodyaspecthearthflame",
+        "embodyaspectteal",
+        "embodyaspectwellspring"
+      ],
+      "sources": [
+        "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/"
+      ],
+      "verifiedOn": "2026-10-05"
     }
   ]
 }

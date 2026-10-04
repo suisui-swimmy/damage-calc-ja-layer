@@ -11,6 +11,12 @@ import { formatDamageResultJa } from "../formatters/jaResultFormatter";
 
 const mega = options.entries.filter((entry) => /-Mega(?:-|$)/.test(entry.showdownName));
 const overrides = labelOverrides.entries.filter((entry) => entry.confirmsShowdownName === false);
+const externalFormNames: Record<string, string> = {
+  "Magearna-Original-Mega": "メガマギアナ ５００ねんまえのいろ",
+  "Tatsugiri-Curly-Mega": "メガシャリタツ そったすがた",
+  "Tatsugiri-Droopy-Mega": "メガシャリタツ たれたすがた",
+  "Tatsugiri-Stretchy-Mega": "メガシャリタツ のびたすがた",
+};
 
 describe("non-repeating Mega display names", () => {
   it("covers every existing Mega entry without changing ordinary species names", () => {
@@ -42,12 +48,8 @@ describe("non-repeating Mega display names", () => {
       expect(resolved.candidates?.some((candidate) => candidate.canonicalName === option.showdownName && candidate.displayNameJa === expected)).toBe(true);
     }
     const external = resolveShowdownDisplayNameJa("pokemon", option.showdownName);
-    if (option.fallback?.nameSourceStatus === "adapter-temporary") {
-      expect(external.status).toBe("needs-confirmation");
-      expect(external).not.toHaveProperty("displayNameJa");
-    } else {
-      expect(external).toMatchObject({ status: "localized", showdownId: option.id, displayNameJa: expected });
-    }
+    expect(external).toMatchObject({ status: "localized", showdownId: option.id,
+      displayNameJa: externalFormNames[option.showdownName] ?? expected });
   });
 
   it.each([

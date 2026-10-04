@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
-  "dataVersion": "showdown-display-c18ba7ae54c57f29",
+  "dataVersion": "showdown-display-835b13be9d271e10",
   "source": {
     "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
-    "overlayVersion": "manual-showdown-2026-10-04-special-content",
+    "overlayVersion": "manual-showdown-2026-10-05-reviewed-shared-names",
     "sha256": {
       "src/data/generated/showdown-catalog.gen.json": "2a35d2c5c6cd5b58c28a856e4e0a3799e38707791d4de0f54f5fc68022349bc9",
       "scripts/data/showdown-source.lock.json": "1b1d2f0827cf0efafaaf6d498f57700cff82148da42f8e831daf25e865e2c2d2",
-      "src/data/overrides/showdown-display-overrides.json": "4d5e82d829821a88c13febc3b7d8ca61961787e16abf884559bf9d0b403eb4f8",
+      "src/data/overrides/showdown-display-overrides.json": "ad1968f2caede6373ae420b69c370b91b622845ae59304c76302c06fe3c8de59",
       "src/data/overrides/showdown-pokemon-names.json": "50403443a0df6e3d9130a5d6b2ae025596d684220fccf2cbea73db5319fcfd2e",
       "src/data/overrides/ja-label-overrides.json": "6e51a518f531bb42635762f057fd6d906703b453526342dab169f4118d57358d",
       "src/localization/displayNameRules.ts": "3cb42e1f40b6ae7bdc952dae2e167094875e5922d22497a6cde5d2218d1f10e7",
@@ -156,25 +156,19 @@
       "kind": "ability",
       "showdownId": "asoneglastrier",
       "showdownName": "As One (Glastrier)",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "asoneglastrier",
-        "canonicalName": "As One (Glastrier)"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "じんばいったい",
+      "provenance": "showdown-overlay",
+      "variantLabelJa": "ブリザポス"
     },
     {
       "kind": "ability",
       "showdownId": "asonespectrier",
       "showdownName": "As One (Spectrier)",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "asonespectrier",
-        "canonicalName": "As One (Spectrier)"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "じんばいったい",
+      "provenance": "showdown-overlay",
+      "variantLabelJa": "レイスポス"
     },
     {
       "kind": "ability",
@@ -680,13 +674,9 @@
       "kind": "ability",
       "showdownId": "dragonize",
       "showdownName": "Dragonize",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "dragonize",
-        "canonicalName": "Dragonize"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ドラゴンスキン",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "ability",
@@ -808,49 +798,37 @@
       "kind": "ability",
       "showdownId": "embodyaspectcornerstone",
       "showdownName": "Embody Aspect (Cornerstone)",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "embodyaspectcornerstone",
-        "canonicalName": "Embody Aspect (Cornerstone)"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "おもかげやどし",
+      "provenance": "showdown-overlay",
+      "variantLabelJa": "いしずえのめん"
     },
     {
       "kind": "ability",
       "showdownId": "embodyaspecthearthflame",
       "showdownName": "Embody Aspect (Hearthflame)",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "embodyaspecthearthflame",
-        "canonicalName": "Embody Aspect (Hearthflame)"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "おもかげやどし",
+      "provenance": "showdown-overlay",
+      "variantLabelJa": "かまどのめん"
     },
     {
       "kind": "ability",
       "showdownId": "embodyaspectteal",
       "showdownName": "Embody Aspect (Teal)",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "embodyaspectteal",
-        "canonicalName": "Embody Aspect (Teal)"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "おもかげやどし",
+      "provenance": "showdown-overlay",
+      "variantLabelJa": "みどりのめん"
     },
     {
       "kind": "ability",
       "showdownId": "embodyaspectwellspring",
       "showdownName": "Embody Aspect (Wellspring)",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "embodyaspectwellspring",
-        "canonicalName": "Embody Aspect (Wellspring)"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "おもかげやどし",
+      "provenance": "showdown-overlay",
+      "variantLabelJa": "いどのめん"
     },
     {
       "kind": "ability",
@@ -1752,13 +1730,9 @@
       "kind": "ability",
       "showdownId": "megasol",
       "showdownName": "Mega Sol",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "megasol",
-        "canonicalName": "Mega Sol"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "メガソーラー",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "ability",
@@ -2152,13 +2126,9 @@
       "kind": "ability",
       "showdownId": "piercingdrill",
       "showdownName": "Piercing Drill",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "piercingdrill",
-        "canonicalName": "Piercing Drill"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "かんつうドリル",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "ability",
@@ -2989,13 +2959,9 @@
       "kind": "ability",
       "showdownId": "spicyspray",
       "showdownName": "Spicy Spray",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "ability",
-        "id": "spicyspray",
-        "canonicalName": "Spicy Spray"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "とびだすハバネロ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "ability",
@@ -7141,25 +7107,17 @@
       "kind": "pokemon",
       "showdownId": "darmanitangalarzen",
       "showdownName": "Darmanitan-Galar-Zen",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "darmanitangalarzen",
-        "canonicalName": "Darmanitan-Galar-Zen"
-      },
-      "reason": "non-distinct-form-label"
+      "status": "localized",
+      "displayNameJa": "ヒヒダルマ ガラルのすがた・ダルマモード",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
       "showdownId": "darmanitanzen",
       "showdownName": "Darmanitan-Zen",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "darmanitanzen",
-        "canonicalName": "Darmanitan-Zen"
-      },
-      "reason": "non-distinct-form-label"
+      "status": "localized",
+      "displayNameJa": "ヒヒダルマ ダルマモード",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -8156,8 +8114,11 @@
       "kind": "pokemon",
       "showdownId": "eeveestarter",
       "showdownName": "Eevee-Starter",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "イーブイ（相棒）",
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "相棒を識別するための括弧表記。別の正式種族名を意味しない。"
     },
     {
       "kind": "pokemon",
@@ -10223,13 +10184,11 @@
       "kind": "pokemon",
       "showdownId": "greninjabond",
       "showdownName": "Greninja-Bond",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "greninjabond",
-        "canonicalName": "Greninja-Bond"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ゲッコウガ",
+      "provenance": "showdown-overlay",
+      "noteJa": "固定Showdown項目の識別用補足。現在の特性やサトシゲッコウガへの変化は判定しない。",
+      "variantLabelJa": "きずなへんげ"
     },
     {
       "kind": "pokemon",
@@ -12566,13 +12525,9 @@
       "kind": "pokemon",
       "showdownId": "magearnaoriginalmega",
       "showdownName": "Magearna-Original-Mega",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "magearnaoriginalmega",
-        "canonicalName": "Magearna-Original-Mega"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "メガマギアナ ５００ねんまえのいろ",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -12863,13 +12818,11 @@
       "kind": "pokemon",
       "showdownId": "marowakalolatotem",
       "showdownName": "Marowak-Alola-Totem",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "marowakalolatotem",
-        "canonicalName": "Marowak-Alola-Totem"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ガラガラ アローラのすがた（ぬし）",
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。"
     },
     {
       "kind": "pokemon",
@@ -13107,25 +13060,21 @@
       "kind": "pokemon",
       "showdownId": "meowsticfmega",
       "showdownName": "Meowstic-F-Mega",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "meowsticfmega",
-        "canonicalName": "Meowstic-F-Mega"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "メガニャオニクス",
+      "provenance": "showdown-overlay",
+      "noteJa": "日本語の名称は共通。補足はShowdownの性別別IDを識別するためのUI表記。",
+      "variantLabelJa": "メス"
     },
     {
       "kind": "pokemon",
       "showdownId": "meowsticmmega",
       "showdownName": "Meowstic-M-Mega",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "meowsticmmega",
-        "canonicalName": "Meowstic-M-Mega"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "メガニャオニクス",
+      "provenance": "showdown-overlay",
+      "noteJa": "日本語の名称は共通。補足はShowdownの性別別IDを識別するためのUI表記。",
+      "variantLabelJa": "オス"
     },
     {
       "kind": "pokemon",
@@ -13405,25 +13354,21 @@
       "kind": "pokemon",
       "showdownId": "mimikyubustedtotem",
       "showdownName": "Mimikyu-Busted-Totem",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "mimikyubustedtotem",
-        "canonicalName": "Mimikyu-Busted-Totem"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ミミッキュ ばれたすがた（ぬし）",
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。"
     },
     {
       "kind": "pokemon",
       "showdownId": "mimikyutotem",
       "showdownName": "Mimikyu-Totem",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "mimikyutotem",
-        "canonicalName": "Mimikyu-Totem"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ミミッキュ ばけたすがた（ぬし）",
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。"
     },
     {
       "kind": "pokemon",
@@ -14254,13 +14199,11 @@
       "kind": "pokemon",
       "showdownId": "ogerponcornerstonetera",
       "showdownName": "Ogerpon-Cornerstone-Tera",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "ogerponcornerstonetera",
-        "canonicalName": "Ogerpon-Cornerstone-Tera"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "オーガポン いしずえのめん",
+      "provenance": "showdown-overlay",
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。",
+      "variantLabelJa": "テラスタル"
     },
     {
       "kind": "pokemon",
@@ -14274,25 +14217,21 @@
       "kind": "pokemon",
       "showdownId": "ogerponhearthflametera",
       "showdownName": "Ogerpon-Hearthflame-Tera",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "ogerponhearthflametera",
-        "canonicalName": "Ogerpon-Hearthflame-Tera"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "オーガポン かまどのめん",
+      "provenance": "showdown-overlay",
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。",
+      "variantLabelJa": "テラスタル"
     },
     {
       "kind": "pokemon",
       "showdownId": "ogerpontealtera",
       "showdownName": "Ogerpon-Teal-Tera",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "ogerpontealtera",
-        "canonicalName": "Ogerpon-Teal-Tera"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "オーガポン みどりのめん",
+      "provenance": "showdown-overlay",
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。",
+      "variantLabelJa": "テラスタル"
     },
     {
       "kind": "pokemon",
@@ -14306,13 +14245,11 @@
       "kind": "pokemon",
       "showdownId": "ogerponwellspringtera",
       "showdownName": "Ogerpon-Wellspring-Tera",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "ogerponwellspringtera",
-        "canonicalName": "Ogerpon-Wellspring-Tera"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "オーガポン いどのめん",
+      "provenance": "showdown-overlay",
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。",
+      "variantLabelJa": "テラスタル"
     },
     {
       "kind": "pokemon",
@@ -14875,8 +14812,9 @@
       "kind": "pokemon",
       "showdownId": "pichuspikyeared",
       "showdownName": "Pichu-Spiky-eared",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "ギザみみピチュー",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -15074,8 +15012,11 @@
       "kind": "pokemon",
       "showdownId": "pikachustarter",
       "showdownName": "Pikachu-Starter",
-      "status": "unsupported",
-      "reason": "missing-japanese-mapping"
+      "status": "localized",
+      "displayNameJa": "ピカチュウ（相棒）",
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "相棒を識別するための括弧表記。別の正式種族名を意味しない。"
     },
     {
       "kind": "pokemon",
@@ -16173,13 +16114,11 @@
       "kind": "pokemon",
       "showdownId": "raticatealolatotem",
       "showdownName": "Raticate-Alola-Totem",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "raticatealolatotem",
-        "canonicalName": "Raticate-Alola-Totem"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ラッタ アローラのすがた（ぬし）",
+      "provenance": "showdown-overlay",
+      "labelKind": "ui-label",
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。"
     },
     {
       "kind": "pokemon",
@@ -16518,13 +16457,11 @@
       "kind": "pokemon",
       "showdownId": "rockruffdusk",
       "showdownName": "Rockruff-Dusk",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "rockruffdusk",
-        "canonicalName": "Rockruff-Dusk"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "イワンコ",
+      "provenance": "showdown-overlay",
+      "noteJa": "固定Showdown項目の識別用補足。現在の特性や進化の可否は判定しない。",
+      "variantLabelJa": "マイペース"
     },
     {
       "kind": "pokemon",
@@ -19138,13 +19075,9 @@
       "kind": "pokemon",
       "showdownId": "tatsugiricurlymega",
       "showdownName": "Tatsugiri-Curly-Mega",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "tatsugiricurlymega",
-        "canonicalName": "Tatsugiri-Curly-Mega"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "メガシャリタツ そったすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -19162,13 +19095,9 @@
       "kind": "pokemon",
       "showdownId": "tatsugiridroopymega",
       "showdownName": "Tatsugiri-Droopy-Mega",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "tatsugiridroopymega",
-        "canonicalName": "Tatsugiri-Droopy-Mega"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "メガシャリタツ たれたすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -19187,12 +19116,8 @@
       "showdownId": "tatsugiristretchymega",
       "showdownName": "Tatsugiri-Stretchy-Mega",
       "status": "localized",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "tatsugiristretchymega",
-        "canonicalName": "Tatsugiri-Stretchy-Mega"
-      },
-      "provenance": "existing-dictionary"
+      "displayNameJa": "メガシャリタツ のびたすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -19702,13 +19627,9 @@
       "kind": "pokemon",
       "showdownId": "toxtricitygmax",
       "showdownName": "Toxtricity-Gmax",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "toxtricitygmax",
-        "canonicalName": "Toxtricity-Gmax"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ストリンダー ハイなすがた・キョダイマックスのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -20274,13 +20195,9 @@
       "kind": "pokemon",
       "showdownId": "urshifugmax",
       "showdownName": "Urshifu-Gmax",
-      "status": "needs-confirmation",
-      "dictionaryRef": {
-        "kind": "pokemon",
-        "id": "urshifugmax",
-        "canonicalName": "Urshifu-Gmax"
-      },
-      "reason": "unverified-dictionary-label"
+      "status": "localized",
+      "displayNameJa": "ウーラオス いちげきのかた・キョダイマックスのすがた",
+      "provenance": "showdown-overlay"
     },
     {
       "kind": "pokemon",
@@ -21995,14 +21912,14 @@
   ],
   "summary": {
     "pokemon": {
-      "localized": 1447,
-      "needs-confirmation": 19,
-      "unsupported": 3,
+      "localized": 1469,
+      "needs-confirmation": 0,
+      "unsupported": 0,
       "out-of-scope": 117
     },
     "ability": {
-      "localized": 308,
-      "needs-confirmation": 10,
+      "localized": 318,
+      "needs-confirmation": 0,
       "unsupported": 0,
       "out-of-scope": 3
     },

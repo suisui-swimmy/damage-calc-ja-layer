@@ -116,21 +116,18 @@ describe("Showdown display API", () => {
     },
   );
 
-  it("separates unsupported known forms, uncertain labels and unknown inputs", () => {
-    expect(lookup("pokemon", "Pichu-Spiky-eared")).toMatchObject({ status: "unsupported", showdownId: "pichuspikyeared" });
-    expect(lookup("pokemon", "Marowak-Alola-Totem")).toMatchObject({ status: "needs-confirmation", showdownId: "marowakalolatotem" });
-    for (const input of ["Pichu-Spiky-eared", "Marowak-Alola-Totem"]) expect(lookup("pokemon", input)).not.toHaveProperty("displayNameJa");
+  it("keeps known identities and kinds distinct from unknown inputs", () => {
+    expect(lookup("pokemon", "Pichu-Spiky-eared")).toMatchObject({ status: "localized", showdownId: "pichuspikyeared", displayNameJa: "ギザみみピチュー" });
+    expect(lookup("pokemon", "Marowak-Alola-Totem")).toMatchObject({ status: "localized", showdownId: "marowakalolatotem", displayNameJa: "ガラガラ アローラのすがた（ぬし）" });
     expect(lookup("ability", "Pikachu").status).toBe("not-found");
     expect(lookup("pokemon", "Static").status).toBe("not-found");
     expect(lookup("type", "Electric")).toMatchObject({ status: "localized", showdownId: "electric", displayNameJa: "でんき" });
     expect(lookup("type", "Stellar")).toMatchObject({ status: "localized", showdownId: "stellar", displayNameJa: "ステラ" });
   });
 
-  it("withholds indistinguishable imported form labels even without fallback flags", () => {
-    for (const name of ["Darmanitan-Galar-Zen", "Darmanitan-Zen"]) {
-      expect(lookup("pokemon", name)).toMatchObject({ status: "needs-confirmation", reason: "non-distinct-form-label" });
-      expect(lookup("pokemon", name)).not.toHaveProperty("displayNameJa");
-    }
+  it("distinguishes the reviewed Darmanitan forms without changing the base species", () => {
+    expect(lookup("pokemon", "Darmanitan-Galar-Zen")).toMatchObject({ status: "localized", displayNameJa: "ヒヒダルマ ガラルのすがた・ダルマモード" });
+    expect(lookup("pokemon", "Darmanitan-Zen")).toMatchObject({ status: "localized", displayNameJa: "ヒヒダルマ ダルマモード" });
     expect(lookup("pokemon", "Araquanid")).toMatchObject({ status: "localized", displayNameJa: "オニシズクモ" });
   });
 

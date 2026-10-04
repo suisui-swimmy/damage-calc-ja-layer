@@ -61,14 +61,14 @@ describe("reviewed Showdown display scope", () => {
     expect(lookup("pokemon", "Mountaineer").status).toBe("not-found");
   });
 
-  it("does not approve unreviewed forms when adding the reviewed scope rules", () => {
+  it("does not confuse newly reviewed forms with out-of-scope entries", () => {
     for (const name of ["Marowak-Alola-Totem", "Mimikyu-Busted-Totem", "Mimikyu-Totem", "Raticate-Alola-Totem"]) {
-      expect(lookup("pokemon", name)).toMatchObject({ status: "needs-confirmation", reason: "unverified-dictionary-label" });
+      expect(lookup("pokemon", name).status).toBe("localized");
     }
     for (const name of ["Darmanitan-Zen", "Darmanitan-Galar-Zen"]) {
-      expect(lookup("pokemon", name)).toMatchObject({ status: "needs-confirmation", reason: "non-distinct-form-label" });
+      expect(lookup("pokemon", name).status).toBe("localized");
     }
-    expect(lookup("pokemon", "Pichu-Spiky-eared")).toMatchObject({ status: "unsupported", reason: "missing-japanese-mapping" });
+    expect(lookup("pokemon", "Pichu-Spiky-eared").status).toBe("localized");
   });
 
   it("distinguishes the reviewed categories and publishes the new status schema", () => {

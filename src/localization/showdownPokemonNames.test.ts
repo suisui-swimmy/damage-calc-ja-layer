@@ -42,17 +42,17 @@ describe("approved Pokemon name imports", () => {
     },
   );
 
-  it("keeps the unapproved 32 decisions and translation scope separate", () => {
+  it("keeps reviewed names and translation scope separate", () => {
     expect(showdownDisplayMetadata.summary).toEqual({
-      pokemon: { localized: 1447, "needs-confirmation": 19, unsupported: 3, "out-of-scope": 117 },
-      ability: { localized: 308, "needs-confirmation": 10, unsupported: 0, "out-of-scope": 3 },
+      pokemon: { localized: 1469, "needs-confirmation": 0, unsupported: 0, "out-of-scope": 117 },
+      ability: { localized: 318, "needs-confirmation": 0, unsupported: 0, "out-of-scope": 3 },
       type: { localized: 19, "needs-confirmation": 0, unsupported: 0, "out-of-scope": 0 },
     });
     for (const name of ["Darmanitan-Zen", "Darmanitan-Galar-Zen", "Urshifu-Gmax", "Ogerpon-Teal-Tera", "Meowstic-F-Mega"]) {
-      expect(lookup("pokemon", name).status).toBe("needs-confirmation");
+      expect(lookup("pokemon", name).status).toBe("localized");
     }
-    for (const name of ["Eevee-Starter", "Pikachu-Starter", "Pichu-Spiky-eared"]) expect(lookup("pokemon", name).status).toBe("unsupported");
-    expect(lookup("ability", "Mega Sol").status).toBe("needs-confirmation");
+    for (const name of ["Eevee-Starter", "Pikachu-Starter", "Pichu-Spiky-eared"]) expect(lookup("pokemon", name).status).toBe("localized");
+    expect(lookup("ability", "Mega Sol").status).toBe("localized");
     expect(lookup("pokemon", "Ababo").status).toBe("out-of-scope");
     expect(lookup("pokemon", "Pikachu-Unknown").status).toBe("not-found");
   });
