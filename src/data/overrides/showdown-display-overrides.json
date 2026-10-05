@@ -765,13 +765,13 @@
       "kind": "item",
       "showdownId": "absolitez",
       "showdownName": "Absolite Z",
-      "displayNameJa": "アブソルナイトZ",
+      "displayNameJa": "アブソルナイトＺ",
       "sources": [
         "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
         "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
       ],
       "verifiedOn": "2026-10-05",
-      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. Japanese X/Y/Z suffixes use fullwidth characters per the reviewed display policy."
     },
     {
       "kind": "item",
@@ -1009,14 +1009,14 @@
       "kind": "item",
       "showdownId": "garchompitez",
       "showdownName": "Garchompite Z",
-      "displayNameJa": "ガブリアスナイトZ",
+      "displayNameJa": "ガブリアスナイトＺ",
       "sources": [
         "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
         "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
         "https://www.nintendo.com/jp/topics/article/c1e7ae23-1b06-4818-9cc3-4c2023540246"
       ],
       "verifiedOn": "2026-10-05",
-      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. Japanese X/Y/Z suffixes use fullwidth characters per the reviewed display policy."
     },
     {
       "kind": "item",
@@ -1095,13 +1095,13 @@
       "kind": "item",
       "showdownId": "lucarionitez",
       "showdownName": "Lucarionite Z",
-      "displayNameJa": "ルカリオナイトZ",
+      "displayNameJa": "ルカリオナイトＺ",
       "sources": [
         "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
         "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
       ],
       "verifiedOn": "2026-10-05",
-      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. Japanese X/Y/Z suffixes use fullwidth characters per the reviewed display policy."
     },
     {
       "kind": "item",
@@ -1167,27 +1167,27 @@
       "kind": "item",
       "showdownId": "raichunitex",
       "showdownName": "Raichunite X",
-      "displayNameJa": "ライチュウナイトX",
+      "displayNameJa": "ライチュウナイトＸ",
       "sources": [
         "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
         "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
         "https://news.pokemon-home.com/ja/page/773.html"
       ],
       "verifiedOn": "2026-10-05",
-      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. Japanese X/Y/Z suffixes use fullwidth characters per the reviewed display policy."
     },
     {
       "kind": "item",
       "showdownId": "raichunitey",
       "showdownName": "Raichunite Y",
-      "displayNameJa": "ライチュウナイトY",
+      "displayNameJa": "ライチュウナイトＹ",
       "sources": [
         "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
         "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
         "https://news.pokemon-home.com/ja/page/773.html"
       ],
       "verifiedOn": "2026-10-05",
-      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. Japanese X/Y/Z suffixes use fullwidth characters per the reviewed display policy."
     },
     {
       "kind": "item",

@@ -65,9 +65,9 @@
     {
       "kind": "pokemon",
       "id": "absolmegaz",
-      "displayNameJa": "メガアブソルZ",
+      "displayNameJa": "メガアブソルＺ",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Use fullwidth Japanese Mega-name suffixes Ｘ/Ｙ/Ｚ; preserve canonical IDs and existing form-review status. Reference: https://zukan.pokemon.co.jp/detail/0006-1"
     },
     {
       "kind": "pokemon",
@@ -172,14 +172,14 @@
       "id": "charizardmegax",
       "displayNameJa": "メガリザードンＸ",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Use fullwidth Japanese Mega-name suffixes Ｘ/Ｙ/Ｚ; preserve canonical IDs and existing form-review status. Reference: https://zukan.pokemon.co.jp/detail/0006-1"
     },
     {
       "kind": "pokemon",
       "id": "charizardmegay",
       "displayNameJa": "メガリザードンＹ",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Use fullwidth Japanese Mega-name suffixes Ｘ/Ｙ/Ｚ; preserve canonical IDs and existing form-review status. Reference: https://zukan.pokemon.co.jp/detail/0006-1"
     },
     {
       "kind": "pokemon",
@@ -317,9 +317,9 @@
     {
       "kind": "pokemon",
       "id": "garchompmegaz",
-      "displayNameJa": "メガガブリアスZ",
+      "displayNameJa": "メガガブリアスＺ",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Use fullwidth Japanese Mega-name suffixes Ｘ/Ｙ/Ｚ; preserve canonical IDs and existing form-review status. Reference: https://zukan.pokemon.co.jp/detail/0006-1"
     },
     {
       "kind": "pokemon",
@@ -443,9 +443,9 @@
     {
       "kind": "pokemon",
       "id": "lucariomegaz",
-      "displayNameJa": "メガルカリオZ",
+      "displayNameJa": "メガルカリオＺ",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Use fullwidth Japanese Mega-name suffixes Ｘ/Ｙ/Ｚ; preserve canonical IDs and existing form-review status. Reference: https://zukan.pokemon.co.jp/detail/0006-1"
     },
     {
       "kind": "pokemon",
@@ -522,14 +522,14 @@
       "id": "mewtwomegax",
       "displayNameJa": "メガミュウツーＸ",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Use fullwidth Japanese Mega-name suffixes Ｘ/Ｙ/Ｚ; preserve canonical IDs and existing form-review status. Reference: https://zukan.pokemon.co.jp/detail/0006-1"
     },
     {
       "kind": "pokemon",
       "id": "mewtwomegay",
       "displayNameJa": "メガミュウツーＹ",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Use fullwidth Japanese Mega-name suffixes Ｘ/Ｙ/Ｚ; preserve canonical IDs and existing form-review status. Reference: https://zukan.pokemon.co.jp/detail/0006-1"
     },
     {
       "kind": "pokemon",
@@ -555,16 +555,16 @@
     {
       "kind": "pokemon",
       "id": "raichumegax",
-      "displayNameJa": "メガライチュウX",
+      "displayNameJa": "メガライチュウＸ",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Use fullwidth Japanese Mega-name suffixes Ｘ/Ｙ/Ｚ; preserve canonical IDs and existing form-review status. Reference: https://zukan.pokemon.co.jp/detail/0006-1"
     },
     {
       "kind": "pokemon",
       "id": "raichumegay",
-      "displayNameJa": "メガライチュウY",
+      "displayNameJa": "メガライチュウＹ",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Use fullwidth Japanese Mega-name suffixes Ｘ/Ｙ/Ｚ; preserve canonical IDs and existing form-review status. Reference: https://zukan.pokemon.co.jp/detail/0006-1"
     },
     {
       "kind": "pokemon",
@@ -726,10 +726,45 @@
       "displayNameJa": "メガジガルデ",
       "confirmsShowdownName": false,
       "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+    },
+    {
+      "kind": "item",
+      "id": "absolitez",
+      "displayNameJa": "アブソルナイトＺ",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate."
+    },
+    {
+      "kind": "item",
+      "id": "garchompitez",
+      "displayNameJa": "ガブリアスナイトＺ",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate."
+    },
+    {
+      "kind": "item",
+      "id": "raichunitex",
+      "displayNameJa": "ライチュウナイトＸ",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate."
+    },
+    {
+      "kind": "item",
+      "id": "raichunitey",
+      "displayNameJa": "ライチュウナイトＹ",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate."
+    },
+    {
+      "kind": "item",
+      "id": "lucarionitez",
+      "displayNameJa": "ルカリオナイトＺ",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate."
     }
   ],
   "summary": {
-    "entryCount": 103,
+    "entryCount": 108,
     "appliedAtRuntime": true
   }
 }

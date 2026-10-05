@@ -10,7 +10,7 @@ import { calculateDamage } from "../calc/smogonAdapter";
 import { formatDamageResultJa } from "../formatters/jaResultFormatter";
 
 const mega = options.entries.filter((entry) => /-Mega(?:-|$)/.test(entry.showdownName));
-const overrides = labelOverrides.entries.filter((entry) => entry.confirmsShowdownName === false);
+const overrides = labelOverrides.entries.filter((entry) => entry.kind === "pokemon" && entry.confirmsShowdownName === false);
 const externalFormNames: Record<string, string> = {
   "Magearna-Original-Mega": "メガマギアナ ５００ねんまえのいろ",
   "Tatsugiri-Curly-Mega": "メガシャリタツ そったすがた",
@@ -29,7 +29,7 @@ describe("non-repeating Mega display names", () => {
 
   it.each(mega)("corrects $showdownName across display and resolver paths", (raw) => {
     const option = raw as LocalizedOptionEntry;
-    const expected = option.label.split(/\s+/).slice(1).join(" ");
+    const expected = option.label.split(/\s+/).slice(1).join(" ").replace(/[XYZ]$/, (letter) => String.fromCharCode(letter.charCodeAt(0) + 0xfee0));
     expect(expected.startsWith("メガ")).toBe(true);
     expect(getOptionDisplayNameJa("pokemon", option)).toBe(expected);
     expect(getDisplayNameJa("pokemon", option.showdownName)).toBe(expected);
@@ -55,7 +55,7 @@ describe("non-repeating Mega display names", () => {
   it.each([
     ["Absol-Mega", "メガアブソル"], ["Aerodactyl-Mega", "メガプテラ"],
     ["Meganium-Mega", "メガメガニウム"], ["Charizard-Mega-X", "メガリザードンＸ"],
-    ["Charizard-Mega-Y", "メガリザードンＹ"], ["Absol-Mega-Z", "メガアブソルZ"],
+    ["Charizard-Mega-Y", "メガリザードンＹ"], ["Absol-Mega-Z", "メガアブソルＺ"],
   ])("retains the exact complete name and calc handoff for %s", (name, expected) => {
     const resolved = resolveEntity("pokemon", expected);
     expect(resolved.canonicalName).toBe(name);

@@ -318,8 +318,8 @@ APIが返す `needs-confirmation` / `unsupported` / `out-of-scope` / `ambiguous`
   辞書参照先は `Hidden Power`。タイプ別項目の完全な集合と上流の `placeholderFor` / `type` を生成時に照合する。
   裸の `Hidden Power` にタイプ補足を付けず、個体値からのタイプ判定も行わない。
 - **メガストーン**: 従来47件は既存辞書を再利用し、新45件は出典付き対応表で確定する。
-  `Dragoninite` は「カイリュナイト」、`Absolite Z` は「アブソルナイトZ」、`Garchompite Z` は「ガブリアスナイトZ」。
-  種族名への「ナイト」付加による推測は行わない。新45件のX/Y/Zは半角表記で、既存辞書の表記は維持する。
+  `Dragoninite` は「カイリュナイト」、`Absolite Z` は「アブソルナイトＺ」、`Garchompite Z` は「ガブリアスナイトＺ」。
+  種族名への「ナイト」付加による推測は行わない。メガシンカ名・メガストーン名の日本語末尾は、[公式ずかんの表記](https://zukan.pokemon.co.jp/detail/0006-1)に合わせて全角のＸ/Ｙ/Ｚに統一する。英語名・IDは変更せず、半角の日本語入力も検索時の正規化で受け付ける。
 - **CAP**: `Paleo Wave` / `Polar Flare` / `Shadow Strike` と `Crucibellite` / `Vile Vial` は
   `out-of-scope` / `category: "cap"`。日本語名を作らず、外部ID・英語名と日本語の分類説明を返す。
 - **性格**: 25件の既存日本語名を再利用する。性格補正の計算や適用判断は行わない。

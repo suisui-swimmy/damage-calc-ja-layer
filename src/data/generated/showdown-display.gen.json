@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
-  "dataVersion": "showdown-display-275e0c58c5895438",
+  "dataVersion": "showdown-display-e7f3c35b34326c92",
   "source": {
     "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
     "overlayVersion": "showdown-display-overrides-2026-10-05-battle",
     "sha256": {
       "src/data/generated/showdown-catalog.gen.json": "58aa180f4cff8151df896a6b0139ba6b782b055a91ca27b6a20cb71191e55dae",
       "scripts/data/showdown-source.lock.json": "7efab29b6e7572925dfeea812f51f98e483c805c4c2a5f144fcbbd5b3f3cc817",
-      "src/data/overrides/showdown-display-overrides.json": "a0dda5b72c90fc0a885f17aeee31d041da9cf4cf675b703a4734ea11c92b1e14",
+      "src/data/overrides/showdown-display-overrides.json": "c0aa5eef912931e9c2414da734b96e001624d704038d51f801d80fbd583071c8",
       "src/data/overrides/showdown-pokemon-names.json": "50403443a0df6e3d9130a5d6b2ae025596d684220fccf2cbea73db5319fcfd2e",
-      "src/data/overrides/ja-label-overrides.json": "6e51a518f531bb42635762f057fd6d906703b453526342dab169f4118d57358d",
+      "src/data/overrides/ja-label-overrides.json": "4127a877777eec0347f656a166c41b6a42e681aadb8ba3b746a84b4360711223",
       "src/localization/displayNameRules.ts": "3cb42e1f40b6ae7bdc952dae2e167094875e5922d22497a6cde5d2218d1f10e7",
       "src/data/generated/pokemon-options.gen.json": "845879d802cc3b80cc9c69a8eecb2a518f750b34c771e68489651a849ea8d9d8",
       "src/data/generated/ability-options.gen.json": "c5a0b6fde9d932afbd046215b49ba1636945e85416a3e8a7fd922a733f182a7b",
@@ -3859,7 +3859,7 @@
       "showdownId": "absolitez",
       "showdownName": "Absolite Z",
       "status": "localized",
-      "displayNameJa": "アブソルナイトZ",
+      "displayNameJa": "アブソルナイトＺ",
       "provenance": "showdown-overlay"
     },
     {
@@ -5768,7 +5768,7 @@
       "showdownId": "garchompitez",
       "showdownName": "Garchompite Z",
       "status": "localized",
-      "displayNameJa": "ガブリアスナイトZ",
+      "displayNameJa": "ガブリアスナイトＺ",
       "provenance": "showdown-overlay"
     },
     {
@@ -6688,7 +6688,7 @@
       "showdownId": "lucarionitez",
       "showdownName": "Lucarionite Z",
       "status": "localized",
-      "displayNameJa": "ルカリオナイトZ",
+      "displayNameJa": "ルカリオナイトＺ",
       "provenance": "showdown-overlay"
     },
     {
@@ -7996,7 +7996,7 @@
       "showdownId": "raichunitex",
       "showdownName": "Raichunite X",
       "status": "localized",
-      "displayNameJa": "ライチュウナイトX",
+      "displayNameJa": "ライチュウナイトＸ",
       "provenance": "showdown-overlay"
     },
     {
@@ -8004,7 +8004,7 @@
       "showdownId": "raichunitey",
       "showdownName": "Raichunite Y",
       "status": "localized",
-      "displayNameJa": "ライチュウナイトY",
+      "displayNameJa": "ライチュウナイトＹ",
       "provenance": "showdown-overlay"
     },
     {
