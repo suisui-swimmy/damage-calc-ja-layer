@@ -43,7 +43,7 @@ describe("approved Pokemon name imports", () => {
   );
 
   it("keeps reviewed names and translation scope separate", () => {
-    expect(showdownDisplayMetadata.summary).toEqual({
+    expect(showdownDisplayMetadata.summary).toMatchObject({
       pokemon: { localized: 1469, "needs-confirmation": 0, unsupported: 0, "out-of-scope": 117 },
       ability: { localized: 318, "needs-confirmation": 0, unsupported: 0, "out-of-scope": 3 },
       type: { localized: 19, "needs-confirmation": 0, unsupported: 0, "out-of-scope": 0 },

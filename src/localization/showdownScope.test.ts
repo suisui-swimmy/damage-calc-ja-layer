@@ -38,12 +38,14 @@ describe("reviewed Showdown display scope", () => {
     expect(getDisplayNameJa("ability", "No Ability")).toBe("No Ability");
   });
 
-  it("keeps all 120 reviewed entries recognizable with original names and Japanese notes", () => {
-    expect(scoped).toHaveLength(120);
+  it("keeps all 125 reviewed entries recognizable with original names and Japanese notes", () => {
+    expect(scoped).toHaveLength(125);
     for (const entry of scoped) {
       const category = entry.category;
       const noteJa = category === "pokestar" ? "ポケウッドの登場データ" : category === "glitch" ? "初代作品のバグ由来データ"
-        : entry.kind === "ability" ? "Smogon CAPの創作特性" : "Smogon CAPの創作ポケモン";
+        : entry.kind === "ability" ? "Smogon CAPの創作特性"
+        : entry.kind === "move" ? "Smogon CAPの創作技"
+        : entry.kind === "item" ? "Smogon CAPの創作持ち物" : "Smogon CAPの創作ポケモン";
       for (const input of [entry.showdownName, entry.showdownId]) {
         const result = lookup(entry.kind as ShowdownEntityKind, input);
         expect(result).toMatchObject({ status: "out-of-scope", reason: "outside-localization-scope", category, noteJa,

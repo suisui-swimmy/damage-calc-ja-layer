@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "manual-showdown-2026-10-05-reviewed-shared-names",
+  "dataVersion": "showdown-display-overrides-2026-10-05-battle",
   "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
   "usage": "display-only",
   "notes": [
@@ -760,6 +760,778 @@
         "https://zukan.pokemon.co.jp/detail/0952-1"
       ],
       "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "item",
+      "showdownId": "absolitez",
+      "showdownName": "Absolite Z",
+      "displayNameJa": "アブソルナイトZ",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "barbaracite",
+      "showdownName": "Barbaracite",
+      "displayNameJa": "ガメノデスナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "baxcalibrite",
+      "showdownName": "Baxcalibrite",
+      "displayNameJa": "セグレイブナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "chandelurite",
+      "showdownName": "Chandelurite",
+      "displayNameJa": "シャンデラナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "chesnaughtite",
+      "showdownName": "Chesnaughtite",
+      "displayNameJa": "ブリガロナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
+        "https://www.nintendo.com/jp/topics/article/c1e7ae23-1b06-4818-9cc3-4c2023540246"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "chimechite",
+      "showdownName": "Chimechite",
+      "displayNameJa": "チリーンナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "clefablite",
+      "showdownName": "Clefablite",
+      "displayNameJa": "ピクシナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "crabominite",
+      "showdownName": "Crabominite",
+      "displayNameJa": "ケケンカニナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "darkranite",
+      "showdownName": "Darkranite",
+      "displayNameJa": "ダークライナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "delphoxite",
+      "showdownName": "Delphoxite",
+      "displayNameJa": "マフォクシナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
+        "https://www.nintendo.com/jp/topics/article/c1e7ae23-1b06-4818-9cc3-4c2023540246"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "dragalgite",
+      "showdownName": "Dragalgite",
+      "displayNameJa": "ドラミドナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "dragoninite",
+      "showdownName": "Dragoninite",
+      "displayNameJa": "カイリュナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
+        "https://www.nintendo.com/jp/topics/article/c1e7ae23-1b06-4818-9cc3-4c2023540246"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "drampanite",
+      "showdownName": "Drampanite",
+      "displayNameJa": "ジジーロナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "eelektrossite",
+      "showdownName": "Eelektrossite",
+      "displayNameJa": "シビルドナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "emboarite",
+      "showdownName": "Emboarite",
+      "displayNameJa": "エンブオナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "excadrite",
+      "showdownName": "Excadrite",
+      "displayNameJa": "ドリュウズナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "falinksite",
+      "showdownName": "Falinksite",
+      "displayNameJa": "タイレーツナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "feraligite",
+      "showdownName": "Feraligite",
+      "displayNameJa": "オーダイルナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "floettite",
+      "showdownName": "Floettite",
+      "displayNameJa": "フラエッテナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
+        "https://www.nintendo.com/jp/topics/article/c1e7ae23-1b06-4818-9cc3-4c2023540246"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "froslassite",
+      "showdownName": "Froslassite",
+      "displayNameJa": "ユキメノコナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "garchompitez",
+      "showdownName": "Garchompite Z",
+      "displayNameJa": "ガブリアスナイトZ",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
+        "https://www.nintendo.com/jp/topics/article/c1e7ae23-1b06-4818-9cc3-4c2023540246"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "glimmoranite",
+      "showdownName": "Glimmoranite",
+      "displayNameJa": "キラフロルナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "golisopite",
+      "showdownName": "Golisopite",
+      "displayNameJa": "グソクムシャナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "golurkite",
+      "showdownName": "Golurkite",
+      "displayNameJa": "ゴルーグナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "greninjite",
+      "showdownName": "Greninjite",
+      "displayNameJa": "ゲッコウガナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
+        "https://www.nintendo.com/jp/topics/article/c1e7ae23-1b06-4818-9cc3-4c2023540246"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "hawluchanite",
+      "showdownName": "Hawluchanite",
+      "displayNameJa": "ルチャブルナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "heatranite",
+      "showdownName": "Heatranite",
+      "displayNameJa": "ヒードラナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "lucarionitez",
+      "showdownName": "Lucarionite Z",
+      "displayNameJa": "ルカリオナイトZ",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "magearnite",
+      "showdownName": "Magearnite",
+      "displayNameJa": "マギアナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "malamarite",
+      "showdownName": "Malamarite",
+      "displayNameJa": "カラマネナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "meganiumite",
+      "showdownName": "Meganiumite",
+      "displayNameJa": "メガニウムナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "meowsticite",
+      "showdownName": "Meowsticite",
+      "displayNameJa": "ニャオニクスナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "pyroarite",
+      "showdownName": "Pyroarite",
+      "displayNameJa": "カエンジシナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "raichunitex",
+      "showdownName": "Raichunite X",
+      "displayNameJa": "ライチュウナイトX",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
+        "https://news.pokemon-home.com/ja/page/773.html"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "raichunitey",
+      "showdownName": "Raichunite Y",
+      "displayNameJa": "ライチュウナイトY",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A",
+        "https://news.pokemon-home.com/ja/page/773.html"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "scolipite",
+      "showdownName": "Scolipite",
+      "displayNameJa": "ペンドラナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "scovillainite",
+      "showdownName": "Scovillainite",
+      "displayNameJa": "スコヴィラナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "scraftinite",
+      "showdownName": "Scraftinite",
+      "displayNameJa": "ズルズキナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "skarmorite",
+      "showdownName": "Skarmorite",
+      "displayNameJa": "エアームドナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "staraptite",
+      "showdownName": "Staraptite",
+      "displayNameJa": "ムクホークナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "starminite",
+      "showdownName": "Starminite",
+      "displayNameJa": "スターミナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "tatsugirinite",
+      "showdownName": "Tatsugirinite",
+      "displayNameJa": "シャリタツナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "victreebelite",
+      "showdownName": "Victreebelite",
+      "displayNameJa": "ウツボットナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "zeraorite",
+      "showdownName": "Zeraorite",
+      "displayNameJa": "ゼラオラナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "item",
+      "showdownId": "zygardite",
+      "showdownName": "Zygardite",
+      "displayNameJa": "ジガルデナイト",
+      "sources": [
+        "https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン",
+        "https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "User-supplied Pokemon Wiki table, cross-checked against Bulbapedia (secondary source); Pokemon Wiki retrieval returned 403. Official corroboration where listed. X/Y/Z use ASCII suffixes."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerbug",
+      "showdownName": "Hidden Power Bug",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "むし",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerdark",
+      "showdownName": "Hidden Power Dark",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "あく",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerdragon",
+      "showdownName": "Hidden Power Dragon",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "ドラゴン",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerelectric",
+      "showdownName": "Hidden Power Electric",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "でんき",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerfighting",
+      "showdownName": "Hidden Power Fighting",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "かくとう",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerfire",
+      "showdownName": "Hidden Power Fire",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "ほのお",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerflying",
+      "showdownName": "Hidden Power Flying",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "ひこう",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerghost",
+      "showdownName": "Hidden Power Ghost",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "ゴースト",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowergrass",
+      "showdownName": "Hidden Power Grass",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "くさ",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerground",
+      "showdownName": "Hidden Power Ground",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "じめん",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerice",
+      "showdownName": "Hidden Power Ice",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "こおり",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerpoison",
+      "showdownName": "Hidden Power Poison",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "どく",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerpsychic",
+      "showdownName": "Hidden Power Psychic",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "エスパー",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerrock",
+      "showdownName": "Hidden Power Rock",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "いわ",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowersteel",
+      "showdownName": "Hidden Power Steel",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "はがね",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
+    },
+    {
+      "kind": "move",
+      "showdownId": "hiddenpowerwater",
+      "showdownName": "Hidden Power Water",
+      "dictionaryName": "Hidden Power",
+      "variantLabelJa": "みず",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json",
+        "src/data/generated/type-options.gen.json"
+      ],
+      "verifiedOn": "2026-10-05",
+      "notes": "Reviewed typed placeholder; reuse the Japanese move name and keep its fixed type qualifier separate. No IV-based type calculation."
     }
   ],
   "aliases": [
@@ -1331,6 +2103,56 @@
           "showdownName": "MissingNo."
         }
       ]
+    },
+    {
+      "kind": "move",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作技",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts"
+      ],
+      "evidence": {
+        "checkedOn": "2026-10-05",
+        "decision": "Preserve original name and ID; mark reviewed CAP entries out of scope for Japanese-name translation.",
+        "sourceField": "isNonstandard: CAP"
+      },
+      "entries": [
+        {
+          "showdownId": "paleowave",
+          "showdownName": "Paleo Wave"
+        },
+        {
+          "showdownId": "polarflare",
+          "showdownName": "Polar Flare"
+        },
+        {
+          "showdownId": "shadowstrike",
+          "showdownName": "Shadow Strike"
+        }
+      ]
+    },
+    {
+      "kind": "item",
+      "category": "cap",
+      "noteJa": "Smogon CAPの創作持ち物",
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/items.ts"
+      ],
+      "evidence": {
+        "checkedOn": "2026-10-05",
+        "decision": "Preserve original name and ID; mark reviewed CAP entries out of scope for Japanese-name translation.",
+        "sourceField": "isNonstandard: CAP"
+      },
+      "entries": [
+        {
+          "showdownId": "crucibellite",
+          "showdownName": "Crucibellite"
+        },
+        {
+          "showdownId": "vilevial",
+          "showdownName": "Vile Vial"
+        }
+      ]
     }
   ],
   "sharedDisplayNameGroups": [
@@ -1448,6 +2270,34 @@
       ],
       "sources": [
         "https://www.pokemon.co.jp/ex/sv_dlc/ja/pokemon/230808_01/"
+      ],
+      "verifiedOn": "2026-10-05"
+    },
+    {
+      "kind": "move",
+      "displayNameJa": "めざめるパワー",
+      "showdownIds": [
+        "hiddenpower",
+        "hiddenpowerbug",
+        "hiddenpowerdark",
+        "hiddenpowerdragon",
+        "hiddenpowerelectric",
+        "hiddenpowerfighting",
+        "hiddenpowerfire",
+        "hiddenpowerflying",
+        "hiddenpowerghost",
+        "hiddenpowergrass",
+        "hiddenpowerground",
+        "hiddenpowerice",
+        "hiddenpowerpoison",
+        "hiddenpowerpsychic",
+        "hiddenpowerrock",
+        "hiddenpowersteel",
+        "hiddenpowerwater"
+      ],
+      "sources": [
+        "https://github.com/smogon/pokemon-showdown/blob/3661ce40bf9001d185ce078b8920e12304204609/data/moves.ts",
+        "src/data/generated/move-options.gen.json"
       ],
       "verifiedOn": "2026-10-05"
     }

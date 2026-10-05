@@ -1,6 +1,9 @@
 import pokemonOptions from "../data/generated/pokemon-options.gen.json";
 import abilityOptions from "../data/generated/ability-options.gen.json";
 import typeOptions from "../data/generated/type-options.gen.json";
+import moveOptions from "../data/generated/move-options.gen.json";
+import itemOptions from "../data/generated/item-options.gen.json";
+import natureOptions from "../data/generated/nature-options.gen.json";
 import mapping from "../data/generated/showdown-display.gen.json";
 import type { LocalizedOptionEntry } from "../data/optionTypes";
 import { getOptionDisplayNameJa } from "./displayNameRules";
@@ -10,6 +13,9 @@ const dictionaries = {
   pokemon: new Map<string, LocalizedOptionEntry>(pokemonOptions.entries.map((entry) => [entry.showdownName, entry as LocalizedOptionEntry])),
   ability: new Map<string, LocalizedOptionEntry>(abilityOptions.entries.map((entry) => [entry.showdownName, entry as LocalizedOptionEntry])),
   type: new Map<string, LocalizedOptionEntry>(typeOptions.entries.map((entry) => [entry.showdownName, entry as LocalizedOptionEntry])),
+  move: new Map<string, LocalizedOptionEntry>(moveOptions.entries.map((entry) => [entry.showdownName, entry as LocalizedOptionEntry])),
+  item: new Map<string, LocalizedOptionEntry>(itemOptions.entries.map((entry) => [entry.showdownName, entry as LocalizedOptionEntry])),
+  nature: new Map<string, LocalizedOptionEntry>(natureOptions.entries.map((entry) => [entry.showdownName, entry as LocalizedOptionEntry])),
 };
 const normalizeName = (input: string): string => input.trim().normalize("NFC").toLowerCase();
 const toShowdownId = (input: string): string => input.toLowerCase().replace(/[^a-z0-9]/g, "");

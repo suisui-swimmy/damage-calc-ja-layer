@@ -21,7 +21,7 @@ Smogon / Showdown 側の計算エンジンは改変せず、日本語 UI をオ�
 - 日本語の計算条件入力から resolver -> adapter -> formatter を通して、ブラウザでダメージ結果を確認する
 - 計算条件を `schemaVersion` 付き JSON として copy / import する
 - `@smogon/calc` Gen9 由来の calc catalog を再生成・検証する
-- 外部 Pokemon Showdown のポケモン・フォーム・特性・タイプの名前/IDから、日本語表示を取得する（計算用resolverとは別API）
+- 外部 Pokemon Showdown のポケモン・フォーム・特性・タイプ・技・持ち物・性格の名前/IDから、日本語表示を取得する（計算用resolverとは別API）
 - GitHub Actions で validation / test / build / GitHub Pages deploy を実行する
 
 ## 方針
@@ -230,7 +230,7 @@ resolver は `not-found`、表示は英語 fallback、adapter は未知の特性
 ## 外部Showdown向け日本語表示API
 
 公開入口は `src/showdown.ts` の `resolveShowdownDisplayNameJa(kind, input)`。
-`kind` は `pokemon` / `ability` / `type`、`input` はShowdown名またはID。
+`kind` は `pokemon` / `ability` / `type` / `move` / `item` / `nature`、`input` はShowdown名またはID。
 `resolveEntity` / `getDisplayNameJa`、calc catalog、adapterとは独立しており、表示に成功しても計算可能とは判定しない。
 日本語名の検索、部分一致、任意のShowdown略称の展開は行わない。
 
@@ -296,9 +296,48 @@ const label = display.status === "localized" ? display.displayNameJa : speciesId
 
 const ability = resolveShowdownDisplayNameJa("ability", "Aura Guard");
 const type = resolveShowdownDisplayNameJa("type", "electric");
+const move = resolveShowdownDisplayNameJa("move", "hiddenpowerfire");
+const item = resolveShowdownDisplayNameJa("item", "Dragoninite");
+const nature = resolveShowdownDisplayNameJa("nature", "modest");
 // ability.displayNameJa: "はどうのぼうご"（status === "localized" の場合）
 // type.displayNameJa: "でんき"（同上）
+// move: displayNameJa="めざめるパワー", variantLabelJa="ほのお", showdownId="hiddenpowerfire"
+// item.displayNameJa: "カイリュナイト"（status === "localized" の場合）
+// nature.displayNameJa: "ひかえめ"（同上）
 ```
+
+技・持ち物・性格もこの公開入口を使い、日本語採用の判断は返却値の `status === "localized"` に統一する。
+`*-options.gen.json` は取り込み元のスナップショットであり、Showdown向け補正前のラベルと `sourceStatus` を保持している。
+そのフラグを再確認して確定済みAPI結果を除外したり、options JSONのラベルでAPI結果を上書きしたりしない。
+APIが返す `needs-confirmation` / `unsupported` / `out-of-scope` / `ambiguous` / `not-found` は、英語表示や選択候補などの判断用に保持する。
+
+### 技・持ち物・性格の表示規則
+
+- **めざめるパワー**: `Hidden Power` とタイプ別16項目は同じ `displayNameJa: "めざめるパワー"` を返す。
+  タイプ別項目だけ `variantLabelJa`（例: `ほのお`）を付け、`hiddenpowerfire` などの外部IDを維持する。
+  辞書参照先は `Hidden Power`。タイプ別項目の完全な集合と上流の `placeholderFor` / `type` を生成時に照合する。
+  裸の `Hidden Power` にタイプ補足を付けず、個体値からのタイプ判定も行わない。
+- **メガストーン**: 従来47件は既存辞書を再利用し、新45件は出典付き対応表で確定する。
+  `Dragoninite` は「カイリュナイト」、`Absolite Z` は「アブソルナイトZ」、`Garchompite Z` は「ガブリアスナイトZ」。
+  種族名への「ナイト」付加による推測は行わない。新45件のX/Y/Zは半角表記で、既存辞書の表記は維持する。
+- **CAP**: `Paleo Wave` / `Polar Flare` / `Shadow Strike` と `Crucibellite` / `Vile Vial` は
+  `out-of-scope` / `category: "cap"`。日本語名を作らず、外部ID・英語名と日本語の分類説明を返す。
+- **性格**: 25件の既存日本語名を再利用する。性格補正の計算や適用判断は行わない。
+- **技なし**: calcの `(No Move)` は固定版Showdownの技には存在しないため、表示APIでは `not-found`。
+  明示的な未選択欄の表示には、別の公開定数 `showdownUiLabels.noMove`（「技なし」）を使える。
+  未知の技や認識失敗を「技なし」に置き換えない。
+
+```js
+import { showdownUiLabels } from "./vendor/damage-calc-ja-layer/showdown.js";
+// 呼び出し側が「未選択」と確定している欄だけに使う。
+const emptyMoveLabel = showdownUiLabels.noMove;
+```
+
+メガストーンの対応表はユーザー提示の[ポケモンWikiの一覧](https://wiki.pokemonwiki.com/wiki/アイテムの外国語名一覧#メガストーン)を、
+[Bulbapediaの多言語一覧](https://bulbapedia.bulbagarden.net/wiki/List_of_items_in_other_languages#Legends_Z-A)と照合して採用した。
+カイリュナイトなどは[任天堂の記事](https://www.nintendo.com/jp/topics/article/c1e7ae23-1b06-4818-9cc3-4c2023540246)、
+ライチュウナイトX/Yは[Pokémon HOMEのお知らせ](https://news.pokemon-home.com/ja/page/773.html)でも確認している。
+各項目の出典と確認日はShowdown専用補正に記録する。
 
 ### 同じ日本語名を共有するID
 
@@ -313,6 +352,7 @@ const type = resolveShowdownDisplayNameJa("type", "electric");
 | Meowstic-M-Mega / Meowstic-F-Mega | メガニャオニクス | オス / メス |
 | As One (Glastrier) / As One (Spectrier) | じんばいったい | ブリザポス / レイスポス |
 | Embody Aspect各種 | おもかげやどし | 各お面の名称 |
+| Hidden Powerのタイプ別16項目 | めざめるパワー | 各タイプの日本語名 |
 
 通常のGreninja / Rockruff / テラスタル前Ogerponには補足を付けない。
 メガニャオニクスは日本語名が共通でも、固定Showdown上の雌雄IDは保持する。
@@ -329,7 +369,7 @@ if (result.status === "localized") {
 }
 ```
 
-同名の承認は出典付きの `sharedDisplayNameGroups` 9群に限定する。
+フォーム・特性・タイプ別技を同名にする補正は、出典付きの `sharedDisplayNameGroups` 10群に限定する。
 生成時に名前・kind・ID集合・補足の区別を照合し、未知の第三項目の混入や補足の重複を拒否する。
 未確認の同名フォームを許可するために重複検査全体を無効化することはしない。
 
@@ -337,23 +377,35 @@ if (result.status === "localized") {
 
 Showdown参照版は [3661ce40bf9001d185ce078b8920e12304204609](https://github.com/smogon/pokemon-showdown/tree/3661ce40bf9001d185ce078b8920e12304204609)
 （commit日時: 2026-10-02 UTC、確認日: 2026-10-04）。
-`data/pokedex.ts`、`data/abilities.ts`、`data/typechart.ts`、`data/aliases.ts`、`sim/dex-species.ts`を確認した。
-スナップショットは名前とフォーム構成のみを採用し、タイプ相性・能力値・特性効果は取り込まない。
+`data/pokedex.ts`、`data/abilities.ts`、`data/typechart.ts`、`data/aliases.ts`、`sim/dex-species.ts`、
+`data/moves.ts`、`data/items.ts`、`data/natures.ts`を確認した（技・持ち物・性格の追加確認日: 2026-10-05）。
+スナップショットは名前・フォーム構成・表示分類の照合に必要なmetadataのみを採用し、タイプ相性・能力値・技や特性の効果は取り込まない。
+技の `type` / `placeholderFor`、CAP分類、メガストーン対応は生成時の名前の検証専用であり、公開APIから戦闘データとしては返さない。
 
 | 種別 | 日本語表示可能 | 要確認 | 日本語未対応 | 翻訳対象外・確認済み | 参照版の項目数 |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | ポケモン・フォーム | 1,469 | 0 | 0 | 117 | 1,586 |
 | 特性 | 318 | 0 | 0 | 3 | 321 |
 | タイプ | 19 | 0 | 0 | 0 | 19 |
+| 技 | 938 | 0 | 13 | 3 | 954 |
+| 持ち物 | 581 | 0 | 0 | 2 | 583 |
+| 性格 | 25 | 0 | 0 | 0 | 25 |
 
 件数は参照版の全項目（CAP等を含む）に対する表示の集計であり、ゲーム・世代別の使用可能件数ではない。
 最新の集計は `showdownDisplayMetadata.summary` で取得できる。
 未解決は `needs-confirmation` + `unsupported` の合計。`out-of-scope` は含めない。
 この件数はcalc未収録の項目数や新規翻訳が必要な件数とは異なる。
 元辞書の暫定フラグだけでは自動承認せず、名前と対応を確認した項目をShowdown専用補正で確定する。
-この固定版では翻訳対象の1,806件に対応し、要確認・日本語未対応は0件。
-別枠の120件は翻訳対象外として確認済み。未知の名前や将来追加されるIDまで対応済みという意味ではない。
+この固定版では3,350件を日本語表示でき、要確認0件・日本語未対応13件。
+別枠の125件は翻訳対象外として確認済み。未知の名前や将来追加されるIDまで対応済みという意味ではない。
 日本語名・補足の出典は `showdown-display-overrides.json` の各項目と共有名グループに記録している。
+
+未対応の13件は、既存calc向け技辞書にない『Let's Go!』由来の次の技。
+いずれも外部ID・英語名を保持して `unsupported` / `reason: "missing-japanese-mapping"` を返す。
+通常の技への置換や英語名からの推測訳は行わない。
+
+`Baddy Bad` / `Bouncy Bubble` / `Buzzy Buzz` / `Floaty Fall` / `Freezy Frost` / `Glitzy Glow` /
+`Pika Papow` / `Sappy Seed` / `Sizzly Slide` / `Sparkly Swirl` / `Splishy Splash` / `Veevee Volley` / `Zippy Zap`
 
 ### POKEMON_ALLから採用した日本語名
 

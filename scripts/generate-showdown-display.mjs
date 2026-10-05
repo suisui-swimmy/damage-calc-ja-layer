@@ -24,6 +24,7 @@ assert.equal(catalog.schemaVersion, 1);
 assert.equal(overlay.schemaVersion, 1);
 assert.equal(overlay.showdownCommit, catalog.source.commit, "Review overlays when updating Showdown");
 const toID = (name) => name.toLowerCase().replace(/[^a-z0-9]/g, "");
+const kinds = ["pokemon", "ability", "type", "move", "item", "nature"];
 const key = (entry) => `${entry.kind}:${entry.showdownId}`;
 const known = new Map(catalog.entries.map((entry) => [key(entry), entry]));
 assert.equal(known.size, catalog.entries.length, "Duplicate Showdown IDs");
@@ -33,21 +34,35 @@ assert.equal(overrides.size, allOverrides.length, "Duplicate overrides");
 const outOfScope = new Map();
 for (const group of overlay.outOfScopeGroups ?? []) {
   assert(["cap", "pokestar", "glitch"].includes(group.category), "Unknown scope category");
-  assert(["pokemon", "ability"].includes(group.kind), "Invalid scope kind");
+  assert(["pokemon", "ability", "move", "item"].includes(group.kind), "Invalid scope kind");
   assert(group.category === "cap" || group.kind === "pokemon", "Special species category on an ability");
   assert(group.noteJa && group.sources?.length && group.evidence?.checkedOn, "Missing scope review evidence");
   for (const entry of group.entries) {
     const scopedKey = key({ ...entry, kind: group.kind });
     assert(known.has(scopedKey), `Unknown scope ID: ${scopedKey}`);
     assert.equal(known.get(scopedKey).showdownName, entry.showdownName);
+    if (group.kind === "move" || group.kind === "item") {
+      assert.equal(known.get(scopedKey).isNonstandard, "CAP", `CAP classification changed: ${scopedKey}`);
+    }
     assert(!overrides.has(scopedKey) && !outOfScope.has(scopedKey), `Conflicting scope rule: ${scopedKey}`);
     outOfScope.set(scopedKey, { category: group.category, noteJa: group.noteJa });
   }
 }
 const dictionaries = {};
-for (const kind of ["pokemon", "ability", "type"]) {
+for (const kind of kinds) {
   const data = await read(`src/data/generated/${kind}-options.gen.json`);
   dictionaries[kind] = new Map(data.entries.map((entry) => [entry.showdownName, entry]));
+}
+// Typed Hidden Power IDs are upstream placeholders with separately reviewed labels.
+// Checking the whole set prevents a future unreviewed type from borrowing a label.
+const hiddenPower = catalog.entries.filter((entry) => entry.kind === "move" && entry.placeholderFor === "Hidden Power");
+const hiddenPowerOverrides = allOverrides.filter((entry) => entry.kind === "move" && entry.dictionaryName === "Hidden Power");
+assert.equal(hiddenPower.length, 16, "Review Hidden Power variant coverage");
+assert.deepEqual(hiddenPower.map(key).sort(), hiddenPowerOverrides.map(key).sort(), "Hidden Power coverage mismatch");
+for (const entry of hiddenPowerOverrides) {
+  const source = known.get(key(entry));
+  assert.equal(source.showdownName, `Hidden Power ${source.type}`, "Hidden Power name/type mismatch");
+  assert.equal(entry.variantLabelJa, dictionaries.type.get(source.type)?.label, "Hidden Power qualifier mismatch");
 }
 for (const entry of allOverrides) {
   assert(known.has(key(entry)), `Override missing in Showdown: ${key(entry)}`);
@@ -145,7 +160,7 @@ assert.deepEqual([...formNames].sort(), [...vivillon.formeOrder].sort(), "Vivill
 const mappedForms = overlay.entries.filter((entry) => entry.kind === "pokemon" && entry.showdownName.startsWith("Vivillon"));
 assert.deepEqual(mappedForms.map((entry) => entry.showdownName).sort(), [...formNames].sort(), "Vivillon overlay coverage mismatch");
 for (const name of formNames) assert.equal(byKey.get(`pokemon:${toID(name)}`).status, "localized");
-const summary = Object.fromEntries(["pokemon", "ability", "type"].map((kind) => [kind,
+const summary = Object.fromEntries(kinds.map((kind) => [kind,
   Object.fromEntries(["localized", "needs-confirmation", "unsupported", "out-of-scope"].map((status) => [status, entries.filter((entry) => entry.kind === kind && entry.status === status).length]))]));
 const payload = {
   schemaVersion: 2, dataVersion: `showdown-display-${createHash("sha256").update(JSON.stringify(hashes)).digest("hex").slice(0, 16)}`,

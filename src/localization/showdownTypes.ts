@@ -1,5 +1,5 @@
 /** Names/display only. This API does not certify calculation or ruleset support. */
-export type ShowdownEntityKind = "pokemon" | "ability" | "type";
+export type ShowdownEntityKind = "pokemon" | "ability" | "type" | "move" | "item" | "nature";
 export type ShowdownScopeCategory = "cap" | "pokestar" | "glitch";
 
 export interface ShowdownDictionaryRef {

@@ -11,7 +11,7 @@ export function validateSharedDisplayNames(groups, entries, labelOf) {
   }
   const approved = new Set();
   for (const group of groups) {
-    assert(["pokemon", "ability", "type"].includes(group.kind), "Invalid shared-name kind");
+    assert(["pokemon", "ability", "type", "move", "item", "nature"].includes(group.kind), "Invalid shared-name kind");
     assert(typeof group.displayNameJa === "string" && group.displayNameJa.trim(), "Missing shared name");
     assert(Array.isArray(group.sources) && group.sources.length > 0 &&
       group.sources.every((source) => typeof source === "string" && source.trim()) &&

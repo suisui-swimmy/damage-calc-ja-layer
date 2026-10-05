@@ -4,7 +4,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import ts from "typescript";
 
-// Read only literal name/form metadata. Never execute downloaded Showdown code.
+// Read only literal name/form/display-classification metadata. Never execute downloaded Showdown code.
 const root = new URL("../", import.meta.url);
 const lock = JSON.parse(await readFile(new URL("scripts/data/showdown-source.lock.json", root), "utf8"));
 const sourceDir = process.argv[2];
@@ -19,6 +19,11 @@ const literal = (node) => {
   if (ts.isStringLiteral(node) || ts.isNumericLiteral(node)) return node.text;
   if (node.kind === ts.SyntaxKind.TrueKeyword) return true;
   if (ts.isArrayLiteralExpression(node)) return node.elements.map(literal);
+  if (ts.isObjectLiteralExpression(node)) return Object.fromEntries(node.properties.map((property) => {
+    assert(ts.isPropertyAssignment(property), "Expected literal metadata property");
+    assert(ts.isIdentifier(property.name) || ts.isStringLiteral(property.name), "Expected literal metadata key");
+    return [property.name.text, literal(property.initializer)];
+  }));
   throw new Error(`Expected literal metadata: ${node.getText().slice(0, 80)}`);
 };
 const table = (path, name, fields) => {
@@ -40,6 +45,9 @@ const table = (path, name, fields) => {
 const pokemon = table("data/pokedex.ts", "Pokedex", ["name", "baseSpecies", "baseForme", "forme", "otherFormes", "cosmeticFormes", "formeOrder", "isCosmeticForme"]);
 const abilities = table("data/abilities.ts", "Abilities", ["name"]);
 const types = table("data/typechart.ts", "TypeChart", []);
+const moves = table("data/moves.ts", "Moves", ["name", "type", "isNonstandard", "placeholderFor"]);
+const items = table("data/items.ts", "Items", ["name", "isNonstandard", "megaStone"]);
+const natures = table("data/natures.ts", "Natures", ["name"]);
 const aliases = table("data/aliases.ts", "Aliases");
 const toID = (name) => name.toLowerCase().replace(/[^a-z0-9]/g, "");
 // Older sources may declare a cosmetic name only on the base entry.
@@ -53,6 +61,9 @@ const entries = [
   ...Object.entries(pokemon).map(([id, entry]) => ({ kind: "pokemon", showdownId: id, showdownName: entry.name, ...Object.fromEntries(Object.entries(entry).filter(([key]) => key !== "name")) })),
   ...Object.entries(abilities).map(([id, entry]) => ({ kind: "ability", showdownId: id, showdownName: entry.name })),
   ...Object.keys(types).map((id) => ({ kind: "type", showdownId: id, showdownName: id[0].toUpperCase() + id.slice(1) })),
+  ...Object.entries({ move: moves, item: items, nature: natures }).flatMap(([kind, records]) =>
+    Object.entries(records).map(([id, entry]) => ({ kind, showdownId: id, showdownName: entry.name,
+      ...Object.fromEntries(Object.entries(entry).filter(([key]) => key !== "name")) }))),
 ].sort((a, b) => `${a.kind}:${a.showdownId}` < `${b.kind}:${b.showdownId}` ? -1 : 1);
 for (const entry of entries) assert.equal(toID(entry.showdownName), entry.showdownId, `Unexpected Showdown identity: ${entry.showdownName}`);
 const payload = {
@@ -61,7 +72,7 @@ const payload = {
   entries,
   // Audit evidence only; runtime accepts a small explicitly reviewed subset.
   aliases: Object.fromEntries(Object.entries(aliases).filter(([, name]) => entries.some((entry) => entry.showdownId === toID(name)))),
-  summary: Object.fromEntries(["pokemon", "ability", "type"].map((kind) => [kind, entries.filter((e) => e.kind === kind).length])),
+  summary: Object.fromEntries(["pokemon", "ability", "type", "move", "item", "nature"].map((kind) => [kind, entries.filter((e) => e.kind === kind).length])),
 };
 const output = new URL("src/data/generated/showdown-catalog.gen.json", root);
 const text = JSON.stringify(payload, null, 2) + "\n";
