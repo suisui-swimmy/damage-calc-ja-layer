@@ -228,14 +228,16 @@ describe("Showdown moves, items and natures", () => {
     expect(result).not.toHaveProperty("displayNameJa");
   });
 
-  it("preserves calc dictionary labels and typed Hidden Power canonical resolution", () => {
+  it("corrects calc labels from reviewed translations and preserves typed Hidden Power identities", () => {
     expect(itemOptions.entries.find((entry) => entry.id === "dragoninite"))
       .toMatchObject({ label: "カイリューナイト", sourceStatus: "adapter-temporary" });
     expect(lookup("item", "Dragoninite")).toMatchObject({ displayNameJa: "カイリュナイト" });
-    expect(getDisplayNameJa("item", "Dragoninite")).toBe("カイリューナイト");
-    expect(resolveEntity("item", "カイリューナイト")).toMatchObject({
-      canonicalName: "Dragoninite", calcId: "dragoninite", sourceStatus: "adapter-temporary",
+    expect(getDisplayNameJa("item", "Dragoninite")).toBe("カイリュナイト");
+    expect(resolveEntity("item", "カイリュナイト")).toMatchObject({
+      canonicalName: "Dragoninite", calcId: "dragoninite", sourceStatus: "supported",
     });
+    // Long-vowel normalization accepts the old spelling but always returns the corrected label.
+    expect(resolveEntity("item", "カイリューナイト")).toMatchObject({ displayNameJa: "カイリュナイト" });
     for (const [type, label] of hiddenPowerTypes) {
       const name = `Hidden Power ${type}`;
       expect(moveOptions.entries.find((entry) => entry.id === toID(name)))

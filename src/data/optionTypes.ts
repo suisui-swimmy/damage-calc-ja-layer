@@ -6,7 +6,11 @@ export type SourceStatus =
   | "supported"
   | "adapter-temporary"
   | "needs-confirmation"
-  | "unsupported-temporary";
+  | "unsupported-temporary"
+  | "out-of-scope";
+
+/** Translation scope only; never a calculation-availability flag. */
+export type LocalizationCategory = "cap" | "pokestar" | "glitch";
 
 export interface OptionFallback {
   from?: string;
@@ -22,6 +26,8 @@ export interface LocalizedOptionEntry {
   showdownName: string;
   searchText: string;
   sourceStatus?: SourceStatus;
+  localizationCategory?: LocalizationCategory;
+  noteJa?: string;
   fallback?: OptionFallback;
   artwork?: string;
   type?: string;
@@ -73,6 +79,8 @@ export interface ManualJaLabelOverride {
   id: string;
   displayNameJa: string;
   sourceStatus?: SourceStatus;
+  localizationCategory?: LocalizationCategory;
+  noteJa?: string;
   /** False for text-only corrections that must not approve an unresolved Showdown form. */
   confirmsShowdownName?: boolean;
   notes?: string;

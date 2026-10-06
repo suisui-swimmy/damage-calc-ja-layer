@@ -74,13 +74,13 @@ describe("reviewed shared Japanese names", () => {
     expect(lookup("pokemon", "Battle Bond").status).toBe("not-found");
     expect(lookup("pokemon", "Greninja-Ash")).toMatchObject({ showdownId: "greninjaash" });
     expect(resolveEntity("pokemon", "メガニャオニクス").status).toBe("ambiguous");
-    expect(resolveEntity("ability", "じんばいったい").status).toBe("not-found");
+    expect(resolveEntity("ability", "じんばいったい").status).toBe("ambiguous");
     expect(resolveEntity("ability", "じんばいったい", { allowFuzzy: true }).status).toBe("ambiguous");
   });
 
-  it("keeps existing calc labels independent and returns fresh qualifier values", () => {
-    expect(getDisplayNameJa("pokemon", "Urshifu-Gmax")).toBe("ウーラオス れんげきのかた・キョダイマックスのすがた");
-    expect(getDisplayNameJa("pokemon", "Tatsugiri-Stretchy-Mega")).toBe("メガシャリタツ");
+  it("shares the reviewed translations with calc and returns fresh qualifier values", () => {
+    expect(getDisplayNameJa("pokemon", "Urshifu-Gmax")).toBe("ウーラオス いちげきのかた・キョダイマックスのすがた");
+    expect(getDisplayNameJa("pokemon", "Tatsugiri-Stretchy-Mega")).toBe("メガシャリタツ のびたすがた");
     expect(getDisplayNameJa("ability", "As One (Glastrier)")).toBe("じんばいったい (ブリザポス)");
     const result = lookup("pokemon", "Greninja-Bond");
     if (result.status !== "localized") throw new Error("Expected localized");

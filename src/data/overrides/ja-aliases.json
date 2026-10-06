@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "manual-2026-10-05-mega-labels",
+  "dataVersion": "manual-2026-10-06-calc-label-inputs",
   "source": {
     "kind": "manual-overlay",
     "note": "Additional Japanese aliases layered over generated options."
@@ -837,10 +837,266 @@
         "ジガルデ メガジガルデ"
       ],
       "notes": "Legacy duplicated Mega label is accepted as input only; display uses the corrected label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallybug",
+      "aliasesJa": [
+        "シルヴァディ むしタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallydark",
+      "aliasesJa": [
+        "シルヴァディ あくタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallydragon",
+      "aliasesJa": [
+        "シルヴァディ ドラゴンタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyelectric",
+      "aliasesJa": [
+        "シルヴァディ でんきタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyfairy",
+      "aliasesJa": [
+        "シルヴァディ フェアリータイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyfighting",
+      "aliasesJa": [
+        "シルヴァディ かくとうタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyfire",
+      "aliasesJa": [
+        "シルヴァディ ほのおタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyflying",
+      "aliasesJa": [
+        "シルヴァディ ひこうタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyghost",
+      "aliasesJa": [
+        "シルヴァディ ゴーストタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallygrass",
+      "aliasesJa": [
+        "シルヴァディ くさタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyground",
+      "aliasesJa": [
+        "シルヴァディ じめんタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyice",
+      "aliasesJa": [
+        "シルヴァディ こおりタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallypoison",
+      "aliasesJa": [
+        "シルヴァディ どくタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallypsychic",
+      "aliasesJa": [
+        "シルヴァディ エスパータイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyrock",
+      "aliasesJa": [
+        "シルヴァディ いわタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallysteel",
+      "aliasesJa": [
+        "シルヴァディ はがねタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallywater",
+      "aliasesJa": [
+        "シルヴァディ みずタイプ"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "emboarite",
+      "aliasesJa": [
+        "エンブオーナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "dragoninite",
+      "aliasesJa": [
+        "カイリューナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "malamarite",
+      "aliasesJa": [
+        "カラマネロナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "drampanite",
+      "aliasesJa": [
+        "ジジーロンナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "eelektrossite",
+      "aliasesJa": [
+        "シビルドンナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "scovillainite",
+      "aliasesJa": [
+        "スコヴィランナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "starminite",
+      "aliasesJa": [
+        "スターミーナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "scraftinite",
+      "aliasesJa": [
+        "ズルズキンナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "dragalgite",
+      "aliasesJa": [
+        "ドラミドロナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "heatranite",
+      "aliasesJa": [
+        "ヒードランナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "clefablite",
+      "aliasesJa": [
+        "ピクシーナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "chesnaughtite",
+      "aliasesJa": [
+        "ブリガロンナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "scolipite",
+      "aliasesJa": [
+        "ペンドラーナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "magearnite",
+      "aliasesJa": [
+        "マギアナナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
+    },
+    {
+      "kind": "item",
+      "id": "delphoxite",
+      "aliasesJa": [
+        "マフォクシーナイト"
+      ],
+      "notes": "Legacy calc display input compatibility only; always return the corrected Showdown-reviewed label."
     }
   ],
   "summary": {
-    "entryCount": 101,
+    "entryCount": 133,
     "appliedAtRuntime": true
   }
 }

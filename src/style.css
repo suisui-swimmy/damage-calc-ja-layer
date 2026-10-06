@@ -365,6 +365,12 @@ p {
   color: #225d78;
 }
 
+.source-chip.out-of-scope {
+  border-color: #c7ceca;
+  background: #f0f2f1;
+  color: #48564e;
+}
+
 .source-chip.needs-confirmation {
   border-color: #dfc0ea;
   background: #f7edfb;

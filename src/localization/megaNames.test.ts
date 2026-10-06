@@ -10,12 +10,17 @@ import { calculateDamage } from "../calc/smogonAdapter";
 import { formatDamageResultJa } from "../formatters/jaResultFormatter";
 
 const mega = options.entries.filter((entry) => /-Mega(?:-|$)/.test(entry.showdownName));
-const overrides = labelOverrides.entries.filter((entry) => entry.kind === "pokemon" && entry.confirmsShowdownName === false);
+const overrides = labelOverrides.entries.filter((entry) => entry.kind === "pokemon" && mega.some((option) => option.id === entry.id));
 const externalFormNames: Record<string, string> = {
   "Magearna-Original-Mega": "メガマギアナ ５００ねんまえのいろ",
   "Tatsugiri-Curly-Mega": "メガシャリタツ そったすがた",
   "Tatsugiri-Droopy-Mega": "メガシャリタツ たれたすがた",
   "Tatsugiri-Stretchy-Mega": "メガシャリタツ のびたすがた",
+};
+const calcFormNames: Record<string, string> = {
+  ...externalFormNames,
+  "Meowstic-M-Mega": "メガニャオニクス (オス)",
+  "Meowstic-F-Mega": "メガニャオニクス (メス)",
 };
 
 describe("non-repeating Mega display names", () => {
@@ -29,15 +34,15 @@ describe("non-repeating Mega display names", () => {
 
   it.each(mega)("corrects $showdownName across display and resolver paths", (raw) => {
     const option = raw as LocalizedOptionEntry;
-    const expected = option.label.split(/\s+/).slice(1).join(" ").replace(/[XYZ]$/, (letter) => String.fromCharCode(letter.charCodeAt(0) + 0xfee0));
+    const expected = calcFormNames[option.showdownName] ?? option.label.split(/\s+/).slice(1).join(" ").replace(/[XYZ]$/, (letter) => String.fromCharCode(letter.charCodeAt(0) + 0xfee0));
     expect(expected.startsWith("メガ")).toBe(true);
     expect(getOptionDisplayNameJa("pokemon", option)).toBe(expected);
     expect(getDisplayNameJa("pokemon", option.showdownName)).toBe(expected);
     const corrected = applyManualLabelOverride("pokemon", option);
     expect(corrected.label).toBe(expected);
     expect(corrected.searchText.split(/\s+/)).not.toContain(option.label.split(/\s+/)[0]);
-    const { label: _oldLabel, searchText: _oldSearch, ...before } = option;
-    const { label: _newLabel, searchText: _newSearch, ...after } = corrected;
+    const { label: _oldLabel, searchText: _oldSearch, sourceStatus: _oldStatus, noteJa: _oldNote, ...before } = option;
+    const { label: _newLabel, searchText: _newSearch, sourceStatus: _newStatus, noteJa: _newNote, ...after } = corrected;
     expect(after).toEqual(before);
     for (const input of [option.showdownName, option.id]) {
       expect(resolveEntity("pokemon", input)).toMatchObject({ status: "exact", canonicalName: option.showdownName,
@@ -49,7 +54,7 @@ describe("non-repeating Mega display names", () => {
     }
     const external = resolveShowdownDisplayNameJa("pokemon", option.showdownName);
     expect(external).toMatchObject({ status: "localized", showdownId: option.id,
-      displayNameJa: externalFormNames[option.showdownName] ?? expected });
+      displayNameJa: externalFormNames[option.showdownName] ?? (option.showdownName.startsWith("Meowstic-") ? "メガニャオニクス" : expected) });
   });
 
   it.each([
@@ -70,6 +75,6 @@ describe("non-repeating Mega display names", () => {
   it("does not choose among forms that already share a Japanese display name", () => {
     expect(resolveEntity("pokemon", "メガニャオニクス").status).toBe("ambiguous");
     expect(resolveEntity("pokemon", "メガシャリタツ").status).toBe("ambiguous");
-    expect(resolveEntity("pokemon", "メガマギアナ").status).toBe("ambiguous");
+    expect(resolveEntity("pokemon", "メガマギアナ")).toMatchObject({ status: "exact", canonicalName: "Magearna-Mega" });
   });
 });

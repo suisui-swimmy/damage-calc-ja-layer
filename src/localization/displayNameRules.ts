@@ -26,6 +26,8 @@ export const applyManualLabelOverride = (
     // Intentional legacy inputs belong in ja-aliases.json.
     searchText: `${label} ${label.replace(/\s+/g, "")} ${option.showdownName} ${option.id}`,
     sourceStatus: override.sourceStatus ?? option.sourceStatus,
+    ...(override.localizationCategory ? { localizationCategory: override.localizationCategory } : {}),
+    ...(override.noteJa ? { noteJa: override.noteJa } : {}),
   };
 };
 

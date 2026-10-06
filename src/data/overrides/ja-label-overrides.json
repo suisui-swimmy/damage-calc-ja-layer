@@ -1,13 +1,16 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "manual-2026-10-05-mega-labels",
+  "dataVersion": "manual-2026-10-06-calc-showdown-labels",
   "source": {
     "kind": "manual-overlay",
     "note": "Display label fixes layered over generated options; no calc data or artwork changes.",
     "taurosNames": "https://zukan.pokemon.co.jp/detail/0128",
     "vivillonPatternNames": "https://www.pokemon.co.jp/goods/2025/05/250530_go01.html",
     "calcDefinition": "@smogon/calc@0.11.0 src/data/species.ts; Generations.get(9).species",
-    "megaNames": "Existing pokemon-options snapshot: retain the complete Mega name, remove only the separate repeated species prefix."
+    "megaNames": "Existing pokemon-options snapshot: retain the complete Mega name, remove only the separate repeated species prefix.",
+    "showdownDisplay": "src/data/generated/showdown-display.gen.json; Japanese labels and translation-scope classifications for existing calc entries only.",
+    "showdownCommit": "3661ce40bf9001d185ce078b8920e12304204609",
+    "calcSelectionLabels": "Keep Showdown variantLabelJa as a parenthetical selection qualifier; calc Vivillon remains generic, Aegislash-Both and (No Move) keep their calc-only contracts."
   },
   "generatedBy": "manual",
   "kind": "ja-label-overrides",
@@ -16,19 +19,25 @@
       "kind": "pokemon",
       "id": "taurospaldeaaqua",
       "displayNameJa": "ケンタロス パルデアのすがた・ウォーターしゅ",
-      "notes": "Official Japanese breed name; calc Aqua has Fighting/Water types."
+      "notes": "Official Japanese breed name; calc Aqua has Fighting/Water types. Japanese display/scope confirmed by the pinned Showdown display API (taurospaldeaaqua); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false
     },
     {
       "kind": "pokemon",
       "id": "taurospaldeablaze",
       "displayNameJa": "ケンタロス パルデアのすがた・ブレイズしゅ",
-      "notes": "Official Japanese breed name; calc Blaze has Fighting/Fire types."
+      "notes": "Official Japanese breed name; calc Blaze has Fighting/Fire types. Japanese display/scope confirmed by the pinned Showdown display API (taurospaldeablaze); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false
     },
     {
       "kind": "pokemon",
       "id": "taurospaldeacombat",
       "displayNameJa": "ケンタロス パルデアのすがた・コンバットしゅ",
-      "notes": "Official Japanese breed name; calc Combat has Fighting type."
+      "notes": "Official Japanese breed name; calc Combat has Fighting type. Japanese display/scope confirmed by the pinned Showdown display API (taurospaldeacombat); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false
     },
     {
       "kind": "pokemon",
@@ -40,13 +49,17 @@
       "kind": "pokemon",
       "id": "vivillonfancy",
       "displayNameJa": "ビビヨン ファンシーなもよう",
-      "notes": "Explicit calc form; shares types, stats, weight and default ability with Vivillon."
+      "notes": "Explicit calc form; shares types, stats, weight and default ability with Vivillon. Japanese display/scope confirmed by the pinned Showdown display API (vivillonfancy); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false
     },
     {
       "kind": "pokemon",
       "id": "vivillonpokeball",
       "displayNameJa": "ビビヨン ボールのもよう",
-      "notes": "Explicit calc form; shares types, stats, weight and default ability with Vivillon."
+      "notes": "Explicit calc form; shares types, stats, weight and default ability with Vivillon. Japanese display/scope confirmed by the pinned Showdown display API (vivillonpokeball); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false
     },
     {
       "kind": "pokemon",
@@ -457,9 +470,10 @@
     {
       "kind": "pokemon",
       "id": "magearnaoriginalmega",
-      "displayNameJa": "メガマギアナ",
+      "displayNameJa": "メガマギアナ ５００ねんまえのいろ",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status. Japanese display/scope confirmed by the pinned Showdown display API (magearnaoriginalmega); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported"
     },
     {
       "kind": "pokemon",
@@ -499,16 +513,20 @@
     {
       "kind": "pokemon",
       "id": "meowsticfmega",
-      "displayNameJa": "メガニャオニクス",
+      "displayNameJa": "メガニャオニクス (メス)",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status. Japanese display/scope confirmed by the pinned Showdown display API (meowsticfmega); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported",
+      "noteJa": "日本語の名称は共通。補足はShowdownの性別別IDを識別するためのUI表記。"
     },
     {
       "kind": "pokemon",
       "id": "meowsticmmega",
-      "displayNameJa": "メガニャオニクス",
+      "displayNameJa": "メガニャオニクス (オス)",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status. Japanese display/scope confirmed by the pinned Showdown display API (meowsticmmega); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported",
+      "noteJa": "日本語の名称は共通。補足はShowdownの性別別IDを識別するためのUI表記。"
     },
     {
       "kind": "pokemon",
@@ -674,23 +692,26 @@
     {
       "kind": "pokemon",
       "id": "tatsugiricurlymega",
-      "displayNameJa": "メガシャリタツ",
+      "displayNameJa": "メガシャリタツ そったすがた",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status. Japanese display/scope confirmed by the pinned Showdown display API (tatsugiricurlymega); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported"
     },
     {
       "kind": "pokemon",
       "id": "tatsugiridroopymega",
-      "displayNameJa": "メガシャリタツ",
+      "displayNameJa": "メガシャリタツ たれたすがた",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status. Japanese display/scope confirmed by the pinned Showdown display API (tatsugiridroopymega); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported"
     },
     {
       "kind": "pokemon",
       "id": "tatsugiristretchymega",
-      "displayNameJa": "メガシャリタツ",
+      "displayNameJa": "メガシャリタツ のびたすがた",
       "confirmsShowdownName": false,
-      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status."
+      "notes": "Remove the duplicated base name only; preserve X/Y/Z spelling and existing form-review status. Japanese display/scope confirmed by the pinned Showdown display API (tatsugiristretchymega); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported"
     },
     {
       "kind": "pokemon",
@@ -732,39 +753,1630 @@
       "id": "absolitez",
       "displayNameJa": "アブソルナイトＺ",
       "confirmsShowdownName": false,
-      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate."
+      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate. Japanese display/scope confirmed by the pinned Showdown display API (absolitez); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported"
     },
     {
       "kind": "item",
       "id": "garchompitez",
       "displayNameJa": "ガブリアスナイトＺ",
       "confirmsShowdownName": false,
-      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate."
+      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate. Japanese display/scope confirmed by the pinned Showdown display API (garchompitez); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported"
     },
     {
       "kind": "item",
       "id": "raichunitex",
       "displayNameJa": "ライチュウナイトＸ",
       "confirmsShowdownName": false,
-      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate."
+      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate. Japanese display/scope confirmed by the pinned Showdown display API (raichunitex); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported"
     },
     {
       "kind": "item",
       "id": "raichunitey",
       "displayNameJa": "ライチュウナイトＹ",
       "confirmsShowdownName": false,
-      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate."
+      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate. Japanese display/scope confirmed by the pinned Showdown display API (raichunitey); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported"
     },
     {
       "kind": "item",
       "id": "lucarionitez",
       "displayNameJa": "ルカリオナイトＺ",
       "confirmsShowdownName": false,
-      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate."
+      "notes": "Japanese display suffix only: use fullwidth Ｘ/Ｙ/Ｚ. Preserve sourceStatus and canonical identity; Showdown translation approval remains separate. Japanese display/scope confirmed by the pinned Showdown display API (lucarionitez); calculation identity and availability are unchanged.",
+      "sourceStatus": "supported"
+    },
+    {
+      "kind": "pokemon",
+      "id": "araquanidtotem",
+      "displayNameJa": "オニシズクモ（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (araquanidtotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusbug",
+      "displayNameJa": "アルセウス むしタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusbug); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusdark",
+      "displayNameJa": "アルセウス あくタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusdark); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusdragon",
+      "displayNameJa": "アルセウス ドラゴンタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusdragon); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceuselectric",
+      "displayNameJa": "アルセウス でんきタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceuselectric); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusfairy",
+      "displayNameJa": "アルセウス フェアリータイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusfairy); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusfighting",
+      "displayNameJa": "アルセウス かくとうタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusfighting); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusfire",
+      "displayNameJa": "アルセウス ほのおタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusfire); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusflying",
+      "displayNameJa": "アルセウス ひこうタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusflying); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusghost",
+      "displayNameJa": "アルセウス ゴーストタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusghost); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusgrass",
+      "displayNameJa": "アルセウス くさタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusgrass); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusground",
+      "displayNameJa": "アルセウス じめんタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusground); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusice",
+      "displayNameJa": "アルセウス こおりタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusice); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceuspoison",
+      "displayNameJa": "アルセウス どくタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceuspoison); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceuspsychic",
+      "displayNameJa": "アルセウス エスパータイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceuspsychic); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceusrock",
+      "displayNameJa": "アルセウス いわタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceusrock); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceussteel",
+      "displayNameJa": "アルセウス はがねタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceussteel); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "arceuswater",
+      "displayNameJa": "アルセウス みずタイプ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (arceuswater); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "basculegion",
+      "displayNameJa": "イダイトウ オスのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (basculegion); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "basculegionf",
+      "displayNameJa": "イダイトウ メスのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (basculegionf); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "basculin",
+      "displayNameJa": "バスラオ あかすじのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (basculin); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "cherrimsunshine",
+      "displayNameJa": "チェリム ポジフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (cherrimsunshine); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "darmanitan",
+      "displayNameJa": "ヒヒダルマ ノーマルモード",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (darmanitan); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "darmanitangalar",
+      "displayNameJa": "ヒヒダルマ ガラルのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (darmanitangalar); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "darmanitangalarzen",
+      "displayNameJa": "ヒヒダルマ ガラルのすがた・ダルマモード",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (darmanitangalarzen); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "deoxys",
+      "displayNameJa": "デオキシス ノーマルフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (deoxys); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "dudunsparce",
+      "displayNameJa": "ノココッチ ふたふしフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (dudunsparce); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "eiscue",
+      "displayNameJa": "コオリッポ アイスフェイス",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (eiscue); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "enamorus",
+      "displayNameJa": "ラブトロス けしんフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (enamorus); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "frillish",
+      "displayNameJa": "プルリル",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (frillish); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "genesectburn",
+      "displayNameJa": "ゲノセクト ブレイズカセット",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (genesectburn); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "genesectchill",
+      "displayNameJa": "ゲノセクト フリーズカセット",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (genesectchill); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "genesectdouse",
+      "displayNameJa": "ゲノセクト アクアカセット",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (genesectdouse); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "genesectshock",
+      "displayNameJa": "ゲノセクト イナズマカセット",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (genesectshock); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "giratina",
+      "displayNameJa": "ギラティナ アナザーフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (giratina); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "gourgeist",
+      "displayNameJa": "パンプジン ふつうのサイズ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (gourgeist); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "greninjabond",
+      "displayNameJa": "ゲッコウガ (きずなへんげ)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "固定Showdown項目の識別用補足。現在の特性やサトシゲッコウガへの変化は判定しない。",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (greninjabond); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "gumshoostotem",
+      "displayNameJa": "デカグース（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (gumshoostotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "indeedee",
+      "displayNameJa": "イエッサン オスのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (indeedee); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "indeedeef",
+      "displayNameJa": "イエッサン メスのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (indeedeef); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "jellicent",
+      "displayNameJa": "ブルンゲル",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (jellicent); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "keldeo",
+      "displayNameJa": "ケルディオ いつものすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (keldeo); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "kommoototem",
+      "displayNameJa": "ジャラランガ（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (kommoototem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "landorus",
+      "displayNameJa": "ランドロス けしんフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (landorus); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "lurantistotem",
+      "displayNameJa": "ラランテス（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (lurantistotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "lycanroc",
+      "displayNameJa": "ルガルガン まひるのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (lycanroc); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "marowakalolatotem",
+      "displayNameJa": "ガラガラ アローラのすがた（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (marowakalolatotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "maushold",
+      "displayNameJa": "イッカネズミ ３びきかぞく",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (maushold); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mausholdfour",
+      "displayNameJa": "イッカネズミ ４ひきかぞく",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (mausholdfour); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "meloetta",
+      "displayNameJa": "メロエッタ ボイスフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (meloetta); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "meowstic",
+      "displayNameJa": "ニャオニクス オスのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (meowstic); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "meowsticf",
+      "displayNameJa": "ニャオニクス メスのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (meowsticf); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mimikyu",
+      "displayNameJa": "ミミッキュ ばけたすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (mimikyu); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mimikyubusted",
+      "displayNameJa": "ミミッキュ ばれたすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (mimikyubusted); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mimikyubustedtotem",
+      "displayNameJa": "ミミッキュ ばれたすがた（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (mimikyubustedtotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "mimikyutotem",
+      "displayNameJa": "ミミッキュ ばけたすがた（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (mimikyutotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "minior",
+      "displayNameJa": "メテノ あかいろのコア",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (minior); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "miniormeteor",
+      "displayNameJa": "メテノ りゅうせいのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (miniormeteor); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "morpeko",
+      "displayNameJa": "モルペコ まんぷくもよう",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (morpeko); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "necrozmadawnwings",
+      "displayNameJa": "ネクロズマ あかつきのつばさ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (necrozmadawnwings); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "necrozmaduskmane",
+      "displayNameJa": "ネクロズマ たそがれのたてがみ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (necrozmaduskmane); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "ogerponcornerstone",
+      "displayNameJa": "オーガポン いしずえのめん",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (ogerponcornerstone); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "ogerponcornerstonetera",
+      "displayNameJa": "オーガポン いしずえのめん (テラスタル)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (ogerponcornerstonetera); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "ogerponhearthflame",
+      "displayNameJa": "オーガポン かまどのめん",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (ogerponhearthflame); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "ogerponhearthflametera",
+      "displayNameJa": "オーガポン かまどのめん (テラスタル)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (ogerponhearthflametera); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "ogerpontealtera",
+      "displayNameJa": "オーガポン みどりのめん (テラスタル)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (ogerpontealtera); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "ogerponwellspring",
+      "displayNameJa": "オーガポン いどのめん",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (ogerponwellspring); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "ogerponwellspringtera",
+      "displayNameJa": "オーガポン いどのめん (テラスタル)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "渡されたShowdown IDの識別用補足。現在の状態や能力値は判定しない。",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (ogerponwellspringtera); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "oinkologne",
+      "displayNameJa": "パフュートン オスのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (oinkologne); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "oinkolognef",
+      "displayNameJa": "パフュートン メスのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (oinkolognef); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "oricorio",
+      "displayNameJa": "オドリドリ めらめらスタイル",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (oricorio); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "palafin",
+      "displayNameJa": "イルカマン ナイーブフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (palafin); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pikachualola",
+      "displayNameJa": "ピカチュウ アローラキャップ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pikachualola); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pikachuhoenn",
+      "displayNameJa": "ピカチュウ ホウエンキャップ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pikachuhoenn); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pikachukalos",
+      "displayNameJa": "ピカチュウ カロスキャップ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pikachukalos); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pikachuoriginal",
+      "displayNameJa": "ピカチュウ オリジナルキャップ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pikachuoriginal); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pikachupartner",
+      "displayNameJa": "ピカチュウ キミにきめたキャップ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pikachupartner); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pikachusinnoh",
+      "displayNameJa": "ピカチュウ シンオウキャップ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pikachusinnoh); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pikachuunova",
+      "displayNameJa": "ピカチュウ イッシュキャップ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pikachuunova); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pikachuworld",
+      "displayNameJa": "ピカチュウ ワールドキャップ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pikachuworld); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "poltchageistartisan",
+      "displayNameJa": "チャデス タカイモノのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (poltchageistartisan); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "polteageistantique",
+      "displayNameJa": "ポットデス しんさくフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (polteageistantique); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pumpkaboo",
+      "displayNameJa": "バケッチャ ふつうのサイズ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pumpkaboo); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "pyroar",
+      "displayNameJa": "カエンジシ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pyroar); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "raticatealolatotem",
+      "displayNameJa": "ラッタ アローラのすがた（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "既知の地域・状態名に、ぬしを識別するUI用の括弧表記を付ける。",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (raticatealolatotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "ribombeetotem",
+      "displayNameJa": "アブリボン（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (ribombeetotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "rockruffdusk",
+      "displayNameJa": "イワンコ (マイペース)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "固定Showdown項目の識別用補足。現在の特性や進化の可否は判定しない。",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (rockruffdusk); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "salazzletotem",
+      "displayNameJa": "エンニュート（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (salazzletotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "shaymin",
+      "displayNameJa": "シェイミ ランドフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (shaymin); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallybug",
+      "displayNameJa": "シルヴァディ タイプ：バグ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallybug); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallydark",
+      "displayNameJa": "シルヴァディ タイプ：ダーク",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallydark); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallydragon",
+      "displayNameJa": "シルヴァディ タイプ：ドラゴン",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallydragon); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyelectric",
+      "displayNameJa": "シルヴァディ タイプ：エレクトロ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallyelectric); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyfairy",
+      "displayNameJa": "シルヴァディ タイプ：フェアリー",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallyfairy); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyfighting",
+      "displayNameJa": "シルヴァディ タイプ：ファイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallyfighting); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyfire",
+      "displayNameJa": "シルヴァディ タイプ：ファイヤー",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallyfire); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyflying",
+      "displayNameJa": "シルヴァディ タイプ：フライング",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallyflying); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyghost",
+      "displayNameJa": "シルヴァディ タイプ：ゴースト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallyghost); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallygrass",
+      "displayNameJa": "シルヴァディ タイプ：グラス",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallygrass); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyground",
+      "displayNameJa": "シルヴァディ タイプ：グラウンド",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallyground); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyice",
+      "displayNameJa": "シルヴァディ タイプ：アイス",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallyice); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallypoison",
+      "displayNameJa": "シルヴァディ タイプ：ポイズン",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallypoison); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallypsychic",
+      "displayNameJa": "シルヴァディ タイプ：サイキック",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallypsychic); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallyrock",
+      "displayNameJa": "シルヴァディ タイプ：ロック",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallyrock); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallysteel",
+      "displayNameJa": "シルヴァディ タイプ：スチール",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallysteel); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "silvallywater",
+      "displayNameJa": "シルヴァディ タイプ：ウオーター",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (silvallywater); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "sinistchamasterpiece",
+      "displayNameJa": "ヤバソチャ ケッサクのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (sinistchamasterpiece); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "sinisteaantique",
+      "displayNameJa": "ヤバチャ しんさくフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (sinisteaantique); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "squawkabilly",
+      "displayNameJa": "イキリンコ グリーンフェザー",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (squawkabilly); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "squawkabillyblue",
+      "displayNameJa": "イキリンコ ブルーフェザー",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (squawkabillyblue); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "squawkabillywhite",
+      "displayNameJa": "イキリンコ ホワイトフェザー",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (squawkabillywhite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "squawkabillyyellow",
+      "displayNameJa": "イキリンコ イエローフェザー",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (squawkabillyyellow); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "tatsugiri",
+      "displayNameJa": "シャリタツ そったすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (tatsugiri); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "thundurus",
+      "displayNameJa": "ボルトロス けしんフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (thundurus); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "togedemarutotem",
+      "displayNameJa": "トゲデマル（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (togedemarutotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "tornadus",
+      "displayNameJa": "トルネロス けしんフォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (tornadus); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "toxtricity",
+      "displayNameJa": "ストリンダー ハイなすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (toxtricity); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "toxtricitygmax",
+      "displayNameJa": "ストリンダー ハイなすがた・キョダイマックスのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (toxtricitygmax); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "urshifu",
+      "displayNameJa": "ウーラオス いちげきのかた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (urshifu); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "urshifugmax",
+      "displayNameJa": "ウーラオス いちげきのかた・キョダイマックスのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (urshifugmax); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "vikavolttotem",
+      "displayNameJa": "クワガノン（ぬし）",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "noteJa": "ぬしポケモンを識別するための補助表記",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (vikavolttotem); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "wishiwashi",
+      "displayNameJa": "ヨワシ たんどくのすがた",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (wishiwashi); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "wormadam",
+      "displayNameJa": "ミノマダム くさきのミノ",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (wormadam); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "pokemon",
+      "id": "zygarde",
+      "displayNameJa": "ジガルデ ５０％フォルム",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (zygarde); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "paleowave",
+      "displayNameJa": "Paleo Wave",
+      "sourceStatus": "out-of-scope",
+      "confirmsShowdownName": false,
+      "localizationCategory": "cap",
+      "noteJa": "Smogon CAPの創作技",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (paleowave); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "polarflare",
+      "displayNameJa": "Polar Flare",
+      "sourceStatus": "out-of-scope",
+      "confirmsShowdownName": false,
+      "localizationCategory": "cap",
+      "noteJa": "Smogon CAPの創作技",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (polarflare); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "shadowstrike",
+      "displayNameJa": "Shadow Strike",
+      "sourceStatus": "out-of-scope",
+      "confirmsShowdownName": false,
+      "localizationCategory": "cap",
+      "noteJa": "Smogon CAPの創作技",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (shadowstrike); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerdark",
+      "displayNameJa": "めざめるパワー(あく)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerdark); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerrock",
+      "displayNameJa": "めざめるパワー(いわ)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerrock); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerpsychic",
+      "displayNameJa": "めざめるパワー(エスパー)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerpsychic); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerfighting",
+      "displayNameJa": "めざめるパワー(かくとう)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerfighting); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowergrass",
+      "displayNameJa": "めざめるパワー(くさ)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowergrass); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerghost",
+      "displayNameJa": "めざめるパワー(ゴースト)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerghost); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerice",
+      "displayNameJa": "めざめるパワー(こおり)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerice); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerground",
+      "displayNameJa": "めざめるパワー(じめん)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerground); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerelectric",
+      "displayNameJa": "めざめるパワー(でんき)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerelectric); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerpoison",
+      "displayNameJa": "めざめるパワー(どく)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerpoison); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerdragon",
+      "displayNameJa": "めざめるパワー(ドラゴン)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerdragon); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowersteel",
+      "displayNameJa": "めざめるパワー(はがね)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowersteel); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerflying",
+      "displayNameJa": "めざめるパワー(ひこう)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerflying); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerfire",
+      "displayNameJa": "めざめるパワー(ほのお)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerfire); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerwater",
+      "displayNameJa": "めざめるパワー(みず)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerwater); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "move",
+      "id": "hiddenpowerbug",
+      "displayNameJa": "めざめるパワー(むし)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hiddenpowerbug); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "crucibellite",
+      "displayNameJa": "Crucibellite",
+      "sourceStatus": "out-of-scope",
+      "confirmsShowdownName": false,
+      "localizationCategory": "cap",
+      "noteJa": "Smogon CAPの創作持ち物",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (crucibellite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "vilevial",
+      "displayNameJa": "Vile Vial",
+      "sourceStatus": "out-of-scope",
+      "confirmsShowdownName": false,
+      "localizationCategory": "cap",
+      "noteJa": "Smogon CAPの創作持ち物",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (vilevial); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "victreebelite",
+      "displayNameJa": "ウツボットナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (victreebelite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "skarmorite",
+      "displayNameJa": "エアームドナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (skarmorite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "emboarite",
+      "displayNameJa": "エンブオナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (emboarite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "feraligite",
+      "displayNameJa": "オーダイルナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (feraligite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "dragoninite",
+      "displayNameJa": "カイリュナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (dragoninite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "pyroarite",
+      "displayNameJa": "カエンジシナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (pyroarite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "barbaracite",
+      "displayNameJa": "ガメノデスナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (barbaracite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "malamarite",
+      "displayNameJa": "カラマネナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (malamarite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "glimmoranite",
+      "displayNameJa": "キラフロルナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (glimmoranite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "golisopite",
+      "displayNameJa": "グソクムシャナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (golisopite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "crabominite",
+      "displayNameJa": "ケケンカニナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (crabominite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "greninjite",
+      "displayNameJa": "ゲッコウガナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (greninjite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "golurkite",
+      "displayNameJa": "ゴルーグナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (golurkite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "zygardite",
+      "displayNameJa": "ジガルデナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (zygardite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "drampanite",
+      "displayNameJa": "ジジーロナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (drampanite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "eelektrossite",
+      "displayNameJa": "シビルドナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (eelektrossite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "tatsugirinite",
+      "displayNameJa": "シャリタツナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (tatsugirinite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "chandelurite",
+      "displayNameJa": "シャンデラナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (chandelurite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "scovillainite",
+      "displayNameJa": "スコヴィラナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (scovillainite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "starminite",
+      "displayNameJa": "スターミナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (starminite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "scraftinite",
+      "displayNameJa": "ズルズキナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (scraftinite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "baxcalibrite",
+      "displayNameJa": "セグレイブナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (baxcalibrite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "zeraorite",
+      "displayNameJa": "ゼラオラナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (zeraorite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "darkranite",
+      "displayNameJa": "ダークライナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (darkranite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "falinksite",
+      "displayNameJa": "タイレーツナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (falinksite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "chimechite",
+      "displayNameJa": "チリーンナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (chimechite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "dragalgite",
+      "displayNameJa": "ドラミドナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (dragalgite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "excadrite",
+      "displayNameJa": "ドリュウズナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (excadrite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "meowsticite",
+      "displayNameJa": "ニャオニクスナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (meowsticite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "heatranite",
+      "displayNameJa": "ヒードラナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (heatranite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "clefablite",
+      "displayNameJa": "ピクシナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (clefablite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "floettite",
+      "displayNameJa": "フラエッテナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (floettite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "chesnaughtite",
+      "displayNameJa": "ブリガロナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (chesnaughtite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "scolipite",
+      "displayNameJa": "ペンドラナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (scolipite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "magearnite",
+      "displayNameJa": "マギアナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (magearnite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "delphoxite",
+      "displayNameJa": "マフォクシナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (delphoxite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "staraptite",
+      "displayNameJa": "ムクホークナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (staraptite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "meganiumite",
+      "displayNameJa": "メガニウムナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (meganiumite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "froslassite",
+      "displayNameJa": "ユキメノコナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (froslassite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "item",
+      "id": "hawluchanite",
+      "displayNameJa": "ルチャブルナイト",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (hawluchanite); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "ability",
+      "id": "mountaineer",
+      "displayNameJa": "Mountaineer",
+      "sourceStatus": "out-of-scope",
+      "confirmsShowdownName": false,
+      "localizationCategory": "cap",
+      "noteJa": "Smogon CAPの創作特性",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (mountaineer); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "ability",
+      "id": "persistent",
+      "displayNameJa": "Persistent",
+      "sourceStatus": "out-of-scope",
+      "confirmsShowdownName": false,
+      "localizationCategory": "cap",
+      "noteJa": "Smogon CAPの創作特性",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (persistent); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "ability",
+      "id": "rebound",
+      "displayNameJa": "Rebound",
+      "sourceStatus": "out-of-scope",
+      "confirmsShowdownName": false,
+      "localizationCategory": "cap",
+      "noteJa": "Smogon CAPの創作特性",
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (rebound); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "ability",
+      "id": "embodyaspectcornerstone",
+      "displayNameJa": "おもかげやどし (いしずえのめん)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (embodyaspectcornerstone); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "ability",
+      "id": "embodyaspectwellspring",
+      "displayNameJa": "おもかげやどし (いどのめん)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (embodyaspectwellspring); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "ability",
+      "id": "embodyaspecthearthflame",
+      "displayNameJa": "おもかげやどし (かまどのめん)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (embodyaspecthearthflame); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "ability",
+      "id": "embodyaspectteal",
+      "displayNameJa": "おもかげやどし (みどりのめん)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (embodyaspectteal); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "ability",
+      "id": "asoneglastrier",
+      "displayNameJa": "じんばいったい (ブリザポス)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (asoneglastrier); calculation identity and availability are unchanged."
+    },
+    {
+      "kind": "ability",
+      "id": "asonespectrier",
+      "displayNameJa": "じんばいったい (レイスポス)",
+      "sourceStatus": "supported",
+      "confirmsShowdownName": false,
+      "notes": "Japanese display/scope confirmed by the pinned Showdown display API (asonespectrier); calculation identity and availability are unchanged."
     }
   ],
   "summary": {
-    "entryCount": 108,
+    "entryCount": 302,
     "appliedAtRuntime": true
   }
 }

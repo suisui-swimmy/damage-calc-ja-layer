@@ -29,7 +29,7 @@ describe("calc form Japanese names", () => {
     const { label: newLabel, searchText: newSearch, sourceStatus: newStatus, ...correctedData } =
       applyManualLabelOverride("pokemon", option);
     expect(correctedData).toEqual(originalData);
-    expect(newStatus).toBe(oldStatus);
+    expect(newStatus).toBe(canonicalName === "Vivillon" ? oldStatus : "supported");
     expect(newLabel).toBe(label);
     expect(newSearch).toContain(canonicalName);
     expect(oldLabel).toBeTruthy();

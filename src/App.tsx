@@ -21,10 +21,10 @@ import {
   type ScenarioTerrain,
   type ScenarioWeather,
 } from "./domain/shareState";
-import { getOptionDisplayNameJa } from "./localization/displayNameRules";
+import { applyManualLabelOverride, getOptionDisplayNameJa } from "./localization/displayNameRules";
 import { resolveEntity, type ResolveCandidate, type ResolveResult } from "./localization/resolver";
 
-type LedgerStatus = "exact" | "alias" | "source" | "needs-confirmation";
+type LedgerStatus = "exact" | "alias" | "source" | "needs-confirmation" | "out-of-scope";
 type StatusFilter = LedgerStatus | "all" | "needs-confirmation";
 
 interface LedgerRow {
@@ -90,6 +90,9 @@ const pokemonArtworkByCanonicalName = new Map(
 );
 
 const sourceStatusToLedgerStatus = (sourceStatus?: string): LedgerStatus => {
+  if (sourceStatus === "out-of-scope") {
+    return "out-of-scope";
+  }
   if (sourceStatus === "needs-confirmation") {
     return "needs-confirmation";
   }
@@ -102,13 +105,13 @@ const sourceStatusToLedgerStatus = (sourceStatus?: string): LedgerStatus => {
 const optionRowsByKind = Object.fromEntries(
   Object.entries(optionPayloadByKind).map(([kind, payload]) => [
     kind,
-    payload.entries.map((entry): LedgerRow => ({
+    payload.entries.map((raw) => applyManualLabelOverride(kind as EntityKind, raw)).map((entry): LedgerRow => ({
       id: `${kind}:${entry.id}`,
       kind: kind as EntityKind,
       labelJa: getOptionDisplayNameJa(kind as EntityKind, entry),
       inputJa: getOptionDisplayNameJa(kind as EntityKind, entry),
       canonicalName: entry.showdownName,
-      source: payload.generatedBy,
+      source: entry.noteJa ?? payload.generatedBy,
       aliases: [entry.showdownName, entry.id],
       status: sourceStatusToLedgerStatus(entry.sourceStatus ?? entry.fallback?.nameSourceStatus),
       artwork: kind === "pokemon" ? entry.artwork : undefined,
@@ -132,9 +135,10 @@ const statusLabels: Record<LedgerStatus, string> = {
   alias: "alias",
   source: "source",
   "needs-confirmation": "needs-confirmation",
+  "out-of-scope": "翻訳対象外",
 };
 
-const statusFilters: StatusFilter[] = ["all", "exact", "alias", "source", "needs-confirmation"];
+const statusFilters: StatusFilter[] = ["all", "exact", "alias", "source", "needs-confirmation", "out-of-scope"];
 
 const getKoReferenceFallbackReason = (status: string): string => {
   switch (status) {
@@ -178,6 +182,9 @@ const firstMatchingRow = (kind: EntityKind, filter: StatusFilter) =>
   ledgerRows[0];
 
 const candidateStatus = (candidate: ResolveCandidate): LedgerStatus => {
+  if (candidate.sourceStatus === "out-of-scope") {
+    return "out-of-scope";
+  }
   if (candidate.sourceStatus === "needs-confirmation") {
     return "needs-confirmation";
   }
@@ -204,7 +211,7 @@ const rowFromCandidate = (
     labelJa: candidate.displayNameJa,
     inputJa: input,
     canonicalName: candidate.canonicalName,
-    source: candidate.reason,
+    source: candidate.noteJa ?? candidate.reason,
     aliases: [candidate.matchText, candidate.canonicalName, candidate.calcId],
     status: candidateStatus(candidate),
     artwork: option?.artwork,
@@ -631,7 +638,7 @@ export const App = () => {
                   onClick={() => selectStatusFilter(filter)}
                   type="button"
                 >
-                  {filter}
+                  {filter === "out-of-scope" ? statusLabels[filter] : filter}
                 </button>
               ))}
             </div>
@@ -672,7 +679,7 @@ export const App = () => {
                     {row.labelJa}
                   </strong>
                   <code>{row.canonicalName}</code>
-                  <span className={`source-chip ${row.status}`}>{statusLabels[row.status]}</span>
+                  <span className={`source-chip ${row.status}`} title={row.source}>{statusLabels[row.status]}</span>
                   <span className="alias-list">{row.aliases.join(" / ")}</span>
                 </button>
               ))
@@ -700,6 +707,7 @@ export const App = () => {
             <span>resolver</span>
             <strong>{selectedTrace?.status ?? "not-found"}</strong>
             <small>{selectedTrace?.candidates?.[0]?.reason ?? "candidate check"}</small>
+            {selectedTrace?.noteJa && <small>{selectedTrace.noteJa}</small>}
           </div>
           <div className="trace-arrow" aria-hidden="true" />
           <div className="trace-card">

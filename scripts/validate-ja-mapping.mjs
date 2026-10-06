@@ -1,6 +1,8 @@
 import { readFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import assert from "node:assert/strict";
+import ts from "typescript";
 
 const SCHEMA_VERSION = 1;
 
@@ -47,6 +49,7 @@ const sourceStatusValues = [
   "adapter-temporary",
   "needs-confirmation",
   "unsupported-temporary",
+  "out-of-scope",
 ];
 
 const errors = [];
@@ -397,6 +400,18 @@ const validateOverlay = async (target, catalogByKind) => {
     if (entry.confirmsShowdownName !== undefined && typeof entry.confirmsShowdownName !== "boolean") {
       addError(target.fileName, `override ${key} has invalid confirmsShowdownName`);
     }
+    if (entry.localizationCategory !== undefined && !["cap", "pokestar", "glitch"].includes(entry.localizationCategory)) {
+      addError(target.fileName, `override ${key} has invalid localizationCategory`);
+    }
+    if (entry.noteJa !== undefined && (typeof entry.noteJa !== "string" || !entry.noteJa.trim())) {
+      addError(target.fileName, `override ${key} has invalid noteJa`);
+    }
+    if (entry.sourceStatus === "out-of-scope" && (!entry.localizationCategory || !entry.noteJa)) {
+      addError(target.fileName, `override ${key} must retain a translation-scope category and noteJa`);
+    }
+    if (entry.localizationCategory && entry.sourceStatus !== "out-of-scope") {
+      addError(target.fileName, `override ${key} category requires out-of-scope`);
+    }
     if (seenKeys.has(key)) {
       addError(target.fileName, `duplicate override key ${key}`);
     }
@@ -423,6 +438,8 @@ const validateOverlay = async (target, catalogByKind) => {
 
 const summaries = [];
 const catalogByKind = new Map();
+const catalogPayloadByKind = new Map();
+const optionsByKind = new Map();
 
 for (const target of mappingTargets) {
   const optionsPayload = await readJson(resolve(generatedDir, target.optionFileName));
@@ -445,6 +462,8 @@ for (const target of mappingTargets) {
   );
 
   summaries.push(validateOptionEntries(target, optionsPayload, catalogPayload));
+  optionsByKind.set(target.kind, optionsPayload);
+  catalogPayloadByKind.set(target.kind, catalogPayload);
 }
 
 const overlaySummaries = [];
@@ -452,7 +471,7 @@ for (const target of overlayTargets) {
   overlaySummaries.push(await validateOverlay(target, catalogByKind));
 }
 
-console.log("ja mapping validation summary:");
+console.log("ja mapping imported snapshot validation summary:");
 for (const summary of summaries) {
   console.log(
     `- ${summary.kind}: options=${summary.options}, catalog=${summary.catalog}, matchedById=${summary.matchedById}, matchedByShowdownNameOnly=${summary.matchedByShowdownNameOnly}, missingFromCatalog=${summary.missingFromCatalog}, catalogMissingJaMapping=${summary.catalogMissingJaMapping}`,
@@ -473,6 +492,52 @@ for (const summary of overlaySummaries) {
     `- ${summary.fileName}: entries=${summary.entries}, missingCatalogRefs=${summary.missingCatalogRefs}, sourceStatus=${JSON.stringify(summary.sourceStatus)}`,
   );
   console.log(`  examples=${JSON.stringify(summary.examples)}`);
+}
+
+// Inspect the same corrected options as the UI and resolver, rather than treating
+// stale imported labels/statuses as the final localization result.
+if (errors.length === 0) {
+  const localImports = {
+    "../data/generated/type-options.gen.json": optionsByKind.get("type"),
+    "../data/overrides/ja-label-overrides.json": await readJson(resolve(overridesDir, "ja-label-overrides.json")),
+  };
+  const source = await readFile(resolve(projectRoot, "src/localization/displayNameRules.ts"), "utf8");
+  const compiled = ts.transpileModule(source, {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true },
+  });
+  const localModule = { exports: {} };
+  new Function("require", "module", "exports", compiled.outputText)(
+    (specifier) => {
+      assert(Object.hasOwn(localImports, specifier), `Review new display rules import: ${specifier}`);
+      return localImports[specifier];
+    }, localModule, localModule.exports,
+  );
+  const { applyManualLabelOverride, getOptionDisplayNameJa } = localModule.exports;
+  const scopeMapping = await readJson(resolve(generatedDir, "showdown-display.gen.json"));
+  const scopeByKey = new Map(scopeMapping.entries
+    .filter((entry) => entry.status === "out-of-scope")
+    .map((entry) => [`${entry.kind}:${entry.showdownId}`, entry]));
+  console.log("\neffective localization summary (display rules applied):");
+  for (const [kind, payload] of optionsByKind) {
+    const sourceStatus = createCounter();
+    const localizationCategory = {};
+    const labelCounts = new Map();
+    const catalogOnlyScope = {};
+    const optionIds = new Set(payload.entries.map((entry) => entry.id));
+    for (const entry of catalogPayloadByKind.get(kind).entries) {
+      if (optionIds.has(entry.id)) continue;
+      const scope = scopeByKey.get(`${kind}:${entry.id}`);
+      if (scope?.showdownName === entry.showdownName) increment(catalogOnlyScope, scope.category);
+    }
+    for (const raw of payload.entries) {
+      const option = applyManualLabelOverride(kind, raw);
+      increment(sourceStatus, statusOf(option));
+      if (option.localizationCategory) increment(localizationCategory, option.localizationCategory);
+      const label = normalizeSearchText(getOptionDisplayNameJa(kind, option));
+      labelCounts.set(label, (labelCounts.get(label) ?? 0) + 1);
+    }
+    console.log(`- ${kind}: sourceStatus=${JSON.stringify(sourceStatus)}, localizationCategory=${JSON.stringify(localizationCategory)}, catalogOnlyTranslationScope=${JSON.stringify(catalogOnlyScope)}, duplicateNormalizedLabels=${[...labelCounts.values()].filter((count) => count > 1).length}`);
+  }
 }
 
 if (warnings.length > 0) {

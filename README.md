@@ -196,6 +196,9 @@ damage-calc-ja-layer/
 | `not-found` | 候補がない |
 
 候補には英語名、ID、日本語名、出所の状態（`sourceStatus`）、一致理由が含まれます。
+`sourceStatus: "supported"` は日本語表示が確認済みであることを表し、計算対応を保証しません。
+翻訳対象外の既存項目は `sourceStatus: "out-of-scope"`、`localizationCategory`、`noteJa` を返し、英語名とcalcIdを保持します。
+分類は翻訳範囲の情報です。技の `category`（Physical / Special / Status）や計算への受け渡しは変えません。
 Web UIの計算導線は `exact` / `alias` のみを採用し、曖昧な入力から対象を自動選択しません。
 例えば「ケンタロス パルデアのすがた」はウォーターしゅ・ブレイズしゅ・コンバットしゅの3候補になります。
 
@@ -342,6 +345,14 @@ const emptyMoveLabel = showdownUiLabels.noMove; // 明示的な未選択欄用�
 元の日本語options生成スクリプトと全入力データは本リポジトリに含まれていないため、ここで一式を再生成することはできません。
 表示名と検索語の補正は `ja-label-overrides.json`、入力互換の別名は `ja-aliases.json` へ記述します。
 補正はlocalization層で一覧・resolver・formatterへ共通適用されます。
+計算用カタログに同じID・英語名が存在する項目には、固定Showdown表示APIの確定した日本語名と翻訳分類を反映します。
+例えば `Silvally-Bug` は「シルヴァディ タイプ：バグ」、`Maushold` は「イッカネズミ ３びきかぞく」、`Dragoninite` は「カイリュナイト」です。
+「シルヴァディ むしタイプ」などのタイプ別表記と、メガストーンの旧表記は入力互換用の明示的な別名として受け付け、表示には現在の名称を返します。フォームを示す検索語は各IDの正しい名称に対応します。
+`variantLabelJa` は計算条件の選択用に括弧で添えます。例: 「メガニャオニクス (オス)」「めざめるパワー(でんき)」。固定項目の識別用表記で、現在の特性や状態を判定しません。
+calcの裸の `Vivillon` は特定模様を推定せず「ビビヨン」を維持し、calc専用の `Aegislash-Both` と `(No Move)` も既存の契約を維持します。
+Showdown専用フォーム・技・特性を計算用カタログや辞書へ追加しません。calcに存在しない既存の参考項目は計算未対応のままです。
+calcの英語カタログにだけ存在するCAPポケモン80件には、日本語optionsを追加しません。計算用resolverの対象外で、`validate:ja-mapping` の `catalogOnlyTranslationScope` から翻訳対象外の分類を確認できます。
+日本語optionsのJSONを直接利用する場合は、`applyManualLabelOverride(kind, option)` と `getOptionDisplayNameJa(kind, option)` を適用してください。JSON単体の `label`・検索語・出所の状態には取り込み時の情報が残ります。
 `confirmsShowdownName: false` の表示補正は、未確認のShowdown名を確定する根拠にはしません。
 
 Showdown用の日本語名・辞書参照・別名・曖昧入力・分類・出典は `showdown-display-overrides.json` で管理します。
@@ -425,7 +436,7 @@ node scripts/import-showdown-catalog.mjs node_modules/.cache/pokemon-showdown --
 | --- | --- |
 | `npm run inspect:calc` | 計算ライブラリの版・ライセンス・主要API |
 | `npm run validate:calc-catalog` | 6種別の英語カタログの形式・ID・依存版との対応 |
-| `npm run validate:ja-mapping` | 日本語辞書と補正の構造、重複、空欄、カタログとの差分、暫定状態 |
+| `npm run validate:ja-mapping` | 日本語辞書と補正の構造、重複、空欄、カタログとの差分、補正後の状態・翻訳分類 |
 | `npm run validate:artwork-assets` | 画像参照の不正・欠落と未使用画像 |
 | `npm run validate:showdown-display` | 同梱入力からのShowdown表示再生成との一致・対応の整合性 |
 | `npm test` / `npm run test:watch` | 単体テストの一括実行 / 変更監視 |

@@ -57,10 +57,10 @@ describe("approved Pokemon name imports", () => {
     expect(lookup("pokemon", "Pikachu-Unknown").status).toBe("not-found");
   });
 
-  it("does not alter existing calc display labels or make imported cosmetic forms calculable", () => {
-    expect(getDisplayNameJa("pokemon", "Silvally-Bug")).toBe("シルヴァディ むしタイプ");
-    expect(getDisplayNameJa("pokemon", "Maushold")).toBe("イッカネズミ ４ひきかぞく");
-    expect(getDisplayNameJa("pokemon", "Minior")).toBe("メテノ りゅうせいのすがた");
+  it("uses the reviewed translations for existing calc entries without adding cosmetic forms", () => {
+    expect(getDisplayNameJa("pokemon", "Silvally-Bug")).toBe("シルヴァディ タイプ：バグ");
+    expect(getDisplayNameJa("pokemon", "Maushold")).toBe("イッカネズミ ３びきかぞく");
+    expect(getDisplayNameJa("pokemon", "Minior")).toBe("メテノ あかいろのコア");
     expect(resolveEntity("pokemon", "Pikachu-Rock-Star").status).toBe("not-found");
     expect(() => calculateDamage({ attacker: { canonicalName: "Pikachu-Rock-Star" },
       defender: { canonicalName: "Mew" }, move: { canonicalName: "Tackle" } })).toThrow();

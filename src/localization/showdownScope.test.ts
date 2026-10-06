@@ -16,7 +16,7 @@ const scoped = overlay.outOfScopeGroups.flatMap((group) =>
 );
 
 describe("reviewed Showdown display scope", () => {
-  it.each(totems)("labels %s without changing its external identity or calc dictionary", (name, label) => {
+  it.each(totems)("shares the reviewed %s label while preserving external and calc identities", (name, label) => {
     for (const input of [name, idOf(name)]) {
       const result = lookup("pokemon", input);
       expect(result).toMatchObject({ status: "localized", inputId: idOf(name), showdownId: idOf(name),
@@ -25,7 +25,7 @@ describe("reviewed Showdown display scope", () => {
       });
       expect(result).not.toHaveProperty("displaySuffixJa");
     }
-    expect(getDisplayNameJa("pokemon", name)).toBe(label);
+    expect(getDisplayNameJa("pokemon", name)).toBe(`${label}（ぬし）`);
     expect(resolveEntity("pokemon", name)).toMatchObject({ status: "exact", canonicalName: name, calcId: idOf(name) });
   });
 

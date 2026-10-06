@@ -13,6 +13,7 @@ import type {
   ManualJaAliasOverride,
   ManualJaOverridePayload,
   SourceStatus,
+  LocalizationCategory,
 } from "../data/optionTypes";
 import { normalizeJaSearchText, toCalcId } from "./normalizeJa";
 
@@ -25,6 +26,8 @@ export interface ResolveCandidate {
   reason: string;
   calcId: string;
   sourceStatus: SourceStatus;
+  localizationCategory?: LocalizationCategory;
+  noteJa?: string;
   matchedBy: ResolveMatchedBy;
   matchText: string;
 }
@@ -37,6 +40,8 @@ export interface ResolveResult {
   calcId?: string;
   displayNameJa?: string;
   sourceStatus?: SourceStatus;
+  localizationCategory?: LocalizationCategory;
+  noteJa?: string;
   candidates?: ResolveCandidate[];
 }
 
@@ -89,6 +94,8 @@ const candidateFromSearchEntry = (entry: SearchEntry): ResolveCandidate => ({
   reason: reasonByMatchedBy[entry.matchedBy],
   calcId: entry.option.id,
   sourceStatus: sourceStatusOf(entry.option, entry.sourceStatus),
+  ...(entry.option.localizationCategory ? { localizationCategory: entry.option.localizationCategory } : {}),
+  ...(entry.option.noteJa ? { noteJa: entry.option.noteJa } : {}),
   matchedBy: entry.matchedBy,
   matchText: entry.matchText,
 });
@@ -188,6 +195,8 @@ const resolveMatches = (
       calcId: candidate.calcId,
       displayNameJa: candidate.displayNameJa,
       sourceStatus: candidate.sourceStatus,
+      ...(candidate.localizationCategory ? { localizationCategory: candidate.localizationCategory } : {}),
+      ...(candidate.noteJa ? { noteJa: candidate.noteJa } : {}),
       candidates,
     };
   }

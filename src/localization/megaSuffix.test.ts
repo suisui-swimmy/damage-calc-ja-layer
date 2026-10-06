@@ -30,8 +30,8 @@ it.each(pairs)("uses fullwidth Japanese suffixes for %s and its stone", (species
   }
 });
 
-it("leaves unrelated Latin suffixes and translation approval unchanged", () => {
+it("leaves unrelated Latin suffixes intact and confirms the reviewed stone translation", () => {
   expect(getDisplayNameJa("pokemon", "Porygon-Z")).toBe("ポリゴンＺ");
   expect(resolveShowdownDisplayNameJa("pokemon", "Porygon-Z")).toMatchObject({showdownName: "Porygon-Z"});
-  expect(resolveEntity("item", "Raichunite X")).toMatchObject({sourceStatus: "adapter-temporary"});
+  expect(resolveEntity("item", "Raichunite X")).toMatchObject({sourceStatus: "supported"});
 });

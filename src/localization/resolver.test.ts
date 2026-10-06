@@ -129,10 +129,10 @@ describe("resolveEntity", () => {
     expect(resolveEntity("move", "めざめるパワー(でんき)")).toMatchObject({
       status: "exact",
       canonicalName: "Hidden Power Electric",
-      sourceStatus: "adapter-temporary",
+      sourceStatus: "supported",
       candidates: [
         expect.objectContaining({
-          sourceStatus: "adapter-temporary",
+          sourceStatus: "supported",
         }),
       ],
     });
